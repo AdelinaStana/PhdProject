@@ -5,7 +5,8 @@ import statistics
 
 
 class PlotCountResults:
-    def __init__(self, structure_manager):
+    def __init__(self, structure_manager, output_dir):
+        self.output_dir = output_dir
         self.results_count = []
         for i in range(0, 4):
             self.results_count.append(-1)
@@ -17,7 +18,7 @@ class PlotCountResults:
         self.count_minus_code_and_git5_links()
         self.count_minus_code_and_git10_links()
 
-        with open('E:\\results_graph.txt', 'a') as file:
+        with open(self.output_dir+'\\results_plot.txt', 'a') as file:
             line = ",".join([str(x) for x in self.results_count])
             file.write(line + "\n")
 
@@ -45,7 +46,7 @@ class PlotCountResults:
         plt.xlabel('LD unique id')
         plt.ylabel('OCC')
         plt.axhline(y=med, color='b')
-        plt.savefig("E:\\fig" + self.proj_name + "5.png")
+        plt.savefig(self.output_dir+"\\ig" + self.proj_name + "5.png")
 
         try:
             for classItem in self.structure_manager.get_class_list():
@@ -59,7 +60,7 @@ class PlotCountResults:
         self.results_count[1] = g.number_of_edges()
 
     def count_minus_code_and_git10_links(self):
-        g = Graph(self.working_dir + "\\minus_code_and_git10_linkss")
+        g = Graph(self.working_dir + "\\minus_code_and_git10_links")
         x = []
         y = []
         max_val = []
@@ -81,7 +82,7 @@ class PlotCountResults:
         plt.xlabel('LD unique id')
         plt.ylabel('OCC')
         plt.axhline(y=med, color='b')
-        plt.savefig("E:\\fig"+self.proj_name+"10.png")
+        plt.savefig(self.output_dir+"\\fig"+self.proj_name+"10.png")
 
         try:
             for classItem in self.structure_manager.get_class_list():

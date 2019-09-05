@@ -4,8 +4,9 @@ import time
 
 
 class Counter:
-    def __init__(self, structure_manager):
+    def __init__(self, structure_manager, output_dir):
         self.results_count = []
+        self.output_dir = output_dir
         for i in range(0, 34):
             self.results_count.append(-1)
         self.structure_manager = structure_manager
@@ -57,7 +58,7 @@ class Counter:
         elapsed = end - start
         print(elapsed)
 
-        with open('E:\\results.txt', 'a') as file:
+        with open(self.output_dir+'\\results.txt', 'a') as file:
             line = ",".join([str(x) for x in self.results_count])
             file.write(line + "\n")
 

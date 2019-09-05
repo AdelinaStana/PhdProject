@@ -9,7 +9,7 @@ from PlotCountResults import PlotCountResults
 
 
 class AnalysisManager:
-    def __init__(self, parent, working_dir):
+    def __init__(self, parent, working_dir, output_dir):
         self.parent = parent
         if os.path.isdir(working_dir):
             self.workingDir = working_dir
@@ -22,7 +22,12 @@ class AnalysisManager:
             self.srcMLWrapper = SrcMLWrapper(self.workingDir)
             self.structureManager = StructureManager(self.workingDir)
         else:
-            print("Cannot set "+working_dir+" as working directory!")
+            print("ERROR: Cannot set "+working_dir+" as working directory!")
+
+        if os.path.isdir(output_dir):
+            self.output_dir = output_dir
+        else:
+            print("ERROR: Cannot set "+output_dir+" as output directory!")
 
         self.filesList = []
         self.converted_files_list = []
@@ -42,7 +47,7 @@ class AnalysisManager:
                 path = class_item.rel_file_path
                 class_item.set_old_paths(self.old_paths_dict[path])
             except BaseException as e:
-                print("rel path not found!")
+                pass
 
     def set_files_list(self, files):
         self.filesList = files
@@ -154,11 +159,11 @@ class AnalysisManager:
 
         print("Build git model ...")
         self.build_git_model_without_comments()
-        # self.structureManager.save_to_xml()
+
         print("Start counter ...")
-        counter = Counter(self.structureManager)
+        counter = Counter(self.structureManager, self.output_dir)
         counter.start_count()
 
-        counter = PlotCountResults(self.structureManager)
+        counter = PlotCountResults(self.structureManager, self.output_dir)
         counter.start_count()
 
