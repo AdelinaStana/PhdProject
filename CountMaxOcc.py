@@ -62,7 +62,7 @@ class CountMaxOcc:
         print(elapsed)
 
     def count_code_links(self):
-        g = Graph(self.working_dir+"\\code_links")
+        g = Graph(self.working_dir+"\\code_links", self.structure_manager)
         try:
             for classItem in self.structure_manager.get_class_list():
                 g.add_node(classItem.unique_id)
@@ -80,7 +80,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\git5_links")
+            g = Graph(self.working_dir+"\\git5_links", self.structure_manager)
             try:
                 for class_item in self.structure_manager.get_class_list():
                     git_list = class_item.get_occurrence_below5(occ)
@@ -103,7 +103,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\git10_links")
+            g = Graph(self.working_dir+"\\git10_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     git_list = classItem.get_occurrence_below10(occ)
@@ -124,7 +124,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\git20_links")
+            g = Graph(self.working_dir+"\\git20_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     git_list = classItem.get_occurrence_below20(occ)
@@ -146,7 +146,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\git_total_links")
+            g = Graph(self.working_dir+"\\git_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     git_list = classItem.get_occurrences_total(occ)
@@ -168,7 +168,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\code_git_total_links")
+            g = Graph(self.working_dir+"\\code_git_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     related_list = classItem.get_match_occ_total(occ)
@@ -190,7 +190,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\code_git5_total_links")
+            g = Graph(self.working_dir+"\\code_git5_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     related_list = classItem.get_match5_occ(occ)
@@ -212,7 +212,7 @@ class CountMaxOcc:
         stop = True
         nr = []
         while stop:
-            g = Graph(self.working_dir+"\\code_git10_total_links")
+            g = Graph(self.working_dir+"\\code_git10_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     related_list = classItem.get_match10_occ(occ)
@@ -234,7 +234,7 @@ class CountMaxOcc:
         stop = True
         nr =[]
         while stop:
-            g = Graph(self.working_dir+"\\code_git20_total_links")
+            g = Graph(self.working_dir+"\\code_git20_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
                     related_list = classItem.get_match20_occ(occ)
