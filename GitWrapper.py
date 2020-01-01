@@ -141,6 +141,7 @@ class GitWrapper:
     def get_commits(self):
         current_dir = os.getcwd()
         repo = self.get_repo()
+        flag = True
         try:
             os.mkdir(self.repo_path+"\~diffs")
         except:
@@ -149,19 +150,24 @@ class GitWrapper:
             if not repo.bare:
                 print('Repo at '+self.repo_path+' successfully loaded.')
                 # self.print_repository(repo)
-                commits = list(repo.iter_commits(repo.active_branch))[:6000]
+                commits = list(repo.iter_commits(repo.active_branch))
+                commits = list(reversed(commits))
+                commits = commits[1:len(commits)]
                 print('Number of commits : {}'.format(len(commits)))
                 nr = 0
                 print_nr = 0
                 for commit in commits:
-                    parent = commit.parents[0] if commit.parents else EMPTY_TREE_SHA
-                    # self.getDeletedFiles(commit, parent)
-                    nr_of_files_changed = self.get_changed_files_number(commit, parent)
-                    if nr_of_files_changed >= 1:
-                        os.system("git diff "+parent.hexsha+" "+commit.hexsha+" > "+self.repo_path+"\~diffs\diff" + str(nr) + "_FilesChanged_"+str(nr_of_files_changed)+".txt")
-                        nr += 1
-                    print_nr += 1
-                    print(print_nr)
+                    if print_nr >= 19108:
+                        flag = False
+                    if flag:
+                        parent = commit.parents[0] if commit.parents else EMPTY_TREE_SHA
+                        # self.getDeletedFiles(commit, parent)
+                        nr_of_files_changed = self.get_changed_files_number(commit, parent)
+                        if nr_of_files_changed >= 1:
+                            os.system("git diff "+parent.hexsha+" "+commit.hexsha+" > "+self.repo_path+"\~diffs\diff" + str(nr) + "_FilesChanged_"+str(nr_of_files_changed)+".txt")
+                            nr += 1
+                        print_nr += 1
+                        print(print_nr)
             else:
                 print('Could not load repository at ' + self.repo_path + '.')
         except BaseException as e:
