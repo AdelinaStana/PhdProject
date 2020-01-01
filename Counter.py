@@ -56,7 +56,7 @@ class Counter:
         end = time.time()
 
         elapsed = end - start
-        print(elapsed)
+        print("Analysis time: "+str(elapsed))
 
         with open(self.output_dir+'\\results.txt', 'a') as file:
             line = ",".join([str(x) for x in self.results_count])

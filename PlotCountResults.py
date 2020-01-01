@@ -25,7 +25,7 @@ class PlotCountResults:
         print(self.results_count)
 
     def count_minus_code_and_git5_links(self):
-        g = Graph(self.working_dir + "\\minus_code_and_git5_links")
+        g = Graph(self.working_dir + "\\minus_code_and_git5_links", self.structure_manager)
         x = []
         y = []
         max_val = []
@@ -60,7 +60,7 @@ class PlotCountResults:
         self.results_count[1] = g.number_of_edges()
 
     def count_minus_code_and_git10_links(self):
-        g = Graph(self.working_dir + "\\minus_code_and_git10_links")
+        g = Graph(self.working_dir + "\\minus_code_and_git10_links", self.structure_manager)
         x = []
         y = []
         max_val = []

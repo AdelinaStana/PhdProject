@@ -21,6 +21,7 @@ class Main:
         analysis_manager = AnalysisManager(self, self.repo, self.output_dir)
         if self.get_files:
             print("Converting to XML ...")
+            analysis_manager.load_files_from_repo()
             analysis_manager.convert_to_xml()
             print("Getting commits ...")
             analysis_manager.get_git_commits()
@@ -36,6 +37,7 @@ class Main:
 
     def get_commit_statistics(self):
         print("*************************************** COMMIT STATISTICS *************************************")
+        print("Repo path: " + self.repo)
         repo_diff_path = self.repo + "\\~diffs"
         sum_commits = 0
         nr_commits = 0
@@ -84,41 +86,56 @@ if __name__ == '__main__':
                         help='run all existing build-in repositories')
 
     args = option.parse_args()
-    runner = Main(args.repoPath, args.outputPath, args.threshold, args.getFiles)
+    get_files = False
+    runner = Main(args.repoPath, args.outputPath, args.threshold, get_files)
     if not args.all:
         runner.get_results()
         if args.getStatistics:
             runner.get_commit_statistics()
     else:
-        repo_list = ["E:\\faculta\\Master\\TestProjects\\bluecove",
-                     "E:\\faculta\\Master\\TestProjects\\aima-java",
-                     "E:\\faculta\\Master\\TestProjects\\powermock",
-                     "E:\\faculta\\Master\\TestProjects\\restfb",
-                     "E:\\faculta\\Master\\TestProjects\\RxJava",
-                     "E:\\faculta\\Master\\TestProjects\\metro-jax-ws",
-                     "E:\\faculta\\Master\\TestProjects\\mockito",
-                     "E:\\faculta\\Master\\TestProjects\\grizzly",
-                     "E:\\faculta\\Master\\TestProjects\\shipkit",
-                     "E:\\faculta\\Master\\TestProjects\\OpenClinica",
-                     "E:\\faculta\\Master\\TestProjects\\robolectric",
-                     "E:\\faculta\\Master\\TestProjects\\aeron",
-                     "E:\\faculta\\Master\\TestProjects\\antlr4",
-                     "E:\\faculta\\Master\\TestProjects\\mcidasv",
-                     "E:\\faculta\\Master\\TestProjects\\ShareX",
-                     "E:\\faculta\\Master\\TestProjects\\aspnetboilerplate",
-                     "E:\\faculta\\Master\\TestProjects\\orleans",
-                     "E:\\faculta\\Master\\TestProjects\\cli",
-                     "E:\\faculta\\Master\\TestProjects\\cake",
-                     "E:\\faculta\\Master\\TestProjects\\Avalonia",
-                     "E:\\faculta\\Master\\TestProjects\\EntityFrameworkCore",
-                     "E:\\faculta\\Master\\TestProjects\\jellyfin",
-                     "E:\\faculta\\Master\\TestProjects\\PowerShell",
-                     "E:\\faculta\\Master\\TestProjects\\WeiXinMPSDK",
-                     "E:\\faculta\\Master\\TestProjects\\ArchiSteamFarm",
-                     "E:\\faculta\\Master\\TestProjects\\VisualStudio",
-                     "E:\\faculta\\Master\\TestProjects\\CppSharp"]
+        repo_list_aux = ["D:\\faculta\\Master\\TestProjects\\bluecove",
+                     "D:\\faculta\\Master\\TestProjects\\aima-java",
+                     "D:\\faculta\\Master\\TestProjects\\powermock",
+                     "D:\\faculta\\Master\\TestProjects\\restfb",
+                     "D:\\faculta\\Master\\TestProjects\\RxJava",
+                     "D:\\faculta\\Master\\TestProjects\\metro-jax-ws",
+                     "D:\\faculta\\Master\\TestProjects\\mockito",
+                     "D:\\faculta\\Master\\TestProjects\\grizzly",
+                     "D:\\faculta\\Master\\TestProjects\\shipkit",
+                     "D:\\faculta\\Master\\TestProjects\\OpenClinica",
+                     "D:\\faculta\\Master\\TestProjects\\robolectric",
+                     "D:\\faculta\\Master\\TestProjects\\aeron",
+                     "D:\\faculta\\Master\\TestProjects\\antlr4",
+                     "D:\\faculta\\Master\\TestProjects\\mcidasv",
+                     "D:\\faculta\\Master\\TestProjects\\ShareX",
+                     "D:\\faculta\\Master\\TestProjects\\aspnetboilerplate",
+                     "D:\\faculta\\Master\\TestProjects\\orleans",
+                     "D:\\faculta\\Master\\TestProjects\\cli",
+                     "D:\\faculta\\Master\\TestProjects\\cake",
+                     "D:\\faculta\\Master\\TestProjects\\Avalonia",
+                     "D:\\faculta\\Master\\TestProjects\\EntityFrameworkCore",
+                     "D:\\faculta\\Master\\TestProjects\\jellyfin",
+                     "D:\\faculta\\Master\\TestProjects\\PowerShell",
+                     "D:\\faculta\\Master\\TestProjects\\WeiXinMPSDK",
+                     "D:\\faculta\\Master\\TestProjects\\ArchiSteamFarm",
+                     "D:\\faculta\\Master\\TestProjects\\VisualStudio",
+                     "D:\\faculta\\Master\\TestProjects\\CppSharp"]
+
+        repo_list_aux = [
+            "D:\\faculta\\Doctorat\\TestProjects\\hibernate-orm",
+            "D:\\faculta\\Doctorat\\TestProjects\\jmeter",
+            "D:\\faculta\\Doctorat\\TestProjects\\log4j",
+            "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
+            "D:\\faculta\\Doctorat\\TestProjects\\jhotdraw",
+            "D:\\faculta\\Doctorat\\TestProjects\\tomcat",
+            "D:\\faculta\\Doctorat\\TestProjects\\ant"
+        ]
+
+        repo_list = [
+            "D:\\faculta\\Doctorat\\TestProjects\\ant",
+        ]
 
         for repo in repo_list:
             runner.repo = repo
-            runner.get_commit_statistics()
+            # runner.get_commit_statistics()
             runner.get_results()

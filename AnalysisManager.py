@@ -12,15 +12,15 @@ class AnalysisManager:
     def __init__(self, parent, working_dir, output_dir):
         self.parent = parent
         if os.path.isdir(working_dir):
-            self.workingDir = working_dir
+            self.working_dir = working_dir
             try:
-                os.mkdir(self.workingDir + "/~results")
+                os.mkdir(self.working_dir + "/~results")
             except:
-                shutil.rmtree(self.workingDir + "/~results")
-                os.mkdir(self.workingDir + "/~results")
+                shutil.rmtree(self.working_dir + "/~results")
+                os.mkdir(self.working_dir + "/~results")
 
-            self.srcMLWrapper = SrcMLWrapper(self.workingDir)
-            self.structureManager = StructureManager(self.workingDir)
+            self.srcMLWrapper = SrcMLWrapper(self.working_dir)
+            self.structureManager = StructureManager(self.working_dir)
         else:
             print("ERROR: Cannot set "+working_dir+" as working directory!")
 
@@ -29,17 +29,17 @@ class AnalysisManager:
         else:
             print("ERROR: Cannot set "+output_dir+" as output directory!")
 
-        self.filesList = []
+        self.files_list = []
         self.converted_files_list = []
         self.old_paths_dict = {}
 
     def get_git_commits(self):
-        git_wrapper = GitWrapper(self.workingDir)
+        git_wrapper = GitWrapper(self.working_dir)
         git_wrapper.get_commits()
 
     def get_renamed_paths(self):
-        git_wrapper = GitWrapper(self.workingDir)
-        self.old_paths_dict = git_wrapper.get_old_paths(self.filesList)
+        git_wrapper = GitWrapper(self.working_dir)
+        self.old_paths_dict = git_wrapper.get_old_paths(self.files_list)
 
     def assign_old_paths(self):
         for class_item in self.structureManager.class_list:
@@ -50,7 +50,7 @@ class AnalysisManager:
                 pass
 
     def set_files_list(self, files):
-        self.filesList = files
+        self.files_list = files
 
     def set_xml_files_list(self, files_dir):
         self.converted_files_list = []
@@ -58,12 +58,19 @@ class AnalysisManager:
             for file in f:
                 self.converted_files_list.append(os.path.join(r, file))
 
+    def load_files_from_repo(self):
+        self.files_list = []
+        for r, d, f in os.walk(self.working_dir):
+            for file in f:
+                if file.endswith("java"):
+                    self.files_list.append(os.path.join(r, file))
+
     def load_structure_from_xml(self, file):
         self.structureManager.loadStructure(file)
 
     def convert_to_xml(self):
         self.converted_files_list = []
-        for file in self.filesList:
+        for file in self.files_list:
             if not re.search('\.xml', file):
                 return_val, path_to_file = self.srcMLWrapper.convert_files(file)
                 self.converted_files_list.append(path_to_file)
@@ -88,9 +95,9 @@ class AnalysisManager:
 
     def build_git_model_with_comments(self):
         print("Start analysing git diffs ...")
-        for file in os.listdir(self.workingDir+"//~diffs"):
+        for file in os.listdir(self.working_dir + "//~diffs"):
             try:
-                datafile = open(self.workingDir+"//~diffs//"+file, 'r+', encoding="utf8", errors='ignore').read()
+                datafile = open(self.working_dir + "//~diffs//" + file, 'r+', encoding="utf8", errors='ignore').read()
                 file = file.replace('.txt', '')
                 nr_of_commits_str = file.split('FilesChanged_')[1]
                 commit_size = int(nr_of_commits_str)
@@ -112,9 +119,9 @@ class AnalysisManager:
 
     def build_git_model_without_comments(self):
         print("Start analysing git diffs...")
-        for file in os.listdir(self.workingDir+"//~diffs"):
+        for file in os.listdir(self.working_dir + "//~diffs"):
             try:
-                datafile = open(self.workingDir+"//~diffs//"+file, 'r+', encoding="utf8", errors='ignore').read()
+                datafile = open(self.working_dir + "//~diffs//" + file, 'r+', encoding="utf8", errors='ignore').read()
                 datafile = self.remove_comments(datafile)
                 file = file.replace('.txt', '')
                 nr_of_commits_str = file.split('FilesChanged_')[1]
@@ -164,6 +171,6 @@ class AnalysisManager:
         counter = Counter(self.structureManager, self.output_dir)
         counter.start_count()
 
-        counter = PlotCountResults(self.structureManager, self.output_dir)
-        counter.start_count()
+        # counter = PlotCountResults(self.structureManager, self.output_dir)
+        # counter.start_count()
 

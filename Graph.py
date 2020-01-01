@@ -36,13 +36,12 @@ class Graph:
             try:
                 self.file_writer.write(class_dict_id[class_item[0]] + ","+class_dict_id[class_item[1]] + "\n")
             except KeyError:
-                print(class_item[0])
+                pass
             except BaseException as e:
                 print(class_dict_id[class_item[0]])
                 print(e)
 
         self.file_writer.close()
-
 
     def number_of_edges(self):
         self.file_writer.close()
