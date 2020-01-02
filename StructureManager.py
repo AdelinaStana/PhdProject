@@ -177,7 +177,7 @@ class StructureManager:
 
     def get_classes_from_jar(self):
         import zipfile
-        archive = zipfile.ZipFile('jar_file_path', 'r')
+        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar', 'r')
         temp_list = archive.namelist()
         jar_cls_list = set()
         for item in temp_list:
@@ -190,13 +190,11 @@ class StructureManager:
 
     def filter_only_jar(self):
         jar_cls_list = self.get_classes_from_jar()
-        extracted_cls_list = set()
         temp_class_list = set()
 
         for cls in self.class_list:
             if cls.full_name in jar_cls_list:
                 temp_class_list.add(cls)
-
         self.class_list = temp_class_list
 
     def get_text(self, atr):

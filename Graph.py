@@ -27,7 +27,7 @@ class Graph:
         class_dict_id = {}
 
         for class_item in self.structure_manager.get_class_list():
-            class_dict_id[class_item.unique_id] = class_item.name
+            class_dict_id[class_item.unique_id] = class_item.full_name
 
         self.file_writer = open(self.csv_name + ".csv", 'wt')
         self.file_writer.write("a,b\n")  # header

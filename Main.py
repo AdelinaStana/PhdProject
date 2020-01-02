@@ -126,13 +126,12 @@ if __name__ == '__main__':
             "D:\\faculta\\Doctorat\\TestProjects\\jmeter",
             "D:\\faculta\\Doctorat\\TestProjects\\log4j",
             "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
-            "D:\\faculta\\Doctorat\\TestProjects\\jhotdraw",
             "D:\\faculta\\Doctorat\\TestProjects\\tomcat",
             "D:\\faculta\\Doctorat\\TestProjects\\ant"
         ]
 
         repo_list = [
-            "D:\\faculta\\Doctorat\\TestProjects\\ant",
+            "D:\\faculta\\Doctorat\\TestProjects\\tomcat",
         ]
 
         for repo in repo_list:

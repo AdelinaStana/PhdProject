@@ -17,6 +17,12 @@ class NameTagParser(Parser):
         cls = root.iter("{http://www.srcML.org/srcML/src}interface")
         for item in cls:
             item_list.append(item)
+        cls = root.iter("{http://www.srcML.org/srcML/src}annotation_defn")
+        for item in cls:
+            item_list.append(item)
+        cls = root.iter("{http://www.srcML.org/srcML/src}enum")
+        for item in cls:
+            item_list.append(item)
         return item_list
 
     def get_all(self, root):
