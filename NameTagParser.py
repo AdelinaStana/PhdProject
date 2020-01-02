@@ -40,23 +40,24 @@ class NameTagParser(Parser):
 
         rep = file_path.find(self.replace)
         rep = file_path[0:rep]
-        base = file_path.replace(rep, "")
-        extension = os.path.splitext(base)[1]
-        base = base.replace(extension, "")
-        base = base.replace("/", ".")
+        base_name = file_path.replace(rep, "")
+        extension = os.path.splitext(base_name)[1]
+        base_name = base_name.replace(extension, "")
+        base_name = base_name.replace("/", ".")
 
         for item in item_list:
             class_model = ClassModel()
-            class_model.set_name(self.get_name(item))
+            item_name = self.get_name(item)
 
-            if class_model.name != "None":
+            if item_name != "None":
                 self.unique_id += 1
 
-                file_name = base
-                if not base.endswith(class_model.name):
-                    file_name = base + "$" + class_model.name
-                print(file_name)
+                class_name = base_name
+                if not base_name.endswith("."+item_name):
+                    class_name = base_name + "$" + item_name
 
+                class_model.set_name(item_name)
+                class_model.set_full_name(class_name)
                 class_model.set_file(file_path)
                 class_model.set_unique_id(self.unique_id)
                 class_model.set_super_class(self.get_item_name(item, "super"))

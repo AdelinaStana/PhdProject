@@ -6,6 +6,7 @@ class ClassModel:
         self.parent = parent
         self.superclass = "None"
         self.name = "None"
+        self.full_name = "None"
         self.rel_file_path = "None"
         self.unique_id = -1
         self.old_paths = []
@@ -19,6 +20,9 @@ class ClassModel:
 
     def set_name(self, name):
         self.name = name
+
+    def set_full_name(self, name):
+        self.full_name = name
 
     def set_unique_id(self, id):
         self.unique_id = id

@@ -154,7 +154,7 @@ class AnalysisManager:
                     self.structureManager.add_class(classStructure)
             except BaseException as e:
                 print(e)
-
+        self.structureManager.filter_only_jar()
         self.structureManager.build_related()
 
     def process_data(self):
