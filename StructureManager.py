@@ -177,7 +177,7 @@ class StructureManager:
 
     def get_classes_from_jar(self):
         import zipfile
-        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar', 'r')
+        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar', 'r')
         temp_list = archive.namelist()
         jar_cls_list = set()
         for item in temp_list:

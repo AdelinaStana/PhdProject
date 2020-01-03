@@ -5,9 +5,10 @@ from AttributeModel import AttributeModel
 
 
 class NameTagParser(Parser):
-    def __init__(self, root_dir, unique_id):
+    def __init__(self, root_dir, unique_id, threshold=None):
         Parser.__init__(self, root_dir, unique_id)
         self.replace = "org"
+        self.threshold = threshold
 
     def get_all_structures(self, root):
         item_list = []
@@ -52,7 +53,7 @@ class NameTagParser(Parser):
         base_name = base_name.replace("/", ".")
 
         for item in item_list:
-            class_model = ClassModel()
+            class_model = ClassModel(threshold=self.threshold)
             item_name = self.get_name(item)
 
             if item_name != "None":
@@ -73,7 +74,6 @@ class NameTagParser(Parser):
                     class_model.add_attribute(attribute)
 
                 class_list.append(class_model)
-                # print(class_model.name)
 
         return class_list
 

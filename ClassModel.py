@@ -2,7 +2,7 @@ import os
 
 
 class ClassModel:
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, threshold=None):
         self.parent = parent
         self.superclass = "None"
         self.name = "None"
@@ -12,10 +12,12 @@ class ClassModel:
         self.old_paths = []
         self.attributes = set()
         self.methods = set()
+        self.threshold = threshold
         self.git_links_below5 = {}
         self.git_links_below10 = {}
         self.git_links_below20 = {}
         self.git_links_total = {}
+        self.git_links_below_threshold = {}
         self.relation_list = set()
 
     def set_name(self, name):
@@ -130,26 +132,33 @@ class ClassModel:
     def set_git_links(self, links, nr_of_commits):
         for link in links:
             if link != self.unique_id:
-                if nr_of_commits <= 5:
-                    if link not in self.git_links_below5.keys():
-                        self.git_links_below5[link] = 1
-                    else:
-                        self.git_links_below5[link] += 1
-                if nr_of_commits <= 10:
-                    if link not in self.git_links_below10.keys():
-                        self.git_links_below10[link] = 1
-                    else:
-                        self.git_links_below10[link] += 1
-                if nr_of_commits <= 20:
-                    if link not in self.git_links_below20.keys():
-                        self.git_links_below20[link] = 1
-                    else:
-                        self.git_links_below20[link] += 1
-
-                if link not in self.git_links_total.keys():
-                    self.git_links_total[link] = 1
+                if self.threshold:
+                    if nr_of_commits <= self.threshold:
+                        if link not in self.git_links_below_threshold.keys():
+                            self.git_links_below_threshold[link] = 1
+                        else:
+                            self.git_links_below_threshold[link] += 1
                 else:
-                    self.git_links_total[link] += 1
+                    if nr_of_commits <= 5:
+                        if link not in self.git_links_below5.keys():
+                            self.git_links_below5[link] = 1
+                        else:
+                            self.git_links_below5[link] += 1
+                    if nr_of_commits <= 10:
+                        if link not in self.git_links_below10.keys():
+                            self.git_links_below10[link] = 1
+                        else:
+                            self.git_links_below10[link] += 1
+                    if nr_of_commits <= 20:
+                        if link not in self.git_links_below20.keys():
+                            self.git_links_below20[link] = 1
+                        else:
+                            self.git_links_below20[link] += 1
+
+                    if link not in self.git_links_total.keys():
+                        self.git_links_total[link] = 1
+                    else:
+                        self.git_links_total[link] += 1
 
     ##########################################################################################################
 
@@ -164,6 +173,9 @@ class ClassModel:
 
     def get_occurrences_total(self, nr):
         return set(key for key, value in self.git_links_total.items() if value >= nr)
+
+    def get_occurrences_below_threshold(self, nr):
+        return set(key for key, value in self.git_links_below_threshold.items() if value >= nr)
 
     #####################################################################################################
 

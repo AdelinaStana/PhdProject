@@ -101,6 +101,7 @@ class GitWrapper:
                 for path in old_paths:
                     if path != '':
                         paths_dict[rel_path].add("a/" + path.replace('\'', ''))
+                print(file)
             except BaseException as e:
                 print(e)
                 print(file)
@@ -111,8 +112,8 @@ class GitWrapper:
         paths_dict = {}
 
         if not repo.bare and not os.path.exists(self.repo_path+'/old_paths_dict.txt'):
+            print("Searching git old paths ...")
             paths_dict = self.get_old_paths_from_logs(files_list)
-
             try:
                 f = open(self.repo_path + '/old_paths_dict.txt', 'w+')
                 for key in paths_dict.keys():

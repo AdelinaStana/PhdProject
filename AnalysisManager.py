@@ -5,12 +5,12 @@ from GitWrapper import GitWrapper
 from StructureManager import *
 from SrcMLWrapper import SrcMLWrapper
 from Counter import Counter
-from PlotCountResults import PlotCountResults
 
 
 class AnalysisManager:
-    def __init__(self, parent, working_dir, output_dir):
+    def __init__(self, parent, working_dir, output_dir, threshold=None):
         self.parent = parent
+        self.threshold = threshold
         if os.path.isdir(working_dir):
             self.working_dir = working_dir
             try:
@@ -19,7 +19,7 @@ class AnalysisManager:
                 shutil.rmtree(self.working_dir + "/~results")
                 os.mkdir(self.working_dir + "/~results")
 
-            self.srcMLWrapper = SrcMLWrapper(self.working_dir)
+            self.srcMLWrapper = SrcMLWrapper(self.working_dir, self.threshold)
             self.structureManager = StructureManager(self.working_dir)
         else:
             print("ERROR: Cannot set "+working_dir+" as working directory!")

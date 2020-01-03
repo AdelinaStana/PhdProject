@@ -18,7 +18,7 @@ class Main:
 
     def get_results(self):
         print("***************************************" + self.repo + "*************************************")
-        analysis_manager = AnalysisManager(self, self.repo, self.output_dir)
+        analysis_manager = AnalysisManager(self, self.repo, self.output_dir, self.threshold)
         if self.get_files:
             print("Converting to XML ...")
             analysis_manager.load_files_from_repo()
@@ -26,6 +26,7 @@ class Main:
             print("Getting commits ...")
             analysis_manager.get_git_commits()
 
+        analysis_manager.load_files_from_repo()
         analysis_manager.set_xml_files_list(self.repo + "/~Temp/")
         print("Processing data ...")
         analysis_manager.process_data()
@@ -131,7 +132,7 @@ if __name__ == '__main__':
         ]
 
         repo_list = [
-            "D:\\faculta\\Doctorat\\TestProjects\\tomcat",
+            "D:\\faculta\\Doctorat\\TestProjects\\hibernate-orm"
         ]
 
         for repo in repo_list:
