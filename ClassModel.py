@@ -100,7 +100,10 @@ class ClassModel:
 
         if self.superclass != "None":
             self.add_if_exists(self.superclass, class_dict)
+
         self.attributes.clear()
+        self.methods.clear()
+
         return self
 
     def print_details(self, UIObj):

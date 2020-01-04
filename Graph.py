@@ -36,7 +36,7 @@ class Graph:
             try:
                 self.file_writer.write(class_dict_id[class_item[0]] + ","+class_dict_id[class_item[1]] + "\n")
             except KeyError:
-                pass
+                print("Key error for "+self.csv_name)
             except BaseException as e:
                 print(class_dict_id[class_item[0]])
                 print(e)
@@ -44,11 +44,11 @@ class Graph:
         self.file_writer.close()
 
     def number_of_edges(self):
+        self.file_writer.close()
         data = pandas.read_csv(self.csv_name + ".csv")
         data = data.drop_duplicates(subset=['a', 'b'], keep='first')
         self.write_names_of_edges_csv(data)
-        rows, columns = data.shape
-        return rows
+        return len(data.values)
 
     def number_of_nodes(self):
         return len(self.nodes)

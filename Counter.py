@@ -20,8 +20,8 @@ class Counter:
             t_code = Thread(target=self.count_code_links, args=())
             t_git_1occ = Thread(target=self.count_git_links_1occ, args=(2,))
             t_git_2occ = Thread(target=self.count_git_links_2occ, args=(3,))
-            t_git_3occ = Thread(target=self.count_git_links_2occ, args=(4,))
-            t_git_4occ = Thread(target=self.count_git_links_2occ, args=(5,))
+            t_git_3occ = Thread(target=self.count_git_links_3occ, args=(4,))
+            t_git_4occ = Thread(target=self.count_git_links_4occ, args=(5,))
 
             t_code.start()
             t_git_1occ.start()
@@ -60,8 +60,8 @@ class Counter:
                     g.add_edge(classItem.unique_id, related)
         except BaseException as e:
             print(e)
-        edges = g.number_of_edges()
         nodes = g.number_of_nodes()
+        edges = g.number_of_edges()
         print("Number of classes: " + str(nodes))
         print("Number of SD: " + str(edges))
         self.results_count[0] = nodes
@@ -104,7 +104,7 @@ class Counter:
         print("Count git links with 3 occ ...")
 
     def count_git_links_4occ(self, pos):
-        g = Graph(self.working_dir + "\\git_links_3occ", self.structure_manager)
+        g = Graph(self.working_dir + "\\git_links_4occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
                 git_list = class_item.get_occurrences_below_threshold(4)

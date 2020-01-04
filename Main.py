@@ -132,7 +132,7 @@ if __name__ == '__main__':
         ]
 
         repo_list = [
-            "D:\\faculta\\Doctorat\\TestProjects\\hibernate-orm"
+            "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
         ]
 
         for repo in repo_list:
