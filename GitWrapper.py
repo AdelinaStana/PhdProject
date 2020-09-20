@@ -158,14 +158,16 @@ class GitWrapper:
                 nr = 0
                 print_nr = 0
                 for commit in commits:
-                    if print_nr >= 19108:
+                    if print_nr >= 6713:
                         flag = False
                     if flag:
                         parent = commit.parents[0] if commit.parents else EMPTY_TREE_SHA
                         # self.getDeletedFiles(commit, parent)
                         nr_of_files_changed = self.get_changed_files_number(commit, parent)
                         if nr_of_files_changed >= 1:
-                            os.system("git diff "+parent.hexsha+" "+commit.hexsha+" > "+self.repo_path+"\~diffs\diff" + str(nr) + "_FilesChanged_"+str(nr_of_files_changed)+".txt")
+                            os.system("git diff "+parent.hexsha+" "+commit.hexsha+" > "+self.repo_path+"\\~diffs\\diff"
+                                      + str(nr) + "_FilesChanged_"+str(nr_of_files_changed) + "_Date_" +
+                                      str(commit.authored_date)+".txt")
                             nr += 1
                         print_nr += 1
                         print(print_nr)

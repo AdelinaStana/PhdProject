@@ -1,6 +1,7 @@
 from Graph import Graph
 from threading import Thread
 import time
+from Statistics import Statistics
 
 
 class Counter:
@@ -72,3 +73,10 @@ class Counter:
             print(e)
         self.results_count[pos] = g.number_of_edges()
         print("Count git links with "+str(occ)+" occ ...")
+
+        Statistics.export_connection_strength(self.working_dir + "\\ant_git_links_"+str(occ)+"occ.csv",
+                                              self.structure_manager, occ)
+
+
+
+
