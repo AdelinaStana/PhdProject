@@ -99,8 +99,10 @@ class AnalysisManager:
             try:
                 datafile = open(self.working_dir + "//~diffs//" + file, 'r+', encoding="utf8", errors='ignore').read()
                 file = file.replace('.txt', '')
-                nr_of_commits_str = file.split('FilesChanged_')[1]
+                nr_of_commits_str = file.split('_')[2]
                 commit_size = int(nr_of_commits_str)
+                commit_date = file.split('_')[4]
+
                 git_link_list = set()
 
                 list_of_lines = datafile.split('\n')
@@ -113,7 +115,7 @@ class AnalysisManager:
                             git_link_list.add(file_name)
 
                 if len(git_link_list) > 1:
-                    self.structureManager.set_git_links_to_class(git_link_list, commit_size)
+                    self.structureManager.set_git_links_to_class(git_link_list, commit_size, commit_date)
             except BaseException as e:
                 print(e)
 
@@ -123,9 +125,12 @@ class AnalysisManager:
             try:
                 datafile = open(self.working_dir + "//~diffs//" + file, 'r+', encoding="utf8", errors='ignore').read()
                 datafile = self.remove_comments(datafile)
+
                 file = file.replace('.txt', '')
-                nr_of_commits_str = file.split('FilesChanged_')[1]
+                nr_of_commits_str = file.split('_')[2]
                 commit_size = int(nr_of_commits_str)
+                commit_date = file.split('_')[4]
+
                 git_link_list = set()
                 temp_list = datafile.split('\n')
                 list_of_lines = []
@@ -142,7 +147,7 @@ class AnalysisManager:
                                 git_link_list.add(file_name)
 
                 if len(git_link_list) > 1:
-                    self.structureManager.set_git_links_to_class(git_link_list, commit_size)
+                    self.structureManager.set_git_links_to_class(git_link_list, commit_size, commit_date)
             except BaseException as e:
                 print(e)
 

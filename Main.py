@@ -49,7 +49,7 @@ class Main:
         for file in os.listdir(repo_diff_path):
             nr_commits += 1
             file = file.replace('.txt', '')
-            nr_of_commits_str = file.split('FilesChanged_')[1]
+            nr_of_commits_str = file.split('_')[2]
             commit_size = int(nr_of_commits_str)
             if commit_size <= 5:
                 commits_under_5 += 1
@@ -89,12 +89,13 @@ if __name__ == '__main__':
     args = option.parse_args()
     get_files = False
     runner = Main(args.repoPath, args.outputPath, args.threshold, get_files)
+
     if not args.all:
         runner.get_results()
         if args.getStatistics:
             runner.get_commit_statistics()
     else:
-        repo_list_aux = ["D:\\faculta\\Master\\TestProjects\\bluecove",
+        repo_orig_list = ["D:\\faculta\\Master\\TestProjects\\bluecove",
                      "D:\\faculta\\Master\\TestProjects\\aima-java",
                      "D:\\faculta\\Master\\TestProjects\\powermock",
                      "D:\\faculta\\Master\\TestProjects\\restfb",
@@ -132,7 +133,7 @@ if __name__ == '__main__':
         ]
 
         repo_list = [
-            "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
+            "D:\\faculta\\Doctorat\\TestProjects\\ant",
         ]
 
         for repo in repo_list:

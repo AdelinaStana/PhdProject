@@ -1,6 +1,7 @@
 import os
 from Util import Util
 
+
 class StructureManager:
     def __init__(self, working_dir):
         self.class_list = set()
@@ -14,7 +15,7 @@ class StructureManager:
 
     def get_classes_from_jar(self):
         import zipfile
-        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\wro4j-core-1.6.3.jar', 'r')
+        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\ant.jar', 'r')
         temp_list = archive.namelist()
         jar_cls_list = set()
         for item in temp_list:
@@ -53,7 +54,7 @@ class StructureManager:
         except BaseException as e:
             print(e)
 
-    def set_git_links_to_class(self, links, commit_size):
+    def set_git_links_to_class(self, links, commit_size, commit_date):
         try:
             class_links = set()
             for link in links:
@@ -63,7 +64,7 @@ class StructureManager:
 
             for class_item in self.class_list:
                 if class_item.get_unique_id() in class_links:
-                    class_item.set_git_links(class_links, commit_size)
+                    class_item.set_git_links(class_links, commit_size, commit_date)
         except BaseException as e:
             print(e)
 
