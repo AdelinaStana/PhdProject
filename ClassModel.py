@@ -20,6 +20,7 @@ class ClassModel:
         self.git_links_below_threshold = {}
         self.git_date_below_threshold = {}
         self.relation_list = set()
+        self.updates_count = 0
 
     def set_name(self, name):
         self.name = name
@@ -134,6 +135,7 @@ class ClassModel:
                             UIObj.print_line(call)
 
     def set_git_links(self, links, nr_of_commits, commit_date):
+        self.updates_count += 1
         for link in links:
             if link != self.unique_id:
                 if self.threshold:

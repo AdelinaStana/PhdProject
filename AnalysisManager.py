@@ -129,7 +129,10 @@ class AnalysisManager:
                 file = file.replace('.txt', '')
                 nr_of_commits_str = file.split('_')[2]
                 commit_size = int(nr_of_commits_str)
-                commit_date = file.split('_')[4]
+                try:
+                    commit_date = file.split('_')[4]
+                except:
+                    commit_date = ""
 
                 git_link_list = set()
                 temp_list = datafile.split('\n')
