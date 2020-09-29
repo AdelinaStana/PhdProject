@@ -20,7 +20,7 @@ class ClassModel:
         self.git_links_below_threshold = {}
         self.git_date_below_threshold = {}
         self.relation_list = set()
-        self.updates_count = 0
+        self.updates_count = 0  # count number of total commits in which is involved
 
     def set_name(self, name):
         self.name = name

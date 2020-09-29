@@ -1,6 +1,7 @@
 from Graph import Graph
 from threading import Thread
 import time
+import os
 from Statistics import Statistics
 
 
@@ -10,6 +11,7 @@ class Counter:
         self.output_dir = output_dir
         self.structure_manager = structure_manager
         self.working_dir = self.structure_manager.working_dir.replace("~Temp", "~results")
+        self.name = os.path.basename(self.working_dir.replace("/~results", ""))
 
     def start_count(self):
         start = time.time()
@@ -63,7 +65,7 @@ class Counter:
         self.results_count[1] = edges
 
     def count_git_links(self, pos, occ):
-        g = Graph(self.working_dir + "\\ant_git_links_"+str(occ)+"occ", self.structure_manager)
+        g = Graph(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
                 git_list = class_item.get_occurrences_below_threshold(occ)
@@ -74,7 +76,7 @@ class Counter:
         self.results_count[pos] = g.number_of_edges()
         print("Count git links with "+str(occ)+" occ ...")
 
-        Statistics.export_connection_strength(self.working_dir + "\\ant_git_links_"+str(occ)+"occ.csv",
+        Statistics.export_connection_strength(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ.csv",
                                               self.structure_manager, occ)
 
 

@@ -124,12 +124,13 @@ if __name__ == '__main__':
                      "D:\\faculta\\Master\\TestProjects\\CppSharp"]
 
         repo_list_aux = [
-            "D:\\faculta\\Doctorat\\TestProjects\\hibernate-orm",
             "D:\\faculta\\Doctorat\\TestProjects\\jmeter",
             "D:\\faculta\\Doctorat\\TestProjects\\log4j",
             "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
-            "D:\\faculta\\Doctorat\\TestProjects\\tomcat",
-            "D:\\faculta\\Doctorat\\TestProjects\\ant"
+
+            "D:\\faculta\\Doctorat\\TestProjects\\ant",
+            "D:\\faculta\\Doctorat\\TestProjects\\hibernate-orm",
+            "D:\\faculta\\Doctorat\\TestProjects\\catalina"
         ]
 
         repo_list = [
