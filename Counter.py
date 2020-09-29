@@ -11,7 +11,9 @@ class Counter:
         self.output_dir = output_dir
         self.structure_manager = structure_manager
         self.working_dir = self.structure_manager.working_dir.replace("~Temp", "~results")
-        self.name = os.path.basename(self.working_dir.replace("/~results", ""))
+
+        dir_name = self.structure_manager.working_dir
+        self.name = os.path.basename(dir_name.replace("/~results", ""))
 
     def start_count(self):
         start = time.time()
