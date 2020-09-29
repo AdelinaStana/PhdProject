@@ -13,9 +13,9 @@ class StructureManager:
 
         self.util = Util(working_dir)  # used for save and load the analysis performed
 
-    def get_classes_from_jar(self):
+    def get_classes_from_jar(self, jar_path):
         import zipfile
-        archive = zipfile.ZipFile('D:\\faculta\\Doctorat\\TestProjects\\jars\\ant.jar', 'r')
+        archive = zipfile.ZipFile(jar_path, 'r')
         temp_list = archive.namelist()
         jar_cls_list = set()
         for item in temp_list:
@@ -26,8 +26,8 @@ class StructureManager:
 
         return jar_cls_list
 
-    def filter_only_jar(self):
-        jar_cls_list = self.get_classes_from_jar()
+    def filter_only_jar(self, jar_path):
+        jar_cls_list = self.get_classes_from_jar(jar_path)
         temp_class_list = set()
 
         for cls in self.class_list:
