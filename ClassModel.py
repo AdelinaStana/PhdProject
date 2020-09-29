@@ -83,6 +83,12 @@ class ClassModel:
             return True
         return False
 
+    def get_nr_of_occ_with(self, link_id):
+        if self.threshold:
+            return self.git_links_below_threshold[link_id]
+        else:
+            return self.git_links_total[link_id]
+
     def add_if_exists(self, name, class_dict):
         if name in class_dict.keys() and name != self.name:
             self.relation_list.add(class_dict[name].unique_id)

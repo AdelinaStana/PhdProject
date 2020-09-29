@@ -78,8 +78,8 @@ class Counter:
         self.results_count[pos] = g.number_of_edges()
         print("Count git links with "+str(occ)+" occ ...")
 
-        Statistics.export_connection_strength(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ.csv",
-                                              self.structure_manager, occ)
+        Statistics.export_connection_percentage(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ.csv",
+                                              self.structure_manager)
 
 
 
