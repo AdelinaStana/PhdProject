@@ -70,10 +70,9 @@ class Statistics:
                 update_percentage1 = (100 * nr_of_updates_together1) / nr_of_total_updates1
                 update_percentage2 = (100 * nr_of_updates_together2) / nr_of_total_updates2
 
-                file_writer.write(class_item[0] + "," + class_item[1] + "," + str(update_percentage1) +
+                file_writer.write(entity1_name + "," + entity2_name + "," + str(update_percentage1) +
                                   "," + str(update_percentage2) + "\n")
             except BaseException as e:
-                print("Statistics error:" + class_item[0] + " - " + class_item[1])
-                print(e)
+                print("Statistics exception: " + entity1_name + " - " + entity2_name)
 
         file_writer.close()
