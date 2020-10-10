@@ -53,6 +53,9 @@ class Counter:
 
     def start_count(self):
         start = time.time()
+        for i in range(0, 14):
+            self.results_count.append(-1)
+
         self.count_code_links()
         self.count_git_links(3, 1)
         index = 4
