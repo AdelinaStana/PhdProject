@@ -29,12 +29,19 @@ class Statistics:
         file_writer.close()
 
     '''
-    Export percentage of update between entities A and B.
-    * percentage of updates between A and B from all A updates
-    * percentage of updates between A and B from all B updates
+    Export percentage of commit update between entities A and B.
+    * percentage of commits involving A and B from all A commits
+    * percentage of commits involving A and B from all B commits
+    * note: number of occurrences between A and B = number of commits in which A and B are involved
+            
+            commits count total  = 8
+            commits count A + B  = 6 
+            
+            occ count total = 140
+            occ count A + B = 6
     '''
     @staticmethod
-    def export_connection_percentage(csv_name, structure_manager):
+    def filter_commit_percentage(csv_name, structure_manager, threshold):
         data = pandas.read_csv(csv_name)
         id_class_name_dict = {}
         entity_class_id_dict = {}
@@ -43,8 +50,9 @@ class Statistics:
             id_class_name_dict[class_item.full_name] = class_item.unique_id
             entity_class_id_dict[class_item.unique_id] = class_item
 
-        file_writer = open(csv_name.replace(".csv", "_filtered.csv"), 'wt')
-        file_writer.write("a,b,c,d\n")
+        file_name = csv_name.replace(".csv", "_filtered_commit" + str(threshold) + ".csv")
+        file_writer = open(file_name, 'wt')
+        file_writer.write("a,b\n")
 
         for class_item in data.values:
             try:
@@ -57,22 +65,21 @@ class Statistics:
                 entity1 = entity_class_id_dict[entity1_id]
                 entity2 = entity_class_id_dict[entity2_id]
 
-                nr_of_updates_together1 = entity1.get_nr_of_occ_with(entity2_id)  # update A with B and other entities
-                nr_of_total_updates1 = entity1.updates_count
-                nr_of_updates_separate = nr_of_total_updates1 - nr_of_updates_together1  # update A without B
-                # and other entities
+                nr_of_commits_together1 = entity1.get_nr_of_occ_with(entity2_id)  # commits involving A and B
+                nr_of_total_commits1 = entity1.commits_count  # total nr of commits involving A
 
-                nr_of_updates_together2 = entity2.get_nr_of_occ_with(entity1_id)  # update B with A and other entities
-                nr_of_total_updates2 = entity2.updates_count
-                nr_of_updates_separate = nr_of_total_updates2 - nr_of_updates_together2  # update B without A
-                # and other entities
+                nr_of_commits_together2 = entity2.get_nr_of_occ_with(entity1_id)  # commits involving A and B
+                nr_of_total_commits2 = entity2.commits_count  # total nr of commits involving B
 
-                update_percentage1 = (100 * nr_of_updates_together1) / nr_of_total_updates1
-                update_percentage2 = (100 * nr_of_updates_together2) / nr_of_total_updates2
+                update_percentage1 = (100 * nr_of_commits_together1) / nr_of_total_commits1
+                update_percentage2 = (100 * nr_of_commits_together2) / nr_of_total_commits2
 
-                file_writer.write(entity1_name + "," + entity2_name + "," + str(update_percentage1) +
-                                  "," + str(update_percentage2) + "\n")
+                if update_percentage1 >= threshold and update_percentage2 >= threshold:
+                    file_writer.write(entity1_name + "," + entity2_name + "\n")
+
             except BaseException as e:
                 print("Statistics exception: " + entity1_name + " - " + entity2_name)
 
         file_writer.close()
+
+        return file_name
