@@ -1,4 +1,4 @@
-import csv
+import pandas
 
 from Graph import Graph
 from threading import Thread
@@ -53,19 +53,19 @@ class Counter:
 
     def start_count(self):
         start = time.time()
-        for i in range(0, 14):
+        for i in range(0, 13):
             self.results_count.append(-1)
 
         self.count_code_links()
-        self.count_git_links(3, 1)
-        index = 4
+        self.count_git_links(2, 1)
+        index = 3
 
         for threshold in range(10, 101, 10):
             unfiltered_file_name = self.working_dir + "\\" + self.name + "_git_links_1occ.csv"
             file_name = Statistics.filter_commit_percentage(unfiltered_file_name, self.structure_manager, threshold)
 
-            csv_reader = csv.reader(file_name)
-            row_count = sum(1 for row in csv_reader)
+            data = pandas.read_csv(file_name)
+            row_count = data.values.size/2
 
             self.results_count[index] = row_count
             index += 1

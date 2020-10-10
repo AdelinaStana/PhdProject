@@ -74,7 +74,7 @@ class Statistics:
                 update_percentage1 = (100 * nr_of_commits_together1) / nr_of_total_commits1
                 update_percentage2 = (100 * nr_of_commits_together2) / nr_of_total_commits2
 
-                if update_percentage1 >= threshold and update_percentage2 >= threshold:
+                if update_percentage1 >= threshold or update_percentage2 >= threshold:
                     file_writer.write(entity1_name + "," + entity2_name + "\n")
 
             except BaseException as e:
