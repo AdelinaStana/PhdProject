@@ -61,6 +61,7 @@ class Counter:
         index = 3
 
         for threshold in range(10, 101, 10):
+            print("Filter with {}% threshold ...".format(threshold))
             unfiltered_file_name = self.working_dir + "\\" + self.name + "_git_links_1occ.csv"
             file_name = Statistics.filter_commit_percentage(unfiltered_file_name, self.structure_manager, threshold)
 
@@ -69,9 +70,9 @@ class Counter:
 
             self.results_count[index] = row_count
             index += 1
+        print(self.results_count)
 
         end = time.time()
-
         elapsed = end - start
         print("Analysis time: "+str(elapsed))
 
