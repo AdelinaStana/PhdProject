@@ -138,8 +138,8 @@ if __name__ == '__main__':
 
         repo_dict = {
             "D:\\faculta\\Doctorat\\TestProjects\\ant": "D:\\faculta\\Doctorat\\TestProjects\\jars\\ant.jar",
-            "D:\\faculta\\Doctorat\\TestProjects\\catalina": "D:\\faculta\\Doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-            "D:\\faculta\\Doctorat\\TestProjects\\hibernate": "D:\\faculta\\Doctorat\\TestProjects\\hibernate\\hibernate-core-5.2.12.Final"
+            #"D:\\faculta\\Doctorat\\TestProjects\\catalina": "D:\\faculta\\Doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+            #"D:\\faculta\\Doctorat\\TestProjects\\hibernate": "D:\\faculta\\Doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
         }
 
         for repo in repo_dict.keys():
