@@ -75,6 +75,9 @@ class Statistics:
                 update_percentage2 = (100 * nr_of_commits_together2) / nr_of_total_commits2
 
                 if update_percentage1 >= threshold and update_percentage2 >= threshold:
+                    max = update_percentage1
+                    if update_percentage2 > max:
+                        max = update_percentage2
                     file_writer.write(entity1_name + "," + entity2_name + "\n")
 
             except BaseException as e:
@@ -83,3 +86,33 @@ class Statistics:
         file_writer.close()
 
         return file_name
+
+    @staticmethod
+    def get_entities_conn(structure_manager):
+        data = pandas.read_csv("D:\\Util\\doctorat\\KeyClassesProject\\hibernate-core-5.2.12.Final.jar_StructOnly.csv")
+        data["logical_count occ > 0"] = "-1"
+        data["logical_count occ > 5"] = "-1"
+        data["logical_count occ > 10"] = "-1"
+        data["logical_count occ > 20"] = "-1"
+        id_class_name_dict = {}
+        entity_class_id_dict = {}
+
+        for class_item in structure_manager.get_class_list():
+            id_class_name_dict[class_item.full_name] = class_item.unique_id
+            entity_class_id_dict[class_item.unique_id] = class_item
+
+        row_index = 0
+        for row in data.values:
+            name = row[0]
+            if name in id_class_name_dict.keys():
+                id = id_class_name_dict[name]
+                class_item = entity_class_id_dict[id]
+                data.iloc[row_index, 14] = len(class_item.get_occurrences_below_threshold(0))
+                data.iloc[row_index, 15] = len(class_item.get_occurrences_below_threshold(5))
+                data.iloc[row_index, 16] = len(class_item.get_occurrences_below_threshold(10))
+                data.iloc[row_index, 17] = len(class_item.get_occurrences_below_threshold(20))
+            row_index += 1
+
+        data.to_csv("D:\\Util\\doctorat\\KeyClassesProject\\hibernate-core-5.2.12.Final.jar_StructOnly_new.csv", index=False)
+
+

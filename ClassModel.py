@@ -79,8 +79,8 @@ class ClassModel:
     def has_path(self, path):
         if path == self.rel_file_path:
             return True
-        if path in self.old_paths:
-            return True
+        #if path in self.old_paths:
+        #   return True
         return False
 
     def get_nr_of_occ_with(self, link_id):
@@ -140,12 +140,12 @@ class ClassModel:
                         for call in local.get_calls():
                             UIObj.print_line(call)
 
-    def set_git_links(self, links, nr_of_commits, commit_date):
+    def set_git_links(self, links, commit_size, commit_date):
         self.commits_count += 1
         for link in links:
             if link != self.unique_id:
                 if self.threshold:
-                    if nr_of_commits <= self.threshold:
+                    if commit_size <= self.threshold:
                         if link not in self.git_links_below_threshold.keys():
                             self.git_links_below_threshold[link] = 1
                         else:
@@ -153,17 +153,17 @@ class ClassModel:
 
                         self.git_date_below_threshold[link] = commit_date
                 else:
-                    if nr_of_commits <= 5:
+                    if commit_size <= 5:
                         if link not in self.git_links_below5.keys():
                             self.git_links_below5[link] = 1
                         else:
                             self.git_links_below5[link] += 1
-                    if nr_of_commits <= 10:
+                    if commit_size <= 10:
                         if link not in self.git_links_below10.keys():
                             self.git_links_below10[link] = 1
                         else:
                             self.git_links_below10[link] += 1
-                    if nr_of_commits <= 20:
+                    if commit_size <= 20:
                         if link not in self.git_links_below20.keys():
                             self.git_links_below20[link] = 1
                         else:

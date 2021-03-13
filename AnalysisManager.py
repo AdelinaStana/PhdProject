@@ -2,6 +2,7 @@ import re
 import shutil
 
 from GitWrapper import GitWrapper
+from Statistics import Statistics
 from StructureManager import *
 from SrcMLWrapper import SrcMLWrapper
 from Counter import Counter
@@ -181,7 +182,8 @@ class AnalysisManager:
 
         print("Start counter ...")
         counter = Counter(self.structureManager, self.output_dir)
-        counter.start_count()
+        counter.start_count_threads()
+        # Statistics.get_entities_conn(self.structureManager)
 
         # counter = PlotCountResults(self.structureManager, self.output_dir)
         # counter.start_count()

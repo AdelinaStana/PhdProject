@@ -90,7 +90,7 @@ if __name__ == '__main__':
                         help='run all existing build-in repositories')
 
     args = option.parse_args()
-    get_files = False
+    get_files = True
     runner = Main(args.repoPath, args.outputPath, args.threshold, get_files, args.jarPath)
 
     if not args.all:
@@ -98,52 +98,52 @@ if __name__ == '__main__':
         if args.getStatistics:
             runner.get_commit_statistics()
     else:
-        repo_orig_list = ["D:\\faculta\\Master\\TestProjects\\bluecove",
-                     "D:\\faculta\\Master\\TestProjects\\aima-java",
-                     "D:\\faculta\\Master\\TestProjects\\powermock",
-                     "D:\\faculta\\Master\\TestProjects\\restfb",
-                     "D:\\faculta\\Master\\TestProjects\\RxJava",
-                     "D:\\faculta\\Master\\TestProjects\\metro-jax-ws",
-                     "D:\\faculta\\Master\\TestProjects\\mockito",
-                     "D:\\faculta\\Master\\TestProjects\\grizzly",
-                     "D:\\faculta\\Master\\TestProjects\\shipkit",
-                     "D:\\faculta\\Master\\TestProjects\\OpenClinica",
-                     "D:\\faculta\\Master\\TestProjects\\robolectric",
-                     "D:\\faculta\\Master\\TestProjects\\aeron",
-                     "D:\\faculta\\Master\\TestProjects\\antlr4",
-                     "D:\\faculta\\Master\\TestProjects\\mcidasv",
-                     "D:\\faculta\\Master\\TestProjects\\ShareX",
-                     "D:\\faculta\\Master\\TestProjects\\aspnetboilerplate",
-                     "D:\\faculta\\Master\\TestProjects\\orleans",
-                     "D:\\faculta\\Master\\TestProjects\\cli",
-                     "D:\\faculta\\Master\\TestProjects\\cake",
-                     "D:\\faculta\\Master\\TestProjects\\Avalonia",
-                     "D:\\faculta\\Master\\TestProjects\\EntityFrameworkCore",
-                     "D:\\faculta\\Master\\TestProjects\\jellyfin",
-                     "D:\\faculta\\Master\\TestProjects\\PowerShell",
-                     "D:\\faculta\\Master\\TestProjects\\WeiXinMPSDK",
-                     "D:\\faculta\\Master\\TestProjects\\ArchiSteamFarm",
-                     "D:\\faculta\\Master\\TestProjects\\VisualStudio",
-                     "D:\\faculta\\Master\\TestProjects\\CppSharp"]
+        repo_orig_list = ["D:\\Util\\doctorat\\TestProjects\\bluecove",
+                     "D:\\Util\\doctorat\\TestProjects\\aima-java",
+                     "D:\\Util\\doctorat\\TestProjects\\powermock",
+                     "D:\\Util\\doctorat\\TestProjects\\restfb",
+                     "D:\\Util\\doctorat\\TestProjects\\RxJava",
+                     "D:\\Util\\doctorat\\TestProjects\\metro-jax-ws",
+                     "D:\\Util\\doctorat\\TestProjects\\mockito",
+                     "D:\\Util\\doctorat\\TestProjects\\grizzly",
+                     "D:\\Util\\doctorat\\TestProjects\\shipkit",
+                     "D:\\Util\\doctorat\\TestProjects\\OpenClinica",
+                     "D:\\Util\\doctorat\\TestProjects\\robolectric",
+                     "D:\\Util\\doctorat\\TestProjects\\aeron",
+                     "D:\\Util\\doctorat\\TestProjects\\antlr4",
+                     "D:\\Util\\doctorat\\TestProjects\\mcidasv",
+                     "D:\\Util\\doctorat\\TestProjects\\ShareX",
+                     "D:\\Util\\doctorat\\TestProjects\\aspnetboilerplate",
+                     "D:\\Util\\doctorat\\TestProjects\\orleans",
+                     "D:\\Util\\doctorat\\TestProjects\\cli",
+                     "D:\\Util\\doctorat\\TestProjects\\cake",
+                     "D:\\Util\\doctorat\\TestProjects\\Avalonia",
+                     "D:\\Util\\doctorat\\TestProjects\\EntityFrameworkCore",
+                     "D:\\Util\\doctorat\\TestProjects\\jellyfin",
+                     "D:\\Util\\doctorat\\TestProjects\\PowerShell",
+                     "D:\\Util\\doctorat\\TestProjects\\WeiXinMPSDK",
+                     "D:\\Util\\doctorat\\TestProjects\\ArchiSteamFarm",
+                     "D:\\Util\\doctorat\\TestProjects\\VisualStudio",
+                     "D:\\Util\\doctorat\\TestProjects\\CppSharp"]
 
         repo_list_aux = [
-            "D:\\faculta\\Doctorat\\TestProjects\\jmeter",
-            "D:\\faculta\\Doctorat\\TestProjects\\log4j",
-            "D:\\faculta\\Doctorat\\TestProjects\\wro4j",
+            "D:\\Util\\doctorat\\TestProjects\\jmeter",
+            "D:\\Util\\doctorat\\TestProjects\\log4j",
+            "D:\\Util\\doctorat\\TestProjects\\wro4j",
 
-            "D:\\faculta\\Doctorat\\TestProjects\\ant",
-            "D:\\faculta\\Doctorat\\TestProjects\\hibernate",
-            "D:\\faculta\\Doctorat\\TestProjects\\catalina",
+            "D:\\Util\\doctorat\\TestProjects\\ant",
+            "D:\\Util\\doctorat\\TestProjects\\hibernate",
+            "D:\\Util\\doctorat\\TestProjects\\catalina",
         ]
 
         repo_dict = {
-            "D:\\faculta\\Doctorat\\TestProjects\\ant": "D:\\faculta\\Doctorat\\TestProjects\\jars\\ant.jar",
-            #"D:\\faculta\\Doctorat\\TestProjects\\catalina": "D:\\faculta\\Doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-            #"D:\\faculta\\Doctorat\\TestProjects\\hibernate": "D:\\faculta\\Doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+             #"D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
+             #"D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+             #"D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
         }
 
-        for repo in repo_dict.keys():
+        for repo in repo_orig_list:
             runner.repo = repo
-            runner.jar_file = repo_dict[repo]
+            #runner.jar_file = repo_dict[repo]
             # runner.get_commit_statistics()
             runner.get_results()
