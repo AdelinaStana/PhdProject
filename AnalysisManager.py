@@ -1,6 +1,7 @@
 import re
 import shutil
 
+from CounterAll import CounterAll
 from GitWrapper import GitWrapper
 from Statistics import Statistics
 from StructureManager import *
@@ -181,8 +182,8 @@ class AnalysisManager:
         self.build_git_model_without_comments()
 
         print("Start counter ...")
-        counter = Counter(self.structureManager, self.output_dir)
-        counter.start_count_threads()
+        counter = CounterAll(self.structureManager, self.output_dir)
+        counter.start_count()
         # Statistics.get_entities_conn(self.structureManager)
 
         # counter = PlotCountResults(self.structureManager, self.output_dir)

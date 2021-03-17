@@ -33,9 +33,10 @@ class Graph:
         self.file_writer.write("a,b\n")  # header
 
         for class_item in data.values:
-            entity1 = class_dict_id[class_item[0]]
-            entity2 = class_dict_id[class_item[1]]
             try:
+                entity1 = class_dict_id[class_item[0]]
+                entity2 = class_dict_id[class_item[1]]
+
                 self.file_writer.write(entity1 + "," + entity2 + "\n")
             except KeyError:
                 print("Key exception for: "+self.csv_name)
