@@ -142,7 +142,6 @@ class GitWrapper:
     def get_commits(self):
         current_dir = os.getcwd()
         repo = self.get_repo()
-        flag = True
         try:
             os.mkdir(self.repo_path+"\~diffs")
         except:
@@ -158,9 +157,7 @@ class GitWrapper:
                 nr = 0
                 print_nr = 0
                 for commit in commits:
-                    if print_nr >= 6713:
-                        flag = False
-                    if flag:
+                    try:
                         parent = commit.parents[0] if commit.parents else EMPTY_TREE_SHA
                         # self.getDeletedFiles(commit, parent)
                         nr_of_files_changed = self.get_changed_files_number(commit, parent)
@@ -171,6 +168,8 @@ class GitWrapper:
                             nr += 1
                         print_nr += 1
                         print(print_nr)
+                    except BaseException as e:
+                        print(e)
             else:
                 print('Could not load repository at ' + self.repo_path + '.')
         except BaseException as e:
