@@ -73,7 +73,6 @@ class CounterAll:
         except BaseException as e:
             print(e)
         print("Number of classes: " + str(g.number_of_nodes()))
-        print("Number of SD: " + str(g.number_of_edges()))
         self.results_count[0] = g.number_of_nodes()
         self.results_count[1] = g.number_of_edges()
 
