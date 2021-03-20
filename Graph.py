@@ -49,8 +49,13 @@ class Graph:
         self.file_writer.close()
         data = pandas.read_csv(self.csv_name + ".csv")
         data = data.drop_duplicates(subset=['a', 'b'], keep='first')
-        self.write_names_of_edges_csv(data)
         return len(data.values)
+
+    def export_names_to_csv(self):
+        self.file_writer.close()
+        data = pandas.read_csv(self.csv_name + ".csv")
+        data = data.drop_duplicates(subset=['a', 'b'], keep='first')
+        self.write_names_of_edges_csv(data)
 
     def number_of_nodes(self):
         return len(self.nodes)

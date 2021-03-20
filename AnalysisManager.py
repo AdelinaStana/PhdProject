@@ -1,12 +1,13 @@
 import re
 import shutil
 
-from CounterAll import CounterAll
 from GitWrapper import GitWrapper
 from Statistics import Statistics
 from StructureManager import *
 from SrcMLWrapper import SrcMLWrapper
-from Counter import Counter
+from CounterOccurrences import CounterOccurrences
+from CounterCommit import CounterCommit
+from CounterStrength import CounterStrength
 
 
 class AnalysisManager:
@@ -182,10 +183,9 @@ class AnalysisManager:
         self.build_git_model_without_comments()
 
         print("Start counter ...")
-        counter = CounterAll(self.structureManager, self.output_dir)
-        counter.start_count()
-        # Statistics.get_entities_conn(self.structureManager)
+        counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
+        counter_occurrences.start_count()
 
-        # counter = PlotCountResults(self.structureManager, self.output_dir)
-        # counter.start_count()
+        #counter_strength = CounterStrength(self.structureManager, self.output_dir)
+        #counter_strength.start_count()
 

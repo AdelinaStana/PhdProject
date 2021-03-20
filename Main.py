@@ -5,11 +5,11 @@ from AnalysisManager import AnalysisManager
 
 
 class Main:
-    def __init__(self, path, output, threshold, getfiles, jar=None):
+    def __init__(self, path, output, threshold, get_files, jar=None):
         self.repo = path
         self.output_dir = output
         self.threshold = threshold
-        self.get_files = getfiles
+        self.get_files = get_files
         self.jar_file = jar
 
     '''
@@ -20,6 +20,7 @@ class Main:
     def get_results(self):
         print("***************************************" + self.repo + "*************************************")
         analysis_manager = AnalysisManager(self, self.repo, self.output_dir, self.threshold, self.jar_file)
+
         if self.get_files:
             print("Converting to XML ...")
             analysis_manager.load_files_from_repo()
@@ -80,7 +81,7 @@ if __name__ == '__main__':
                         help='path of output folder')
     option.add_argument('--jarPath', dest='jarPath', default="", type=str,
                         help='path of jar file')
-    option.add_argument('--threshold', dest='threshold', default=0, type=int,
+    option.add_argument('--threshold', dest='threshold', default=None, type=int,
                         help='threshold for accepted length of git files in a commit')
     option.add_argument('--getFiles', dest='getFiles', default=False, type=bool,
                         help='download git diffs and convert source code to xml')
@@ -90,8 +91,7 @@ if __name__ == '__main__':
                         help='run all existing build-in repositories')
 
     args = option.parse_args()
-    get_files = True
-    runner = Main(args.repoPath, args.outputPath, args.threshold, get_files, args.jarPath)
+    runner = Main(args.repoPath, args.outputPath, args.threshold, args.getFiles, args.jarPath)
 
     if not args.all:
         runner.get_results()

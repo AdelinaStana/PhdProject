@@ -83,7 +83,7 @@ class CountMaxOcc:
             g = Graph(self.working_dir+"\\git5_links", self.structure_manager)
             try:
                 for class_item in self.structure_manager.get_class_list():
-                    git_list = class_item.get_occurrence_below5(occ)
+                    git_list = class_item.get_occurrence_commits_below_5files(occ)
                     for related in git_list:
                         g.add_edge(class_item.unique_id, related)
             except BaseException as e:
@@ -106,7 +106,7 @@ class CountMaxOcc:
             g = Graph(self.working_dir+"\\git10_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_occurrence_below10(occ)
+                    git_list = classItem.get_occurrence_commits_below_10files(occ)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -127,7 +127,7 @@ class CountMaxOcc:
             g = Graph(self.working_dir+"\\git20_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_occurrence_below20(occ)
+                    git_list = classItem.get_occurrence_commits_below_20files(occ)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -149,7 +149,7 @@ class CountMaxOcc:
             g = Graph(self.working_dir+"\\git_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_occurrences_total(occ)
+                    git_list = classItem.get_unfiltered_commit_size_occurrences(occ)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:

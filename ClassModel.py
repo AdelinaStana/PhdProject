@@ -17,8 +17,7 @@ class ClassModel:
         self.git_links_below10 = {}
         self.git_links_below20 = {}
         self.git_links_total = {}
-        self.git_links_below_threshold = {}
-        self.git_date_below_threshold = {}
+        self.git_links_below_commit_size_threshold = {}
         self.relation_list = set()
         self.commits_count = 0  # count number of total commits in which is involved
 
@@ -79,13 +78,13 @@ class ClassModel:
     def has_path(self, path):
         if path == self.rel_file_path:
             return True
-        #if path in self.old_paths:
-        #   return True
+        if path in self.old_paths:
+           return True
         return False
 
     def get_nr_of_occ_with(self, link_id):
         if self.threshold:
-            return self.git_links_below_threshold[link_id]
+            return self.git_links_below_commit_size_threshold[link_id]
         else:
             return self.git_links_total[link_id]
 
@@ -146,12 +145,10 @@ class ClassModel:
             if link != self.unique_id:
                 if self.threshold:
                     if commit_size <= self.threshold:
-                        if link not in self.git_links_below_threshold.keys():
-                            self.git_links_below_threshold[link] = 1
+                        if link not in self.git_links_below_commit_size_threshold.keys():
+                            self.git_links_below_commit_size_threshold[link] = 1
                         else:
-                            self.git_links_below_threshold[link] += 1
-
-                        self.git_date_below_threshold[link] = commit_date
+                            self.git_links_below_commit_size_threshold[link] += 1
                 else:
                     if commit_size <= 5:
                         if link not in self.git_links_below5.keys():
@@ -174,42 +171,39 @@ class ClassModel:
                     else:
                         self.git_links_total[link] += 1
 
-    def get_commit_date(self, link):
-        return self.git_date_below_threshold[link]
-
     ##########################################################################################################
 
-    def get_occurrence_below5(self, nr):
+    def get_occurrence_commits_below_5files(self, nr):
         return set(key for key, value in self.git_links_below5.items() if value >= nr)
 
-    def get_occurrence_below10(self, nr):
+    def get_occurrence_commits_below_10files(self, nr):
         return set(key for key, value in self.git_links_below10.items() if value >= nr)
 
-    def get_occurrence_below20(self, nr):
+    def get_occurrence_commits_below_20files(self, nr):
         return set(key for key, value in self.git_links_below20.items() if value >= nr)
 
-    def get_occurrences_total(self, nr):
+    def get_unfiltered_commit_size_occurrences(self, nr):
         return set(key for key, value in self.git_links_total.items() if value >= nr)
 
-    def get_occurrences_below_threshold(self, nr):
-        return set(key for key, value in self.git_links_below_threshold.items() if value >= nr)
+    def get_filtered_commit_size_occurrences(self, nr):
+        return set(key for key, value in self.git_links_below_commit_size_threshold.items() if value >= nr)
 
     #####################################################################################################
 
     def get_match5_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_below5(nr_of_occ)
+        git_links = self.get_occurrence_commits_below_5files(nr_of_occ)
         return self.relation_list.intersection(git_links)
 
     def get_match10_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_below10(nr_of_occ)
+        git_links = self.get_occurrence_commits_below_10files(nr_of_occ)
         return self.relation_list.intersection(git_links)
 
     def get_match20_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_below20(nr_of_occ)
+        git_links = self.get_occurrence_commits_below_20files(nr_of_occ)
         return self.relation_list.intersection(git_links)
 
     def get_match_occ_total(self, nr_of_occ):
-        git_links = self.get_occurrences_total(nr_of_occ)
+        git_links = self.get_unfiltered_commit_size_occurrences(nr_of_occ)
         return self.relation_list.intersection(git_links)
 
     #####################################################################################################

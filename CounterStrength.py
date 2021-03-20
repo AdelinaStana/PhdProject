@@ -7,7 +7,7 @@ import os
 from Statistics import Statistics
 
 
-class Counter:
+class CounterStrength:
     def __init__(self, structure_manager, output_dir):
         self.results_count = []
         self.output_dir = output_dir
@@ -17,9 +17,9 @@ class Counter:
         dir_name = self.structure_manager.working_dir
         self.name = os.path.basename(dir_name.replace("/~results", ""))
 
-    def start_count_threads(self):
+    def start_count(self):
         start = time.time()
-        number_of_steps = 20
+        number_of_steps = 10
 
         for i in range(0, number_of_steps + 2):
             self.results_count.append(-1)
@@ -29,9 +29,11 @@ class Counter:
         try:
             t_code = Thread(target=self.count_code_links, args=())
             threads.append(t_code)
+            t_git = Thread(target=self.count_git_links, args=(2, 1))
+            threads.append(t_git)
             for i in range(1, number_of_steps + 1):
-                t_git = Thread(target=self.count_git_links, args=(i + 1, i))
-                threads.append(t_git)
+                t_strength = Thread(target=self.count_git_links, args=(i + 1, i))
+                threads.append(t_strength)
 
             for thread in threads:
                 thread.start()
@@ -101,13 +103,49 @@ class Counter:
         g = Graph(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
-                git_list = class_item.get_occurrences_below_threshold(occ)
+                git_list = class_item.get_filtered_commit_size_occurrences(occ)
                 for related in git_list:
                     g.add_edge(class_item.unique_id, related)
         except BaseException as e:
             print(e)
         self.results_count[pos] = g.number_of_edges()
         print("Count git links with "+str(occ)+" occ ...")
+
+    def count_strength(self, pos, threshold):
+        id_class_name_dict = {}
+        entity_class_id_dict = {}
+
+        for class_item in self.structure_manager.get_class_list():
+            id_class_name_dict[class_item.full_name] = class_item.unique_id
+            entity_class_id_dict[class_item.unique_id] = class_item
+
+        g = Graph(self.working_dir + "\\" + self.name + "_git_strength_"+str(threshold), self.structure_manager)
+        try:
+            for classItem in self.structure_manager.get_class_list():
+                entity1 = classItem
+                entity1_id = classItem.unique_id
+
+                related_list = classItem.get_match_occ_total(1)
+                for entity2_id in related_list:
+                    entity2 = id_class_name_dict[entity2_id]
+
+                    nr_of_commits_together1 = entity1.get_nr_of_occ_with(entity2_id)  # commits involving A and B
+                    nr_of_total_commits1 = entity1.commits_count  # total nr of commits involving A
+
+                    nr_of_commits_together2 = entity2.get_nr_of_occ_with(entity1_id)  # commits involving A and B
+                    nr_of_total_commits2 = entity2.commits_count  # total nr of commits involving B
+
+                    update_percentage1 = (100 * nr_of_commits_together1) / nr_of_total_commits1
+                    update_percentage2 = (100 * nr_of_commits_together2) / nr_of_total_commits2
+
+                    if update_percentage1 >= threshold and update_percentage2 >= threshold:
+                        g.add_edge(classItem.unique_id, entity2_id)
+
+        except BaseException as e:
+            print(e)
+
+        self.results_count[pos] = g.number_of_edges()
+        print("Count git links with strength "+str(threshold)+"% ...")
 
 
 
