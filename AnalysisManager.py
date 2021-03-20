@@ -45,6 +45,8 @@ class AnalysisManager:
         git_wrapper = GitWrapper(self.working_dir)
         self.old_paths_dict = git_wrapper.get_old_paths(self.files_list)
 
+        self.assign_old_paths()
+
     def assign_old_paths(self):
         for class_item in self.structureManager.class_list:
             try:
@@ -66,7 +68,7 @@ class AnalysisManager:
         self.files_list = []
         for r, d, f in os.walk(self.working_dir):
             for file in f:
-                if file.endswith("java"):
+                if file.endswith("java") or file.endswith("cs"):
                     self.files_list.append(os.path.join(r, file))
 
     def load_structure_from_xml(self, file):
@@ -176,16 +178,16 @@ class AnalysisManager:
         print("Building structural dependencies ...")
         self.analyse_xml()
 
-        self.get_renamed_paths()
-        self.assign_old_paths()
+        # TODO: find a better way to get renaming of files, current method does not work
+        # self.get_renamed_paths()
 
         print("Build git model ...")
-        self.build_git_model_without_comments()
+        self.build_git_model_with_comments()
 
         print("Start counter ...")
         counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
         counter_occurrences.start_count()
 
-        #counter_strength = CounterStrength(self.structureManager, self.output_dir)
+        #counter_strength = CounterStrength(self.strubuild_git_model_with_commentsctureManager, self.output_dir)
         #counter_strength.start_count()
 
