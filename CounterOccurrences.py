@@ -53,7 +53,7 @@ class CounterOccurrences:
         try:
             for classItem in self.structure_manager.get_class_list():
                 g.add_node(classItem.unique_id)
-                related_list = classItem.get_related()
+                related_list = classItem.get_structural_related_links()
                 for related in related_list:
                     g.add_edge(classItem.unique_id, related)
         except BaseException as e:

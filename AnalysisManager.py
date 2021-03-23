@@ -185,9 +185,9 @@ class AnalysisManager:
         self.build_git_model_with_comments()
 
         print("Start counter ...")
-        counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
-        counter_occurrences.start_count()
+        #counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
+        #counter_occurrences.start_count()
 
-        #counter_strength = CounterStrength(self.strubuild_git_model_with_commentsctureManager, self.output_dir)
-        #counter_strength.start_count()
+        counter_strength = CounterStrength(self.structureManager, self.output_dir)
+        counter_strength.start_count()
 

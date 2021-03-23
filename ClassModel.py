@@ -18,7 +18,7 @@ class ClassModel:
         self.git_links_below20 = {}
         self.git_links_total = {}
         self.git_links_below_commit_size_threshold = {}
-        self.relation_list = set()
+        self.structural_relation_list = set()
         self.commits_count = 0  # count number of total commits in which is involved
 
     def set_name(self, name):
@@ -70,10 +70,10 @@ class ClassModel:
         return self.methods
 
     def set_related(self, rel_list):
-        self.relation_list = rel_list
+        self.structural_relation_list = rel_list
 
-    def get_related(self):
-        return self.relation_list
+    def get_structural_related_links(self):
+        return self.structural_relation_list
 
     def has_path(self, path):
         if path == self.rel_file_path:
@@ -90,10 +90,10 @@ class ClassModel:
 
     def add_if_exists(self, name, class_dict):
         if name in class_dict.keys() and name != self.name:
-            self.relation_list.add(class_dict[name].unique_id)
+            self.structural_relation_list.add(class_dict[name].unique_id)
 
     def build_related(self, class_dict):
-        self.relation_list = set()
+        self.structural_relation_list = set()
 
         for attrib in self.attributes:
             self.add_if_exists(attrib.get_type(), class_dict)
@@ -192,25 +192,25 @@ class ClassModel:
 
     def get_match5_occ(self, nr_of_occ):
         git_links = self.get_occurrence_commits_below_5files(nr_of_occ)
-        return self.relation_list.intersection(git_links)
+        return self.structural_relation_list.intersection(git_links)
 
     def get_match10_occ(self, nr_of_occ):
         git_links = self.get_occurrence_commits_below_10files(nr_of_occ)
-        return self.relation_list.intersection(git_links)
+        return self.structural_relation_list.intersection(git_links)
 
     def get_match20_occ(self, nr_of_occ):
         git_links = self.get_occurrence_commits_below_20files(nr_of_occ)
-        return self.relation_list.intersection(git_links)
+        return self.structural_relation_list.intersection(git_links)
 
     def get_match_occ_total(self, nr_of_occ):
         git_links = self.get_unfiltered_commit_size_occurrences(nr_of_occ)
-        return self.relation_list.intersection(git_links)
+        return self.structural_relation_list.intersection(git_links)
 
     #####################################################################################################
 
     def print_git_below_5_links(self, system_keys):
         git_links = set(key for key, value in self.git_links_below5.items())
-        pure_git_links = list(set(git_links) - set(self.relation_list))
+        pure_git_links = list(set(git_links) - set(self.structural_relation_list))
         output = self.name
         for key in system_keys:
             if key in pure_git_links and key != self.unique_id:
@@ -225,7 +225,7 @@ class ClassModel:
     def get_git_below_5_links(self):
         try:
             git_links = set(key for key, value in self.git_links_below5.items() if value >= 2)
-            pure_git_links = list(set(git_links) - set(self.relation_list))
+            pure_git_links = list(set(git_links) - set(self.structural_relation_list))
             values = []
             output = self.name + " - Indiv. entities: " + str(len(pure_git_links))
             avg = 0
@@ -249,7 +249,7 @@ class ClassModel:
     def get_median(self, git_links_below_x, x, y, max_val):
         try:
             git_links = set(key for key, value in git_links_below_x.items())
-            pure_git_links = list(set(git_links) - set(self.relation_list))
+            pure_git_links = list(set(git_links) - set(self.structural_relation_list))
 
             points = []
             for key in pure_git_links:
@@ -268,7 +268,7 @@ class ClassModel:
 
         try:
             git_links = set(key for key, value in git_links_below_x.items() if value >= k)
-            pure_git_links = list(set(git_links) - set(self.relation_list))
+            pure_git_links = list(set(git_links) - set(self.structural_relation_list))
 
             avg = 0
             for key in pure_git_links:

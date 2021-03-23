@@ -73,7 +73,7 @@ class Util:
 
                 code_related_element = ET.SubElement(class_element,
                                                      'codelinks')
-                related_list = ",".join(class_item.get_related())
+                related_list = ",".join(class_item.get_structural_related_links())
                 code_related_element.text = related_list
             except BaseException as e:
                 print(e)
