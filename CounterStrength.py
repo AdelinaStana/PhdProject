@@ -119,6 +119,7 @@ class CounterStrength:
             print(e)
 
         self.results_count[pos] = g.number_of_edges()
+        g.export_names_to_csv()
         print("Count git links with strength "+str(threshold)+"% ...")
 
     def count_strength_overlapping_with_code(self, pos, threshold):
@@ -155,6 +156,7 @@ class CounterStrength:
             print(e)
 
         self.results_count[pos] = g.number_of_edges()
+        g.export_names_to_csv()
         print("Count git links with strength "+str(threshold)+"% ...")
 
 
