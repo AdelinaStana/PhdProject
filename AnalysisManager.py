@@ -8,6 +8,7 @@ from SrcMLWrapper import SrcMLWrapper
 from CounterOccurrences import CounterOccurrences
 from CounterCommit import CounterCommit
 from CounterStrength import CounterStrength
+from CounterStrengthConfidence import CounterStrengthConfidence
 
 
 class AnalysisManager:
@@ -191,6 +192,6 @@ class AnalysisManager:
         #counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
         #counter_occurrences.start_count()
 
-        counter_strength = CounterStrength(self.structureManager, self.output_dir)
+        counter_strength = CounterStrengthConfidence(self.structureManager, self.output_dir)
         counter_strength.start_count()
 
