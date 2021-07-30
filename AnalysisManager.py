@@ -194,9 +194,9 @@ class AnalysisManager:
         #counter_occurrences.start_count()
 
         counter_strength = CounterStrengthConfidence(self.structureManager, self.output_dir)
-        #counter_strength.start_count()
+        counter_strength.start_count()
 
-        c = PlotCountResults(self.structureManager, self.output_dir)
-        c.start_count()
+        #c = PlotCountResults(self.structureManager, self.output_dir)
+        #c.start_count()
 
 

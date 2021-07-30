@@ -1,3 +1,5 @@
+import statistics
+
 from Graph import Graph
 from threading import Thread
 import time
@@ -47,12 +49,18 @@ class CounterStrengthConfidence(CounterStrength):
 
     def count_strength(self, pos, threshold):
         entity_class_id_dict = {}
-        max_system = -1
+        max_occ_set = set()
 
-        for class_item in self.structure_manager.get_class_list():
-            entity_class_id_dict[class_item.unique_id] = class_item
-            if max_system < class_item.commits_count:
-                max_system = class_item.commits_count
+        for classItem in self.structure_manager.get_class_list():
+            entity_class_id_dict[classItem.unique_id] = classItem
+            values = classItem.git_links_below_commit_size_threshold.values()
+            max_occ = 0
+            if values:
+                max_occ = max(values)
+            max_occ_set.add(max_occ)
+
+        mean = statistics.mean(list(max_occ_set))
+        print(mean)
 
         g = Graph(self.working_dir + "\\" + self.name + "_git_strength_"+str(threshold), self.structure_manager)
         try:
@@ -70,8 +78,8 @@ class CounterStrengthConfidence(CounterStrength):
                     nr_of_commits_together2 = entity2.get_nr_of_occ_with(entity1_id)  # commits involving A and B
                     nr_of_total_commits2 = entity2.commits_count  # total nr of commits involving B
 
-                    confidence1 = nr_of_total_commits1/max_system   # c [0,1]
-                    confidence2 = nr_of_total_commits2/max_system
+                    confidence1 = nr_of_total_commits1/mean
+                    confidence2 = nr_of_total_commits2/mean
 
                     update_percentage1 = ((100 * nr_of_commits_together1) / nr_of_total_commits1) * confidence1
                     update_percentage2 = ((100 * nr_of_commits_together2) / nr_of_total_commits2) * confidence2
@@ -80,7 +88,7 @@ class CounterStrengthConfidence(CounterStrength):
                         g.add_edge(classItem.unique_id, entity2_id)
 
         except BaseException as e:
-            print(e)
+            print("Exception: "+str(e))
 
         self.results_count[pos] = g.number_of_edges()
         g.export_names_to_csv()
