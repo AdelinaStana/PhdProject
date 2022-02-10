@@ -35,15 +35,15 @@ class PlotCountResults:
         plt.clf()
         plt.scatter(x, y, s=area, c=colors, alpha=0.5)
         plt.title(self.proj_name)
-        plt.xlabel('LD unique id')
-        plt.ylabel('commits involved')
+        plt.xlabel('entity id')
+        plt.ylabel('max occurrence with another entity')
         plt.axhline(y=med, color='b')
         plt.savefig(self.output_dir+"\\fig_"+self.proj_name+"_allcommits.png")
 
     def build_max_commit_plot(self):
         x = []
         y = []
-        max_val = set()
+        max_val = []
         try:
             for classItem in self.structure_manager.get_class_list():
                 x.append(classItem.unique_id)
@@ -52,11 +52,10 @@ class PlotCountResults:
                 if values:
                     max_occ = max(values)
                 y.append(max_occ)
-                max_val.add(max_occ)
+                max_val.append(max_occ)
         except BaseException as e:
             print(e)
 
-        max_val = list(max_val)
         med = statistics.mean(max_val)
         print(med)
 
@@ -72,7 +71,7 @@ class PlotCountResults:
         plt.clf()
         plt.scatter(x, y, s=area, c=colors, alpha=0.5)
         plt.title(self.proj_name)
-        plt.xlabel('LD unique id')
-        plt.ylabel('commits involved')
+        plt.xlabel('entity id')
+        plt.ylabel('max occurrence with another entity')
         plt.axhline(y=med, color='b')
         plt.savefig(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png")
