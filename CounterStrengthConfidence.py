@@ -14,7 +14,7 @@ class CounterStrengthConfidence(CounterStrength):
         start = time.time()
         number_of_steps = 10
 
-        for i in range(0, number_of_steps + 2):
+        for i in range(0, number_of_steps + 3):
             self.results_count.append(-1)
 
         threads = []
@@ -25,8 +25,8 @@ class CounterStrengthConfidence(CounterStrength):
             t_git = Thread(target=self.count_git_links, args=(2, 1))
             threads.append(t_git)
 
-            for i in range(1, number_of_steps + 1):
-                t_strength = Thread(target=self.count_strength, args=(i + 1, i*10))
+            for i in range(0, number_of_steps + 1):
+                t_strength = Thread(target=self.count_overlapping_with_code, args=(i + 2, i*10))
                 threads.append(t_strength)
 
             for thread in threads:
@@ -96,3 +96,54 @@ class CounterStrengthConfidence(CounterStrength):
 
         self.results_count[pos] = entities_count
         print("Count git links with strength "+str(threshold)+"% ...")
+
+    def count_overlapping_with_code(self, pos, threshold):
+            entity_class_id_dict = {}
+            max_occ_list = []
+
+            for classItem in self.structure_manager.get_class_list():
+                entity_class_id_dict[classItem.unique_id] = classItem
+                values = classItem.git_links_below_commit_size_threshold.values()
+                max_occ = 0
+                if values:
+                    max_occ = max(values)
+                max_occ_list.append(max_occ)
+
+            mean = statistics.mean(max_occ_list)
+            print(mean)
+
+            csv_name = self.working_dir + "\\" + self.name + "_git_strength_overlapp_" + str(threshold) + ".csv"
+            file_writer = open(csv_name, 'wt')
+            file_writer.write("a,b,c\n")
+
+            entities_count = 0
+            try:
+                for classItem in self.structure_manager.get_class_list():
+                    entity1 = classItem
+
+                    commit_related_list = classItem.get_filtered_commit_size_occurrences(1)
+                    code_related_list = classItem.get_structural_related_links()
+                    related_list = commit_related_list.intersection(code_related_list)
+
+                    for entity2_id in related_list:
+                        entity2 = entity_class_id_dict[entity2_id]
+
+                        freqAUB = entity1.get_nr_of_occ_with(entity2_id)  # commits involving A and B
+                        freqA = entity1.commits_count  # total nr of commits involving A
+
+                        strength = freqAUB / mean
+
+                        confidence_percent = ((100 * freqAUB) / freqA) * strength
+
+                        if confidence_percent >= threshold:
+                            file_writer.write(entity1.full_name + "," + entity2.full_name + "," +
+                                              str(round(confidence_percent, 0)) + "\n")
+                            entities_count += 1
+
+            except BaseException as e:
+                print("Exception: " + str(e))
+
+            file_writer.close()
+
+            self.results_count[pos] = entities_count
+            print("Count git links with strength " + str(threshold) + "% ...")
