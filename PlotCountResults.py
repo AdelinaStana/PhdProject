@@ -66,12 +66,14 @@ class PlotCountResults:
 
         print(i)
 
-        colors = (0, 0, 0)
+        colors = (0, 0, 0, 0)
         area = np.pi * 3
         plt.clf()
-        plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+        plt.figure(figsize=(12, 4))
+        plt.scatter(x, y, s=area, alpha=1)
         plt.title(self.proj_name)
         plt.xlabel('entity id')
         plt.ylabel('max occurrence with another entity')
-        plt.axhline(y=med, color='b')
-        plt.savefig(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png")
+        plt.axhline(y=med, color='black')
+        print(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png")
+        plt.savefig(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png", dpi=600)
