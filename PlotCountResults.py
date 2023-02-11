@@ -44,6 +44,7 @@ class PlotCountResults:
         x = []
         y = []
         max_val = []
+        
         try:
             for classItem in self.structure_manager.get_class_list():
                 x.append(classItem.unique_id)
@@ -58,7 +59,6 @@ class PlotCountResults:
 
         med = statistics.mean(max_val)
         print(med)
-
         i = 0
         for nr in max_val:
             if nr > med:
@@ -66,7 +66,6 @@ class PlotCountResults:
 
         print(i)
 
-        colors = (0, 0, 0, 0)
         area = np.pi * 3
         plt.clf()
         plt.figure(figsize=(12, 4))
@@ -77,3 +76,47 @@ class PlotCountResults:
         plt.axhline(y=med, color='black')
         print(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png")
         plt.savefig(self.output_dir+"\\fig_"+self.proj_name+"_maxOcc.png", dpi=600)
+
+    def build_histogram_plot(self):
+        x = []
+        y = []
+        max_val = []
+        try:
+            for classItem in self.structure_manager.get_class_list():
+                x.append(classItem.unique_id)
+                values = classItem.git_links_below_commit_size_threshold.values()
+                max_occ = 0
+                if values:
+                    max_occ = max(values)
+                y = y + list(values)
+                max_val.append(max_occ)
+        except BaseException as e:
+            print(e)
+
+        med = statistics.mean(max_val)
+        print(med)
+
+        i = 0
+        for nr in max_val:
+            if nr > med:
+                i += 1
+
+        print(i)
+
+
+        plt.clf()
+        plt.figure(figsize=(12, 12))
+
+        density, bins, _ = plt.hist(y, alpha=0.5, edgecolor='black', color='steelblue', histtype='bar')
+
+        count, _ = np.histogram(y, bins)
+        for x, y, num in zip(bins, density, count):
+            if num != 0:
+                plt.text(x + 2.5, y + 700, num, fontsize=10)  # x,y,str
+
+        plt.title(self.proj_name)
+        plt.xlabel('number of entities')
+        plt.ylabel('number of occurrences with another entity')
+        plt.axhline(y=med, color='black')
+        print(self.output_dir + "\\fig_hist_" + self.proj_name + "_maxOcc.png")
+        plt.savefig(self.output_dir + "\\fig_hist_" + self.proj_name + "_maxOcc.png", dpi=600)
