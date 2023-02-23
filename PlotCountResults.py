@@ -12,7 +12,7 @@ class PlotCountResults:
         self.working_dir = self.structure_manager.working_dir.replace("~Temp", "~results")
 
     def start_count(self):
-        self.build_max_commit_plot()
+        self.build_histogram_plot()
 
     def build_all_commit_plot(self):
         x = []
@@ -44,7 +44,7 @@ class PlotCountResults:
         x = []
         y = []
         max_val = []
-        
+
         try:
             for classItem in self.structure_manager.get_class_list():
                 x.append(classItem.unique_id)
@@ -115,8 +115,8 @@ class PlotCountResults:
                 plt.text(x + 2.5, y + 700, num, fontsize=10)  # x,y,str
 
         plt.title(self.proj_name)
-        plt.xlabel('number of entities')
-        plt.ylabel('number of occurrences with another entity')
+        plt.xlabel('number of occurrences with another entity')
+        plt.ylabel('number of entities')
         plt.axhline(y=med, color='black')
         print(self.output_dir + "\\fig_hist_" + self.proj_name + "_maxOcc.png")
         plt.savefig(self.output_dir + "\\fig_hist_" + self.proj_name + "_maxOcc.png", dpi=600)
