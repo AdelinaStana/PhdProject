@@ -1,8 +1,8 @@
-from ClassModel import *
-from MethodModel import *
+from models.ClassModel import *
+from models.MethodModel import *
 import xml
 from Parser import Parser
-from AttributeModel import AttributeModel
+from models.AttributeModel import AttributeModel
 
 class CParser(Parser):
     def __init__(self, root_dir, unique_id):

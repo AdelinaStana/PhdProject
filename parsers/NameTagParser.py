@@ -1,7 +1,7 @@
-from ClassModel import *
+from models.ClassModel import *
 import xml
-from Parser import Parser
-from AttributeModel import AttributeModel
+from parsers.Parser import Parser
+from models.AttributeModel import AttributeModel
 
 
 class NameTagParser(Parser):

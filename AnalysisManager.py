@@ -1,15 +1,9 @@
 import re
 import shutil
 
-from GitWrapper import GitWrapper
-from PlotCountResults import PlotCountResults
-from Statistics import Statistics
+from wrappers.GitWrapper import GitWrapper
 from StructureManager import *
-from SrcMLWrapper import SrcMLWrapper
-from CounterOccurrences import CounterOccurrences
-from CounterCommit import CounterCommit
-from CounterStrength import CounterStrength
-from CounterStrengthConfidence import CounterStrengthConfidence
+from wrappers.SrcMLWrapper import SrcMLWrapper
 
 
 class AnalysisManager:
@@ -190,13 +184,17 @@ class AnalysisManager:
         self.build_git_model_with_comments()
 
         print("Start counter ...")
-        #counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
-        #counter_occurrences.start_count()
 
-        #counter_strength = CounterStrengthConfidence(self.structureManager, self.output_dir)
-        #counter_strength.start_count()
+        from counters.CounterOccurrences import CounterOccurrences
+        counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
+        counter_occurrences.start_count()
 
-        c = PlotCountResults(self.structureManager, self.output_dir)
-        c.start_count()
+        # from counters.CounterStrengthConfidence import CounterStrengthConfidence
+        # counter_strength = CounterStrengthConfidence(self.structureManager, self.output_dir)
+        # counter_strength.start_count()
+
+        # from counters.PlotCountResults import PlotCountResults
+        # c = PlotCountResults(self.structureManager, self.output_dir)
+        # c.start_count()
 
 

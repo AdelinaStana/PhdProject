@@ -1,5 +1,5 @@
 import os
-from Util import Util
+from models.Util import Util
 
 
 class StructureManager:

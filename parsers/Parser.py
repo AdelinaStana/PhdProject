@@ -1,4 +1,4 @@
-from AttributeModel import *
+from models.AttributeModel import *
 
 
 class Parser:

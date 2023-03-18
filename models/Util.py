@@ -1,6 +1,6 @@
-from ClassModel import ClassModel
-from AttributeModel import AttributeModel
-from MethodModel import MethodModel
+from models.ClassModel import ClassModel
+from models.AttributeModel import AttributeModel
+from models.MethodModel import MethodModel
 
 import xml.etree.ElementTree as ET
 

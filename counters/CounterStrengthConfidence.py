@@ -1,9 +1,9 @@
 import statistics
 
-from Graph import Graph
+
 from threading import Thread
 import time
-from CounterStrength import CounterStrength
+from counters.CounterStrength import CounterStrength
 
 
 class CounterStrengthConfidence(CounterStrength):

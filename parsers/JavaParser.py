@@ -1,5 +1,5 @@
-from ClassModel import *
-from MethodModel import *
+from models.ClassModel import *
+from models.MethodModel import *
 import xml
 from Parser import Parser
 

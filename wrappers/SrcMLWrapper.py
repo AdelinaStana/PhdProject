@@ -1,6 +1,6 @@
 import subprocess
 import os
-from NameTagParser import NameTagParser
+from parsers.NameTagParser import NameTagParser
 
 
 class SrcMLWrapper:
