@@ -184,14 +184,22 @@ class AnalysisManager:
         self.build_git_model_with_comments()
 
         print("Start counter ...")
+        
+        from counters.CounterCommit import CounterCommit
+        counter_commit = CounterCommit(self.structureManager, self.output_dir)
+        counter_commit.start_count()
 
         from counters.CounterOccurrences import CounterOccurrences
         counter_occurrences = CounterOccurrences(self.structureManager, self.output_dir)
         counter_occurrences.start_count()
 
-        # from counters.CounterStrengthConfidence import CounterStrengthConfidence
-        # counter_strength = CounterStrengthConfidence(self.structureManager, self.output_dir)
-        # counter_strength.start_count()
+        from counters.CounterStrengthConfidence import CounterStrengthConfidence
+        counter_strength_confidence = CounterStrengthConfidence(self.structureManager, self.output_dir)
+        counter_strength_confidence.start_count()
+
+        from counters.CounterStrength import CounterStrength
+        counter_strength = CounterStrength(self.structureManager, self.output_dir)
+        counter_strength.start_count()
 
         # from counters.PlotCountResults import PlotCountResults
         # c = PlotCountResults(self.structureManager, self.output_dir)

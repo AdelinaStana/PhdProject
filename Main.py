@@ -5,8 +5,7 @@ from AnalysisManager import AnalysisManager
 
 
 class Main:
-    def __init__(self, path, output, threshold, get_files, jar=None):
-        self.repo = path
+    def __init__(self, output, threshold, get_files=False, jar=None):
         self.output_dir = output
         self.threshold = threshold
         self.get_files = get_files
@@ -17,9 +16,9 @@ class Main:
     logical and structural dependencies for a selected repo from UI.
     '''
 
-    def get_results(self):
-        print("***************************************" + self.repo + "*************************************")
-        analysis_manager = AnalysisManager(self, self.repo, self.output_dir, self.threshold, self.jar_file)
+    def get_results(self, repo, jar_file):
+        print("***************************************" + repo + "*************************************")
+        analysis_manager = AnalysisManager(self, repo, self.output_dir, self.threshold, jar_file)
 
         if self.get_files:
             print("Converting to XML ...")
@@ -29,13 +28,27 @@ class Main:
             analysis_manager.get_git_commits()
 
         analysis_manager.load_files_from_repo()
-        analysis_manager.set_xml_files_list(self.repo + "/~Temp/")
+        analysis_manager.set_xml_files_list(repo + "/~Temp/")
         print("Processing data ...")
         analysis_manager.process_data()
 
 
 def run_regression_test():
-    pass
+    """
+    The regression was run for all three projects and the following counters in this order:
+    CounterCommit; CounterOccurrences; CounterStrengthConfidence; CounterStrength
+    compare: "D:\\Util\\doctorat\\PhdProject\\results\\results_old.txt"
+    """
+    runner = Main("D:\\Util\\doctorat\\TestProjects\\results", 20)
+
+    repo_dict = {
+        "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
+        "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+        "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+    }
+
+    for repo in repo_dict:
+        runner.get_results(repo, repo_dict[repo])
 
 
 if __name__ == '__main__':
@@ -52,13 +65,13 @@ if __name__ == '__main__':
     args = option.parse_args()
     runner = Main(args.repoPath, args.outputPath, args.threshold, args.getFiles)
 
-    repo_dict = {
-             "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
-             # "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-             # "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
-    }
+    run_regression_test()
 
-    for repo in repo_dict:
-        runner.repo = repo
-        runner.jar_file = repo_dict[repo]
-        runner.get_results()
+    # repo_dict = {
+    #          "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
+    #          "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+    #          "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+    # }
+    #
+    # for repo in repo_dict:
+    #     runner.get_results(repo, repo_dict[repo])

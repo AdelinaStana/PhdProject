@@ -64,7 +64,7 @@ class CounterStrengthConfidence(CounterStrength):
 
         count = [i for i in max_occ_list if i > mean]
         print(len(count))
-        csv_name = self.working_dir + "\\" + self.name + "_git_strength_"+str(threshold) + ".csv"
+        csv_name = self.working_dir + "\\" + self.project_name + "_git_strength_" + str(threshold) + ".csv"
         file_writer = open(csv_name, 'wt')
         file_writer.write("a,b,c\n")
 
@@ -112,7 +112,7 @@ class CounterStrengthConfidence(CounterStrength):
             mean = statistics.mean(max_occ_list)
             print(mean)
 
-            csv_name = self.working_dir + "\\" + self.name + "_git_strength_overlapp_" + str(threshold) + ".csv"
+            csv_name = self.working_dir + "\\" + self.project_name + "_git_strength_overlapp_" + str(threshold) + ".csv"
             file_writer = open(csv_name, 'wt')
             file_writer.write("a,b,c\n")
 

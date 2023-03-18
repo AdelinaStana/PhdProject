@@ -12,8 +12,11 @@ class CounterStrength:
         self.working_dir = self.structure_manager.working_dir.replace("~Temp", "~results")
 
         dir_name = self.structure_manager.working_dir
-        self.name = os.path.basename(dir_name.replace("/~results", ""))
+        self.project_name = os.path.basename(dir_name.replace("/~results", ""))
 
+    """
+    Each counter writes the results in results.txt file
+    """
     def start_count(self):
         start = time.time()
         number_of_steps = 10
@@ -73,7 +76,7 @@ class CounterStrength:
         self.results_count[1] = edges
 
     def count_git_links(self, pos, occ):
-        g = Graph(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ", self.structure_manager)
+        g = Graph(self.working_dir + "\\" + self.project_name + "_git_links_" + str(occ) + "occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
                 git_list = class_item.get_filtered_commit_size_occurrences(occ)
@@ -90,7 +93,7 @@ class CounterStrength:
         for class_item in self.structure_manager.get_class_list():
             entity_class_id_dict[class_item.unique_id] = class_item
 
-        g = Graph(self.working_dir + "\\" + self.name + "_git_strength_"+str(threshold), self.structure_manager)
+        g = Graph(self.working_dir + "\\" + self.project_name + "_git_strength_" + str(threshold), self.structure_manager)
         try:
             for classItem in self.structure_manager.get_class_list():
                 entity1 = classItem
@@ -125,7 +128,7 @@ class CounterStrength:
         for class_item in self.structure_manager.get_class_list():
             entity_class_id_dict[class_item.unique_id] = class_item
 
-        g = Graph(self.working_dir + "\\" + self.name + "_git_code_strength_"+str(threshold), self.structure_manager)
+        g = Graph(self.working_dir + "\\" + self.project_name + "_git_code_strength_" + str(threshold), self.structure_manager)
         try:
             for classItem in self.structure_manager.get_class_list():
                 entity1 = classItem

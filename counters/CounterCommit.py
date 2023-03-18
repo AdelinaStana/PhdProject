@@ -1,4 +1,4 @@
-from Graph import Graph
+from counters.Graph import Graph
 from threading import Thread
 import time
 
