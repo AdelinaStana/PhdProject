@@ -13,7 +13,7 @@ class Statistics:
         class_dict_conn = {}
 
         for class_item in structure_manager.get_class_list():
-            connections = class_item.get_filtered_commit_size_occurrences(occ)
+            connections = class_item.get_occurrence_for_commits_below_threshold(occ)
             full_name = class_item.full_name
             class_dict_conn[full_name] = len(connections)
 
@@ -109,10 +109,10 @@ class Statistics:
             if name in id_class_name_dict.keys():
                 id = id_class_name_dict[name]
                 class_item = entity_class_id_dict[id]
-                data.iloc[row_index, 14] = len(class_item.get_filtered_commit_size_occurrences(0))
-                data.iloc[row_index, 15] = len(class_item.get_filtered_commit_size_occurrences(5))
-                data.iloc[row_index, 16] = len(class_item.get_filtered_commit_size_occurrences(10))
-                data.iloc[row_index, 17] = len(class_item.get_filtered_commit_size_occurrences(20))
+                data.iloc[row_index, 14] = len(class_item.get_occurrence_for_commits_below_threshold(0))
+                data.iloc[row_index, 15] = len(class_item.get_occurrence_for_commits_below_threshold(5))
+                data.iloc[row_index, 16] = len(class_item.get_occurrence_for_commits_below_threshold(10))
+                data.iloc[row_index, 17] = len(class_item.get_occurrence_for_commits_below_threshold(20))
             row_index += 1
 
         data.to_csv("D:\\Util\\doctorat\\KeyClassesProject\\hibernate-core-5.2.12.Final.jar_StructOnly_new.csv", index=False)

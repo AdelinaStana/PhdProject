@@ -1,5 +1,4 @@
 import os
-from models.Util import Util
 
 
 class StructureManager:
@@ -11,7 +10,7 @@ class StructureManager:
         if not os.path.isdir(self.working_dir):
             os.mkdir(self.working_dir)
 
-        self.util = Util(working_dir)  # used for save and load the analysis performed
+        self.commit_threshold = 20
 
     def get_classes_from_jar(self, jar_path):
         import zipfile

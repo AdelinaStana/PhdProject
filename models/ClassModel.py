@@ -13,9 +13,6 @@ class ClassModel:
         self.attributes = set()
         self.methods = set()
         self.threshold = threshold
-        self.git_links_below5 = {}
-        self.git_links_below10 = {}
-        self.git_links_below20 = {}
         self.git_links_total = {}
         self.git_links_below_commit_size_threshold = {}
         self.structural_relation_list = set()
@@ -143,68 +140,26 @@ class ClassModel:
         self.commits_count += 1
         for link in links:
             if link != self.unique_id:
-                if self.threshold:
                     if commit_size <= self.threshold:
                         if link not in self.git_links_below_commit_size_threshold.keys():
                             self.git_links_below_commit_size_threshold[link] = 1
                         else:
                             self.git_links_below_commit_size_threshold[link] += 1
-                else:
-                    if commit_size <= 5:
-                        if link not in self.git_links_below5.keys():
-                            self.git_links_below5[link] = 1
-                        else:
-                            self.git_links_below5[link] += 1
-                    if commit_size <= 10:
-                        if link not in self.git_links_below10.keys():
-                            self.git_links_below10[link] = 1
-                        else:
-                            self.git_links_below10[link] += 1
-                    if commit_size <= 20:
-                        if link not in self.git_links_below20.keys():
-                            self.git_links_below20[link] = 1
-                        else:
-                            self.git_links_below20[link] += 1
-
-                    if link not in self.git_links_total.keys():
-                        self.git_links_total[link] = 1
-                    else:
-                        self.git_links_total[link] += 1
-
-    ##########################################################################################################
-
-    def get_occurrence_commits_below_5files(self, nr):
-        return set(key for key, value in self.git_links_below5.items() if value >= nr)
-
-    def get_occurrence_commits_below_10files(self, nr):
-        return set(key for key, value in self.git_links_below10.items() if value >= nr)
-
-    def get_occurrence_commits_below_20files(self, nr):
-        return set(key for key, value in self.git_links_below20.items() if value >= nr)
 
     def get_unfiltered_commit_size_occurrences(self, nr):
         return set(key for key, value in self.git_links_total.items() if value >= nr)
 
-    def get_filtered_commit_size_occurrences(self, nr):
+    def get_occurrence_for_commits_below_threshold(self, nr, commit_threshold=20):
         return set(key for key, value in self.git_links_below_commit_size_threshold.items() if value >= nr)
 
-    #####################################################################################################
-
-    def get_match5_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_commits_below_5files(nr_of_occ)
+    def get_overlapping_with_commit_and_occ_threshold(self, nr_of_occ, commit_threshold=20):
+        git_links = self.get_occurrence_for_commits_below_threshold(nr_of_occ, commit_threshold)
         return self.structural_relation_list.intersection(git_links)
 
-    def get_match10_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_commits_below_10files(nr_of_occ)
+    def get_overlapping_with_occ_threshold(self, nr_of_occ):
+        git_links = self.get_occurrence_for_commits(nr_of_occ)
         return self.structural_relation_list.intersection(git_links)
 
-    def get_match20_occ(self, nr_of_occ):
-        git_links = self.get_occurrence_commits_below_20files(nr_of_occ)
-        return self.structural_relation_list.intersection(git_links)
-
-    def get_match_occ_total(self, nr_of_occ):
-        git_links = self.get_unfiltered_commit_size_occurrences(nr_of_occ)
-        return self.structural_relation_list.intersection(git_links)
 
 
 

@@ -81,7 +81,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\git5_links", self.structure_manager)
             try:
                 for class_item in self.structure_manager.get_class_list():
-                    git_list = class_item.get_occurrence_commits_below_5files(occ)
+                    git_list = class_item.get_occurrence_for_commits_below_threshold(occ, self.structure_manager.commit_threshold)
                     for related in git_list:
                         g.add_edge(class_item.unique_id, related)
             except BaseException as e:
@@ -94,7 +94,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\git10_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_occurrence_commits_below_10files(occ)
+                    git_list = classItem.get_occurrence_for_commits_below_threshold(occ, self.structure_manager.commit_threshold)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -107,7 +107,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\git20_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_occurrence_commits_below_20files(occ)
+                    git_list = classItem.get_occurrence_for_commits_below_threshold(occ, self.structure_manager.commit_threshold)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -120,7 +120,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\git_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    git_list = classItem.get_unfiltered_commit_size_occurrences(occ)
+                    git_list = classItem.get_unfiltered_commit_size_occurrences(occ, self.structure_manager.commit_threshold)
                     for related in git_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -133,7 +133,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\code_git_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    related_list = classItem.get_match_occ_total(occ)
+                    related_list = classItem.get_overlapping_with_commit_and_occ_threshold(occ, self.structure_manager.commit_threshold)
                     for related in related_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -146,7 +146,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\code_git5_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    related_list = classItem.get_match5_occ(occ)
+                    related_list = classItem.get_overlapping_with_commit_and_occ_threshold(occ, self.structure_manager.commit_threshold)
                     for related in related_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -159,7 +159,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\code_git10_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    related_list = classItem.get_match10_occ(occ)
+                    related_list = classItem.get_overlapping_with_commit_and_occ_threshold(occ, self.structure_manager.commit_threshold)
                     for related in related_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
@@ -172,7 +172,7 @@ class CounterCommit:
             g = Graph(self.working_dir+"\\code_git20_total_links", self.structure_manager)
             try:
                 for classItem in self.structure_manager.get_class_list():
-                    related_list = classItem.get_match20_occ(occ)
+                    related_list = classItem.get_overlapping_with_commit_and_occ_threshold(occ, self.structure_manager.commit_threshold)
                     for related in related_list:
                         g.add_edge(classItem.unique_id, related)
             except BaseException as e:
