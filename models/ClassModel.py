@@ -15,7 +15,7 @@ class ClassModel:
         self.methods = set()
         self.threshold = threshold
         self.git_links_total = {}
-        self.git_links_below_commit_size_threshold = {}
+        self.git_links = {}
         self.structural_relation_list = set()
         self.commits_count = 0  # count number of total commits in which is involved
 
@@ -81,11 +81,11 @@ class ClassModel:
         return False
 
     def get_all_occurrence_values(self, commit_threshold=20):
-        return self.git_links_below_commit_size_threshold.values()
+        return self.git_links.values()
 
     def get_nr_of_occ_with(self, link_id):
         if self.threshold:
-            return self.git_links_below_commit_size_threshold[link_id]
+            return self.git_links[link_id]
         else:
             return self.git_links_total[link_id]
 
@@ -145,15 +145,15 @@ class ClassModel:
         for link in links:
             if link != self.unique_id:
                     if commit_size <= self.threshold:
-                        if link not in self.git_links_below_commit_size_threshold.keys():
-                            self.git_links_below_commit_size_threshold[link] = 1
+                        if link not in self.git_links.keys():
+                            self.git_links[link] = 1
                         else:
-                            self.git_links_below_commit_size_threshold[link] += 1
+                            self.git_links[link] += 1
 
     def get_occurrence_for_commits_below_threshold(self, nr, commit_threshold=20):
         if not commit_threshold:
             commit_threshold = sys.maxsize
-        return set(key for key, value in self.git_links_below_commit_size_threshold.items() if value >= nr)
+        return set(key for key, value in self.git_links.items() if value >= nr)
 
     def get_overlapping_with_commit_and_occ_threshold(self, nr_of_occ, commit_threshold=20):
         git_links = self.get_occurrence_for_commits_below_threshold(nr_of_occ, commit_threshold)
