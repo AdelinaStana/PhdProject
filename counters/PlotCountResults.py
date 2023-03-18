@@ -47,7 +47,7 @@ class PlotCountResults:
         try:
             for classItem in self.structure_manager.get_class_list():
                 x.append(classItem.unique_id)
-                values = classItem.git_links_below_commit_size_threshold.values()
+                values = classItem.get_all_occurrence_values(self.structure_manager.commit_threshold)
                 max_occ = 0
                 if values:
                     max_occ = max(values)
@@ -83,7 +83,7 @@ class PlotCountResults:
         try:
             for classItem in self.structure_manager.get_class_list():
                 x.append(classItem.unique_id)
-                values = classItem.git_links_below_commit_size_threshold.values()
+                values = classItem.get_all_occurrence_values(self.structure_manager.commit_threshold)
                 max_occ = 0
                 if values:
                     max_occ = max(values)

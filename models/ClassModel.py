@@ -80,6 +80,9 @@ class ClassModel:
            return True
         return False
 
+    def get_all_occurrence_values(self, commit_threshold=20):
+        return self.git_links_below_commit_size_threshold.values()
+
     def get_nr_of_occ_with(self, link_id):
         if self.threshold:
             return self.git_links_below_commit_size_threshold[link_id]
