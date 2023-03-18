@@ -1,5 +1,5 @@
 import os
-
+from models.Util import Util
 
 class StructureManager:
     def __init__(self, working_dir):
@@ -9,6 +9,8 @@ class StructureManager:
         self.working_dir = working_dir + "/~results"
         if not os.path.isdir(self.working_dir):
             os.mkdir(self.working_dir)
+
+        self.util = Util(working_dir)  # used for save and load the analysis performed
 
         self.commit_threshold = 20
 

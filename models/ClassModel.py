@@ -1,4 +1,5 @@
 import os
+import sys
 
 
 class ClassModel:
@@ -146,18 +147,13 @@ class ClassModel:
                         else:
                             self.git_links_below_commit_size_threshold[link] += 1
 
-    def get_unfiltered_commit_size_occurrences(self, nr):
-        return set(key for key, value in self.git_links_total.items() if value >= nr)
-
     def get_occurrence_for_commits_below_threshold(self, nr, commit_threshold=20):
+        if not commit_threshold:
+            commit_threshold = sys.maxsize
         return set(key for key, value in self.git_links_below_commit_size_threshold.items() if value >= nr)
 
     def get_overlapping_with_commit_and_occ_threshold(self, nr_of_occ, commit_threshold=20):
         git_links = self.get_occurrence_for_commits_below_threshold(nr_of_occ, commit_threshold)
-        return self.structural_relation_list.intersection(git_links)
-
-    def get_overlapping_with_occ_threshold(self, nr_of_occ):
-        git_links = self.get_occurrence_for_commits(nr_of_occ)
         return self.structural_relation_list.intersection(git_links)
 
 
