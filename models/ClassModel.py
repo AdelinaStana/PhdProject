@@ -14,7 +14,6 @@ class ClassModel:
         self.attributes = set()
         self.methods = set()
         self.threshold = threshold
-        self.git_links_total = {}
         self.git_links = {}
         self.structural_relation_list = set()
         self.commits_count = 0  # count number of total commits in which is involved
@@ -84,10 +83,7 @@ class ClassModel:
         return self.git_links.values()
 
     def get_nr_of_occ_with(self, link_id):
-        if self.threshold:
-            return self.git_links[link_id]
-        else:
-            return self.git_links_total[link_id]
+        return self.git_links[link_id]
 
     def add_if_exists(self, name, class_dict):
         if name in class_dict.keys() and name != self.name:

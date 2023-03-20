@@ -2,6 +2,7 @@ from models.ClassModel import *
 import xml
 from parsers.Parser import Parser
 from models.AttributeModel import AttributeModel
+from xml.etree.ElementTree import *
 
 
 class NameTagParser(Parser):
