@@ -1,24 +1,21 @@
 import argparse
 import os
-
 from AnalysisManager import AnalysisManager
 
 
 class MainRunner:
-    def __init__(self, output, threshold, get_files=False, jar=None):
+    def __init__(self, output, threshold, download_files=False):
         self.output_dir = output
         self.threshold = threshold
-        self.get_files = get_files
-        self.jar_file = jar
-
-    '''
-    This method is called for the entire process of converting to xml, saving git diff files and counting
-    logical and structural dependencies for a selected repo from UI.
-    '''
+        self.get_files = download_files
 
     def get_results(self, repo, jar_file):
+        """
+        This method is called for the entire process of converting to xml, saving git diff files and counting
+        logical and structural dependencies for a selected repo from UI.
+        """
         print("***************************************" + repo + "*************************************")
-        analysis_manager = AnalysisManager(self, repo, self.output_dir, self.threshold, jar_file)
+        analysis_manager = AnalysisManager(repo, self.output_dir, self.threshold, jar_file)
 
         if self.get_files:
             print("Converting to XML ...")
@@ -46,8 +43,8 @@ def run_regression_test():
 
     repo_dict = {
         "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
-        "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-        #"D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+        # "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+        # "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
     }
 
     for repo in repo_dict:
@@ -66,7 +63,7 @@ if __name__ == '__main__':
                         help='download git diffs and convert source code to xml')
 
     args = option.parse_args()
-    runner = MainRunner(args.repoPath, args.outputPath, args.threshold, args.getFiles)
+    runner = MainRunner(args.outputPath, args.threshold, args.getFiles)
 
     run_regression_test()
 

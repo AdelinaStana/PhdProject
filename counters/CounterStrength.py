@@ -14,10 +14,11 @@ class CounterStrength:
         dir_name = self.structure_manager.working_dir
         self.project_name = os.path.basename(dir_name.replace("/~results", ""))
 
-    """
-    Each counter writes the results in results.txt file
-    """
+
     def start_count(self):
+        """
+        Each counter writes the results in results.txt file
+        """
         start = time.time()
         number_of_steps = 10
 

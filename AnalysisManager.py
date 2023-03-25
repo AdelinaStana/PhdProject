@@ -7,8 +7,7 @@ from wrappers.SrcMLWrapper import SrcMLWrapper
 
 
 class AnalysisManager:
-    def __init__(self, parent, working_dir, output_dir, threshold=None, jar=None):
-        self.parent = parent
+    def __init__(self, working_dir, output_dir, threshold=None, jar=None):
         self.threshold = threshold
         self.jar_file = jar
         if os.path.isdir(working_dir):
