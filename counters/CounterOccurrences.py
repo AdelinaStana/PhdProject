@@ -69,7 +69,7 @@ class CounterOccurrences:
         g = Graph(self.working_dir + "\\" + self.name + "_git_links_"+str(occ)+"occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
-                git_list = class_item.get_occurrence_for_commits_below_threshold(occ, self.structure_manager.commit_threshold)
+                git_list = class_item.get_filtered_git_links(occ)
                 for related in git_list:
                     g.add_edge(class_item.unique_id, related)
         except BaseException as e:

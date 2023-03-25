@@ -15,6 +15,7 @@ class ClassModel:
         self.methods = set()
         self.threshold = threshold
         self.git_links = {}
+        self.git_links_without_threshold = {}
         self.structural_relation_list = set()
         self.commits_count = 0  # count number of total commits in which is involved
 
@@ -79,7 +80,7 @@ class ClassModel:
            return True
         return False
 
-    def get_all_occurrence_values(self, commit_threshold=20):
+    def get_all_occurrence_values(self):
         return self.git_links.values()
 
     def get_nr_of_occ_with(self, link_id):
@@ -136,7 +137,30 @@ class ClassModel:
                         for call in local.get_calls():
                             UIObj.print_line(call)
 
+    def get_commit_size_category(self, commit_size):
+        """
+        Get commit size category.
+        :param commit_size:
+        :return:
+        """
+        if 0 < commit_size <= 5:
+            return "A"
+        if 5 < commit_size <= 10:
+            return "B"
+        if 10 < commit_size <= 20:
+            return "C"
+        if commit_size > 20:
+            return "D"
+
     def set_git_links(self, links, commit_size, commit_date):
+        """
+        Add in dictionaries all the entities extracted based on commit size.
+
+        :param links: list with all the files that changed in the commit
+        :param commit_size: number of files changed in the commit
+        :param commit_date: keep this here for more future development
+        :return:
+        """
         self.commits_count += 1
         for link in links:
             if link != self.unique_id:
@@ -146,13 +170,30 @@ class ClassModel:
                         else:
                             self.git_links[link] += 1
 
-    def get_occurrence_for_commits_below_threshold(self, nr, commit_threshold=20):
-        if not commit_threshold:
-            commit_threshold = sys.maxsize
-        return set(key for key, value in self.git_links.items() if value >= nr)
+                    # store all links in a dict for some counters
+                    link = self.get_commit_size_category(commit_size) + str(link)
 
-    def get_overlapping_with_commit_and_occ_threshold(self, nr_of_occ, commit_threshold=20):
-        git_links = self.get_occurrence_for_commits_below_threshold(nr_of_occ, commit_threshold)
+                    if link not in self.git_links_without_threshold.keys():
+                        self.git_links_without_threshold[link] = 1
+                    else:
+                        self.git_links_without_threshold[link] += 1
+
+    def get_filtered_git_links(self, occurrence_threshold, commit_threshold=None):
+        """
+        Get all links that are above the given occurrence threshold and commit threshold.
+        :param occurrence_threshold:
+        :param commit_threshold: if missing; then list all entities from the already filtered dictionary: git_links
+        :return:
+        """
+        if commit_threshold:
+            searched_category = self.get_commit_size_category(commit_threshold)
+            return set(int(key.replace(searched_category, "")) for key, value in self.git_links_without_threshold.items()
+                       if value >= occurrence_threshold and str(key).startswith(searched_category))
+        else:
+            return set(key for key, value in self.git_links.items() if value >= occurrence_threshold)
+
+    def get_git_code_overlapping(self, nr_of_occ, commit_threshold=None):
+        git_links = self.get_filtered_git_links(nr_of_occ, commit_threshold)
         return self.structural_relation_list.intersection(git_links)
 
 

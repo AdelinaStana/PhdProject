@@ -73,7 +73,7 @@ class CounterStrengthConfidence(CounterStrength):
             for classItem in self.structure_manager.get_class_list():
                 entity1 = classItem
 
-                related_list = classItem.get_occurrence_for_commits_below_threshold(1, self.structure_manager.commit_threshold)
+                related_list = classItem.get_filtered_git_links(1)
                 for entity2_id in related_list:
                     entity2 = entity_class_id_dict[entity2_id]
 
@@ -103,7 +103,7 @@ class CounterStrengthConfidence(CounterStrength):
 
             for classItem in self.structure_manager.get_class_list():
                 entity_class_id_dict[classItem.unique_id] = classItem
-                values = classItem.get_all_occurrence_values(self.structure_manager.commit_threshold)
+                values = classItem.get_all_occurrence_values()
                 max_occ = 0
                 if values:
                     max_occ = max(values)
@@ -121,7 +121,7 @@ class CounterStrengthConfidence(CounterStrength):
                 for classItem in self.structure_manager.get_class_list():
                     entity1 = classItem
 
-                    commit_related_list = classItem.get_occurrence_for_commits_below_threshold(1, self.structure_manager.commit_threshold)
+                    commit_related_list = classItem.get_filtered_git_links(1)
                     code_related_list = classItem.get_structural_related_links()
                     related_list = commit_related_list.intersection(code_related_list)
 

@@ -80,7 +80,7 @@ class CounterStrength:
         g = Graph(self.working_dir + "\\" + self.project_name + "_git_links_" + str(occ) + "occ", self.structure_manager)
         try:
             for class_item in self.structure_manager.get_class_list():
-                git_list = class_item.get_occurrence_for_commits_below_threshold(occ, self.structure_manager.commit_threshold)
+                git_list = class_item.get_filtered_git_links(occ)
                 for related in git_list:
                     g.add_edge(class_item.unique_id, related)
         except BaseException as e:
@@ -100,7 +100,7 @@ class CounterStrength:
                 entity1 = classItem
                 entity1_id = classItem.unique_id
 
-                related_list = classItem.get_occurrence_for_commits_below_threshold(1, self.structure_manager.commit_threshold)
+                related_list = classItem.get_filtered_git_links(1)
                 for entity2_id in related_list:
                     entity2 = entity_class_id_dict[entity2_id]
 
@@ -135,7 +135,7 @@ class CounterStrength:
                 entity1 = classItem
                 entity1_id = classItem.unique_id
 
-                commit_related_list = classItem.get_occurrence_for_commits_below_threshold(1, self.structure_manager.commit_threshold)
+                commit_related_list = classItem.get_filtered_git_links(1)
                 code_related_list = classItem.get_structural_related_links()
                 related_list = commit_related_list.intersection(code_related_list)
                 for entity2_id in related_list:
