@@ -48,7 +48,8 @@ def run_regression_test():
     }
 
     for repo in repo_dict:
-        runner.get_results(repo, repo_dict[repo])
+        if os.path.exists(repo):
+            runner.get_results(repo, repo_dict[repo])
 
 
 if __name__ == '__main__':
@@ -65,13 +66,13 @@ if __name__ == '__main__':
     args = option.parse_args()
     runner = MainRunner(args.outputPath, args.threshold, args.getFiles)
 
-    run_regression_test()
+    # run_regression_test()
 
-    # repo_dict = {
-    #          "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
-    #          "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-    #          "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
-    # }
-    #
-    # for repo in repo_dict:
-    #     runner.get_results(repo, repo_dict[repo])
+    repo_dict = {
+             "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
+             # "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+             # "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+    }
+
+    for repo in repo_dict:
+        runner.get_results(repo, repo_dict[repo])
