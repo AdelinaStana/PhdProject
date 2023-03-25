@@ -4,7 +4,7 @@ import os
 from AnalysisManager import AnalysisManager
 
 
-class Main:
+class MainRunner:
     def __init__(self, output, threshold, get_files=False, jar=None):
         self.output_dir = output
         self.threshold = threshold
@@ -39,7 +39,10 @@ def run_regression_test():
     CounterCommit; CounterOccurrences; CounterStrengthConfidence; CounterStrength
     compare: "D:\\Util\\doctorat\\PhdProject\\results\\results_old.txt"
     """
-    runner = Main("D:\\Util\\doctorat\\TestProjects\\results", 20)
+    if os.path.exists("D:\\Util\\doctorat\\TestProjects\\results\\results.txt"):
+        os.remove("D:\\Util\\doctorat\\TestProjects\\results\\results.txt")
+
+    runner = MainRunner("D:\\Util\\doctorat\\TestProjects\\results", 20)
 
     repo_dict = {
         "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
@@ -63,7 +66,7 @@ if __name__ == '__main__':
                         help='download git diffs and convert source code to xml')
 
     args = option.parse_args()
-    runner = Main(args.repoPath, args.outputPath, args.threshold, args.getFiles)
+    runner = MainRunner(args.repoPath, args.outputPath, args.threshold, args.getFiles)
 
     run_regression_test()
 

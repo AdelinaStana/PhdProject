@@ -21,7 +21,7 @@ class CounterStrength:
         start = time.time()
         number_of_steps = 10
 
-        for i in range(0, number_of_steps*2 + 2):
+        for i in range(0, number_of_steps*2 + 3):
             self.results_count.append(-1)
 
         threads = []
@@ -33,11 +33,11 @@ class CounterStrength:
             threads.append(t_git)
 
             for i in range(1, number_of_steps + 1):
-                t_strength = Thread(target=self.count_strength, args=(i + 1, i*10))
+                t_strength = Thread(target=self.count_strength, args=(i + 2, i*10))
                 threads.append(t_strength)
 
             for i in range(1, number_of_steps + 1):
-                t_code_strength = Thread(target=self.count_strength_overlapping_with_code, args=(i + 11, i*10))
+                t_code_strength = Thread(target=self.count_strength_overlapping_with_code, args=(i + 12, i*10))
                 threads.append(t_code_strength)
 
             for thread in threads:
