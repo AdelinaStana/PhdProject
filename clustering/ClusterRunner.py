@@ -1,19 +1,27 @@
+from mst_clustering import MSTClustering
 import numpy as np
-from graph_based_clustering import ConnectedComponentsClustering
-# docs: https://pypi.org/project/graph-based-clustering/
 
+data = np.genfromtxt('data.csv', delimiter=',')
 
-X = np.array([[0, 1], [1, 0], [1, 1]])
+'''
+cutoff_scale : minimum size of edges. All edges larger than cutoff_scale will be removed 
+ 
+approximate: If True, then compute the approximate minimum spanning tree using
+        n_neighbors nearest neighbors. If False, then compute the full O[N^2] edges
+'''
+model = MSTClustering(cutoff_scale=1, approximate=True)
+model.fit(data)
+labels = model.labels_
 
-clustering = ConnectedComponentsClustering(
-    threshold=0.275,
-    metric="euclidean",
-    n_jobs=-1,
-)
+print("Labels: "+str(labels))
 
-clustering.fit(X)
-labels_pred = clustering.labels_
+print("Number of clusters: "+str(len(np.unique(labels))))
 
-# alternative
-labels_pred = clustering.fit_predict(X)
+nodes = {}
+for i in np.unique(labels):
+    nodes[i] = set(np.where(labels == i)[0])
 
+for i, cluster_nodes in nodes.items():
+    node_values = data[list(cluster_nodes)].astype(int)  # values corresponding to the indices
+    node_numbers = [node+1 for node in cluster_nodes]  # convert the indices to the node numbers
+    print(f"Nodes associated with label {i}: {node_values.tolist()} (Node numbers: {node_numbers})")
