@@ -32,11 +32,3 @@ class ClusteringAnalyzer:
             node_numbers = [node + 1 for node in cluster_nodes]
             print(f"Nodes associated with label {i}: {node_values.tolist()} (Node numbers: {node_numbers})")
 
-
-c1 = ClusteringAnalyzer('data.csv', cutoff_scale=2)
-c1.fit()
-c2 = ClusteringAnalyzer('data.csv', cutoff_scale=1)
-c2.fit()
-
-eval = ClusterEvaluator()
-print(eval.compute_mojo(c1.labels, c2.labels))
