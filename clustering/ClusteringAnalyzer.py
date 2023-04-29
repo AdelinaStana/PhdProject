@@ -1,8 +1,6 @@
 from mst_clustering import MSTClustering
 import numpy as np
 
-from clustering.ClusterEvaluator import ClusterEvaluator
-
 
 class ClusteringAnalyzer:
     def __init__(self, data_file, cutoff_scale=1, approximate=True):
