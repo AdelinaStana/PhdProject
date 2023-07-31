@@ -17,6 +17,8 @@ Mojo stands for "Minimum Overlapping Join Operations", and it is a metric used t
 class ClusterEvaluator:
     def compute_mojo(self, cluster1, cluster2):
         """Compute the Mojo metric to compare two clusterings."""
+        if len(cluster1) != len(cluster2):
+            return 0
         num_points = len(cluster1)
         num_pairs = num_points * (num_points - 1) // 2
 

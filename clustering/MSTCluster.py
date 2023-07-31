@@ -2,7 +2,7 @@ from mst_clustering import MSTClustering
 import numpy as np
 
 
-class ClusteringAnalyzer:
+class MSTCluster:
     def __init__(self, data_file, cutoff_scale=1, approximate=True):
         """
         cutoff_scale : minimum size of edges. All edges larger than cutoff_scale will be removed
@@ -16,15 +16,17 @@ class ClusteringAnalyzer:
         self.nodes = None
 
     def fit(self):
-        self.model.fit(self.data)
-        self.labels = self.model.labels_
+        self.labels = self.model.fit_predict(self.data)
         self.nodes = {}
         for i in np.unique(self.labels):
             self.nodes[i] = set(np.where(self.labels == i)[0])
 
     def print_cluster_info(self):
-        print("Labels: " + str(self.labels))
+        print("__________________________________________________\nMST Cluster")
         print("Number of clusters: " + str(len(np.unique(self.labels))))
+        print("Labels: " + str(self.labels))
+
+    def print_detailed_cluster_info(self):
         for i, cluster_nodes in self.nodes.items():
             node_values = self.data[list(cluster_nodes)].astype(int)
             node_numbers = [node + 1 for node in cluster_nodes]

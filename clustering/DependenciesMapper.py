@@ -2,11 +2,12 @@ import csv
 from itertools import chain
 
 
-class DependenciesImporter:
+class DependenciesMapper:
     def __init__(self, file1, file2):
         self.id_dict = {}
         self.file1 = file1
         self.file2 = file2
+        self.nodes = {}
 
         with open(file1, newline='') as file1:
             reader = csv.reader(file1)
@@ -27,6 +28,7 @@ class DependenciesImporter:
         for name in all_data:
             if name not in self.id_dict:
                 self.id_dict[name] = id_counter
+                self.nodes[id_counter] = name
                 id_counter += 1
 
         with open('map.txt', 'w') as output_file:
