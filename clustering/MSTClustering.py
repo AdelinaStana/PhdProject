@@ -1,14 +1,15 @@
 import networkx as nx
+import numpy as np
 
 
 class MMSTClustering:
     def __init__(self, dependencies):
         self.index_name_map = dependencies.index_name_map
-        self.labels = [0] * dependencies.n
+        self.labels = np.array([0] * dependencies.n)
 
         G = nx.Graph()
         for edge in dependencies.array:
-            G.add_edge(edge[0], edge[1], weight=1)
+            G.add_edge(edge[0], edge[1], weight=edge[2])
 
         mst = nx.minimum_spanning_tree(G)
 

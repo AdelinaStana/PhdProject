@@ -15,14 +15,20 @@ class DependenciesBuilder:
 
     def populate_matrix(self, csv_file):
         # read file
+        entities = set()
+        data = []
         try:
             with open(csv_file, newline='') as file1:
                 reader = csv.reader(file1)
-                data = [[row[0].strip(), row[1].strip()] for row in reader]
-        except:
-            return
+                for row in reader:
+                    data.append([row[0].strip(), row[1].strip(), row[2].strip()])
+                    entities.add(row[0].strip())
+                    entities.add(row[1].strip())
 
-        entities = set(chain(*data))
+        except:
+                return
+
+        data = data[1:] # remove first row
         self.n = len(entities)
         print(f"ENTITIES COUNT: {self.n}")
 
@@ -40,8 +46,8 @@ class DependenciesBuilder:
             index_a = self.name_index_map[dependency[0]]
             index_b = self.name_index_map[dependency[1]]
 
-            self.matrix[index_a][index_b] = 1
-            self.matrix[index_b][index_a] = 1
+            self.matrix[index_a][index_b] = int(dependency[2])
+            self.matrix[index_b][index_a] = int(dependency[2])
 
-            self.array.append([index_a, index_b])
+            self.array.append([index_a, index_b, int(dependency[2])])
 
