@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 
 
-class MMSTClustering:
+class MSTClustering:
     def __init__(self, dependencies):
         self.index_name_map = dependencies.index_name_map
         self.labels = np.array([0] * dependencies.n)

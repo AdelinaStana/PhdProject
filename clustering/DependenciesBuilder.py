@@ -46,8 +46,8 @@ class DependenciesBuilder:
             index_a = self.name_index_map[dependency[0]]
             index_b = self.name_index_map[dependency[1]]
 
-            self.matrix[index_a][index_b] = int(dependency[2])
-            self.matrix[index_b][index_a] = int(dependency[2])
+            self.matrix[index_a][index_b] = 1
+            self.matrix[index_b][index_a] = 1
 
-            self.array.append([index_a, index_b, int(dependency[2])])
+            self.array.append([index_a, index_b, 1])
 

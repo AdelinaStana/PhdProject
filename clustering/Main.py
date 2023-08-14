@@ -1,13 +1,15 @@
 from clustering.LouvianClustering import LouvianClustering
-from clustering.MSTClustering import MMSTClustering
+from clustering.MSTClustering import MSTClustering
 from clustering.DependenciesBuilder import DependenciesBuilder
+from ModularizationQuality import *
 
-dependencies = DependenciesBuilder("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
+dependencies = DependenciesBuilder("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_tomcat-catalina-9.0.4.csv")
+# dependencies = DependenciesBuilder("data2.csv")
 
 louvian = LouvianClustering(dependencies)
 louvian.print_clusters()
 
-mst = MMSTClustering(dependencies)
+mst = MSTClustering(dependencies)
 mst.print_clusters()
 
 
@@ -19,6 +21,17 @@ import numpy as np
 from sknetwork.clustering import metrics
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score
+
+
+'''
+The MQ measurement is bounded between -1 (no cohesion
+within the subsystems) and 1 (no coupling between the
+subsystems).
+'''
+print("MQ metric")
+print(np.round(calculate_modularity(dependencies.matrix, louvian.labels), 3))
+print(np.round(calculate_modularity(dependencies.matrix, mst.labels), 3))
+
 
 print("sknetwork.clustering.get_modularity")
 print(np.round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3))
