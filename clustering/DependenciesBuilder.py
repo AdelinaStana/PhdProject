@@ -26,9 +26,10 @@ class DependenciesBuilder:
                     entities.add(row[1].strip())
 
         except:
-                return
+            print(f"Error for file {csv_file}")
+            return
 
-        data = data[1:] # remove first row
+        data = data[1:]     # remove first row
         self.n = len(entities)
         print(f"ENTITIES COUNT: {self.n}")
 
