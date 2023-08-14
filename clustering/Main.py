@@ -47,12 +47,12 @@ def build_and_measure(file_path):
     subsystems).
     '''
     print("\n\nMQ metric")
-    print(np.round(calculate_modularity(dependencies.matrix, louvian.labels), 3))
-    print(np.round(calculate_modularity(dependencies.matrix, mst.labels), 3))
+    print(round(calculate_modularity(dependencies.matrix, louvian.labels), 3))
+    print(round(calculate_modularity(dependencies.matrix, mst.labels), 3))
 
     print("sknetwork.clustering.get_modularity")
-    print(np.round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3))
-    print(np.round(metrics.get_modularity(dependencies.matrix, mst.labels), 3))
+    print(round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3))
+    print(round(metrics.get_modularity(dependencies.matrix, mst.labels), 3))
 
     print("sklearn.metrics.silhouette_score")
     '''
@@ -62,24 +62,40 @@ def build_and_measure(file_path):
     Implemented based on this article:
             https://www.sciencedirect.com/science/article/pii/0377042787901257?via%3Dihub
     '''
-    print(np.round(silhouette_score(dependencies.matrix, louvian.labels, metric='euclidean'), 2))
-    print(np.round(silhouette_score(dependencies.matrix, mst.labels, metric='euclidean'), 2))
+    print(round(silhouette_score(dependencies.matrix, louvian.labels, metric='euclidean'), 2))
+    try:
+        print(round(silhouette_score(dependencies.matrix, mst.labels, metric='euclidean'), 2))
+    except:
+        pass
 
     print("sklearn.metrics.davies_bouldin_score")
     '''
     a lower Davies-Bouldin index relates to a model with better separation between the clusters
     Zero is the lowest possible score. Values closer to zero indicate a better partition.
     '''
-    print(np.round(davies_bouldin_score(dependencies.matrix, louvian.labels), 3))
-    print(np.round(davies_bouldin_score(dependencies.matrix, mst.labels), 3))
+    print(round(davies_bouldin_score(dependencies.matrix, louvian.labels), 3))
+    try:
+        print(round(davies_bouldin_score(dependencies.matrix, mst.labels), 3))
+    except:
+        pass
 
 
 def run_all():
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_tomcat-catalina-9.0.4.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_ant.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_ant.csv")
+
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_hibernate.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_hibernate.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_hibernate.csv")
+
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_catalina.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_catalina.csv")
 
 
-with RedirectPrintToFile('./../results/output.txt'):
-    run_all()
+# with RedirectPrintToFile('./../results/output.txt'):
+#     run_all()
 
-# run_all()
+run_all()
 

@@ -1,60 +1,958 @@
-============================================ structural_dep_tomcat-catalina-9.0.4.csv : 2023-08-14 14:30:27.357668 ============================================
+============================================ sd_catalina.csv : 2023-08-14 15:13:50.678001 ============================================
 ENTITIES COUNT: 383
 
 LouvianClustering - cluster count: 15
-Cluster 0: org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.ContainerListener, org.apache.catalina.LifecycleListener, org.apache.catalina.Engine, org.apache.catalina.security.SecurityListener, org.apache.catalina.util.Introspection, org.apache.catalina.startup.FailedContext, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.startup.EngineConfig, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.core.StandardEngine, org.apache.catalina.Server, org.apache.catalina.mapper.MapperListener, org.apache.catalina.LifecycleEvent, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.startup.HostConfig, org.apache.catalina.startup.Tomcat, org.apache.catalina.connector.Connector, org.apache.catalina.realm.NullRealm, org.apache.catalina.Host, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.core.ContainerBase, org.apache.catalina.Cluster, org.apache.catalina.realm.RealmBase, org.apache.catalina.realm.MessageDigestCredentialHandler, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.core.StandardService, org.apache.catalina.ContainerEvent, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.Lifecycle, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.catalina.JmxEnabled, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.Service, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.CredentialHandler, org.apache.catalina.Contained, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.util.ContextName, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.core.StandardHost, org.apache.catalina.Executor, org.apache.catalina.startup.ContextConfig, org.apache.catalina.core.StandardThreadExecutor, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.realm.JAASRealm, org.apache.catalina.Container, org.apache.catalina.util.ServerInfo, org.apache.catalina.ContainerServlet, org.apache.catalina.startup.ExpandWar, org.apache.catalina.core.StandardServer, org.apache.catalina.startup.WebAnnotationSet, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.mbeans.ServiceMBean, 
-Total: 71
-Cluster 1: org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.Realm, org.apache.catalina.Pipeline, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.valves.ValveBase, org.apache.catalina.AccessLog, org.apache.catalina.util.SessionConfig, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.TomcatPrincipal, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.connector.Response, org.apache.catalina.valves.SSLValve, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.util.TLSUtil, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.core.StandardContextValve, org.apache.catalina.connector.CoyoteOutputStream, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.connector.CoyoteReader, org.apache.catalina.authenticator.Constants, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.catalina.connector.CoyotePrincipal, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.connector.InputBuffer, org.apache.catalina.core.ApplicationPart, org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.connector.Request, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.Authenticator, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.valves.AccessLogValve, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.valves.RemoteIpValve, org.apache.catalina.core.StandardHostValve, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.Valve, 
-Total: 54
-Cluster 2: org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.TrackedWebResource, org.apache.catalina.webresources.JarResourceRoot, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.WebResourceSet, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.util.ManifestResource, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.util.ResourceSet, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.webresources.JarResource, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.webresources.CachedResource, org.apache.catalina.util.Extension, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.WebResourceRoot, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.core.StandardPipeline, org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.war.Handler, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.webresources.FileResource, org.apache.catalina.LifecycleState, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.LifecycleException, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.webresources.WarResource, org.apache.catalina.WebResource, org.apache.catalina.util.LifecycleBase, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.util.ExtensionValidator, org.apache.catalina.loader.WebappClassLoaderBase, 
-Total: 46
-Cluster 3: org.apache.catalina.manager.DummyProxySession, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.StoreManager, org.apache.catalina.session.FileStore, org.apache.catalina.session.Constants, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.session.JDBCStore, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.SessionListener, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.SessionIdGenerator, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.DistributedManager, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.Manager, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.SessionEvent, org.apache.catalina.Context, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.session.PersistentManager, org.apache.catalina.session.StoreBase, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.manager.JspHelper, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.session.StandardSession, org.apache.catalina.valves.PersistentValve, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.Store, org.apache.catalina.Session, org.apache.catalina.session.ManagerBase, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.manager.Constants, org.apache.catalina.util.ToStringUtil, 
+
+
+Cluster 0: org.apache.catalina.core.StandardPipeline, org.apache.catalina.startup.Tomcat, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.realm.JAASRealm, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.catalina.security.SecurityListener, org.apache.catalina.core.StandardThreadExecutor, org.apache.catalina.util.CharsetMapper, org.apache.catalina.LifecycleListener, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.util.ContextName, org.apache.catalina.realm.NullRealm, org.apache.catalina.connector.Connector, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.catalina.Contained, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.core.StandardHost, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.Executor, org.apache.catalina.mapper.MapperListener, org.apache.catalina.ContainerEvent, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.catalina.core.StandardContext, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.core.NamingContextListener, org.apache.catalina.Host, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.mapper.Mapper, org.apache.catalina.core.ContainerBase, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.LifecycleEvent, org.apache.catalina.JmxEnabled, org.apache.catalina.core.StandardEngine, org.apache.catalina.core.StandardService, org.apache.catalina.util.ToStringUtil, org.apache.catalina.startup.ExpandWar, org.apache.catalina.startup.ContextConfig, org.apache.catalina.Server, org.apache.catalina.startup.HostConfig, org.apache.catalina.realm.RealmBase, org.apache.catalina.util.ServerInfo, org.apache.catalina.Cluster, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.AccessLog, org.apache.catalina.Service, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.startup.EngineConfig, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.ContainerListener, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.core.StandardServer, org.apache.catalina.Engine, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.Container, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.CredentialHandler, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.realm.MessageDigestCredentialHandler, org.apache.catalina.mbeans.ServiceMBean,
+Total: 73
+Distribution: org - 73 [100.0%], apache - 73 [100.0%], catalina - 73 [100.0%], realm - 18 [24.7%], core - 13 [17.8%], startup - 8 [11.0%], util - 5 [6.8%], manager - 3 [4.1%], mapper - 3 [4.1%], mbeans - 3 [4.1%], host - 2 [2.7%], security - 2 [2.7%], connector - 1 [1.4%], deploy - 1 [1.4%], authenticator - 1 [1.4%], jaspic - 1 [1.4%],
+
+Cluster 1: org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.Context, org.apache.catalina.connector.Request, org.apache.catalina.util.SessionConfig, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.valves.AccessLogValve, org.apache.catalina.valves.SSLValve, org.apache.catalina.valves.PersistentValve, org.apache.catalina.startup.WebAnnotationSet, org.apache.catalina.valves.ValveBase, org.apache.catalina.core.ApplicationPart, org.apache.catalina.util.TLSUtil, org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.Realm, org.apache.catalina.Wrapper, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.TomcatPrincipal, org.apache.catalina.core.StandardContextValve, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.core.StandardHostValve, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.connector.CoyotePrincipal, org.apache.catalina.ThreadBindingListener, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.Authenticator, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.Valve, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.connector.Response, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.mapper.MappingData, org.apache.catalina.connector.CoyoteOutputStream, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.connector.CoyoteReader, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.Pipeline, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.startup.FailedContext, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.connector.InputBuffer, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.valves.RemoteIpValve,
+Total: 61
+Distribution: org - 61 [100.0%], apache - 61 [100.0%], catalina - 61 [100.0%], valves - 18 [29.5%], connector - 11 [18.0%], core - 10 [16.4%], authenticator - 9 [14.8%], util - 2 [3.3%], startup - 2 [3.3%], rewrite - 2 [3.3%], mapper - 1 [1.6%], jaspic - 1 [1.6%],
+
+Cluster 2: org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.loader.WebappLoader, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.TrackedWebResource, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.util.ResourceSet, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.webresources.WarResource, org.apache.catalina.webresources.war.Handler, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.WebResource, org.apache.catalina.WebResourceRoot, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.webresources.JarResource, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.webresources.FileResource, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.LifecycleException, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.LifecycleState, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.util.ExtensionValidator, org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.webresources.CachedResource, org.apache.catalina.webresources.JarResourceRoot, org.apache.catalina.WebResourceSet, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.util.LifecycleBase, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.Lifecycle, org.apache.catalina.util.Extension, org.apache.catalina.util.ManifestResource,
+Total: 49
+Distribution: org - 49 [100.0%], apache - 49 [100.0%], catalina - 49 [100.0%], webresources - 30 [61.2%], loader - 5 [10.2%], util - 5 [10.2%], war - 2 [4.1%], realm - 2 [4.1%],
+
+Cluster 3: org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.manager.JspHelper, org.apache.catalina.SessionListener, org.apache.catalina.session.FileStore, org.apache.catalina.session.StoreBase, org.apache.catalina.session.Constants, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.session.ManagerBase, org.apache.catalina.DistributedManager, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.session.JDBCStore, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.Manager, org.apache.catalina.session.PersistentManager, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.session.StandardSession, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.authenticator.Constants, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.session.StandardManager, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.Store, org.apache.catalina.StoreManager, org.apache.catalina.SessionEvent, org.apache.catalina.SessionIdGenerator, org.apache.catalina.manager.Constants, org.apache.catalina.Session, org.apache.catalina.manager.DummyProxySession,
 Total: 37
-Cluster 4: org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.AsyncDispatcher, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.security.SecurityUtil, org.apache.catalina.connector.RequestFacade, org.apache.catalina.core.ApplicationServletRegistration, org.apache.catalina.mapper.Mapper, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.core.StandardWrapper, org.apache.catalina.Wrapper, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.loader.WebappLoader, org.apache.catalina.mapper.MappingData, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.ThreadBindingListener, org.apache.catalina.core.StandardContext, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.util.ParameterMap, org.apache.catalina.util.RequestUtil, org.apache.catalina.Globals, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.core.ApplicationContext, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.catalina.filters.RemoteIpFilter, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.Loader, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.util.CharsetMapper, org.apache.catalina.session.StandardManager, org.apache.catalina.servlets.DefaultServlet, 
-Total: 36
-Cluster 5: org.apache.naming.ContextBindings, org.apache.naming.SelectorContext, org.apache.naming.factory.DataSourceLinkFactory, org.apache.naming.StringManager, org.apache.naming.factory.ResourceLinkFactory, org.apache.naming.java.javaURLContextFactory, org.apache.naming.NamingContext, org.apache.naming.TransactionRef, org.apache.catalina.startup.UserDatabase, org.apache.naming.ResourceEnvRef, org.apache.naming.ContextAccessController, org.apache.catalina.startup.HomesUserDatabase, org.apache.naming.EjbRef, org.apache.naming.HandlerRef, org.apache.naming.AbstractRef, org.apache.naming.factory.ResourceEnvFactory, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.naming.factory.TransactionFactory, org.apache.naming.NameParserImpl, org.apache.naming.factory.ResourceFactory, org.apache.naming.NamingEntry, org.apache.naming.factory.BeanFactory, org.apache.naming.NamingContextBindingsEnumeration, org.apache.naming.factory.FactoryBase, org.apache.naming.ServiceRef, org.apache.catalina.startup.UserConfig, org.apache.catalina.startup.PasswdUserDatabase, org.apache.naming.factory.OpenEjbFactory, org.apache.naming.ResourceLinkRef, org.apache.catalina.core.NamingContextListener, org.apache.naming.factory.EjbFactory, 
+Distribution: org - 37 [100.0%], apache - 37 [100.0%], catalina - 37 [100.0%], session - 12 [32.4%], manager - 8 [21.6%], util - 5 [13.5%], authenticator - 5 [13.5%], core - 1 [2.7%],
+
+Cluster 4: org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.util.RequestUtil, org.apache.catalina.Globals, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.core.ApplicationServletRegistration, org.apache.catalina.ContainerServlet, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.security.SecurityUtil, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.util.DOMWriter, org.apache.catalina.util.XMLWriter, org.apache.catalina.util.URLEncoder, org.apache.catalina.connector.RequestFacade, org.apache.catalina.AsyncDispatcher, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.core.StandardWrapper, org.apache.catalina.Loader, org.apache.catalina.core.ApplicationContext, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.util.Introspection, org.apache.catalina.util.ParameterMap, org.apache.catalina.filters.RemoteIpFilter,
 Total: 32
-Cluster 6: org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.ssi.SSIMediator, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.ssi.SSIExec, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.util.IOTools, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.ssi.SSIPrintenv, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.servlets.CGIServlet, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.ssi.SSICommand, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.ssi.SSIFsize, org.apache.catalina.util.Strftime, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.ssi.SSISet, org.apache.catalina.ssi.SSIServlet, 
+Distribution: org - 32 [100.0%], apache - 32 [100.0%], catalina - 32 [100.0%], core - 14 [43.8%], util - 7 [21.9%], servlets - 3 [9.4%], connector - 2 [6.2%], security - 1 [3.1%], filters - 1 [3.1%],
+
+Cluster 5: org.apache.naming.ContextAccessController, org.apache.naming.NamingContextBindingsEnumeration, org.apache.naming.ResourceEnvRef, org.apache.naming.factory.DataSourceLinkFactory, org.apache.naming.factory.FactoryBase, org.apache.naming.factory.BeanFactory, org.apache.naming.factory.ResourceLinkFactory, org.apache.naming.AbstractRef, org.apache.naming.factory.EjbFactory, org.apache.naming.ResourceLinkRef, org.apache.naming.StringManager, org.apache.naming.ContextBindings, org.apache.naming.NamingEntry, org.apache.naming.NameParserImpl, org.apache.naming.factory.OpenEjbFactory, org.apache.naming.EjbRef, org.apache.naming.ServiceRef, org.apache.catalina.startup.UserDatabase, org.apache.naming.factory.TransactionFactory, org.apache.naming.NamingContext, org.apache.naming.SelectorContext, org.apache.naming.factory.ResourceFactory, org.apache.naming.factory.ResourceEnvFactory, org.apache.naming.HandlerRef, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.naming.java.javaURLContextFactory, org.apache.catalina.startup.HomesUserDatabase, org.apache.catalina.startup.UserConfig, org.apache.naming.TransactionRef, org.apache.catalina.startup.PasswdUserDatabase,
+Total: 31
+Distribution: org - 31 [100.0%], apache - 31 [100.0%], naming - 27 [87.1%], factory - 9 [29.0%], catalina - 4 [12.9%], startup - 4 [12.9%], java - 1 [3.2%],
+
+Cluster 6: org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.ssi.SSIMediator, org.apache.catalina.util.IOTools, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSISet, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.ssi.SSIServlet, org.apache.catalina.ssi.SSIPrintenv, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.util.Strftime, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.ssi.SSIExec, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.ssi.SSIFsize, org.apache.catalina.ssi.SSICommand, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.servlets.CGIServlet,
 Total: 26
-Cluster 7: org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.users.AbstractRole, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.users.MemoryRole, org.apache.catalina.User, org.apache.catalina.UserDatabase, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.users.MemoryUserCreationFactory, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.users.AbstractUser, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.Group, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.users.AbstractGroup, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.Role, 
+Distribution: org - 26 [100.0%], apache - 26 [100.0%], catalina - 26 [100.0%], ssi - 23 [88.5%], util - 2 [7.7%], servlets - 1 [3.8%],
+
+Cluster 7: org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser, org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.users.MemoryRole, org.apache.catalina.UserDatabase, org.apache.catalina.User, org.apache.catalina.Role, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.Group, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.users.AbstractRole, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.users.MemoryUserCreationFactory,
+Total: 21
+Distribution: org - 21 [100.0%], apache - 21 [100.0%], catalina - 21 [100.0%], users - 9 [42.9%], mbeans - 7 [33.3%], realm - 1 [4.8%],
+
+Cluster 8: org.apache.catalina.startup.Catalina, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.startup.Bootstrap, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.startup.Tool, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.security.SecurityConfig,
 Total: 20
-Cluster 8: org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.startup.Catalina, org.apache.catalina.security.SecurityConfig, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.startup.Bootstrap, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.startup.Tool, 
-Total: 20
-Cluster 9: org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.RemoteHostFilter, 
+Distribution: org - 20 [100.0%], apache - 20 [100.0%], catalina - 20 [100.0%], startup - 18 [90.0%], security - 2 [10.0%],
+
+Cluster 9: org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.RemoteHostFilter,
 Total: 14
-Cluster 10: org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.util.URLEncoder, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.util.XMLWriter, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.util.DOMWriter, 
-Total: 13
-Cluster 11: org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.mbeans.ContextResourceLinkMBean, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.mbeans.ContextResourceMBean, 
+Distribution: org - 14 [100.0%], apache - 14 [100.0%], catalina - 14 [100.0%], filters - 14 [100.0%],
+
+Cluster 10: org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mbeans.ContextResourceLinkMBean,
 Total: 7
-Cluster 12: org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext, org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, 
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], mbeans - 7 [100.0%],
+
+Cluster 11: org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.valves.rewrite.RewriteCond,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], valves - 5 [100.0%], rewrite - 5 [100.0%],
+
+Cluster 12: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
 Total: 3
-Cluster 13: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet, 
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 13: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet,
 Total: 2
-Cluster 14: org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, 
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], mbeans - 1 [50.0%], manager - 1 [50.0%],
+
+Cluster 14: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,
 Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%], jaspic - 2 [100.0%],
+
 
 MSTClustering - cluster count: 5
-Cluster 0: org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.AsyncDispatcher, org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.TrackedWebResource, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.manager.DummyProxySession, org.apache.catalina.webresources.JarResourceRoot, org.apache.naming.ContextBindings, org.apache.catalina.ContainerListener, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.LifecycleListener, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.Realm, org.apache.catalina.WebResourceSet, org.apache.catalina.Engine, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.security.SecurityListener, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.util.Introspection, org.apache.catalina.Pipeline, org.apache.catalina.StoreManager, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.startup.FailedContext, org.apache.catalina.session.FileStore, org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.session.Constants, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.ssi.SSIMediator, org.apache.naming.SelectorContext, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.users.AbstractRole, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.valves.ValveBase, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.startup.EngineConfig, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.core.StandardEngine, org.apache.catalina.AccessLog, org.apache.catalina.ssi.SSIExec, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.users.MemoryRole, org.apache.catalina.util.SessionConfig, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.Server, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.mapper.MapperListener, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.security.SecurityUtil, org.apache.catalina.util.ManifestResource, org.apache.catalina.LifecycleEvent, org.apache.catalina.connector.RequestFacade, org.apache.catalina.TomcatPrincipal, org.apache.catalina.User, org.apache.naming.factory.DataSourceLinkFactory, org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.util.IOTools, org.apache.catalina.util.ResourceSet, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.startup.Catalina, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.security.SecurityConfig, org.apache.naming.StringManager, org.apache.naming.factory.ResourceLinkFactory, org.apache.catalina.core.ApplicationServletRegistration, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.startup.HostConfig, org.apache.catalina.UserDatabase, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.startup.Tomcat, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.connector.Connector, org.apache.catalina.util.URLEncoder, org.apache.catalina.realm.NullRealm, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.webresources.JarResource, org.apache.catalina.session.JDBCStore, org.apache.catalina.connector.Response, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.mapper.Mapper, org.apache.catalina.Host, org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.naming.java.javaURLContextFactory, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.valves.SSLValve, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.SessionListener, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.core.StandardWrapper, org.apache.catalina.mbeans.ContextResourceLinkMBean, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.util.TLSUtil, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.SessionIdGenerator, org.apache.catalina.Wrapper, org.apache.catalina.core.ContainerBase, org.apache.catalina.util.XMLWriter, org.apache.catalina.Cluster, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.realm.RealmBase, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.realm.MessageDigestCredentialHandler, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.loader.WebappLoader, org.apache.catalina.core.StandardContextValve, org.apache.catalina.connector.CoyoteOutputStream, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.mapper.MappingData, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.DistributedManager, org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.Manager, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.core.StandardService, org.apache.naming.NamingContext, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.ThreadBindingListener, org.apache.catalina.ContainerEvent, org.apache.catalina.users.MemoryUserCreationFactory, org.apache.catalina.connector.CoyoteReader, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.core.StandardContext, org.apache.catalina.ssi.SSIPrintenv, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.authenticator.Constants, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.webresources.CachedResource, org.apache.catalina.core.AsyncContextImpl, org.apache.naming.TransactionRef, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.startup.UserDatabase, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.servlets.CGIServlet, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.naming.ResourceEnvRef, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.connector.CoyotePrincipal, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.util.Extension, org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.Lifecycle, org.apache.catalina.SessionEvent, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.naming.ContextAccessController, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.JmxEnabled, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.startup.HomesUserDatabase, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.connector.InputBuffer, org.apache.catalina.util.ParameterMap, org.apache.catalina.Service, org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.Context, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.util.RequestUtil, org.apache.catalina.WebResourceRoot, org.apache.catalina.CredentialHandler, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.session.PersistentManager, org.apache.naming.EjbRef, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.naming.HandlerRef, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.Contained, org.apache.naming.AbstractRef, org.apache.catalina.Globals, org.apache.catalina.session.StoreBase, org.apache.catalina.core.ApplicationPart, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.naming.factory.ResourceEnvFactory, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.core.StandardPipeline, org.apache.naming.factory.TransactionFactory, org.apache.catalina.users.AbstractUser, org.apache.naming.NameParserImpl, org.apache.naming.factory.ResourceFactory, org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.webresources.FileResourceSet, org.apache.naming.NamingEntry, org.apache.catalina.ssi.SSICommand, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.core.ApplicationContext, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.catalina.filters.RemoteIpFilter, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.webresources.Cache, org.apache.catalina.Group, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.naming.factory.BeanFactory, org.apache.naming.NamingContextBindingsEnumeration, org.apache.catalina.manager.JspHelper, org.apache.catalina.webresources.war.Handler, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.naming.factory.FactoryBase, org.apache.catalina.util.ContextName, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.connector.Request, org.apache.catalina.ssi.SSIFsize, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.util.Strftime, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.session.StandardSession, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.users.AbstractGroup, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.valves.PersistentValve, org.apache.catalina.webresources.FileResource, org.apache.catalina.core.StandardHost, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.Loader, org.apache.catalina.LifecycleState, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.LifecycleException, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.Executor, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.Authenticator, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.startup.ContextConfig, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.startup.Bootstrap, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.core.StandardThreadExecutor, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.valves.AccessLogValve, org.apache.naming.ServiceRef, org.apache.catalina.webresources.WarResource, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.startup.UserConfig, org.apache.catalina.startup.PasswdUserDatabase, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.realm.JAASRealm, org.apache.catalina.util.CharsetMapper, org.apache.catalina.Container, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.valves.RemoteIpValve, org.apache.catalina.util.ServerInfo, org.apache.catalina.session.StandardManager, org.apache.catalina.Store, org.apache.naming.factory.OpenEjbFactory, org.apache.catalina.WebResource, org.apache.catalina.ContainerServlet, org.apache.catalina.ssi.SSISet, org.apache.catalina.core.StandardHostValve, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.startup.ExpandWar, org.apache.catalina.util.LifecycleBase, org.apache.catalina.Session, org.apache.catalina.session.ManagerBase, org.apache.catalina.core.StandardServer, org.apache.naming.ResourceLinkRef, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.startup.WebAnnotationSet, org.apache.catalina.util.ExtensionValidator, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.manager.Constants, org.apache.catalina.core.NamingContextListener, org.apache.catalina.startup.Tool, org.apache.naming.factory.EjbFactory, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.Role, org.apache.catalina.util.DOMWriter, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.mbeans.ServiceMBean, org.apache.catalina.ssi.SSIServlet, org.apache.catalina.util.ToStringUtil, org.apache.catalina.Valve, 
-Total: 362
-Cluster 1: org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, 
-Total: 2
-Cluster 2: org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext, org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, 
-Total: 3
-Cluster 3: org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.RemoteHostFilter, 
-Total: 14
-Cluster 4: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet, 
-Total: 2
 
+
+Cluster 0: org.apache.catalina.core.StandardPipeline, org.apache.catalina.webresources.Cache, org.apache.catalina.startup.Tomcat, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.Context, org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.startup.Catalina, org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.realm.JAASRealm, org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.catalina.security.SecurityListener, org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.valves.rewrite.RewriteMap, org.apache.naming.ContextAccessController, org.apache.catalina.core.StandardThreadExecutor, org.apache.naming.NamingContextBindingsEnumeration, org.apache.catalina.util.RequestUtil, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.Globals, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.valves.rewrite.Substitution, org.apache.naming.ResourceEnvRef, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.connector.Request, org.apache.catalina.util.SessionConfig, org.apache.catalina.loader.WebappLoader, org.apache.catalina.util.CharsetMapper, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.TrackedWebResource, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.LifecycleListener, org.apache.catalina.valves.AccessLogValve, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.valves.SSLValve, org.apache.catalina.util.ContextName, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.manager.JspHelper, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.ssi.SSIMediator, org.apache.catalina.util.IOTools, org.apache.naming.factory.DataSourceLinkFactory, org.apache.catalina.realm.NullRealm, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.core.ApplicationServletRegistration, org.apache.naming.factory.FactoryBase, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.valves.PersistentValve, org.apache.catalina.ContainerServlet, org.apache.catalina.SessionListener, org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.startup.WebAnnotationSet, org.apache.naming.factory.BeanFactory, org.apache.catalina.connector.Connector, org.apache.catalina.valves.ValveBase, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.util.ResourceSet, org.apache.naming.factory.ResourceLinkFactory, org.apache.catalina.core.ApplicationPart, org.apache.catalina.util.TLSUtil, org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.Realm, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.naming.AbstractRef, org.apache.catalina.startup.Bootstrap, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.security.SecurityUtil, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSISet, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.session.FileStore, org.apache.catalina.Wrapper, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser, org.apache.catalina.session.StoreBase, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.session.Constants, org.apache.catalina.users.MemoryRole, org.apache.catalina.Contained, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.TomcatPrincipal, org.apache.catalina.webresources.WarResource, org.apache.catalina.core.StandardHost, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.mbeans.ConnectorMBean, org.apache.naming.factory.EjbFactory, org.apache.naming.ResourceLinkRef, org.apache.catalina.Executor, org.apache.catalina.startup.Tool, org.apache.catalina.core.StandardContextValve, org.apache.naming.StringManager, org.apache.catalina.session.ManagerBase, org.apache.catalina.util.DOMWriter, org.apache.catalina.mapper.MapperListener, org.apache.catalina.webresources.war.Handler, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.WebResource, org.apache.naming.ContextBindings, org.apache.catalina.core.StandardHostValve, org.apache.catalina.UserDatabase, org.apache.catalina.WebResourceRoot, org.apache.naming.NamingEntry, org.apache.catalina.ContainerEvent, org.apache.catalina.DistributedManager, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.util.XMLWriter, org.apache.catalina.util.URLEncoder, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.connector.RequestFacade, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.naming.NameParserImpl, org.apache.catalina.core.StandardContext, org.apache.naming.factory.OpenEjbFactory, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.ssi.SSIServlet, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.webresources.JarResource, org.apache.catalina.User, org.apache.catalina.core.NamingContextListener, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.ssi.SSIPrintenv, org.apache.catalina.webresources.FileResource, org.apache.catalina.Host, org.apache.naming.EjbRef, org.apache.catalina.AsyncDispatcher, org.apache.catalina.connector.CoyotePrincipal, org.apache.naming.ServiceRef, org.apache.catalina.ThreadBindingListener, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.Role, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.Authenticator, org.apache.catalina.mapper.Mapper, org.apache.catalina.core.ContainerBase, org.apache.catalina.LifecycleException, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.startup.UserDatabase, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.Valve, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.LifecycleState, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.LifecycleEvent, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.connector.Response, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.session.JDBCStore, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.Manager, org.apache.naming.factory.TransactionFactory, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.naming.NamingContext, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.JmxEnabled, org.apache.catalina.core.StandardEngine, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.util.ExtensionValidator, org.apache.naming.SelectorContext, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.session.PersistentManager, org.apache.naming.factory.ResourceFactory, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.core.StandardService, org.apache.catalina.mapper.MappingData, org.apache.catalina.util.ToStringUtil, org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.startup.ExpandWar, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.util.Strftime, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.session.StandardSession, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.authenticator.Constants, org.apache.catalina.connector.CoyoteOutputStream, org.apache.naming.factory.ResourceEnvFactory, org.apache.catalina.webresources.CachedResource, org.apache.catalina.startup.ContextConfig, org.apache.catalina.core.StandardWrapper, org.apache.naming.HandlerRef, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.Server, org.apache.catalina.webresources.JarResourceRoot, org.apache.catalina.session.StandardManager, org.apache.catalina.WebResourceSet, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.util.LifecycleBase, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.startup.HostConfig, org.apache.catalina.Group, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.realm.RealmBase, org.apache.catalina.util.ServerInfo, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.ssi.SSIExec, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.connector.CoyoteReader, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.naming.java.javaURLContextFactory, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.Cluster, org.apache.catalina.startup.HomesUserDatabase, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.Loader, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.mbeans.ContextResourceLinkMBean, org.apache.catalina.core.ApplicationContext, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.startup.UserConfig, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.AccessLog, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.Pipeline, org.apache.catalina.Service, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.ssi.SSIFsize, org.apache.naming.TransactionRef, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.startup.EngineConfig, org.apache.catalina.users.AbstractRole, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.users.MemoryUserCreationFactory, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.startup.FailedContext, org.apache.catalina.ssi.SSICommand, org.apache.catalina.Store, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.ContainerListener, org.apache.catalina.StoreManager, org.apache.catalina.util.Introspection, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.SessionEvent, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.core.StandardServer, org.apache.catalina.Engine, org.apache.catalina.SessionIdGenerator, org.apache.catalina.Lifecycle, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.Container, org.apache.catalina.manager.Constants, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.Session, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.manager.DummyProxySession, org.apache.catalina.connector.InputBuffer, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.CredentialHandler, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.util.Extension, org.apache.catalina.util.ManifestResource, org.apache.catalina.servlets.CGIServlet, org.apache.catalina.util.ParameterMap, org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.realm.MessageDigestCredentialHandler, org.apache.catalina.mbeans.ServiceMBean, org.apache.catalina.security.SecurityConfig, org.apache.catalina.filters.RemoteIpFilter, org.apache.catalina.startup.PasswdUserDatabase, org.apache.catalina.valves.RemoteIpValve,
+Total: 362
+Distribution: org - 362 [100.0%], apache - 362 [100.0%], catalina - 335 [92.5%], core - 38 [10.5%], startup - 32 [8.8%], webresources - 30 [8.3%], naming - 27 [7.5%], util - 26 [7.2%], valves - 23 [6.4%], ssi - 23 [6.4%], realm - 21 [5.8%], mbeans - 17 [4.7%], authenticator - 15 [4.1%], connector - 14 [3.9%], session - 12 [3.3%], manager - 11 [3.0%], users - 9 [2.5%], factory - 9 [2.5%], rewrite - 7 [1.9%], security - 5 [1.4%], loader - 5 [1.4%], servlets - 4 [1.1%], mapper - 4 [1.1%], host - 2 [0.6%], war - 2 [0.6%], jaspic - 2 [0.6%], deploy - 1 [0.3%], java - 1 [0.3%], filters - 1 [0.3%],
+
+Cluster 1: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%], jaspic - 2 [100.0%],
+
+Cluster 2: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 3: org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.RemoteHostFilter,
+Total: 14
+Distribution: org - 14 [100.0%], apache - 14 [100.0%], catalina - 14 [100.0%], filters - 14 [100.0%],
+
+Cluster 4: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], mbeans - 1 [50.0%], manager - 1 [50.0%],
 
 MQ metric
-0.23
+0.255
 0.32
 sknetwork.clustering.get_modularity
-0.516
+0.505
 0.023
 sklearn.metrics.silhouette_score
 -0.18
 -0.26
 sklearn.metrics.davies_bouldin_score
-3.141
+3.05
 3.406
+============================================ ld_catalina.csv : 2023-08-14 15:13:57.060672 ============================================
+ENTITIES COUNT: 329
+
+LouvianClustering - cluster count: 86
+
+
+Cluster 0: org.apache.catalina.valves.AbstractAccessLogValve$ByteSentElement, org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache, org.apache.catalina.valves.AbstractAccessLogValve$UserElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalServerNameElement, org.apache.catalina.valves.AbstractAccessLogValve$HeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$ThreadNameElement, org.apache.catalina.valves.AbstractAccessLogValve$AccessLogElement, org.apache.catalina.valves.AbstractAccessLogValve$FirstByteTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$HttpStatusCodeElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionIdElement, org.apache.catalina.valves.AbstractAccessLogValve$DateAndTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$RemoteAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestElement, org.apache.catalina.valves.AbstractAccessLogValve$QueryElement, org.apache.catalina.valves.AbstractAccessLogValve$MethodElement, org.apache.catalina.valves.AbstractAccessLogValve$StringElement, org.apache.catalina.valves.AbstractAccessLogValve$FormatType, org.apache.catalina.valves.AbstractAccessLogValve$ConnectionStatusElement, org.apache.catalina.valves.AbstractAccessLogValve$PortType, org.apache.catalina.valves.AbstractAccessLogValve$ResponseHeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$CookieElement, org.apache.catalina.valves.AbstractAccessLogValve$PortElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.valves.AbstractAccessLogValve$RequestURIElement, org.apache.catalina.valves.AbstractAccessLogValve$ProtocolElement, org.apache.catalina.valves.AbstractAccessLogValve$LogicalUserNameElement, org.apache.catalina.valves.AbstractAccessLogValve$ElapsedTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$HostElement,
+Total: 31
+Distribution: org - 31 [100.0%], apache - 31 [100.0%], catalina - 31 [100.0%], valves - 31 [100.0%],
+
+Cluster 1: org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction, org.apache.catalina.connector.RequestFacade, org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,
+Total: 14
+Distribution: org - 14 [100.0%], apache - 14 [100.0%], catalina - 14 [100.0%], connector - 14 [100.0%],
+
+Cluster 2: org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement, org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer, org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct, org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement, org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement, org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,
+Total: 13
+Distribution: org - 13 [100.0%], apache - 13 [100.0%], catalina - 13 [100.0%], valves - 13 [100.0%],
+
+Cluster 3: org.apache.catalina.ssi.ExpressionParseTree$OrNode, org.apache.catalina.ssi.ExpressionParseTree$OppNode, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.ssi.ExpressionParseTree$Node, org.apache.catalina.ssi.ExpressionParseTree$AndNode, org.apache.catalina.ssi.ExpressionParseTree$LessThanNode, org.apache.catalina.ssi.ExpressionParseTree$CompareNode, org.apache.catalina.ssi.ExpressionParseTree$StringNode, org.apache.catalina.ssi.ExpressionParseTree$NotNode, org.apache.catalina.ssi.ExpressionParseTree$EqualNode, org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,
+Total: 11
+Distribution: org - 11 [100.0%], apache - 11 [100.0%], catalina - 11 [100.0%], ssi - 11 [100.0%],
+
+Cluster 4: org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mbeans.ServiceMBean,
+Total: 11
+Distribution: org - 11 [100.0%], apache - 11 [100.0%], catalina - 11 [100.0%], mbeans - 11 [100.0%],
+
+Cluster 5: org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement, org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement, org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement, org.apache.catalina.valves.rewrite.Substitution$StaticElement, org.apache.catalina.valves.rewrite.Substitution$MapElement, org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,
+Total: 10
+Distribution: org - 10 [100.0%], apache - 10 [100.0%], catalina - 10 [100.0%], valves - 10 [100.0%], rewrite - 10 [100.0%],
+
+Cluster 6: org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration, org.apache.catalina.filters.ExpiresFilter$DurationUnit, org.apache.catalina.filters.ExpiresFilter$XServletOutputStream, org.apache.catalina.filters.ExpiresFilter$XPrintWriter, org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse, org.apache.catalina.filters.ExpiresFilter$Duration, org.apache.catalina.filters.ExpiresFilter$StartingPoint,
+Total: 8
+Distribution: org - 8 [100.0%], apache - 8 [100.0%], catalina - 8 [100.0%], filters - 8 [100.0%],
+
+Cluster 7: org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer, org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction, org.apache.catalina.authenticator.SpnegoAuthenticator,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], authenticator - 7 [100.0%],
+
+Cluster 8: org.apache.catalina.mapper.Mapper, org.apache.catalina.mapper.Mapper$MappedWrapper, org.apache.catalina.mapper.Mapper$MapElement, org.apache.catalina.mapper.Mapper$MappedHost, org.apache.catalina.mapper.Mapper$ContextList, org.apache.catalina.mapper.Mapper$ContextVersion, org.apache.catalina.mapper.Mapper$MappedContext,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], mapper - 7 [100.0%],
+
+Cluster 9: org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], session - 6 [100.0%],
+
+Cluster 10: org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener, org.apache.catalina.startup.HostConfig$DeployDescriptor, org.apache.catalina.startup.HostConfig$DeployWar, org.apache.catalina.startup.HostConfig$DeployedApplication, org.apache.catalina.startup.HostConfig$DeployDirectory, org.apache.catalina.startup.HostConfig,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], startup - 6 [100.0%],
+
+Cluster 11: org.apache.catalina.core.ContainerBase$StartChild, org.apache.catalina.core.ContainerBase$PrivilegedAddChild, org.apache.catalina.core.ContainerBase$StopChild, org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor, org.apache.catalina.core.ContainerBase, org.apache.catalina.core.ContainerBase$StartStopThreadFactory,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], core - 6 [100.0%],
+
+Cluster 12: org.apache.catalina.servlets.DefaultServlet$PrecompressedResource, org.apache.catalina.servlets.DefaultServlet$Range, org.apache.catalina.servlets.DefaultServlet$CompressionFormat, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], servlets - 5 [100.0%],
+
+Cluster 13: org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch, org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward, org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.core.ApplicationDispatcher$State,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], core - 5 [100.0%],
+
+Cluster 14: org.apache.catalina.filters.RequestDumperFilter$Timestamp, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.RequestDumperFilter, org.apache.catalina.filters.WebdavFixFilter, org.apache.catalina.filters.AddDefaultCharsetFilter$ResponseWrapper,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], filters - 5 [100.0%],
+
+Cluster 15: org.apache.catalina.valves.rewrite.RewriteCond$Condition, org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition, org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], valves - 5 [100.0%], rewrite - 5 [100.0%],
+
+Cluster 16: org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.RestCsrfPreventionFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], filters - 5 [100.0%],
+
+Cluster 17: org.apache.catalina.servlets.CGIServlet$CGIEnvironment, org.apache.catalina.servlets.CGIServlet$CGIRunner, org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream, org.apache.catalina.servlets.CGIServlet,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], servlets - 4 [100.0%],
+
+Cluster 18: org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], valves - 4 [100.0%],
+
+Cluster 19: org.apache.catalina.startup.Tomcat, org.apache.catalina.startup.Tomcat$DefaultWebXmlListener, org.apache.catalina.startup.Tomcat$ExistingStandardWrapper, org.apache.catalina.startup.Tomcat$FixContextListener,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], startup - 4 [100.0%],
+
+Cluster 20: org.apache.catalina.core.AsyncContextImpl$AsyncRunnable, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.core.AsyncContextImpl$RunnableWrapper, org.apache.catalina.core.AsyncContextImpl$DebugException,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], core - 4 [100.0%],
+
+Cluster 21: org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], loader - 4 [100.0%],
+
+Cluster 22: org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.webresources.JarResource, org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper, org.apache.catalina.webresources.JarWarResource,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], webresources - 4 [100.0%],
+
+Cluster 23: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], authenticator - 4 [100.0%], jaspic - 4 [100.0%],
+
+Cluster 24: org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.realm.JDBCRealm,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], realm - 4 [100.0%],
+
+Cluster 25: org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.startup.HostRuleSet,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], startup - 4 [100.0%],
+
+Cluster 26: org.apache.catalina.connector.ResponseFacade, org.apache.catalina.connector.ResponseFacade$DateHeaderPrivilegedAction, org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], connector - 3 [100.0%],
+
+Cluster 27: org.apache.catalina.servlets.WebdavServlet$LockInfo, org.apache.catalina.servlets.WebdavServlet$WebdavResolver, org.apache.catalina.servlets.WebdavServlet,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], servlets - 3 [100.0%],
+
+Cluster 28: org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.valves.rewrite.ResolverImpl,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], valves - 3 [100.0%], rewrite - 3 [100.0%],
+
+Cluster 29: org.apache.catalina.core.StandardContext, org.apache.catalina.core.StandardContext$ContextFilterMaps, org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 30: org.apache.catalina.filters.CsrfPreventionFilter$LruCache, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], filters - 3 [100.0%],
+
+Cluster 31: org.apache.catalina.session.StandardManager$PrivilegedDoLoad, org.apache.catalina.session.StandardManager$PrivilegedDoUnload, org.apache.catalina.session.StandardManager,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], session - 3 [100.0%],
+
+Cluster 32: org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.mbeans.ContextResourceLinkMBean,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], mbeans - 3 [100.0%],
+
+Cluster 33: org.apache.catalina.Lifecycle$SingleUse, org.apache.catalina.util.LifecycleBase, org.apache.catalina.Lifecycle,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], util - 1 [33.3%],
+
+Cluster 34: org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.SessionIdGenerator,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], util - 2 [66.7%],
+
+Cluster 35: org.apache.catalina.WebResource, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.webresources.JarResourceRoot,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 2 [66.7%],
+
+Cluster 36: org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.Cache$EvictionOrder, org.apache.catalina.webresources.CachedResource,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 3 [100.0%],
+
+Cluster 37: org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry, org.apache.catalina.startup.ContextConfig, org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], startup - 3 [100.0%],
+
+Cluster 38: org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry, org.apache.catalina.core.DefaultInstanceManager,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 39: org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo, org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo, org.apache.catalina.authenticator.DigestAuthenticator,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%],
+
+Cluster 40: org.apache.catalina.startup.ClassLoaderFactory$RepositoryType, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.startup.ClassLoaderFactory$Repository,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], startup - 3 [100.0%],
+
+Cluster 41: org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.Constants,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], filters - 3 [100.0%],
+
+Cluster 42: org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.webresources.JarWarResourceSet,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 3 [100.0%],
+
+Cluster 43: org.apache.catalina.core.StandardEngine$NoopAccessLog, org.apache.catalina.core.StandardEngine$AccessLogListener, org.apache.catalina.core.StandardEngine,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 44: org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 45: org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], users - 3 [100.0%],
+
+Cluster 46: org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], connector - 2 [100.0%],
+
+Cluster 47: org.apache.catalina.realm.JNDIRealm, org.apache.catalina.realm.JNDIRealm$User,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 48: org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.RemoteHostFilter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 49: org.apache.catalina.manager.host.Constants, org.apache.catalina.manager.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], manager - 2 [100.0%], host - 1 [50.0%],
+
+Cluster 50: org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.webresources.WarResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 51: org.apache.catalina.core.ApplicationContext$DispatchData, org.apache.catalina.core.ApplicationContext,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 52: org.apache.catalina.connector.Request, org.apache.catalina.connector.Request$SpecialAttributeAdapter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], connector - 2 [100.0%],
+
+Cluster 53: org.apache.catalina.WebResourceRoot, org.apache.catalina.WebResourceRoot$ResourceSetType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%],
+
+Cluster 54: org.apache.catalina.authenticator.AuthenticatorBase$JaspicState, org.apache.catalina.authenticator.AuthenticatorBase,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%],
+
+Cluster 55: org.apache.catalina.webresources.StandardRoot, org.apache.catalina.webresources.StandardRoot$BaseLocation,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 56: org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 57: org.apache.catalina.startup.UserConfig$DeployUserDirectory, org.apache.catalina.startup.UserConfig,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 58: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%], jaspic - 2 [100.0%],
+
+Cluster 59: org.apache.catalina.ssi.SSISet, org.apache.catalina.ssi.SSIConfig,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], ssi - 2 [100.0%],
+
+Cluster 60: org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal, org.apache.catalina.realm.GenericPrincipal,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 61: org.apache.catalina.realm.RealmBase$AllRolesMode, org.apache.catalina.realm.RealmBase,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 62: org.apache.naming.factory.DataSourceLinkFactory, org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], naming - 2 [100.0%], factory - 2 [100.0%],
+
+Cluster 63: org.apache.catalina.session.ManagerBase, org.apache.catalina.session.ManagerBase$SessionTiming,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], session - 2 [100.0%],
+
+Cluster 64: org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.TrackedWebResource,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 1 [50.0%],
+
+Cluster 65: org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.manager.JspHelper,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], manager - 2 [100.0%], util - 1 [50.0%],
+
+Cluster 66: org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 67: org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 68: org.apache.catalina.realm.LockOutRealm$LockRecord, org.apache.catalina.realm.LockOutRealm,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 69: org.apache.catalina.core.ApplicationMapping, org.apache.catalina.core.ApplicationMapping$MappingImpl,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 70: org.apache.catalina.core.StandardHost, org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 71: org.apache.catalina.valves.Constants$AccessLog, org.apache.catalina.valves.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 72: org.apache.catalina.util.XMLWriter, org.apache.catalina.util.Strftime,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], util - 2 [100.0%],
+
+Cluster 73: org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.webresources.war.Handler,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%], war - 2 [100.0%],
+
+Cluster 74: org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], ssi - 2 [100.0%],
+
+Cluster 75: org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.webresources.DirResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 76: org.apache.catalina.UserDatabase, org.apache.catalina.User,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%],
+
+Cluster 77: org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.realm.X509SubjectDnRetriever,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 78: org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread, org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 79: org.apache.catalina.startup.Catalina, org.apache.catalina.startup.Catalina$CatalinaShutdownHook,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 80: org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter$XFrameOption,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 81: org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.valves.RemoteAddrValve,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 82: org.apache.catalina.filters.CorsFilter, org.apache.catalina.filters.CorsFilter$CORSRequestType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 83: org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest, org.apache.catalina.filters.RemoteIpFilter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 84: b,
+Total: 1
+Distribution:
+
+Cluster 85: a,
+Total: 1
+Distribution:
+
+
+MSTClustering - cluster count: 84
+
+
+Cluster 0: org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement, a, org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement, org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer, b, org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct, org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement, org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement, org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,
+Total: 15
+Distribution: org - 13 [86.7%], apache - 13 [86.7%], catalina - 13 [86.7%], valves - 13 [86.7%],
+
+Cluster 1: org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], session - 6 [100.0%],
+
+Cluster 2: org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.webresources.JarResource, org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper, org.apache.catalina.webresources.JarWarResource,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], webresources - 4 [100.0%],
+
+Cluster 3: org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration, org.apache.catalina.filters.ExpiresFilter$DurationUnit, org.apache.catalina.filters.ExpiresFilter$XServletOutputStream, org.apache.catalina.filters.ExpiresFilter$XPrintWriter, org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse, org.apache.catalina.filters.ExpiresFilter$Duration, org.apache.catalina.filters.ExpiresFilter$StartingPoint,
+Total: 8
+Distribution: org - 8 [100.0%], apache - 8 [100.0%], catalina - 8 [100.0%], filters - 8 [100.0%],
+
+Cluster 4: org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 5: org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.manager.JspHelper,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], manager - 2 [100.0%], util - 1 [50.0%],
+
+Cluster 6: org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mbeans.ServiceMBean,
+Total: 11
+Distribution: org - 11 [100.0%], apache - 11 [100.0%], catalina - 11 [100.0%], mbeans - 11 [100.0%],
+
+Cluster 7: org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry, org.apache.catalina.startup.ContextConfig, org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], startup - 3 [100.0%],
+
+Cluster 8: org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch, org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward, org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.core.ApplicationDispatcher$State,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], core - 5 [100.0%],
+
+Cluster 9: org.apache.catalina.manager.host.Constants, org.apache.catalina.manager.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], manager - 2 [100.0%], host - 1 [50.0%],
+
+Cluster 10: org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], valves - 4 [100.0%],
+
+Cluster 11: org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], connector - 2 [100.0%],
+
+Cluster 12: org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], ssi - 2 [100.0%],
+
+Cluster 13: org.apache.catalina.servlets.CGIServlet$CGIEnvironment, org.apache.catalina.servlets.CGIServlet$CGIRunner, org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream, org.apache.catalina.servlets.CGIServlet,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], servlets - 4 [100.0%],
+
+Cluster 14: org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.webresources.DirResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 15: org.apache.catalina.WebResource, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.webresources.JarResourceRoot,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 2 [66.7%],
+
+Cluster 16: org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 17: org.apache.catalina.valves.AbstractAccessLogValve$ByteSentElement, org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache, org.apache.catalina.valves.AbstractAccessLogValve$UserElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalServerNameElement, org.apache.catalina.valves.AbstractAccessLogValve$HeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$ThreadNameElement, org.apache.catalina.valves.AbstractAccessLogValve$AccessLogElement, org.apache.catalina.valves.AbstractAccessLogValve$FirstByteTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$HttpStatusCodeElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionIdElement, org.apache.catalina.valves.AbstractAccessLogValve$DateAndTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$RemoteAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestElement, org.apache.catalina.valves.AbstractAccessLogValve$QueryElement, org.apache.catalina.valves.AbstractAccessLogValve$MethodElement, org.apache.catalina.valves.AbstractAccessLogValve$StringElement, org.apache.catalina.valves.AbstractAccessLogValve$FormatType, org.apache.catalina.valves.AbstractAccessLogValve$ConnectionStatusElement, org.apache.catalina.valves.AbstractAccessLogValve$PortType, org.apache.catalina.valves.AbstractAccessLogValve$ResponseHeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$CookieElement, org.apache.catalina.valves.AbstractAccessLogValve$PortElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.valves.AbstractAccessLogValve$RequestURIElement, org.apache.catalina.valves.AbstractAccessLogValve$ProtocolElement, org.apache.catalina.valves.AbstractAccessLogValve$LogicalUserNameElement, org.apache.catalina.valves.AbstractAccessLogValve$ElapsedTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$HostElement,
+Total: 31
+Distribution: org - 31 [100.0%], apache - 31 [100.0%], catalina - 31 [100.0%], valves - 31 [100.0%],
+
+Cluster 18: org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction, org.apache.catalina.connector.RequestFacade, org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,
+Total: 14
+Distribution: org - 14 [100.0%], apache - 14 [100.0%], catalina - 14 [100.0%], connector - 14 [100.0%],
+
+Cluster 19: org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.Cache$EvictionOrder, org.apache.catalina.webresources.CachedResource,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 3 [100.0%],
+
+Cluster 20: org.apache.catalina.ssi.ExpressionParseTree$OrNode, org.apache.catalina.ssi.ExpressionParseTree$OppNode, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.ssi.ExpressionParseTree$Node, org.apache.catalina.ssi.ExpressionParseTree$AndNode, org.apache.catalina.ssi.ExpressionParseTree$LessThanNode, org.apache.catalina.ssi.ExpressionParseTree$CompareNode, org.apache.catalina.ssi.ExpressionParseTree$StringNode, org.apache.catalina.ssi.ExpressionParseTree$NotNode, org.apache.catalina.ssi.ExpressionParseTree$EqualNode, org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,
+Total: 11
+Distribution: org - 11 [100.0%], apache - 11 [100.0%], catalina - 11 [100.0%], ssi - 11 [100.0%],
+
+Cluster 21: org.apache.catalina.realm.RealmBase$AllRolesMode, org.apache.catalina.realm.RealmBase,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 22: org.apache.catalina.startup.Catalina, org.apache.catalina.startup.Catalina$CatalinaShutdownHook,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 23: org.apache.catalina.filters.RequestDumperFilter$Timestamp, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.RequestDumperFilter, org.apache.catalina.filters.WebdavFixFilter, org.apache.catalina.filters.AddDefaultCharsetFilter$ResponseWrapper,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], filters - 5 [100.0%],
+
+Cluster 24: org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer, org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction, org.apache.catalina.authenticator.SpnegoAuthenticator,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], authenticator - 7 [100.0%],
+
+Cluster 25: org.apache.catalina.session.StandardManager$PrivilegedDoLoad, org.apache.catalina.session.StandardManager$PrivilegedDoUnload, org.apache.catalina.session.StandardManager,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], session - 3 [100.0%],
+
+Cluster 26: org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.RestCsrfPreventionFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], filters - 5 [100.0%],
+
+Cluster 27: org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.mbeans.ContextResourceLinkMBean,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], mbeans - 3 [100.0%],
+
+Cluster 28: org.apache.catalina.valves.rewrite.RewriteCond$Condition, org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition, org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], valves - 5 [100.0%], rewrite - 5 [100.0%],
+
+Cluster 29: org.apache.catalina.servlets.WebdavServlet$LockInfo, org.apache.catalina.servlets.WebdavServlet$WebdavResolver, org.apache.catalina.servlets.WebdavServlet,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], servlets - 3 [100.0%],
+
+Cluster 30: org.apache.catalina.core.AsyncContextImpl$AsyncRunnable, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.core.AsyncContextImpl$RunnableWrapper, org.apache.catalina.core.AsyncContextImpl$DebugException,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], core - 4 [100.0%],
+
+Cluster 31: org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.webresources.war.Handler,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%], war - 2 [100.0%],
+
+Cluster 32: org.apache.catalina.startup.UserConfig$DeployUserDirectory, org.apache.catalina.startup.UserConfig,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 33: org.apache.catalina.util.XMLWriter, org.apache.catalina.util.Strftime,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], util - 2 [100.0%],
+
+Cluster 34: org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry, org.apache.catalina.core.DefaultInstanceManager,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 35: org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter$XFrameOption,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 36: org.apache.catalina.core.ApplicationMapping, org.apache.catalina.core.ApplicationMapping$MappingImpl,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 37: org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], users - 3 [100.0%],
+
+Cluster 38: org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.TrackedWebResource,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 1 [50.0%],
+
+Cluster 39: org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.valves.rewrite.ResolverImpl,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], valves - 3 [100.0%], rewrite - 3 [100.0%],
+
+Cluster 40: org.apache.catalina.connector.ResponseFacade, org.apache.catalina.connector.ResponseFacade$DateHeaderPrivilegedAction, org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], connector - 3 [100.0%],
+
+Cluster 41: org.apache.catalina.servlets.DefaultServlet$PrecompressedResource, org.apache.catalina.servlets.DefaultServlet$Range, org.apache.catalina.servlets.DefaultServlet$CompressionFormat, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], servlets - 5 [100.0%],
+
+Cluster 42: org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 43: org.apache.catalina.realm.JNDIRealm, org.apache.catalina.realm.JNDIRealm$User,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 44: org.apache.catalina.mapper.Mapper, org.apache.catalina.mapper.Mapper$MappedWrapper, org.apache.catalina.mapper.Mapper$MapElement, org.apache.catalina.mapper.Mapper$MappedHost, org.apache.catalina.mapper.Mapper$ContextList, org.apache.catalina.mapper.Mapper$ContextVersion, org.apache.catalina.mapper.Mapper$MappedContext,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], mapper - 7 [100.0%],
+
+Cluster 45: org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.SessionIdGenerator,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], util - 2 [66.7%],
+
+Cluster 46: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], authenticator - 4 [100.0%], jaspic - 4 [100.0%],
+
+Cluster 47: org.apache.catalina.core.StandardHost, org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 48: org.apache.catalina.startup.ClassLoaderFactory$RepositoryType, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.startup.ClassLoaderFactory$Repository,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], startup - 3 [100.0%],
+
+Cluster 49: org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement, org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement, org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement, org.apache.catalina.valves.rewrite.Substitution$StaticElement, org.apache.catalina.valves.rewrite.Substitution$MapElement, org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,
+Total: 10
+Distribution: org - 10 [100.0%], apache - 10 [100.0%], catalina - 10 [100.0%], valves - 10 [100.0%], rewrite - 10 [100.0%],
+
+Cluster 50: org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.webresources.JarWarResourceSet,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], webresources - 3 [100.0%],
+
+Cluster 51: org.apache.catalina.core.StandardEngine$NoopAccessLog, org.apache.catalina.core.StandardEngine$AccessLogListener, org.apache.catalina.core.StandardEngine,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 52: org.apache.catalina.authenticator.AuthenticatorBase$JaspicState, org.apache.catalina.authenticator.AuthenticatorBase,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%],
+
+Cluster 53: org.apache.catalina.webresources.StandardRoot, org.apache.catalina.webresources.StandardRoot$BaseLocation,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 54: org.apache.catalina.startup.Tomcat, org.apache.catalina.startup.Tomcat$DefaultWebXmlListener, org.apache.catalina.startup.Tomcat$ExistingStandardWrapper, org.apache.catalina.startup.Tomcat$FixContextListener,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], startup - 4 [100.0%],
+
+Cluster 55: org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.valves.RemoteAddrValve,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 56: org.apache.catalina.core.ApplicationContext$DispatchData, org.apache.catalina.core.ApplicationContext,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 57: org.apache.catalina.Lifecycle$SingleUse, org.apache.catalina.util.LifecycleBase, org.apache.catalina.Lifecycle,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], util - 1 [33.3%],
+
+Cluster 58: org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.startup.HostRuleSet,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], startup - 4 [100.0%],
+
+Cluster 59: org.apache.catalina.core.StandardContext, org.apache.catalina.core.StandardContext$ContextFilterMaps, org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], core - 3 [100.0%],
+
+Cluster 60: org.apache.catalina.session.ManagerBase, org.apache.catalina.session.ManagerBase$SessionTiming,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], session - 2 [100.0%],
+
+Cluster 61: org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], core - 2 [100.0%],
+
+Cluster 62: org.apache.catalina.filters.CsrfPreventionFilter$LruCache, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], filters - 3 [100.0%],
+
+Cluster 63: org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest, org.apache.catalina.filters.RemoteIpFilter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 64: org.apache.catalina.UserDatabase, org.apache.catalina.User,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%],
+
+Cluster 65: org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.webresources.WarResourceSet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], webresources - 2 [100.0%],
+
+Cluster 66: org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal, org.apache.catalina.realm.GenericPrincipal,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 67: org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], loader - 4 [100.0%],
+
+Cluster 68: org.apache.catalina.ssi.SSISet, org.apache.catalina.ssi.SSIConfig,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], ssi - 2 [100.0%],
+
+Cluster 69: org.apache.catalina.connector.Request, org.apache.catalina.connector.Request$SpecialAttributeAdapter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], connector - 2 [100.0%],
+
+Cluster 70: org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.Constants,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], filters - 3 [100.0%],
+
+Cluster 71: org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener, org.apache.catalina.startup.HostConfig$DeployDescriptor, org.apache.catalina.startup.HostConfig$DeployWar, org.apache.catalina.startup.HostConfig$DeployedApplication, org.apache.catalina.startup.HostConfig$DeployDirectory, org.apache.catalina.startup.HostConfig,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], startup - 6 [100.0%],
+
+Cluster 72: org.apache.catalina.core.ContainerBase$StartChild, org.apache.catalina.core.ContainerBase$PrivilegedAddChild, org.apache.catalina.core.ContainerBase$StopChild, org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor, org.apache.catalina.core.ContainerBase, org.apache.catalina.core.ContainerBase$StartStopThreadFactory,
+Total: 6
+Distribution: org - 6 [100.0%], apache - 6 [100.0%], catalina - 6 [100.0%], core - 6 [100.0%],
+
+Cluster 73: org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread, org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 74: org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.realm.X509SubjectDnRetriever,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 75: org.apache.catalina.WebResourceRoot, org.apache.catalina.WebResourceRoot$ResourceSetType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%],
+
+Cluster 76: org.apache.naming.factory.DataSourceLinkFactory, org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], naming - 2 [100.0%], factory - 2 [100.0%],
+
+Cluster 77: org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo, org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo, org.apache.catalina.authenticator.DigestAuthenticator,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%],
+
+Cluster 78: org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.realm.JDBCRealm,
+Total: 4
+Distribution: org - 4 [100.0%], apache - 4 [100.0%], catalina - 4 [100.0%], realm - 4 [100.0%],
+
+Cluster 79: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], authenticator - 2 [100.0%], jaspic - 2 [100.0%],
+
+Cluster 80: org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.RemoteHostFilter,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 81: org.apache.catalina.valves.Constants$AccessLog, org.apache.catalina.valves.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 82: org.apache.catalina.realm.LockOutRealm$LockRecord, org.apache.catalina.realm.LockOutRealm,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], realm - 2 [100.0%],
+
+Cluster 83: org.apache.catalina.filters.CorsFilter, org.apache.catalina.filters.CorsFilter$CORSRequestType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+MQ metric
+0.599
+0.61
+sknetwork.clustering.get_modularity
+0.786
+0.786
+sklearn.metrics.silhouette_score
+0.16
+0.29
+sklearn.metrics.davies_bouldin_score
+1.425
+1.431
+============================================ sd_ld_catalina.csv : 2023-08-14 15:18:14.175572 ============================================
+ENTITIES COUNT: 580
+
+LouvianClustering - cluster count: 25
+
+
+Cluster 0: org.apache.catalina.core.StandardPipeline, org.apache.catalina.startup.Tomcat, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.Context, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.catalina.security.SecurityListener, org.apache.catalina.core.StandardThreadExecutor, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.loader.WebappLoader, org.apache.catalina.util.CharsetMapper, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.LifecycleListener, org.apache.catalina.valves.AccessLogValve, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.util.ContextName, org.apache.catalina.core.ApplicationServletRegistration, org.apache.catalina.ContainerServlet, org.apache.catalina.startup.WebAnnotationSet, org.apache.catalina.connector.Connector, org.apache.catalina.Realm, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.catalina.core.StandardEngine$NoopAccessLog, org.apache.catalina.core.StandardEngine$AccessLogListener, org.apache.catalina.Wrapper, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.Contained, org.apache.catalina.startup.Tomcat$DefaultWebXmlListener, org.apache.catalina.core.ApplicationMapping$MappingImpl, org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry, org.apache.catalina.core.StandardHost, org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.Executor, org.apache.catalina.mapper.MapperListener, org.apache.catalina.ContainerEvent, org.apache.catalina.DistributedManager, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.util.URLEncoder, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.catalina.core.StandardContext, org.apache.catalina.core.NamingContextListener, org.apache.catalina.Host, org.apache.catalina.connector.CoyotePrincipal, org.apache.catalina.ThreadBindingListener, org.apache.catalina.Lifecycle$SingleUse, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.Authenticator, org.apache.catalina.core.ContainerBase, org.apache.catalina.startup.Tomcat$ExistingStandardWrapper, org.apache.catalina.startup.UserDatabase, org.apache.catalina.core.ApplicationContext$DispatchData, org.apache.catalina.core.StandardContext$ContextFilterMaps, org.apache.catalina.LifecycleState, org.apache.catalina.manager.host.Constants, org.apache.catalina.LifecycleEvent, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.JmxEnabled, org.apache.catalina.core.StandardEngine, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.core.StandardService, org.apache.catalina.mapper.MappingData, org.apache.catalina.startup.ExpandWar, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.startup.ContextConfig, org.apache.catalina.startup.UserConfig$DeployUserDirectory, org.apache.catalina.core.StandardWrapper, org.apache.catalina.core.StandardContext$NoPluggabilityServletContext, org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException, org.apache.catalina.Server, org.apache.catalina.util.LifecycleBase, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.startup.HostConfig, org.apache.catalina.util.ServerInfo, org.apache.catalina.startup.Tomcat$FixContextListener, org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry, org.apache.catalina.Cluster, org.apache.catalina.startup.HomesUserDatabase, org.apache.catalina.Loader, org.apache.catalina.core.ApplicationContext, org.apache.catalina.startup.UserConfig, org.apache.catalina.Pipeline, org.apache.catalina.Service, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.startup.EngineConfig, org.apache.catalina.startup.FailedContext, org.apache.catalina.ContainerListener, org.apache.catalina.util.Introspection, org.apache.catalina.core.StandardServer, org.apache.catalina.Engine, org.apache.catalina.Lifecycle, org.apache.catalina.Container, org.apache.catalina.manager.Constants, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.util.ParameterMap, org.apache.catalina.startup.PasswdUserDatabase,
+Total: 103
+Distribution: org - 103 [100.0%], apache - 103 [100.0%], catalina - 103 [100.0%], core - 26 [25.2%], startup - 21 [20.4%], manager - 8 [7.8%], util - 8 [7.8%], connector - 4 [3.9%], host - 3 [2.9%], mapper - 3 [2.9%], security - 2 [1.9%], valves - 2 [1.9%], mbeans - 2 [1.9%], loader - 1 [1.0%], deploy - 1 [1.0%], rewrite - 1 [1.0%],
+
+Cluster 1: org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType, org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer, org.apache.catalina.Globals, org.apache.catalina.connector.Request, org.apache.catalina.util.SessionConfig, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry, org.apache.catalina.valves.SSLValve, org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.valves.PersistentValve, org.apache.catalina.valves.ValveBase, org.apache.catalina.core.ApplicationPart, org.apache.catalina.util.TLSUtil, org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.security.SecurityUtil, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.core.AsyncContextImpl$AsyncRunnable, org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.TomcatPrincipal, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState, org.apache.catalina.core.StandardContextValve, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.core.StandardHostValve, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.AsyncDispatcher, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward, org.apache.catalina.connector.ResponseFacade$DateHeaderPrivilegedAction, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction, org.apache.catalina.core.AsyncContextImpl$RunnableWrapper, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude, org.apache.catalina.Valve, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.connector.Response, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.connector.CoyoteOutputStream, org.apache.catalina.authenticator.AuthenticatorBase$JaspicState, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.connector.CoyoteReader, org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.AccessLog, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.core.ApplicationDispatcher$State, org.apache.catalina.connector.Request$SpecialAttributeAdapter, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.core.AsyncContextImpl$DebugException, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.connector.InputBuffer, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.valves.RemoteIpValve,
+Total: 81
+Distribution: org - 81 [100.0%], apache - 81 [100.0%], catalina - 81 [100.0%], core - 28 [34.6%], authenticator - 16 [19.8%], valves - 16 [19.8%], connector - 13 [16.0%], util - 2 [2.5%], security - 1 [1.2%], jaspic - 1 [1.2%],
+
+Cluster 2: org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.Cache$EvictionOrder, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.TrackedWebResource, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.servlets.WebdavServlet$LockInfo, org.apache.catalina.util.ResourceSet, org.apache.catalina.servlets.DefaultServlet$PrecompressedResource, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.servlets.DefaultServlet$Range, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.webresources.WarResource, org.apache.catalina.util.DOMWriter, org.apache.catalina.webresources.war.Handler, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.WebResource, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName, org.apache.catalina.WebResourceRoot, org.apache.catalina.util.XMLWriter, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.webresources.JarResource, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.servlets.DefaultServlet$CompressionFormat, org.apache.catalina.webresources.FileResource, org.apache.catalina.servlets.WebdavServlet$WebdavResolver, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper, org.apache.catalina.LifecycleException, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.util.ExtensionValidator, org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.webresources.CachedResource, org.apache.catalina.webresources.JarResourceRoot, org.apache.catalina.WebResourceSet, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.webresources.StandardRoot$BaseLocation, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.WebResourceRoot$ResourceSetType, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver, org.apache.catalina.util.Extension, org.apache.catalina.util.ManifestResource,
+Total: 63
+Distribution: org - 63 [100.0%], apache - 63 [100.0%], catalina - 63 [100.0%], webresources - 33 [52.4%], servlets - 9 [14.3%], loader - 7 [11.1%], util - 7 [11.1%], war - 2 [3.2%], valves - 1 [1.6%], rewrite - 1 [1.6%],
+
+Cluster 3: org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.manager.JspHelper, org.apache.catalina.SessionListener, org.apache.catalina.session.FileStore, org.apache.catalina.session.StoreBase, org.apache.catalina.session.Constants, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.session.ManagerBase, org.apache.catalina.session.StandardManager$PrivilegedDoLoad, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.session.StandardManager$PrivilegedDoUnload, org.apache.catalina.session.JDBCStore, org.apache.catalina.Manager, org.apache.catalina.session.PersistentManager, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove, org.apache.catalina.util.ToStringUtil, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.session.ManagerBase$SessionTiming, org.apache.catalina.session.StandardSession, org.apache.catalina.authenticator.Constants, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.session.StandardManager, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave, org.apache.catalina.Store, org.apache.catalina.StoreManager, org.apache.catalina.SessionEvent, org.apache.catalina.SessionIdGenerator, org.apache.catalina.Session, org.apache.catalina.manager.DummyProxySession,
+Total: 40
+Distribution: org - 40 [100.0%], apache - 40 [100.0%], catalina - 40 [100.0%], session - 20 [50.0%], util - 6 [15.0%], authenticator - 5 [12.5%], manager - 4 [10.0%],
+
+Cluster 4: org.apache.catalina.filters.RequestDumperFilter$Timestamp, org.apache.catalina.filters.CsrfPreventionFilter$LruCache, org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy, org.apache.catalina.filters.Constants, org.apache.catalina.filters.RequestDumperFilter, org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.ExpiresFilter$DurationUnit, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.ExpiresFilter$XServletOutputStream, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.HttpHeaderSecurityFilter$XFrameOption, org.apache.catalina.filters.ExpiresFilter$XPrintWriter, org.apache.catalina.filters.WebdavFixFilter, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.ExpiresFilter$Duration, org.apache.catalina.filters.RestCsrfPreventionFilter, org.apache.catalina.filters.ExpiresFilter$StartingPoint, org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper, org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest, org.apache.catalina.filters.AddDefaultCharsetFilter$ResponseWrapper, org.apache.catalina.filters.RemoteHostFilter,
+Total: 32
+Distribution: org - 32 [100.0%], apache - 32 [100.0%], catalina - 32 [100.0%], filters - 32 [100.0%],
+
+Cluster 5: org.apache.catalina.valves.AbstractAccessLogValve$ByteSentElement, org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache, org.apache.catalina.valves.AbstractAccessLogValve$UserElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalServerNameElement, org.apache.catalina.valves.AbstractAccessLogValve$HeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$ThreadNameElement, org.apache.catalina.valves.AbstractAccessLogValve$AccessLogElement, org.apache.catalina.valves.AbstractAccessLogValve$FirstByteTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$LocalAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$HttpStatusCodeElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionIdElement, org.apache.catalina.valves.AbstractAccessLogValve$DateAndTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$RemoteAddrElement, org.apache.catalina.valves.AbstractAccessLogValve$RequestElement, org.apache.catalina.valves.AbstractAccessLogValve$QueryElement, org.apache.catalina.valves.AbstractAccessLogValve$MethodElement, org.apache.catalina.valves.AbstractAccessLogValve$StringElement, org.apache.catalina.valves.AbstractAccessLogValve$FormatType, org.apache.catalina.valves.AbstractAccessLogValve$ConnectionStatusElement, org.apache.catalina.valves.AbstractAccessLogValve$PortType, org.apache.catalina.valves.AbstractAccessLogValve$ResponseHeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$CookieElement, org.apache.catalina.valves.AbstractAccessLogValve$PortElement, org.apache.catalina.valves.AbstractAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.valves.AbstractAccessLogValve$RequestURIElement, org.apache.catalina.valves.AbstractAccessLogValve$ProtocolElement, org.apache.catalina.valves.AbstractAccessLogValve$LogicalUserNameElement, org.apache.catalina.valves.AbstractAccessLogValve$ElapsedTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$HostElement,
+Total: 31
+Distribution: org - 31 [100.0%], apache - 31 [100.0%], catalina - 31 [100.0%], valves - 31 [100.0%],
+
+Cluster 6: org.apache.naming.ContextAccessController, org.apache.naming.NamingContextBindingsEnumeration, org.apache.naming.ResourceEnvRef, org.apache.naming.factory.DataSourceLinkFactory, org.apache.naming.factory.FactoryBase, org.apache.naming.factory.BeanFactory, org.apache.naming.factory.ResourceLinkFactory, org.apache.naming.AbstractRef, org.apache.naming.factory.EjbFactory, org.apache.naming.ResourceLinkRef, org.apache.naming.StringManager, org.apache.naming.ContextBindings, org.apache.naming.NamingEntry, org.apache.naming.NameParserImpl, org.apache.naming.factory.OpenEjbFactory, org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler, org.apache.naming.EjbRef, org.apache.naming.ServiceRef, org.apache.naming.factory.TransactionFactory, org.apache.naming.NamingContext, org.apache.naming.SelectorContext, org.apache.naming.factory.ResourceFactory, org.apache.naming.factory.ResourceEnvFactory, org.apache.naming.HandlerRef, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.naming.java.javaURLContextFactory, org.apache.naming.TransactionRef,
+Total: 28
+Distribution: org - 28 [100.0%], apache - 28 [100.0%], naming - 28 [100.0%], factory - 10 [35.7%], java - 1 [3.6%],
+
+Cluster 7: org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.ssi.SSIMediator, org.apache.catalina.util.IOTools, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSISet, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.servlets.CGIServlet$CGIEnvironment, org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.ssi.SSIServlet, org.apache.catalina.ssi.SSIPrintenv, org.apache.catalina.servlets.CGIServlet$CGIRunner, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream, org.apache.catalina.util.Strftime, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.ssi.SSIExec, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.ssi.SSIFsize, org.apache.catalina.ssi.SSICommand, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.servlets.CGIServlet,
+Total: 28
+Distribution: org - 28 [100.0%], apache - 28 [100.0%], catalina - 28 [100.0%], ssi - 22 [78.6%], servlets - 4 [14.3%], util - 2 [7.1%],
+
+Cluster 8: org.apache.catalina.realm.JAASRealm, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.realm.LockOutRealm$LockRecord, org.apache.catalina.realm.NullRealm, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.realm.RealmBase$AllRolesMode, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.realm.RealmBase, org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.CredentialHandler, org.apache.catalina.realm.JNDIRealm$User, org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.realm.MessageDigestCredentialHandler,
+Total: 26
+Distribution: org - 26 [100.0%], apache - 26 [100.0%], catalina - 26 [100.0%], realm - 24 [92.3%], authenticator - 1 [3.8%], jaspic - 1 [3.8%],
+
+Cluster 9: org.apache.catalina.startup.Catalina, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.startup.Bootstrap, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.startup.ClassLoaderFactory$RepositoryType, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.startup.Tool, org.apache.catalina.startup.Catalina$CatalinaShutdownHook, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.startup.ClassLoaderFactory$Repository, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.security.SecurityConfig,
+Total: 22
+Distribution: org - 22 [100.0%], apache - 22 [100.0%], catalina - 22 [100.0%], startup - 20 [90.9%], security - 2 [9.1%],
+
+Cluster 10: org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser, org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.users.MemoryRole, org.apache.catalina.UserDatabase, org.apache.catalina.User, org.apache.catalina.Role, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.Group, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.users.AbstractRole, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.users.MemoryUserCreationFactory,
+Total: 21
+Distribution: org - 21 [100.0%], apache - 21 [100.0%], catalina - 21 [100.0%], users - 9 [42.9%], mbeans - 7 [33.3%], realm - 1 [4.8%],
+
+Cluster 11: org.apache.catalina.util.RequestUtil, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction, org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator, org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction, org.apache.catalina.connector.RequestFacade, org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction, org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction, org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction, org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest, org.apache.catalina.filters.RemoteIpFilter,
+Total: 19
+Distribution: org - 19 [100.0%], apache - 19 [100.0%], catalina - 19 [100.0%], connector - 14 [73.7%], core - 2 [10.5%], filters - 2 [10.5%], util - 1 [5.3%],
+
+Cluster 12: org.apache.catalina.valves.rewrite.RewriteMap, org.apache.catalina.valves.rewrite.RewriteCond$Condition, org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition, org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement, org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement, org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement, org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.valves.rewrite.Substitution$StaticElement, org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition, org.apache.catalina.valves.rewrite.Substitution$MapElement, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition, org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,
+Total: 18
+Distribution: org - 18 [100.0%], apache - 18 [100.0%], catalina - 18 [100.0%], valves - 18 [100.0%], rewrite - 18 [100.0%],
+
+Cluster 13: org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement, org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer, org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement, org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct, org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement, org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement, org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,
+Total: 13
+Distribution: org - 13 [100.0%], apache - 13 [100.0%], catalina - 13 [100.0%], valves - 13 [100.0%],
+
+Cluster 14: org.apache.catalina.ssi.ExpressionParseTree$OrNode, org.apache.catalina.ssi.ExpressionParseTree$OppNode, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.ssi.ExpressionParseTree$Node, org.apache.catalina.ssi.ExpressionParseTree$AndNode, org.apache.catalina.ssi.ExpressionParseTree$LessThanNode, org.apache.catalina.ssi.ExpressionParseTree$CompareNode, org.apache.catalina.ssi.ExpressionParseTree$StringNode, org.apache.catalina.ssi.ExpressionParseTree$NotNode, org.apache.catalina.ssi.ExpressionParseTree$EqualNode, org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,
+Total: 12
+Distribution: org - 12 [100.0%], apache - 12 [100.0%], catalina - 12 [100.0%], ssi - 12 [100.0%],
+
+Cluster 15: org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.mbeans.ConnectorMBean, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mbeans.ContextResourceLinkMBean, org.apache.catalina.mbeans.ServiceMBean,
+Total: 8
+Distribution: org - 8 [100.0%], apache - 8 [100.0%], catalina - 8 [100.0%], mbeans - 8 [100.0%],
+
+Cluster 16: org.apache.catalina.mapper.Mapper, org.apache.catalina.mapper.Mapper$MappedWrapper, org.apache.catalina.mapper.Mapper$MapElement, org.apache.catalina.mapper.Mapper$MappedHost, org.apache.catalina.mapper.Mapper$ContextList, org.apache.catalina.mapper.Mapper$ContextVersion, org.apache.catalina.mapper.Mapper$MappedContext,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], mapper - 7 [100.0%],
+
+Cluster 17: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], authenticator - 7 [100.0%], jaspic - 7 [100.0%],
+
+Cluster 18: org.apache.catalina.core.ContainerBase$StartChild, org.apache.catalina.core.ContainerBase$PrivilegedAddChild, org.apache.catalina.core.ContainerBase$StopChild, org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor, org.apache.catalina.core.ContainerBase$StartStopThreadFactory,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], core - 5 [100.0%],
+
+Cluster 19: org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener, org.apache.catalina.startup.HostConfig$DeployDescriptor, org.apache.catalina.startup.HostConfig$DeployWar, org.apache.catalina.startup.HostConfig$DeployedApplication, org.apache.catalina.startup.HostConfig$DeployDirectory,
+Total: 5
+Distribution: org - 5 [100.0%], apache - 5 [100.0%], catalina - 5 [100.0%], startup - 5 [100.0%],
+
+Cluster 20: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 21: org.apache.catalina.filters.CorsFilter, org.apache.catalina.filters.CorsFilter$CORSRequestType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+Cluster 22: org.apache.catalina.valves.Constants$AccessLog, org.apache.catalina.valves.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 23: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], mbeans - 1 [50.0%], manager - 1 [50.0%],
+
+Cluster 24: org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread, org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+
+MSTClustering - cluster count: 8
+
+
+Cluster 0: org.apache.catalina.core.StandardPipeline, org.apache.catalina.ssi.ExpressionParseTree$OrNode, org.apache.catalina.webresources.Cache, org.apache.catalina.webresources.Cache$EvictionOrder, org.apache.catalina.startup.Tomcat, org.apache.catalina.manager.host.HostManagerServlet, org.apache.catalina.valves.ExtendedAccessLogValve, org.apache.catalina.core.ApplicationMapping, org.apache.catalina.authenticator.FormAuthenticator, org.apache.catalina.webresources.TrackedInputStream, org.apache.catalina.webresources.AbstractSingleArchiveResourceSet, org.apache.catalina.manager.util.SessionUtils, org.apache.catalina.Context, org.apache.catalina.servlets.WebdavStatus, org.apache.catalina.startup.Catalina, org.apache.catalina.ssi.ByteArrayServletOutputStream, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType, org.apache.catalina.realm.JAASRealm, org.apache.catalina.mbeans.RoleMBean, org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer, org.apache.catalina.manager.host.HTMLHostManagerServlet, org.apache.catalina.security.SecurityListener, org.apache.catalina.webresources.FileResourceSet, org.apache.catalina.valves.rewrite.RewriteMap, org.apache.naming.ContextAccessController, org.apache.catalina.ssi.ExpressionParseTree$OppNode, org.apache.catalina.valves.AbstractAccessLogValve$ByteSentElement, org.apache.catalina.core.StandardThreadExecutor, org.apache.naming.NamingContextBindingsEnumeration, org.apache.catalina.util.RequestUtil, org.apache.catalina.core.ContainerBase$StartChild, org.apache.catalina.startup.CatalinaProperties, org.apache.catalina.users.MemoryUserDatabaseFactory, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys, org.apache.catalina.Globals, org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener, org.apache.catalina.session.PersistentManagerBase, org.apache.catalina.valves.rewrite.RewriteCond$Condition, org.apache.catalina.valves.rewrite.Substitution, org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement, org.apache.naming.ResourceEnvRef, org.apache.catalina.manager.StatusManagerServlet, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig, org.apache.catalina.session.StandardSessionFacade, org.apache.catalina.ssi.SSIConditionalState, org.apache.catalina.connector.Request, org.apache.catalina.util.SessionConfig, org.apache.catalina.valves.AbstractAccessLogValve$DateFormatCache, org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement, org.apache.catalina.loader.WebappLoader, org.apache.catalina.util.CharsetMapper, org.apache.catalina.webresources.TomcatURLStreamHandlerFactory, org.apache.catalina.TrackedWebResource, org.apache.catalina.core.ApplicationSessionCookieConfig, org.apache.catalina.valves.AbstractAccessLogValve$UserElement, org.apache.catalina.LifecycleListener, org.apache.catalina.valves.AccessLogValve, org.apache.catalina.realm.DataSourceRealm, org.apache.catalina.core.AprLifecycleListener, org.apache.catalina.valves.SSLValve, org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread, org.apache.catalina.util.ContextName, org.apache.catalina.mbeans.GroupMBean, org.apache.catalina.core.ApplicationHttpRequest, org.apache.catalina.webresources.war.WarURLConnection, org.apache.catalina.manager.JspHelper, org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction, org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition, org.apache.catalina.realm.LockOutRealm$LockRecord, org.apache.catalina.connector.ResponseFacade, org.apache.catalina.ssi.SSIMediator, org.apache.catalina.util.IOTools, org.apache.naming.factory.DataSourceLinkFactory, org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction, org.apache.catalina.realm.NullRealm, org.apache.catalina.ssi.ExpressionTokenizer, org.apache.catalina.core.ApplicationServletRegistration, org.apache.naming.factory.FactoryBase, org.apache.catalina.ssi.ExpressionParseTree, org.apache.catalina.servlets.WebdavServlet$LockInfo, org.apache.catalina.valves.AbstractAccessLogValve$RequestAttributeElement, org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator, org.apache.catalina.valves.PersistentValve, org.apache.catalina.ContainerServlet, org.apache.catalina.SessionListener, org.apache.catalina.mbeans.ContextEnvironmentMBean, org.apache.catalina.startup.WebAnnotationSet, org.apache.naming.factory.BeanFactory, org.apache.catalina.connector.Connector, org.apache.catalina.valves.ValveBase, org.apache.catalina.ssi.SSIFilter, org.apache.catalina.util.ResourceSet, org.apache.naming.factory.ResourceLinkFactory, org.apache.catalina.core.ApplicationPart, org.apache.catalina.util.TLSUtil, org.apache.catalina.valves.CrawlerSessionManagerValve, org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo, org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction, org.apache.catalina.ssi.ExpressionParseTree$Node, org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement, org.apache.catalina.Realm, org.apache.catalina.mapper.WrapperMappingInfo, org.apache.catalina.valves.AbstractAccessLogValve$LocalServerNameElement, org.apache.catalina.servlets.DefaultServlet$PrecompressedResource, org.apache.catalina.core.StandardEngine$NoopAccessLog, org.apache.naming.AbstractRef, org.apache.catalina.startup.Bootstrap, org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement, org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction, org.apache.catalina.core.ApplicationFilterFactory, org.apache.catalina.core.StandardEngine$AccessLogListener, org.apache.catalina.security.SecurityUtil, org.apache.catalina.webresources.AbstractSingleArchiveResource, org.apache.catalina.ssi.SSIServletExternalResolver, org.apache.catalina.ssi.SSISet, org.apache.catalina.startup.LifecycleListenerRule, org.apache.catalina.core.ApplicationContextFacade, org.apache.catalina.session.FileStore, org.apache.catalina.core.AsyncContextImpl$AsyncRunnable, org.apache.catalina.Wrapper, org.apache.catalina.valves.AbstractAccessLogValve$HeaderElement, org.apache.catalina.valves.AbstractAccessLogValve$ThreadNameElement, org.apache.catalina.users.AbstractGroup, org.apache.catalina.users.AbstractUser, org.apache.catalina.session.StoreBase, org.apache.catalina.startup.RealmRuleSet, org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement, org.apache.catalina.webresources.AbstractFileResourceSet, org.apache.catalina.webresources.AbstractResourceSet, org.apache.catalina.webresources.StandardRoot, org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction, org.apache.catalina.core.StandardWrapperFacade, org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch, org.apache.catalina.servlets.DefaultServlet$Range, org.apache.catalina.valves.AbstractAccessLogValve$AccessLogElement, org.apache.catalina.connector.CoyoteWriter, org.apache.catalina.startup.ClassLoaderFactory$RepositoryType, org.apache.catalina.webresources.AbstractArchiveResource, org.apache.catalina.valves.RemoteHostValve, org.apache.catalina.ssi.SSIInclude, org.apache.catalina.users.MemoryUserDatabase, org.apache.catalina.startup.HostConfig$DeployDescriptor, org.apache.catalina.realm.LockOutRealm, org.apache.catalina.session.Constants, org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement, org.apache.catalina.users.MemoryRole, org.apache.catalina.Contained, org.apache.catalina.startup.Tomcat$DefaultWebXmlListener, org.apache.catalina.core.ApplicationMapping$MappingImpl, org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials, org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad, org.apache.catalina.realm.MemoryRuleSet, org.apache.catalina.valves.ErrorReportValve, org.apache.catalina.TomcatPrincipal, org.apache.catalina.valves.AbstractAccessLogValve$FirstByteTimeElement, org.apache.catalina.webresources.WarResource, org.apache.catalina.core.StandardHost, org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener, org.apache.catalina.authenticator.SingleSignOnSessionKey, org.apache.catalina.valves.AbstractAccessLogValve$LocalAddrElement, org.apache.catalina.ssi.SSIServletRequestUtil, org.apache.catalina.startup.ConnectorCreateRule, org.apache.catalina.mbeans.ContainerMBean, org.apache.catalina.mbeans.MBeanFactory, org.apache.catalina.core.ThreadLocalLeakPreventionListener, org.apache.catalina.servlets.CGIServlet$CGIEnvironment, org.apache.catalina.startup.ClassLoaderFactory, org.apache.catalina.mbeans.ConnectorMBean, org.apache.naming.factory.EjbFactory, org.apache.naming.ResourceLinkRef, org.apache.catalina.Executor, org.apache.catalina.startup.Tool, org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState, org.apache.catalina.core.StandardContextValve, org.apache.naming.StringManager, org.apache.catalina.session.ManagerBase, org.apache.catalina.util.DOMWriter, org.apache.catalina.mapper.MapperListener, org.apache.catalina.webresources.war.Handler, org.apache.catalina.loader.ParallelWebappClassLoader, org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement, org.apache.catalina.authenticator.SSLAuthenticator, org.apache.catalina.WebResource, org.apache.naming.ContextBindings, org.apache.catalina.core.StandardHostValve, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName, org.apache.catalina.UserDatabase, org.apache.catalina.WebResourceRoot, org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath, org.apache.naming.NamingEntry, org.apache.catalina.ContainerEvent, org.apache.catalina.DistributedManager, org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement, org.apache.catalina.util.LifecycleMBeanBase, org.apache.catalina.core.AsyncContextImpl, org.apache.catalina.util.XMLWriter, org.apache.catalina.util.URLEncoder, org.apache.catalina.valves.StuckThreadDetectionValve, org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction, org.apache.catalina.ssi.SSIStopProcessingException, org.apache.catalina.valves.AbstractAccessLogValve$HttpStatusCodeElement, org.apache.catalina.session.StandardManager$PrivilegedDoLoad, org.apache.catalina.connector.RequestFacade, org.apache.catalina.deploy.NamingResourcesImpl, org.apache.naming.NameParserImpl, org.apache.catalina.core.StandardContext, org.apache.naming.factory.OpenEjbFactory, org.apache.catalina.realm.MemoryUserRule, org.apache.catalina.loader.WebappClassLoaderBase, org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader, org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement, org.apache.catalina.ssi.SSIServlet, org.apache.catalina.ssi.ExpressionParseTree$AndNode, org.apache.catalina.valves.AbstractAccessLogValve$SessionIdElement, org.apache.catalina.loader.WebappClassLoader, org.apache.catalina.webresources.DirResourceSet, org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement, org.apache.catalina.webresources.JarResource, org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer, org.apache.catalina.User, org.apache.catalina.ssi.ExpressionParseTree$LessThanNode, org.apache.catalina.ssi.ExpressionParseTree$CompareNode, org.apache.catalina.core.NamingContextListener, org.apache.catalina.core.ApplicationPushBuilder, org.apache.catalina.webresources.AbstractResource, org.apache.catalina.mbeans.ContextResourceMBean, org.apache.catalina.core.ContainerBase$PrivilegedAddChild, org.apache.catalina.ssi.SSIPrintenv, org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler, org.apache.catalina.servlets.DefaultServlet$CompressionFormat, org.apache.catalina.webresources.FileResource, org.apache.catalina.core.ContainerBase$StopChild, org.apache.catalina.ssi.ExpressionParseTree$StringNode, org.apache.catalina.Host, org.apache.naming.EjbRef, org.apache.catalina.AsyncDispatcher, org.apache.catalina.connector.CoyotePrincipal, org.apache.naming.ServiceRef, org.apache.catalina.valves.AbstractAccessLogValve$DateAndTimeElement, org.apache.catalina.servlets.CGIServlet$CGIRunner, org.apache.catalina.servlets.WebdavServlet$WebdavResolver, org.apache.catalina.ThreadBindingListener, org.apache.catalina.valves.LoadBalancerDrainingValve, org.apache.catalina.Lifecycle$SingleUse, org.apache.catalina.connector.CoyoteAdapter, org.apache.catalina.authenticator.NonLoginAuthenticator, org.apache.catalina.startup.HostConfig$DeployWar, org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward, org.apache.catalina.realm.JAASCallbackHandler, org.apache.catalina.realm.JNDIRealm, org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor, org.apache.catalina.core.JreMemoryLeakPreventionListener, org.apache.catalina.connector.ResponseFacade$DateHeaderPrivilegedAction, org.apache.catalina.Role, org.apache.catalina.connector.ClientAbortException, org.apache.catalina.startup.WebappServiceLoader, org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction, org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement, org.apache.catalina.manager.util.BaseSessionComparator, org.apache.catalina.core.StandardWrapperValve, org.apache.catalina.loader.ResourceEntry, org.apache.catalina.realm.DigestCredentialHandlerBase, org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper, org.apache.catalina.connector.ResponseFacade$SetContentTypePrivilegedAction, org.apache.catalina.Authenticator, org.apache.catalina.valves.AbstractAccessLogValve$RemoteAddrElement, org.apache.catalina.startup.HostConfig$DeployedApplication, org.apache.catalina.mapper.Mapper, org.apache.catalina.core.AsyncContextImpl$RunnableWrapper, org.apache.catalina.startup.Catalina$CatalinaShutdownHook, org.apache.catalina.core.ContainerBase, org.apache.catalina.LifecycleException, org.apache.catalina.webresources.EmptyResource, org.apache.catalina.startup.EngineRuleSet, org.apache.catalina.valves.rewrite.Resolver, org.apache.catalina.ssi.SSIConditional, org.apache.catalina.valves.SemaphoreValve, org.apache.catalina.startup.Tomcat$ExistingStandardWrapper, org.apache.catalina.startup.UserDatabase, org.apache.catalina.valves.rewrite.Substitution$StaticElement, org.apache.catalina.webresources.VirtualResource, org.apache.catalina.valves.AbstractAccessLogValve$RequestElement, org.apache.catalina.valves.AbstractAccessLogValve$QueryElement, org.apache.catalina.core.ApplicationFilterChain, org.apache.catalina.core.ApplicationContext$DispatchData, org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude, org.apache.catalina.Valve, org.apache.catalina.startup.CredentialHandlerRuleSet, org.apache.catalina.valves.AbstractAccessLogValve$MethodElement, org.apache.catalina.realm.NestedCredentialHandler, org.apache.catalina.core.StandardContext$ContextFilterMaps, org.apache.catalina.webresources.JarResourceSet, org.apache.catalina.mbeans.MemoryUserDatabaseMBean, org.apache.catalina.LifecycleState, org.apache.catalina.util.SessionIdGeneratorBase, org.apache.catalina.authenticator.BasicAuthenticator, org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition, org.apache.catalina.manager.host.Constants, org.apache.catalina.LifecycleEvent, org.apache.catalina.core.DefaultInstanceManager, org.apache.catalina.mapper.Mapper$MappedWrapper, org.apache.catalina.session.StandardManager$PrivilegedDoUnload, org.apache.catalina.connector.Response, org.apache.catalina.ssi.SSIProcessor, org.apache.catalina.session.JDBCStore, org.apache.catalina.valves.AbstractAccessLogValve$StringElement, org.apache.catalina.manager.HTMLManagerServlet, org.apache.catalina.Manager, org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction, org.apache.naming.factory.TransactionFactory, org.apache.catalina.startup.CopyParentClassLoaderRule, org.apache.catalina.startup.HostRuleSet, org.apache.catalina.servlets.WebdavServlet, org.apache.catalina.mapper.Mapper$MapElement, org.apache.catalina.valves.AbstractAccessLogValve$FormatType, org.apache.catalina.core.ApplicationFilterConfig, org.apache.catalina.valves.AbstractAccessLogValve$ConnectionStatusElement, org.apache.catalina.mbeans.BaseCatalinaMBean, org.apache.naming.NamingContext, org.apache.catalina.util.ConcurrentDateFormat, org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement, org.apache.catalina.JmxEnabled, org.apache.catalina.core.StandardEngine, org.apache.catalina.webresources.AbstractArchiveResourceSet, org.apache.catalina.valves.rewrite.ResolverImpl, org.apache.catalina.valves.RemoteAddrValve, org.apache.catalina.ssi.ResponseIncludeWrapper, org.apache.catalina.webresources.JarWarResource, org.apache.catalina.util.ExtensionValidator, org.apache.naming.SelectorContext, org.apache.catalina.valves.rewrite.RewriteValve, org.apache.catalina.session.PersistentManager, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove, org.apache.naming.factory.ResourceFactory, org.apache.catalina.core.ApplicationFilterRegistration, org.apache.catalina.core.StandardService, org.apache.catalina.mapper.MappingData, org.apache.catalina.util.ToStringUtil, org.apache.catalina.webresources.ClasspathURLStreamHandler, org.apache.catalina.servlets.DefaultServlet, org.apache.catalina.session.StandardSessionContext, org.apache.catalina.startup.ExpandWar, org.apache.catalina.users.MemoryRoleCreationFactory, org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction, org.apache.catalina.session.ManagerBase$SessionTiming, org.apache.catalina.mbeans.NamingResourcesMBean, org.apache.catalina.mbeans.ClassNameMBean, org.apache.catalina.core.ApplicationResponse, org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream, org.apache.catalina.util.Strftime, org.apache.catalina.ssi.SSIFlastmod, org.apache.catalina.session.StandardSession, org.apache.catalina.manager.StatusTransformer, org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction, org.apache.catalina.realm.RealmBase$AllRolesMode, org.apache.catalina.authenticator.Constants, org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct, org.apache.catalina.connector.CoyoteOutputStream, org.apache.naming.factory.ResourceEnvFactory, org.apache.catalina.webresources.CachedResource, org.apache.catalina.startup.ContextConfig, org.apache.catalina.authenticator.AuthenticatorBase$JaspicState, org.apache.catalina.startup.UserConfig$DeployUserDirectory, org.apache.catalina.core.StandardWrapper, org.apache.naming.HandlerRef, org.apache.catalina.core.StandardContext$NoPluggabilityServletContext, org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException, org.apache.catalina.valves.rewrite.Substitution$MapElement, org.apache.catalina.startup.ClassLoaderFactory$Repository, org.apache.catalina.ssi.ExpressionParseTree$NotNode, org.apache.catalina.util.CustomObjectInputStream, org.apache.catalina.Server, org.apache.catalina.webresources.JarResourceRoot, org.apache.catalina.session.StandardManager, org.apache.catalina.WebResourceSet, org.apache.catalina.valves.AbstractAccessLogValve$PortType, org.apache.catalina.startup.SetContextPropertiesRule, org.apache.catalina.core.AsyncListenerWrapper, org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction, org.apache.catalina.authenticator.jaspic.MessageInfoImpl, org.apache.catalina.connector.CoyoteInputStream, org.apache.catalina.realm.CombinedRealm, org.apache.catalina.mbeans.GlobalResourcesLifecycleListener, org.apache.catalina.realm.UserDatabaseRealm, org.apache.catalina.valves.rewrite.RewriteRule, org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement, org.apache.catalina.util.LifecycleBase, org.apache.catalina.startup.HostConfig$DeployDirectory, org.apache.catalina.startup.SetNextNamingRule, org.apache.catalina.startup.HostConfig, org.apache.catalina.Group, org.apache.catalina.webresources.WarResourceSet, org.apache.catalina.authenticator.SingleSignOnListener, org.apache.catalina.realm.RealmBase, org.apache.catalina.util.ServerInfo, org.apache.catalina.valves.AbstractAccessLogValve$ResponseHeaderElement, org.apache.catalina.startup.CertificateCreateRule, org.apache.catalina.ssi.SSIExec, org.apache.catalina.valves.AbstractAccessLogValve$CookieElement, org.apache.catalina.mbeans.UserMBean, org.apache.catalina.util.StandardSessionIdGenerator, org.apache.catalina.webresources.StandardRoot$BaseLocation, org.apache.catalina.connector.CoyoteReader, org.apache.naming.NamingContextEnumeration, org.apache.naming.ResourceRef, org.apache.catalina.startup.Tomcat$FixContextListener, org.apache.naming.java.javaURLContextFactory, org.apache.catalina.mbeans.ContextMBean, org.apache.catalina.mapper.Mapper$MappedHost, org.apache.catalina.webresources.EmptyResourceSet, org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry, org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction, org.apache.catalina.Cluster, org.apache.catalina.valves.AbstractAccessLogValve$PortElement, org.apache.catalina.startup.HomesUserDatabase, org.apache.catalina.mbeans.MBeanUtils, org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction, org.apache.catalina.Loader, org.apache.catalina.startup.SetAllPropertiesRule, org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal, org.apache.catalina.startup.ContextRuleSet, org.apache.catalina.ssi.SSIConfig, org.apache.catalina.mbeans.ContextResourceLinkMBean, org.apache.catalina.core.ApplicationContext, org.apache.catalina.core.StandardEngineValve, org.apache.catalina.session.TooManyActiveSessionsException, org.apache.catalina.startup.UserConfig, org.apache.catalina.mapper.Mapper$ContextList, org.apache.catalina.realm.X509UsernameRetriever, org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod, org.apache.catalina.valves.AbstractAccessLogValve$SessionAttributeElement, org.apache.catalina.valves.RequestFilterValve, org.apache.catalina.core.ApplicationRequest, org.apache.catalina.authenticator.SingleSignOn, org.apache.catalina.security.SecurityClassLoad, org.apache.catalina.AccessLog, org.apache.catalina.valves.rewrite.RewriteCond, org.apache.catalina.mapper.Mapper$ContextVersion, org.apache.catalina.Pipeline, org.apache.catalina.Service, org.apache.catalina.startup.VersionLoggerListener, org.apache.catalina.authenticator.AuthenticatorBase, org.apache.catalina.connector.OutputBuffer, org.apache.catalina.ssi.SSIFsize, org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread, org.apache.naming.TransactionRef, org.apache.catalina.authenticator.SingleSignOnEntry, org.apache.catalina.valves.AbstractAccessLogValve, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear, org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction, org.apache.catalina.webresources.ExtractingRoot, org.apache.catalina.core.ApplicationDispatcher, org.apache.catalina.manager.ManagerServlet, org.apache.catalina.WebResourceRoot$ResourceSetType, org.apache.catalina.valves.AbstractAccessLogValve$RequestURIElement, org.apache.catalina.realm.MemoryRealm, org.apache.catalina.startup.NamingRuleSet, org.apache.catalina.startup.EngineConfig, org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction, org.apache.catalina.ssi.ExpressionParseTree$EqualNode, org.apache.catalina.users.AbstractRole, org.apache.catalina.authenticator.SavedRequest, org.apache.catalina.users.MemoryGroupCreationFactory, org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave, org.apache.catalina.users.MemoryUserCreationFactory, org.apache.catalina.webresources.TomcatJarInputStream, org.apache.catalina.valves.AbstractAccessLogValve$ProtocolElement, org.apache.catalina.core.ApplicationHttpResponse, org.apache.catalina.core.ApplicationDispatcher$State, org.apache.catalina.connector.Request$SpecialAttributeAdapter, org.apache.catalina.startup.FailedContext, org.apache.catalina.ssi.SSICommand, org.apache.catalina.Store, org.apache.catalina.realm.SecretKeyCredentialHandler, org.apache.catalina.authenticator.DigestAuthenticator, org.apache.catalina.ContainerListener, org.apache.catalina.StoreManager, org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement, org.apache.catalina.util.Introspection, org.apache.catalina.webresources.JarWarResourceSet, org.apache.catalina.core.AsyncContextImpl$DebugException, org.apache.catalina.SessionEvent, org.apache.catalina.realm.GenericPrincipal, org.apache.catalina.core.StandardServer, org.apache.catalina.Engine, org.apache.catalina.SessionIdGenerator, org.apache.catalina.Lifecycle, org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode, org.apache.catalina.realm.JAASMemoryLoginModule, org.apache.catalina.realm.JDBCRealm, org.apache.catalina.ssi.SSIEcho, org.apache.catalina.valves.JDBCAccessLogValve, org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition, org.apache.catalina.authenticator.jaspic.CallbackHandlerImpl, org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver, org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement, org.apache.catalina.mapper.Mapper$MappedContext, org.apache.catalina.Container, org.apache.catalina.manager.Constants, org.apache.catalina.startup.SetParentClassLoaderRule, org.apache.catalina.Session, org.apache.catalina.security.DeployXmlPermission, org.apache.catalina.manager.DummyProxySession, org.apache.catalina.connector.InputBuffer, org.apache.catalina.authenticator.SpnegoAuthenticator, org.apache.catalina.valves.ExtendedAccessLogValve$DateElement, org.apache.catalina.core.ContainerBase$StartStopThreadFactory, org.apache.catalina.ssi.SSIExternalResolver, org.apache.catalina.CredentialHandler, org.apache.catalina.valves.AbstractAccessLogValve$LogicalUserNameElement, org.apache.catalina.core.AccessLogAdapter, org.apache.catalina.util.Extension, org.apache.catalina.util.ManifestResource, org.apache.catalina.servlets.CGIServlet, org.apache.catalina.valves.AbstractAccessLogValve$ElapsedTimeElement, org.apache.catalina.valves.AbstractAccessLogValve$HostElement, org.apache.catalina.realm.JNDIRealm$User, org.apache.catalina.util.ParameterMap, org.apache.catalina.realm.X509SubjectDnRetriever, org.apache.catalina.realm.MessageDigestCredentialHandler, org.apache.catalina.mbeans.ServiceMBean, org.apache.catalina.security.SecurityConfig, org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest, org.apache.catalina.filters.RemoteIpFilter, org.apache.catalina.startup.PasswdUserDatabase, org.apache.catalina.valves.RemoteIpValve,
+Total: 530
+Distribution: org - 530 [100.0%], apache - 530 [100.0%], catalina - 502 [94.7%], valves - 81 [15.3%], core - 61 [11.5%], startup - 46 [8.7%], ssi - 34 [6.4%], webresources - 33 [6.2%], connector - 31 [5.8%], naming - 28 [5.3%], util - 26 [4.9%], realm - 25 [4.7%], authenticator - 22 [4.2%], rewrite - 20 [3.8%], session - 20 [3.8%], mbeans - 17 [3.2%], servlets - 13 [2.5%], manager - 12 [2.3%], factory - 10 [1.9%], mapper - 10 [1.9%], users - 9 [1.7%], loader - 8 [1.5%], security - 5 [0.9%], host - 3 [0.6%], war - 2 [0.4%], jaspic - 2 [0.4%], filters - 2 [0.4%], deploy - 1 [0.2%], java - 1 [0.2%],
+
+Cluster 1: org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl, org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers, org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,
+Total: 7
+Distribution: org - 7 [100.0%], apache - 7 [100.0%], catalina - 7 [100.0%], authenticator - 7 [100.0%], jaspic - 7 [100.0%],
+
+Cluster 2: org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider, org.apache.catalina.authenticator.jaspic.SimpleServerAuthConfig, org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,
+Total: 3
+Distribution: org - 3 [100.0%], apache - 3 [100.0%], catalina - 3 [100.0%], authenticator - 3 [100.0%], jaspic - 3 [100.0%],
+
+Cluster 3: org.apache.catalina.filters.RequestDumperFilter$Timestamp, org.apache.catalina.filters.CsrfPreventionFilter$LruCache, org.apache.catalina.filters.RestCsrfPreventionFilter$1, org.apache.catalina.filters.FilterBase, org.apache.catalina.filters.ExpiresFilter, org.apache.catalina.filters.RequestFilter, org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration, org.apache.catalina.filters.FailedRequestFilter, org.apache.catalina.filters.AddDefaultCharsetFilter, org.apache.catalina.filters.SetCharacterEncodingFilter, org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy, org.apache.catalina.filters.Constants, org.apache.catalina.filters.RequestDumperFilter, org.apache.catalina.filters.RemoteAddrFilter, org.apache.catalina.filters.ExpiresFilter$DurationUnit, org.apache.catalina.filters.CsrfPreventionFilter, org.apache.catalina.filters.HttpHeaderSecurityFilter, org.apache.catalina.filters.ExpiresFilter$XServletOutputStream, org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest, org.apache.catalina.filters.HttpHeaderSecurityFilter$XFrameOption, org.apache.catalina.filters.ExpiresFilter$XPrintWriter, org.apache.catalina.filters.WebdavFixFilter, org.apache.catalina.filters.CsrfPreventionFilterBase, org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse, org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType, org.apache.catalina.filters.ExpiresFilter$Duration, org.apache.catalina.filters.RestCsrfPreventionFilter, org.apache.catalina.filters.ExpiresFilter$StartingPoint, org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper, org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest, org.apache.catalina.filters.AddDefaultCharsetFilter$ResponseWrapper, org.apache.catalina.filters.RemoteHostFilter,
+Total: 32
+Distribution: org - 32 [100.0%], apache - 32 [100.0%], catalina - 32 [100.0%], filters - 32 [100.0%],
+
+Cluster 4: org.apache.catalina.mbeans.MBeanDumper, org.apache.catalina.manager.JMXProxyServlet,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], mbeans - 1 [50.0%], manager - 1 [50.0%],
+
+Cluster 5: org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread, org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], startup - 2 [100.0%],
+
+Cluster 6: org.apache.catalina.valves.Constants$AccessLog, org.apache.catalina.valves.Constants,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], valves - 2 [100.0%],
+
+Cluster 7: org.apache.catalina.filters.CorsFilter, org.apache.catalina.filters.CorsFilter$CORSRequestType,
+Total: 2
+Distribution: org - 2 [100.0%], apache - 2 [100.0%], catalina - 2 [100.0%], filters - 2 [100.0%],
+
+MQ metric
+0.438
+0.402
+sknetwork.clustering.get_modularity
+0.699
+0.062
+sklearn.metrics.silhouette_score
+-0.08
+-0.27
+sklearn.metrics.davies_bouldin_score
+2.593
+3.663
