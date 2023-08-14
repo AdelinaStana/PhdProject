@@ -22,7 +22,7 @@ class MSTClustering:
         self.clusters = set(self.labels)
 
     def print_clusters(self):
-        print(f"MSTClustering - cluster count: {len(self.clusters)}")
+        print(f"\nMSTClustering - cluster count: {len(self.clusters)}")
 
         for cluster in self.clusters:
             count = 0
@@ -31,4 +31,4 @@ class MSTClustering:
                 if self.labels[i] == cluster:
                     print(self.index_name_map[i], end=", ")
                     count += 1
-            print(f"total: {count}")
+            print(f"\nTotal: {count}")

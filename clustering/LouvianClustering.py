@@ -9,7 +9,7 @@ class LouvianClustering:
         self.clusters = set(self.labels)
 
     def print_clusters(self):
-        print(f"LouvianClustering - cluster count: {len(self.clusters)}")
+        print(f"\nLouvianClustering - cluster count: {len(self.clusters)}")
 
         for cluster in self.clusters:
             count = 0
@@ -18,4 +18,4 @@ class LouvianClustering:
                 if self.labels[i] == cluster:
                     print(self.index_name_map[i], end=", ")
                     count += 1
-            print(f"total: {count}")
+            print(f"\nTotal: {count}")
