@@ -2,6 +2,8 @@ import datetime
 import os
 import sys
 
+import networkx as nx
+
 from clustering.LouvianClustering import LouvianClustering
 from clustering.MSTClustering import MSTClustering
 from clustering.DependenciesBuilder import DependenciesBuilder
@@ -11,7 +13,6 @@ from ModularizationQuality import *
 Measurements:
 '''
 
-import numpy as np
 from sknetwork.clustering import metrics
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score
@@ -31,30 +32,81 @@ class RedirectPrintToFile:
         self.file.close()
 
 
+'''
+Use it to concatenate two csv;
+First must be SD, second LD
+
+concat_files("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv", 
+"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10.csv")
+
+'''
+
+
+def concat_files(file1_path, file2_path):
+    output_file = file2_path.replace(".csv", "_sd_ld.csv")
+    reworked_ld = file2_path.replace(".csv", "_ld.csv")
+
+    with open(output_file, 'w') as out_file:
+        with open(file1_path, 'r') as file:
+            for line in file:
+                out_file.write(line)
+        file.close()
+
+        with open(reworked_ld, 'w') as new_ld:
+            with open(file2_path, 'r') as file:
+                for line in file:
+                    if 'a,b' in line:
+                        continue
+                    out_file.write(line.strip()+",1\n")
+                    new_ld.write(line.strip()+",1\n")
+        file.close()
+
+    out_file.close()
+    new_ld.close()
+    os.remove(file2_path)
+
+
+def plot_info(dependencies, labels):
+    '''
+    plot_info(dependencies, louvian.labels)
+    '''
+    import matplotlib.pyplot as plt
+    node_colors = []
+    for node in dependencies.name_graph.nodes():
+        node_colors.append(labels[node])
+    pos = nx.spring_layout(dependencies.name_graph)
+    nx.draw(dependencies.name_graph, pos, with_labels=True, node_size=500, font_size=5, font_color='black', font_weight='bold', node_color=node_colors, cmap=plt.cm.plasma)
+
+    # Display the graph
+    plt.show()
+
+
 def build_and_measure(file_path):
-    print(f"============================================ {os.path.basename(file_path)} : {datetime.datetime.now()} ============================================")
+    # print(f"============================================ {os.path.basename(file_path)} : {datetime.datetime.now()} ============================================")
+    print(os.path.basename(file_path), end=',')
     dependencies = DependenciesBuilder(file_path)
 
     louvian = LouvianClustering(dependencies)
-    louvian.print_clusters()
+    # louvian.print_clusters()
 
     mst = MSTClustering(dependencies)
-    mst.print_clusters()
+    # mst.print_clusters()
+
 
     '''
     The MQ measurement is bounded between -1 (no cohesion
     within the subsystems) and 1 (no coupling between the
     subsystems).
     '''
-    print("\n\nMQ metric")
-    print(round(calculate_modularity(dependencies.matrix, louvian.labels), 3))
-    print(round(calculate_modularity(dependencies.matrix, mst.labels), 3))
+    #print("MQ metric", end=",")
+    print(round(calculate_modularity(dependencies.matrix, louvian.labels), 3), end=",")
+    print(round(calculate_modularity(dependencies.matrix, mst.labels), 3), end=",")
 
-    print("sknetwork.clustering.get_modularity")
-    print(round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3))
-    print(round(metrics.get_modularity(dependencies.matrix, mst.labels), 3))
+    #print("sknetwork.clustering.get_modularity", end=",")
+    print(round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3), end=",")
+    print(round(metrics.get_modularity(dependencies.matrix, mst.labels), 3), end=",")
 
-    print("sklearn.metrics.silhouette_score")
+    #print("sklearn.metrics.silhouette_score", end=",")
     '''
     The score is bounded between -1 for incorrect clustering and +1 for highly dense clustering. Scores around zero indicate overlapping clusters.
 
@@ -62,40 +114,113 @@ def build_and_measure(file_path):
     Implemented based on this article:
             https://www.sciencedirect.com/science/article/pii/0377042787901257?via%3Dihub
     '''
-    print(round(silhouette_score(dependencies.matrix, louvian.labels, metric='euclidean'), 2))
+    print(round(silhouette_score(dependencies.matrix, louvian.labels, metric='euclidean'), 2), end=",")
     try:
-        print(round(silhouette_score(dependencies.matrix, mst.labels, metric='euclidean'), 2))
+        print(round(silhouette_score(dependencies.matrix, mst.labels, metric='euclidean'), 2), end=",")
     except:
+        print('NA', end=',')
         pass
 
-    print("sklearn.metrics.davies_bouldin_score")
+    #print("sklearn.metrics.davies_bouldin_score", end=",")
     '''
     a lower Davies-Bouldin index relates to a model with better separation between the clusters
     Zero is the lowest possible score. Values closer to zero indicate a better partition.
     '''
-    print(round(davies_bouldin_score(dependencies.matrix, louvian.labels), 3))
+    print(round(davies_bouldin_score(dependencies.matrix, louvian.labels), 3), end=",")
     try:
         print(round(davies_bouldin_score(dependencies.matrix, mst.labels), 3))
     except:
+        print('NA')
         pass
 
 
 def run_all():
+
+    '''
+    ANT
+    '''
+
     # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv")
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_ant.csv")
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_ant.csv")
+    #
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_30_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_40_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_50_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_60_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_ld.csv")
 
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_hibernate.csv")
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_hibernate.csv")
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_hibernate.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_30_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_40_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_50_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_60_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
 
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\ld_catalina.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ld_catalina.csv")
+    '''
+    CATALINA
+    '''
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
+    #
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_20_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_30_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_40_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_60_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_70_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_80_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_90_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_100_ld.csv")
+    #
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_20_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_30_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_40_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_60_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_70_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_80_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_90_sd_ld.csv")
+    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_100_sd_ld.csv")
+
+    '''
+    HIBERNATE
+    '''
+
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_hibernate.csv")
+
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_30_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_40_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_50_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_60_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_70_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_80_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_90_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_100_ld.csv")
+
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_30_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_40_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_50_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_60_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_70_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_80_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_90_sd_ld.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_100_sd_ld.csv")
 
 
 # with RedirectPrintToFile('./../results/output.txt'):
 #     run_all()
 
 run_all()
-

@@ -1,5 +1,6 @@
 import csv
-from itertools import chain
+
+import networkx as nx
 import numpy as np
 
 
@@ -9,6 +10,7 @@ class DependenciesBuilder:
         self.index_name_map = {}
         self.matrix = np.array([])
         self.array = []
+        self.name_graph = nx.Graph()
         self.n = 0
 
         self.populate_matrix(csv_file)
@@ -21,6 +23,8 @@ class DependenciesBuilder:
             with open(csv_file, newline='') as file1:
                 reader = csv.reader(file1)
                 for row in reader:
+                    if row[0].strip() == 'a':
+                        continue
                     data.append([row[0].strip(), row[1].strip(), row[2].strip()])
                     entities.add(row[0].strip())
                     entities.add(row[1].strip())
@@ -29,9 +33,8 @@ class DependenciesBuilder:
             print(f"Error for file {csv_file}")
             return
 
-        data = data[1:]     # remove first row
         self.n = len(entities)
-        print(f"ENTITIES COUNT: {self.n}")
+        #print(f"ENTITIES COUNT: {self.n}")
 
         # create dict with mapping between entity and id (index)
         i = 0
@@ -51,4 +54,5 @@ class DependenciesBuilder:
             self.matrix[index_b][index_a] = 1
 
             self.array.append([index_a, index_b, 1])
+            self.name_graph.add_edge(index_a,index_b)
 
