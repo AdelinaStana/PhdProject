@@ -1,0 +1,13 @@
+org.apache.catalina.webresources.AbstractArchiveResource,org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,1
+org.apache.catalina.core.ApplicationMapping,org.apache.catalina.core.ApplicationMapping$MappingImpl,1
+org.apache.catalina.TrackedWebResource,org.apache.catalina.webresources.TrackedInputStream,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
+org.apache.catalina.webresources.AbstractSingleArchiveResource,org.apache.catalina.webresources.WarResourceSet,1
+org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread,1
+org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider,org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,1
+org.apache.catalina.valves.Constants,org.apache.catalina.valves.Constants$AccessLog,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,1
+org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,1

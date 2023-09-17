@@ -41,9 +41,10 @@ def calculate_intraconnectivity(adj_matrix, cluster_labels, cluster_id):
     mi = 0.0  # intra-edge dependencies
 
     for i in range(num_nodes):
-        for j in range(num_nodes):
-            if cluster_labels[i] == cluster_id and cluster_labels[j] == cluster_id:
-                mi += adj_matrix[i, j]
+        if cluster_labels[i] == cluster_id:
+            for j in range(num_nodes):
+                if cluster_labels[j] == cluster_id:
+                    mi += adj_matrix[i, j]
 
     Ni = calculate_components_number(cluster_labels, cluster_id)
 
@@ -63,9 +64,10 @@ def calculate_interconnectivity(adj_matrix, cluster_labels, cluster_id_i, cluste
     eij = 0.0  # inter-edge dependencies
 
     for i in range(num_nodes):
-        for j in range(num_nodes):
-            if cluster_labels[i] == cluster_id_i and cluster_labels[j] == cluster_id_j:
-                eij += adj_matrix[i, j]
+        if cluster_labels[i] == cluster_id_i:
+            for j in range(num_nodes):
+                if cluster_labels[j] == cluster_id_j:
+                    eij += adj_matrix[i, j]
     Ni = calculate_components_number(cluster_labels, cluster_id_i)
     Nj = calculate_components_number(cluster_labels, cluster_id_j)
 
