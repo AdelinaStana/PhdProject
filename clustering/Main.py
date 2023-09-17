@@ -1,4 +1,7 @@
 import sys
+
+import sklearn
+
 from clustering.LouvianClustering import LouvianClustering
 from clustering.MSTClustering import MSTClustering
 from clustering.DependenciesBuilder import DependenciesBuilder
@@ -12,6 +15,7 @@ Measurements:
 from sknetwork.clustering import metrics
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score
+from sklearn.metrics import  adjusted_mutual_info_score
 
 
 class RedirectPrintToFile:
@@ -44,7 +48,13 @@ indicate overlapping clusters.
  a lower Davies-Bouldin index relates to a model with better separation between the clusters
     Zero is the lowest possible score. Values closer to zero indicate a better partition.            
 
+
+    Mutual Information based scores 
+    from: https://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation
+    Values close to zero indicate two label assignments that are largely independent
 '''
+
+
 def build_and_measure(file_path):
     # print(f"============================================ {os.path.basename(file_path)} : {datetime.datetime.now()}
     # ============================================")
@@ -75,13 +85,20 @@ def build_and_measure(file_path):
     print(round(davies_bouldin_score(dependencies.matrix, louvian.labels), 3), end=",")
     print(round(davies_bouldin_score(dependencies.matrix, reference_labels), 3), end=",")
 
+    print(round(adjusted_mutual_info_score(louvian.labels, reference_labels)))  # 0 1 0
+
+    print(round(calculate_mojo(louvian.labels, reference_labels, dependencies)))
+
+
+
+
 
 def run_all():
     '''
     ANT
     '''
 
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv")
     #
     # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10_ld.csv")
     # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_ld.csv")
@@ -108,7 +125,7 @@ def run_all():
     '''
     CATALINA
     '''
-    # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
+    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
     #
     # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_ld.csv")
     # build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_20_ld.csv")

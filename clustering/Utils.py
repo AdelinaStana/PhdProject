@@ -105,10 +105,48 @@ def convert_to_cluster_packages(file_path):
     for deleted in to_delete:
         del packages[deleted]
 
-    print(len(packages.keys()))
-    for package in packages.keys():
-        print(package)
-        for item in packages[package]:
-            print(f"\t{item}")
+    # print(len(packages.keys()))
+    # for package in packages.keys():
+    #     print(package)
+    #     for item in packages[package]:
+    #         print(f"\t{item}")
 
     return packages
+
+
+def map_labels_to_cluster_array(labels, dependencies_mapper):
+    clusters_dict = {}
+    for i in range(0, len(labels)):
+        if labels[i] in clusters_dict.keys():
+            clusters_dict[labels[i]].append(i)
+        else:
+            clusters_dict[labels[i]] = [i]
+
+    clusters = []
+    for key in clusters_dict.keys():
+        cluster = []
+        for value in clusters_dict[key]:
+            cluster.append(dependencies_mapper.index_name_map[value])
+        clusters.append(cluster)
+
+    return clusters
+
+
+def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
+    sol_clusters = map_labels_to_cluster_array(sol_labels, dependencies_mapper)
+    reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
+
+    moves = 0
+    joins = 0
+
+    for cluster in sol_clusters:
+        for reference_cluster in reference_clusters:
+            intersect = len(set(cluster) & set(reference_cluster))
+            moves += len(cluster) - intersect
+            joins += len(reference_cluster) - intersect
+
+    mojo = (1 - ((moves + joins)/dependencies_mapper.n))* 100
+    return mojo
+
+
+
