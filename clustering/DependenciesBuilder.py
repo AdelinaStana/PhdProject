@@ -32,9 +32,9 @@ class DependenciesBuilder:
         except:
             print(f"Error for file {csv_file}")
             return
-
+        entities = sorted(entities)
         self.n = len(entities)
-        #print(f"ENTITIES COUNT: {self.n}")
+        # print(f"ENTITIES COUNT: {self.n}")
 
         # create dict with mapping between entity and id (index)
         i = 0

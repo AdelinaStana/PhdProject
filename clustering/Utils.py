@@ -3,6 +3,7 @@ import csv
 import networkx as nx
 import os
 import numpy as np
+import subprocess
 
 '''
 Use it to concatenate two csv;
@@ -55,8 +56,12 @@ def plot_info(dependencies, labels):
     # Display the graph
     plt.show()
 
+'''
+given a csv, merge all existing entities and split them based on packages
+'''
 
-def map_package_solution_to_labels(file_path, dependencies_mapper):
+
+def create_clustering_based_on_packages(file_path, dependencies_mapper):
     packages = convert_to_cluster_packages(file_path)
     label_index = 0
     labels = np.array([0]*dependencies_mapper.n)
@@ -67,10 +72,6 @@ def map_package_solution_to_labels(file_path, dependencies_mapper):
         label_index += 1
 
     return labels
-
-'''
-given a csv, merge all existing entities and split them based on packages
-'''
 
 
 def convert_to_cluster_packages(file_path):
@@ -92,20 +93,26 @@ def convert_to_cluster_packages(file_path):
         else:
             packages[package] = [name]
 
+    threshold = 15
+    if 'hibernate' in file_path:
+        threshold = 30
+
     to_delete = set()
-    for package in packages.keys():
-        if len(packages[package]) <= 4:
+    keys = list(packages.keys())
+    keys = sorted(keys)
+    for package in keys:
+        if len(packages[package]) <= threshold:
             for item in packages[package]:
                 parts = item.split(".")
                 new_package = parts[-3]
-                if new_package in packages.keys():
+                if new_package in packages.keys() and new_package != package:
                     packages[new_package].append(item)
                     to_delete.add(package)
 
     for deleted in to_delete:
         del packages[deleted]
 
-    # print(len(packages.keys()))
+    # print(f"packages: {len(packages.keys())}")
     # for package in packages.keys():
     #     print(package)
     #     for item in packages[package]:
@@ -131,22 +138,45 @@ def map_labels_to_cluster_array(labels, dependencies_mapper):
 
     return clusters
 
+'''
+Please use one of the following:
+
+java mojo.MoJo a.rsf b.rsf
+  calculates the one-way MoJo distance from a.rsf to b.rsf
+java mojo.MoJo a.rsf b.rsf -fm
+  calculates the MoJoFM distance from a.rsf to b.rsf
+java mojo.MoJo a.rsf b.rsf -b
+  calculates the two-way MoJo distance between a.rsf and b.rsf
+java mojo.MoJo a.rsf b.rsf -e r.rsf
+  calculates the EdgeMoJo distance between a.rsf and b.rsf
+java mojo.MoJo a.rsf b.rsf -m+
+  calculates the one-way MoJoPlus distance from a.rsf to b.rsf
+java mojo.MoJo a.rsf b.rsf -b+
+  calculates the two-way MoJoPlus distance between a.rsf and b.rsf
+'''
+
+
+def save_clusters(clusters, file_name):
+    index = 0
+    with open(file_name, 'w') as file:
+        for cluster in clusters:
+            for item in cluster:
+                file.write(f"contain {index} {item}\n")
+            index += 1
+
 
 def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
     sol_clusters = map_labels_to_cluster_array(sol_labels, dependencies_mapper)
-    reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
+    #reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
 
-    moves = 0
-    joins = 0
+    save_clusters(sol_clusters, "solution.rsf")
+    #save_clusters(reference_clusters, "reference.rsf")
 
-    for cluster in sol_clusters:
-        for reference_cluster in reference_clusters:
-            intersect = len(set(cluster) & set(reference_cluster))
-            moves += len(cluster) - intersect
-            joins += len(reference_cluster) - intersect
+    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf"], capture_output=True, text=True)
+    mojofm = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"], capture_output=True, text=True)
 
-    mojo = (1 - ((moves + joins)/dependencies_mapper.n))* 100
-    return mojo
+    print(mojo.stdout.strip(), end=",")
+    print(mojofm.stdout.strip())
 
 
 
