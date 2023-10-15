@@ -1507,512 +1507,825 @@ org.apache.naming.factory.FactoryBase,org.apache.naming.factory.ResourceFactory,
 org.apache.naming.factory.FactoryBase,org.apache.naming.factory.TransactionFactory,250
 org.apache.naming.factory.ResourceLinkFactory,org.apache.catalina.core.NamingContextListener,62
 org.apache.naming.factory.ResourceLinkFactory,org.apache.naming.factory.DataSourceLinkFactory,303
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,1
-org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,1
-org.apache.catalina.webresources.JarResource,org.apache.catalina.webresources.JarWarResource,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$DurationUnit,1
-org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,1
-org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.startup.ContextConfig,org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,1
-org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$StartingPoint,1
-org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$State,1
-org.apache.catalina.manager.Constants,org.apache.catalina.manager.host.Constants,1
-org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,1
-org.apache.catalina.valves.StuckThreadDetectionValve,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,1
-org.apache.catalina.valves.StuckThreadDetectionValve,org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,1
-org.apache.catalina.valves.StuckThreadDetectionValve,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState,1
-org.apache.catalina.connector.CoyoteAdapter,org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,1
-org.apache.catalina.ssi.SSIServletExternalResolver,org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath,1
-org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$CGIRunner,1
-org.apache.catalina.servlets.CGIServlet$CGIEnvironment,org.apache.catalina.servlets.CGIServlet$CGIRunner,1
-org.apache.catalina.servlets.CGIServlet$CGIRunner,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,1
-org.apache.catalina.webresources.Cache,org.apache.catalina.webresources.Cache$EvictionOrder,1
-org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher$State,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$AndNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OrNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$CompareNode,org.apache.catalina.ssi.ExpressionParseTree$EqualNode,1
-org.apache.catalina.ssi.ExpressionParseTree$EqualNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$EqualNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.realm.RealmBase,org.apache.catalina.realm.RealmBase$AllRolesMode,1
-org.apache.catalina.startup.Catalina,org.apache.catalina.startup.Catalina$CatalinaShutdownHook,1
-org.apache.catalina.filters.RequestDumperFilter,org.apache.catalina.filters.RequestDumperFilter$Timestamp,1
-org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials,1
-org.apache.catalina.session.StandardManager,org.apache.catalina.session.StandardManager$PrivilegedDoLoad,1
-org.apache.catalina.session.StandardManager,org.apache.catalina.session.StandardManager$PrivilegedDoUnload,1
-org.apache.catalina.filters.RestCsrfPreventionFilter,org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest,1
-org.apache.catalina.filters.RestCsrfPreventionFilter,org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,1
-org.apache.catalina.filters.RestCsrfPreventionFilter,org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType,1
-org.apache.catalina.filters.RestCsrfPreventionFilter,org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$Duration,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,1
-org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.webresources.AbstractArchiveResource,org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,1
-org.apache.catalina.valves.rewrite.RewriteCond,org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,1
-org.apache.catalina.valves.rewrite.RewriteCond$Condition,org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,1
-org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition,org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,1
-org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition,org.apache.catalina.valves.rewrite.RewriteCond$ResourceCondition,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.servlets.WebdavServlet,org.apache.catalina.servlets.WebdavServlet$WebdavResolver,1
-org.apache.catalina.servlets.WebdavServlet$LockInfo,org.apache.catalina.servlets.WebdavServlet$WebdavResolver,1
-org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$DebugException,1
-org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,1
-org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.startup.ContextConfig,org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.core.AsyncContextImpl$DebugException,org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,1
-org.apache.catalina.core.AsyncContextImpl$DebugException,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,1
-org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$CGIEnvironment,1
-org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,1
-org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.core.DefaultInstanceManager,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,1
-org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.core.ApplicationMapping,org.apache.catalina.core.ApplicationMapping$MappingImpl,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.TrackedWebResource,org.apache.catalina.webresources.TrackedInputStream,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.valves.rewrite.Resolver,org.apache.catalina.valves.rewrite.ResolverImpl,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,1
-org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.servlets.CGIServlet$CGIEnvironment,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,1
-org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$Range,1
-org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,1
-org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,1
-org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedHost,1
-org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedHost,1
-org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$ContextList,1
-org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$MappedContext,1
-org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$ContextVersion,1
-org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,1
-org.apache.catalina.core.StandardHost,org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener,1
-org.apache.catalina.startup.ClassLoaderFactory,org.apache.catalina.startup.ClassLoaderFactory$Repository,1
-org.apache.catalina.startup.ClassLoaderFactory,org.apache.catalina.startup.ClassLoaderFactory$RepositoryType,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteRuleBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.webresources.JarResourceSet,org.apache.catalina.webresources.JarWarResourceSet,1
-org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,1
-org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,1
-org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,1
-org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,1
-org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,1
-org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,1
-org.apache.catalina.authenticator.AuthenticatorBase,org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,1
-org.apache.catalina.webresources.StandardRoot,org.apache.catalina.webresources.StandardRoot$BaseLocation,1
-org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,1
-org.apache.catalina.startup.Tomcat$FixContextListener,org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,1
-org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$StaticElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,1
-org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState,1
-org.apache.catalina.core.ApplicationContext,org.apache.catalina.core.ApplicationContext$DispatchData,1
-org.apache.catalina.mbeans.ContainerMBean,org.apache.catalina.mbeans.ContextMBean,1
-org.apache.catalina.core.StandardContext,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,1
-org.apache.catalina.core.StandardContext$ContextFilterMaps,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$RewriteCondBackReferenceElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,1
-org.apache.catalina.startup.Tomcat$FixContextListener,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,1
-org.apache.catalina.session.ManagerBase,org.apache.catalina.session.ManagerBase$SessionTiming,1
-org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,1
-org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$State,1
-org.apache.catalina.core.ApplicationHttpRequest,org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$MappedWrapper,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.filters.CsrfPreventionFilter,org.apache.catalina.filters.CsrfPreventionFilter$LruCache,1
-org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,org.apache.catalina.filters.CsrfPreventionFilter$LruCache,1
-org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,org.apache.catalina.core.ApplicationDispatcher$State,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,1
-org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.filters.RemoteIpFilter,org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest,1
-org.apache.catalina.Lifecycle,org.apache.catalina.Lifecycle$SingleUse,1
-org.apache.catalina.startup.EngineRuleSet,org.apache.catalina.startup.HostRuleSet,1
-org.apache.catalina.startup.ClassLoaderFactory$Repository,org.apache.catalina.startup.ClassLoaderFactory$RepositoryType,1
-org.apache.catalina.webresources.AbstractSingleArchiveResource,org.apache.catalina.webresources.WarResourceSet,1
-org.apache.catalina.realm.GenericPrincipal,org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,1
-org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,1
-org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,1
-org.apache.catalina.session.StandardManager$PrivilegedDoLoad,org.apache.catalina.session.StandardManager$PrivilegedDoUnload,1
-org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,1
-org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,1
-org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest,org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy,org.apache.catalina.filters.RestCsrfPreventionFilter$MethodType,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,1
-org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$Node,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$StringNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$OppNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$NotNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$AndNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$OppNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$OppNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$NotNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$AndNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OppNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.connector.Request,org.apache.catalina.connector.Request$SpecialAttributeAdapter,1
-org.apache.catalina.SessionIdGenerator,org.apache.catalina.util.StandardSessionIdGenerator,1
-org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$FixContextListener,1
-org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,1
-org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployWar,1
-org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployWar,1
-org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$DeployWar,1
-org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$DeployDirectory,1
-org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$AndNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OrNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$CompareNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,org.apache.catalina.ssi.ExpressionParseTree$LessThanNode,1
-org.apache.catalina.filters.AddDefaultCharsetFilter,org.apache.catalina.filters.AddDefaultCharsetFilter$ResponseWrapper,1
-org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,1
-org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,1
-org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StartChild,1
-org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StopChild,1
-org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory,org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory$SafeForkJoinWorkerThread,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$AndNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OrNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.ssi.ExpressionParseTree$CompareNode,org.apache.catalina.ssi.ExpressionParseTree$GreaterThanNode,1
-org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,1
-org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,1
-org.apache.catalina.servlets.WebdavServlet,org.apache.catalina.servlets.WebdavServlet$LockInfo,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest,org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy,org.apache.catalina.filters.RestCsrfPreventionFilter$StateChangingRequest,1
-org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployDirectory,1
-org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployDirectory,1
-org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$DeployDirectory,1
-org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$NotNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$NotNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$AndNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.ssi.ExpressionParseTree$NotNode,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,1
-org.apache.catalina.core.DefaultInstanceManager,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,1
-org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,1
-org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,1
-org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$StringNode,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$AndNode,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$ContextVersion,1
-org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$ContextVersion,1
-org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$ContextVersion,1
-org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$ContextVersion,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$AndNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.ssi.ExpressionParseTree$StringNode,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.WebResourceRoot,org.apache.catalina.WebResourceRoot$ResourceSetType,1
-org.apache.naming.factory.DataSourceLinkFactory,org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler,1
-org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,1
-org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,1
-org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,1
-org.apache.catalina.valves.rewrite.RewriteCond,org.apache.catalina.valves.rewrite.RewriteCond$Condition,1
-org.apache.catalina.valves.rewrite.RewriteCond$Condition,org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition,1
-org.apache.catalina.valves.rewrite.RewriteCond$Condition,org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedContext,1
-org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedContext,1
-org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MappedContext,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.valves.rewrite.RewriteCond,org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition,1
-org.apache.catalina.valves.rewrite.RewriteCond$PatternCondition,org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition,1
-org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,1
-org.apache.catalina.ssi.ExpressionParseTree$AndNode,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.ssi.ExpressionParseTree$OrNode,org.apache.catalina.ssi.ExpressionParseTree$CompareNode,1
-org.apache.catalina.authenticator.jaspic.SimpleAuthConfigProvider,org.apache.catalina.authenticator.jaspic.SimpleServerAuthContext,1
-org.apache.catalina.valves.rewrite.RewriteCond,org.apache.catalina.valves.rewrite.RewriteCond$LexicalCondition,1
-org.apache.catalina.valves.Constants,org.apache.catalina.valves.Constants$AccessLog,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MapElement,1
-org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$ContextList,1
-org.apache.catalina.ssi.ExpressionParseTree$AndNode,org.apache.catalina.ssi.ExpressionParseTree$OrNode,1
-org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployedApplication,1
-org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployDescriptor,1
-org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,1
-org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,1
-org.apache.catalina.realm.LockOutRealm,org.apache.catalina.realm.LockOutRealm$LockRecord,1
-org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployDescriptor,1
-org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,1
-org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.core.StandardContext,org.apache.catalina.core.StandardContext$ContextFilterMaps,1
-org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,1
-org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,1
-org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,1
-org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,1
-org.apache.catalina.mbeans.ContextMBean,org.apache.catalina.mbeans.ServiceMBean,1
-org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StopChild,1
-org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StopChild,1
-org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$StopChild,1
-org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$ContextList,1
-org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,1
-org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StartChild,1
-org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,1
-org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,1
-org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StartChild,1
-org.apache.catalina.filters.CsrfPreventionFilter,org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,1
-org.apache.catalina.filters.RestCsrfPreventionFilter$RestCsrfPreventionStrategy,org.apache.catalina.filters.RestCsrfPreventionFilter$FetchRequest,1
-org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,1
-org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,1
-org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableEnvElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,1
-org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableSslElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,1
-org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,1
-org.apache.catalina.filters.CorsFilter,org.apache.catalina.filters.CorsFilter$CORSRequestType,1
-org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,1
-org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$StaticElement,1
-org.apache.catalina.valves.rewrite.Substitution$SubstitutionElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
-org.apache.catalina.valves.rewrite.Substitution$StaticElement,org.apache.catalina.valves.rewrite.Substitution$MapElement,1
+org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,org.apache.catalina.servlets.DefaultServlet,44, LD
+org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,org.apache.catalina.servlets.DefaultServlet$Range,44, LD
+org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,44, LD
+org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,44, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.Lifecycle$SingleUse,org.apache.catalina.Lifecycle,14, LD
+org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,29, LD
+org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,29, LD
+org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,29, LD
+org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,29, LD
+org.apache.catalina.session.PersistentManagerBase,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,29, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$DurationUnit,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,org.apache.catalina.startup.ContextConfig,135, LD
+org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,135, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.WebResourceRoot$ResourceSetType,org.apache.catalina.WebResourceRoot,16, LD
+org.apache.catalina.WebResourceRoot$ResourceSetType,org.apache.catalina.webresources.StandardRoot,13, LD
+org.apache.catalina.WebResourceRoot$ResourceSetType,org.apache.catalina.webresources.StandardRoot$BaseLocation,13, LD
+org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig,43, LD
+org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$DeployedApplication,43, LD
+org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$DeployDescriptor,43, LD
+org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$DeployDirectory,43, LD
+org.apache.catalina.startup.HostConfig$DeployWar,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,43, LD
+org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$Range,44, LD
+org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,44, LD
+org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,44, LD
+org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,44, LD
+org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,org.apache.catalina.realm.GenericPrincipal,17, LD
+org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet,44, LD
+org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$Range,44, LD
+org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,44, LD
+org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,44, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$StartingPoint,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.Constants,12, LD
+org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.HTMLManagerServlet,11, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.session.ManagerBase$SessionTiming,org.apache.catalina.session.ManagerBase,63, LD
+org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,org.apache.catalina.startup.Tomcat,39, LD
+org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
+org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,39, LD
+org.apache.catalina.servlets.CGIServlet$CGIEnvironment,org.apache.catalina.servlets.CGIServlet,22, LD
+org.apache.catalina.servlets.CGIServlet$CGIEnvironment,org.apache.catalina.servlets.CGIServlet$CGIRunner,22, LD
+org.apache.catalina.servlets.CGIServlet$CGIEnvironment,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,22, LD
+org.apache.catalina.core.ApplicationHttpRequest,org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator,26, LD
+org.apache.catalina.core.StandardEngine$NoopAccessLog,org.apache.catalina.core.StandardEngine,17, LD
+org.apache.catalina.core.StandardEngine$NoopAccessLog,org.apache.catalina.core.StandardEngine$AccessLogListener,17, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,11, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,11, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase,55, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$StopChild,55, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,55, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase$StartChild,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.manager.Constants,org.apache.catalina.manager.host.Constants,12, LD
+org.apache.catalina.manager.Constants,org.apache.catalina.manager.HTMLManagerServlet,13, LD
+org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat,39, LD
+org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
+org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,39, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig,43, LD
+org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig$DeployedApplication,43, LD
+org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig$DeployDescriptor,43, LD
+org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig$DeployWar,43, LD
+org.apache.catalina.startup.HostConfig$DeployDirectory,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,43, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.webresources.StandardRoot$BaseLocation,org.apache.catalina.webresources.StandardRoot,37, LD
+org.apache.catalina.core.StandardEngine,org.apache.catalina.core.StandardEngine$NoopAccessLog,17, LD
+org.apache.catalina.core.StandardEngine,org.apache.catalina.core.StandardEngine$AccessLogListener,17, LD
+org.apache.catalina.core.StandardEngine$AccessLogListener,org.apache.catalina.core.StandardEngine,17, LD
+org.apache.catalina.core.StandardEngine$AccessLogListener,org.apache.catalina.core.StandardEngine$NoopAccessLog,17, LD
+org.apache.catalina.filters.RemoteIpFilter,org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest,25, LD
+org.apache.catalina.webresources.JarWarResource,org.apache.catalina.webresources.JarResource,13, LD
+org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials,18, LD
+org.apache.catalina.realm.RealmBase,org.apache.catalina.realm.RealmBase$AllRolesMode,52, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase,55, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase$StartChild,55, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,55, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase$StopChild,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.core.ApplicationContext$DispatchData,org.apache.catalina.core.ApplicationContext,90, LD
+org.apache.catalina.core.ApplicationContext$DispatchData,org.apache.catalina.core.StandardContext,35, LD
+org.apache.catalina.core.ApplicationContext$DispatchData,org.apache.catalina.core.StandardContext$ContextFilterMaps,35, LD
+org.apache.catalina.core.ApplicationContext$DispatchData,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,35, LD
+org.apache.catalina.connector.Request,org.apache.catalina.connector.CoyoteAdapter,44, LD
+org.apache.catalina.connector.Request,org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,44, LD
+org.apache.catalina.connector.Request,org.apache.catalina.connector.Request$SpecialAttributeAdapter,178, LD
+org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,org.apache.catalina.servlets.CGIServlet,22, LD
+org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,org.apache.catalina.servlets.CGIServlet$CGIEnvironment,22, LD
+org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,org.apache.catalina.servlets.CGIServlet$CGIRunner,22, LD
+org.apache.catalina.connector.Request$SpecialAttributeAdapter,org.apache.catalina.connector.CoyoteAdapter,44, LD
+org.apache.catalina.connector.Request$SpecialAttributeAdapter,org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,44, LD
+org.apache.catalina.connector.Request$SpecialAttributeAdapter,org.apache.catalina.connector.Request,178, LD
+org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,org.apache.catalina.authenticator.AuthenticatorBase,42, LD
+org.apache.catalina.servlets.WebdavServlet,org.apache.catalina.servlets.WebdavServlet$LockInfo,30, LD
+org.apache.catalina.servlets.WebdavServlet,org.apache.catalina.servlets.WebdavServlet$WebdavResolver,30, LD
+org.apache.catalina.Wrapper,org.apache.catalina.core.StandardWrapper,13, LD
+org.apache.catalina.session.ManagerBase,org.apache.catalina.session.ManagerBase$SessionTiming,63, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,11, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,11, LD
+org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,org.apache.catalina.authenticator.DigestAuthenticator,27, LD
+org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.servlets.WebdavServlet$LockInfo,org.apache.catalina.servlets.WebdavServlet,30, LD
+org.apache.catalina.servlets.WebdavServlet$LockInfo,org.apache.catalina.servlets.WebdavServlet$WebdavResolver,30, LD
+org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,org.apache.catalina.startup.HostConfig,43, LD
+org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,org.apache.catalina.startup.HostConfig$DeployedApplication,43, LD
+org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,org.apache.catalina.startup.HostConfig$DeployDescriptor,43, LD
+org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,org.apache.catalina.startup.HostConfig$DeployWar,43, LD
+org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,org.apache.catalina.startup.HostConfig$DeployDirectory,43, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,org.apache.catalina.filters.CsrfPreventionFilter,12, LD
+org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,org.apache.catalina.filters.CsrfPreventionFilter$LruCache,12, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.ContainerBase,55, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.ContainerBase$StartChild,55, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.ContainerBase$StopChild,55, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase$StartStopThreadFactory,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.servlets.CGIServlet$CGIRunner,org.apache.catalina.servlets.CGIServlet,22, LD
+org.apache.catalina.servlets.CGIServlet$CGIRunner,org.apache.catalina.servlets.CGIServlet$CGIEnvironment,22, LD
+org.apache.catalina.servlets.CGIServlet$CGIRunner,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.mapper.Mapper$ContextList,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.webresources.StandardRoot,org.apache.catalina.webresources.StandardRoot$BaseLocation,37, LD
+org.apache.catalina.loader.WebappLoader,org.apache.catalina.loader.WebappClassLoader,29, LD
+org.apache.catalina.webresources.JarResourceSet,org.apache.catalina.webresources.JarWarResourceSet,15, LD
+org.apache.catalina.core.StandardHost,org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener,38, LD
+org.apache.catalina.filters.CsrfPreventionFilter,org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,12, LD
+org.apache.catalina.filters.CsrfPreventionFilter,org.apache.catalina.filters.CsrfPreventionFilter$LruCache,12, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.ssi.SSIServletExternalResolver,org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath,15, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.core.ApplicationContextFacade,org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,18, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.mapper.Mapper,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.realm.RealmBase$AllRolesMode,org.apache.catalina.realm.RealmBase,52, LD
+org.apache.catalina.ssi.SSIServletExternalResolver$ServletContextAndPath,org.apache.catalina.ssi.SSIServletExternalResolver,15, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,org.apache.catalina.loader.WebappClassLoaderBase,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,17, LD
+org.apache.catalina.realm.JNDIRealm$User,org.apache.catalina.realm.JNDIRealm,26, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.webresources.JarResource,org.apache.catalina.webresources.JarWarResource,13, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,org.apache.catalina.authenticator.DigestAuthenticator,27, LD
+org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,27, LD
+org.apache.catalina.realm.JDBCRealm,org.apache.catalina.realm.DataSourceRealm,20, LD
+org.apache.catalina.realm.JDBCRealm,org.apache.catalina.realm.MemoryRealm,19, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.core.StandardHost$MemoryLeakTrackingListener,org.apache.catalina.core.StandardHost,38, LD
+org.apache.catalina.Lifecycle,org.apache.catalina.Lifecycle$SingleUse,14, LD
+org.apache.catalina.authenticator.AuthenticatorBase,org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,42, LD
+org.apache.catalina.core.ApplicationMapping,org.apache.catalina.core.ApplicationMapping$MappingImpl,11, LD
+org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials,org.apache.catalina.authenticator.BasicAuthenticator,18, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,org.apache.catalina.loader.WebappClassLoaderBase,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.mapper.Mapper$MapElement,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authenticator.DigestAuthenticator$DigestInfo,27, LD
+org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,27, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase,16, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,16, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,16, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$StartChild,16, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$StopChild,16, LD
+org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,16, LD
+org.apache.catalina.core.DefaultInstanceManager,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,18, LD
+org.apache.catalina.core.DefaultInstanceManager,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,18, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter$Duration,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,org.apache.catalina.loader.WebappClassLoaderBase,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,17, LD
+org.apache.catalina.startup.FailedContext,org.apache.catalina.Context,30, LD
+org.apache.catalina.startup.FailedContext,org.apache.catalina.core.StandardContext,29, LD
+org.apache.catalina.startup.FailedContext,org.apache.catalina.core.StandardContext$ContextFilterMaps,29, LD
+org.apache.catalina.startup.FailedContext,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,29, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.Request,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.Request$SpecialAttributeAdapter,22, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetAttributePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterMapPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetRequestDispatcherPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetParameterValuePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCookiesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetCharacterEncodingPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeadersPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetHeaderNamesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalePrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetLocalesPrivilegedAction,27, LD
+org.apache.catalina.connector.RequestFacade$GetParameterNamesPrivilegedAction,org.apache.catalina.connector.RequestFacade$GetSessionPrivilegedAction,27, LD
+org.apache.catalina.startup.Tomcat$FixContextListener,org.apache.catalina.startup.Tomcat,39, LD
+org.apache.catalina.startup.Tomcat$FixContextListener,org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,39, LD
+org.apache.catalina.startup.Tomcat$FixContextListener,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,39, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.mapper.Mapper$MappedHost,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployedApplication,43, LD
+org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployDescriptor,43, LD
+org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployWar,43, LD
+org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$DeployDirectory,43, LD
+org.apache.catalina.startup.HostConfig,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,43, LD
+org.apache.catalina.webresources.AbstractArchiveResource,org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,14, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.mapper.Mapper$MappedContext,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.core.ApplicationContext,org.apache.catalina.core.ApplicationContext$DispatchData,90, LD
+org.apache.catalina.core.ApplicationContext,org.apache.catalina.core.StandardContext,35, LD
+org.apache.catalina.core.ApplicationContext,org.apache.catalina.core.StandardContext$ContextFilterMaps,35, LD
+org.apache.catalina.core.ApplicationContext,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,35, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,29, LD
+org.apache.catalina.startup.Catalina,org.apache.catalina.startup.Catalina$CatalinaShutdownHook,32, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.Manager,org.apache.catalina.session.ManagerBase,15, LD
+org.apache.catalina.Manager,org.apache.catalina.session.ManagerBase$SessionTiming,15, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,org.apache.catalina.connector.CoyoteAdapter,129, LD
+org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,org.apache.catalina.connector.Request,44, LD
+org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,org.apache.catalina.connector.Request$SpecialAttributeAdapter,44, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper$ContextVersion,org.apache.catalina.mapper.Mapper$MappedWrapper,22, LD
+org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$DebugException,49, LD
+org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,49, LD
+org.apache.catalina.core.AsyncContextImpl,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,49, LD
+org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,org.apache.catalina.core.DefaultInstanceManager,18, LD
+org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,18, LD
+org.apache.catalina.connector.CoyoteAdapter,org.apache.catalina.connector.CoyoteAdapter$RecycleRequiredException,129, LD
+org.apache.catalina.connector.CoyoteAdapter,org.apache.catalina.connector.Request,44, LD
+org.apache.catalina.connector.CoyoteAdapter,org.apache.catalina.connector.Request$SpecialAttributeAdapter,44, LD
+org.apache.catalina.WebResourceRoot,org.apache.catalina.WebResourceRoot$ResourceSetType,16, LD
+org.apache.catalina.WebResourceRoot,org.apache.catalina.webresources.StandardRoot$BaseLocation,13, LD
+org.apache.catalina.WebResourceRoot,org.apache.catalina.webresources.StandardRoot,13, LD
+org.apache.catalina.loader.WebappClassLoader,org.apache.catalina.loader.WebappLoader,29, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,org.apache.catalina.core.ApplicationDispatcher$State,33, LD
+org.apache.catalina.core.AsyncContextImpl$DebugException,org.apache.catalina.core.AsyncContextImpl,49, LD
+org.apache.catalina.core.AsyncContextImpl$DebugException,org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,49, LD
+org.apache.catalina.core.AsyncContextImpl$DebugException,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,49, LD
+org.apache.catalina.core.StandardContext$ContextFilterMaps,org.apache.catalina.Context,68, LD
+org.apache.catalina.core.StandardContext$ContextFilterMaps,org.apache.catalina.core.StandardContext,213, LD
+org.apache.catalina.core.StandardContext$ContextFilterMaps,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,213, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,19, LD
+org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,org.apache.catalina.core.AsyncContextImpl,49, LD
+org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,org.apache.catalina.core.AsyncContextImpl$DebugException,49, LD
+org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,49, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$Duration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$ExpiresConfiguration,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$XPrintWriter,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
+org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StartChild,55, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StopChild,55, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,55, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.filters.CsrfPreventionFilter$LruCache,org.apache.catalina.filters.CsrfPreventionFilter,12, LD
+org.apache.catalina.filters.CsrfPreventionFilter$LruCache,org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,12, LD
+org.apache.catalina.startup.Catalina$CatalinaShutdownHook,org.apache.catalina.startup.Catalina,32, LD
+org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,org.apache.catalina.webresources.AbstractArchiveResource,14, LD
+org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,17, LD
+org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,17, LD
+org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,org.apache.catalina.Context,68, LD
+org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,org.apache.catalina.core.StandardContext,213, LD
+org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,org.apache.catalina.core.StandardContext$ContextFilterMaps,213, LD
+org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
+org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$DefaultWebXmlListener,39, LD
+org.apache.catalina.startup.Tomcat,org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,39, LD
+org.apache.catalina.filters.RemoteIpFilter$XForwardedRequest,org.apache.catalina.filters.RemoteIpFilter,25, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,org.apache.catalina.core.ApplicationDispatcher$State,33, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,org.apache.catalina.authenticator.SpnegoAuthenticator,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,19, LD
+org.apache.catalina.core.StandardContext,org.apache.catalina.Context,68, LD
+org.apache.catalina.core.StandardContext,org.apache.catalina.core.StandardContext$ContextFilterMaps,213, LD
+org.apache.catalina.core.StandardContext,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,213, LD
+org.apache.catalina.session.StandardManager,org.apache.catalina.session.StandardManager$PrivilegedDoLoad,30, LD
+org.apache.catalina.session.StandardManager,org.apache.catalina.session.StandardManager$PrivilegedDoUnload,30, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationContextImpl,11, LD
+org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl,org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl$RegistrationListenerWrapper,11, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContextFacade,18, LD
+org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.JDBCRealm,19, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper,22, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MapElement,22, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$ContextList,22, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MappedContext,22, LD
+org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$ContextVersion,22, LD
+org.apache.catalina.manager.HTMLManagerServlet,org.apache.catalina.manager.ManagerServlet,25, LD
+org.apache.catalina.realm.GenericPrincipal,org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,17, LD
+org.apache.catalina.core.ApplicationHttpRequest$AttributeNamesEnumerator,org.apache.catalina.core.ApplicationHttpRequest,26, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase,55, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StartChild,55, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StopChild,55, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,55, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase$PrivilegedAddChild,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,org.apache.catalina.core.ApplicationDispatcher,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,33, LD
+org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,org.apache.catalina.core.ApplicationDispatcher$State,33, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,org.apache.catalina.session.PersistentManagerBase,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,29, LD
+org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,org.apache.catalina.core.AsyncContextImpl,49, LD
+org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,org.apache.catalina.core.AsyncContextImpl$DebugException,49, LD
+org.apache.catalina.core.AsyncContextImpl$AsyncRunnable,org.apache.catalina.core.AsyncContextImpl$RunnableWrapper,49, LD
+org.apache.catalina.session.StandardManager$PrivilegedDoLoad,org.apache.catalina.session.StandardManager,30, LD
+org.apache.catalina.session.StandardManager$PrivilegedDoLoad,org.apache.catalina.session.StandardManager$PrivilegedDoUnload,30, LD
+org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig,43, LD
+org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployDescriptor,43, LD
+org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployWar,43, LD
+org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$DeployDirectory,43, LD
+org.apache.catalina.startup.HostConfig$DeployedApplication,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,43, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,org.apache.catalina.authenticator.SpnegoAuthenticator,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,19, LD
+org.apache.catalina.webresources.JarWarResourceSet,org.apache.catalina.webresources.JarResourceSet,15, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase,55, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StartChild,55, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StopChild,55, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.ContainerBase$StartStopThreadFactory,55, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.StandardContext,26, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.StandardContext$ContextFilterMaps,26, LD
+org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,26, LD
+org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$CGIEnvironment,22, LD
+org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$CGIRunner,22, LD
+org.apache.catalina.servlets.CGIServlet,org.apache.catalina.servlets.CGIServlet$HTTPHeaderInputStream,22, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.session.StandardManager$PrivilegedDoUnload,org.apache.catalina.session.StandardManager,30, LD
+org.apache.catalina.session.StandardManager$PrivilegedDoUnload,org.apache.catalina.session.StandardManager$PrivilegedDoLoad,30, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,29, LD
+org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,org.apache.catalina.core.DefaultInstanceManager,18, LD
+org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntry,org.apache.catalina.core.DefaultInstanceManager$AnnotationCacheEntryType,18, LD
+org.apache.catalina.webresources.Cache,org.apache.catalina.webresources.Cache$EvictionOrder,15, LD
+org.apache.catalina.core.ApplicationDispatcher$State,org.apache.catalina.core.ApplicationDispatcher,33, LD
+org.apache.catalina.core.ApplicationDispatcher$State,org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,33, LD
+org.apache.catalina.core.ApplicationDispatcher$State,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,33, LD
+org.apache.catalina.core.ApplicationDispatcher$State,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,33, LD
+org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet,44, LD
+org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,44, LD
+org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,44, LD
+org.apache.catalina.servlets.DefaultServlet$Range,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,44, LD
+org.apache.catalina.manager.ManagerServlet,org.apache.catalina.manager.HTMLManagerServlet,25, LD
+org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedForward,33, LD
+org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedInclude,33, LD
+org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$PrivilegedDispatch,33, LD
+org.apache.catalina.core.ApplicationDispatcher,org.apache.catalina.core.ApplicationDispatcher$State,33, LD
+org.apache.catalina.webresources.Cache$EvictionOrder,org.apache.catalina.webresources.Cache,15, LD
+org.apache.catalina.core.ApplicationMapping$MappingImpl,org.apache.catalina.core.ApplicationMapping,11, LD
+org.apache.catalina.realm.DataSourceRealm,org.apache.catalina.realm.JDBCRealm,20, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ServletContextElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$SessionAttributeElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
+org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.SpnegoAuthenticator,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,19, LD
+org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,19, LD
+org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,org.apache.catalina.startup.ContextConfig,135, LD
+org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,135, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,29, LD
+org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet,44, LD
+org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet$Range,44, LD
+org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,44, LD
+org.apache.catalina.servlets.DefaultServlet$CompressionFormat,org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,44, LD
+org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig,43, LD
+org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$DeployedApplication,43, LD
+org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$DeployWar,43, LD
+org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$DeployDirectory,43, LD
+org.apache.catalina.startup.HostConfig$DeployDescriptor,org.apache.catalina.startup.HostConfig$ExpandedDirectoryRemovalListener,43, LD
+org.apache.catalina.realm.JNDIRealm,org.apache.catalina.realm.JNDIRealm$User,26, LD
+org.apache.catalina.startup.ContextConfig,org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,135, LD
+org.apache.catalina.startup.ContextConfig,org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,135, LD
+org.apache.catalina.Context,org.apache.catalina.startup.FailedContext,30, LD
+org.apache.catalina.Context,org.apache.catalina.core.StandardContext,68, LD
+org.apache.catalina.Context,org.apache.catalina.core.StandardContext$ContextFilterMaps,68, LD
+org.apache.catalina.Context,org.apache.catalina.core.StandardContext$NoPluggabilityServletContext,68, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreClear,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreLoad,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreSave,29, LD
+org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreRemove,org.apache.catalina.session.PersistentManagerBase$PrivilegedStoreKeys,29, LD
+org.apache.catalina.servlets.WebdavServlet$WebdavResolver,org.apache.catalina.servlets.WebdavServlet,30, LD
+org.apache.catalina.servlets.WebdavServlet$WebdavResolver,org.apache.catalina.servlets.WebdavServlet$LockInfo,30, LD

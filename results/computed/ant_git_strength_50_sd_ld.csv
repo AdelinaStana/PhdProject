@@ -1669,346 +1669,615 @@ org.apache.tools.zip.ZipShort,org.apache.tools.zip.ZipEntry,128,
 org.apache.tools.zip.ZipShort,org.apache.tools.zip.ZipExtraField,35,
 org.apache.tools.zip.ZipShort,org.apache.tools.zip.ZipFile,83,
 org.apache.tools.zip.ZipShort,org.apache.tools.zip.ZipOutputStream,83,
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.taskdefs.Concat,org.apache.tools.ant.taskdefs.Concat$TextElement,1
-org.apache.tools.ant.taskdefs.Concat$TextElement,org.apache.tools.ant.taskdefs.Concat$MultiReader,1
-org.apache.tools.ant.taskdefs.Available,org.apache.tools.ant.taskdefs.Available$FileDir,1
-org.apache.tools.ant.types.Path,org.apache.tools.ant.types.Path$PathElement,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$Filter,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.ant.taskdefs.Ant,org.apache.tools.ant.taskdefs.Ant$Reference,1
-org.apache.tools.ant.taskdefs.Manifest,org.apache.tools.ant.taskdefs.Manifest$Attribute,1
-org.apache.tools.ant.taskdefs.Manifest,org.apache.tools.ant.taskdefs.Manifest$Section,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.zip.ZipFile,org.apache.tools.zip.ZipFile$BoundedInputStream,1
-org.apache.tools.ant.taskdefs.Manifest$Attribute,org.apache.tools.ant.taskdefs.Manifest$Section,1
-org.apache.tools.ant.taskdefs.Javac,org.apache.tools.ant.taskdefs.Javac$ImplementationSpecificArgument,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$Attribute,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$Text,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.types.Resource,org.apache.tools.ant.types.ResourceFactory,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$Text,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$Text,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.Rmic,org.apache.tools.ant.taskdefs.Rmic$ImplementationSpecificArgument,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ContainsString,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsString,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsString,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ContainsString,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ContainsString,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.util.LineTokenizer,org.apache.tools.ant.util.Tokenizer,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroInstance$Element,1
-org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$PackageName,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.types.Permissions,org.apache.tools.ant.types.Permissions$MySM,1
-org.apache.tools.ant.types.Permissions$MySM,org.apache.tools.ant.types.Permissions$Permission,1
-org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,1
-org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$Duplicate,1
-org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$ArchiveState,1
-org.apache.tools.ant.types.PatternSet,org.apache.tools.ant.types.PatternSet$NameEntry,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.XmlLogger,org.apache.tools.ant.XmlLogger$TimedElement,1
-org.apache.tools.ant.types.selectors.TypeSelector,org.apache.tools.ant.types.selectors.TypeSelector$FileType,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.taskdefs.PreSetDef,org.apache.tools.ant.taskdefs.PreSetDef$PreSetDefinition,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceString,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$InternalResolver,1
-org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$ExternalResolver,1
-org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceString,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.types.FilterSet,org.apache.tools.ant.types.FilterSet$Filter,1
-org.apache.tools.ant.types.FilterSet,org.apache.tools.ant.types.FilterSet$FiltersFile,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceString,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.Project,org.apache.tools.ant.Project$AntRefTable,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.EqualComparator,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.types.Commandline,org.apache.tools.ant.types.Commandline$Argument,1
-org.apache.tools.ant.types.Commandline,org.apache.tools.ant.types.Commandline$Marker,1
-org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter,org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter$RmicFileNameMapper,1
-org.apache.tools.ant.types.Mapper,org.apache.tools.ant.types.Mapper$MapperType,1
-org.apache.tools.ant.DemuxOutputStream,org.apache.tools.ant.DemuxOutputStream$BufferInfo,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,1
-org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.HashvalueAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.types.Permissions,org.apache.tools.ant.types.Permissions$Permission,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceString,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.taskdefs.ProcessDestroyer,org.apache.tools.ant.taskdefs.ProcessDestroyer$ProcessDestroyerImpl,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.ant.taskdefs.Concat,org.apache.tools.ant.taskdefs.Concat$MultiReader,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,1
-org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,1
-org.apache.tools.ant.IntrospectionHelper$Creator,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,1
-org.apache.tools.ant.IntrospectionHelper$NestedCreator,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,1
-org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Zip$Duplicate,1
-org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Zip$ArchiveState,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,1
-org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Zip$ArchiveState,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$PackageName,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$PackageName,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$PackageName,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$Creator,1
-org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$NestedCreator,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,1
-org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.zip.ZipLong,org.apache.tools.zip.ZipShort,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,1
-org.apache.tools.ant.types.CommandlineJava,org.apache.tools.ant.types.CommandlineJava$SysProperties,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.Cache,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Algorithm,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.types.XMLCatalog$InternalResolver,org.apache.tools.ant.types.XMLCatalog$ExternalResolver,1
-org.apache.tools.ant.types.XMLCatalog$InternalResolver,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,1
-org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.taskdefs.condition.IsFalse,org.apache.tools.ant.taskdefs.condition.IsTrue,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.Cache,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$Attribute,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,1
-org.apache.tools.ant.IntrospectionHelper$Creator,org.apache.tools.ant.IntrospectionHelper$NestedCreator,1
-org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$Html,1
-org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.AntClassLoader,org.apache.tools.ant.AntClassLoader$ResourceEnumeration,1
-org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,1
-org.apache.tools.ant.taskdefs.XSLTProcess$Param,org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,1
-org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$AccessType,1
-org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.taskdefs.Definer,org.apache.tools.ant.taskdefs.Definer$OnError,1
-org.apache.tools.ant.taskdefs.Definer,org.apache.tools.ant.taskdefs.Definer$Format,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$Trim,1
-org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,1
-org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,1
-org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.taskdefs.Definer$OnError,org.apache.tools.ant.taskdefs.Definer$Format,1
-org.apache.tools.ant.types.XMLCatalog$ExternalResolver,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,1
-org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,1
-org.apache.tools.ant.taskdefs.XSLTProcess$Param,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,1
-org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroInstance,1
-org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,1
-org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.types.FilterSet$Filter,org.apache.tools.ant.types.FilterSet$FiltersFile,1
-org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$Param,1
-org.apache.tools.ant.types.Commandline$Argument,org.apache.tools.ant.types.Commandline$Marker,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$CacheName,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$AlgorithmName,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,1
-org.apache.tools.ant.types.selectors.modifiedselector.DigestAlgorithm,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.types.selectors.modifiedselector.ModifiedSelector$ComparatorName,org.apache.tools.ant.types.selectors.modifiedselector.PropertiesfileCache,1
-org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.PreSetDef,1
-org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,1
-org.apache.tools.ant.taskdefs.XSLTLogger,org.apache.tools.ant.taskdefs.XSLTLoggerAware,1
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$MainHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.types.CommandlineJava$SysProperties,org.apache.tools.ant.types.CommandlineJava,30, LD
+org.apache.tools.ant.types.XMLCatalog$ExternalResolver,org.apache.tools.ant.types.XMLCatalog,12, LD
+org.apache.tools.ant.types.XMLCatalog$ExternalResolver,org.apache.tools.ant.types.XMLCatalog$InternalResolver,12, LD
+org.apache.tools.ant.types.XMLCatalog$ExternalResolver,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,12, LD
+org.apache.tools.ant.taskdefs.Concat$MultiReader,org.apache.tools.ant.taskdefs.Concat,12, LD
+org.apache.tools.ant.taskdefs.Concat$MultiReader,org.apache.tools.ant.taskdefs.Concat$TextElement,12, LD
+org.apache.tools.ant.types.FilterSet$FiltersFile,org.apache.tools.ant.types.FilterSet,10, LD
+org.apache.tools.ant.types.FilterSet$FiltersFile,org.apache.tools.ant.types.FilterSet$Filter,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.types.Mapper,org.apache.tools.ant.types.Mapper$MapperType,11, LD
+org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef$Attribute,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef$Text,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,6, LD
+org.apache.tools.ant.IntrospectionHelper$AttributeSetter,org.apache.tools.ant.IntrospectionHelper,43, LD
+org.apache.tools.ant.IntrospectionHelper$AttributeSetter,org.apache.tools.ant.IntrospectionHelper$Creator,43, LD
+org.apache.tools.ant.IntrospectionHelper$AttributeSetter,org.apache.tools.ant.IntrospectionHelper$NestedCreator,43, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.IntrospectionHelper$NestedCreator,org.apache.tools.ant.IntrospectionHelper,43, LD
+org.apache.tools.ant.IntrospectionHelper$NestedCreator,org.apache.tools.ant.IntrospectionHelper$Creator,43, LD
+org.apache.tools.ant.IntrospectionHelper$NestedCreator,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,43, LD
+org.apache.tools.ant.types.Commandline$Argument,org.apache.tools.ant.types.Commandline,19, LD
+org.apache.tools.ant.types.Commandline$Argument,org.apache.tools.ant.types.Commandline$Marker,19, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$TagArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,org.apache.tools.ant.taskdefs.FixCRLF,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,org.apache.tools.ant.taskdefs.FixCRLF$CrLf,17, LD
+org.apache.tools.ant.types.Path$PathElement,org.apache.tools.ant.types.Path,31, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$Filter,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.taskdefs.Concat,org.apache.tools.ant.taskdefs.Concat$TextElement,12, LD
+org.apache.tools.ant.taskdefs.Concat,org.apache.tools.ant.taskdefs.Concat$MultiReader,12, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$Creator,43, LD
+org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$NestedCreator,43, LD
+org.apache.tools.ant.IntrospectionHelper,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,43, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,org.apache.tools.ant.taskdefs.SQLExec,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,org.apache.tools.ant.taskdefs.SQLExec$OnError,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,org.apache.tools.ant.taskdefs.SQLExec$Transaction,13, LD
+org.apache.tools.ant.types.XMLCatalog$InternalResolver,org.apache.tools.ant.types.XMLCatalog,12, LD
+org.apache.tools.ant.types.XMLCatalog$InternalResolver,org.apache.tools.ant.types.XMLCatalog$ExternalResolver,12, LD
+org.apache.tools.ant.types.XMLCatalog$InternalResolver,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,12, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.taskdefs.Javac$ImplementationSpecificArgument,org.apache.tools.ant.taskdefs.Javac,50, LD
+org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$Attribute,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$Text,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsString,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.SQLExec$OnError,org.apache.tools.ant.taskdefs.SQLExec,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$OnError,org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$OnError,org.apache.tools.ant.taskdefs.SQLExec$Transaction,13, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.DemuxOutputStream$BufferInfo,org.apache.tools.ant.DemuxOutputStream,12, LD
+org.apache.tools.ant.taskdefs.SQLExec$Transaction,org.apache.tools.ant.taskdefs.SQLExec,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$Transaction,org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,13, LD
+org.apache.tools.ant.taskdefs.SQLExec$Transaction,org.apache.tools.ant.taskdefs.SQLExec$OnError,13, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.taskdefs.ExecuteOn$FileDirBoth,org.apache.tools.ant.taskdefs.ExecuteOn,17, LD
+org.apache.tools.ant.types.PatternSet,org.apache.tools.ant.types.PatternSet$NameEntry,16, LD
+org.apache.tools.ant.types.PatternSet$NameEntry,org.apache.tools.ant.types.PatternSet,16, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,org.apache.tools.ant.taskdefs.XSLTProcess,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,org.apache.tools.ant.taskdefs.XSLTProcess$Param,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,28, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.XmlLogger,org.apache.tools.ant.XmlLogger$TimedElement,14, LD
+org.apache.tools.ant.taskdefs.SQLExec,org.apache.tools.ant.taskdefs.SQLExec$DelimiterType,13, LD
+org.apache.tools.ant.taskdefs.SQLExec,org.apache.tools.ant.taskdefs.SQLExec$OnError,13, LD
+org.apache.tools.ant.taskdefs.SQLExec,org.apache.tools.ant.taskdefs.SQLExec$Transaction,13, LD
+org.apache.tools.ant.taskdefs.Manifest$Attribute,org.apache.tools.ant.taskdefs.Manifest,17, LD
+org.apache.tools.ant.taskdefs.Manifest$Attribute,org.apache.tools.ant.taskdefs.Manifest$Section,17, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$FileTokenizer,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroDef,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroDef$Attribute,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroDef$Text,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,6, LD
+org.apache.tools.ant.taskdefs.Definer$OnError,org.apache.tools.ant.taskdefs.Definer,20, LD
+org.apache.tools.ant.taskdefs.Definer$OnError,org.apache.tools.ant.taskdefs.Definer$Format,20, LD
+org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$InternalResolver,12, LD
+org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$ExternalResolver,12, LD
+org.apache.tools.ant.types.XMLCatalog,org.apache.tools.ant.types.XMLCatalog$CatalogResolver,12, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$StringTokenizer,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Factory,org.apache.tools.ant.taskdefs.XSLTProcess,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Factory,org.apache.tools.ant.taskdefs.XSLTProcess$Param,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Factory,org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,28, LD
+org.apache.tools.ant.taskdefs.FixCRLF,org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF,org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF,org.apache.tools.ant.taskdefs.FixCRLF$CrLf,17, LD
+org.apache.tools.ant.types.FilterSet,org.apache.tools.ant.types.FilterSet$Filter,10, LD
+org.apache.tools.ant.types.FilterSet,org.apache.tools.ant.types.FilterSet$FiltersFile,10, LD
+org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$Text,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Attribute,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.Untar$UntarCompressionMethod,org.apache.tools.ant.taskdefs.Untar,17, LD
+org.apache.tools.ant.Project$AntRefTable,org.apache.tools.ant.Project,92, LD
+org.apache.tools.ant.RuntimeConfigurable,org.apache.tools.ant.UnknownElement,16, LD
+org.apache.tools.ant.types.Commandline,org.apache.tools.ant.types.Commandline$Argument,19, LD
+org.apache.tools.ant.types.Commandline,org.apache.tools.ant.types.Commandline$Marker,19, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter,org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter$RmicFileNameMapper,15, LD
+org.apache.tools.ant.taskdefs.Definer$Format,org.apache.tools.ant.taskdefs.Definer,20, LD
+org.apache.tools.ant.taskdefs.Definer$Format,org.apache.tools.ant.taskdefs.Definer$OnError,20, LD
+org.apache.tools.ant.Main,org.apache.tools.ant.Project,21, LD
+org.apache.tools.ant.Main,org.apache.tools.ant.Project$AntRefTable,21, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Param,org.apache.tools.ant.taskdefs.XSLTProcess,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Param,org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess$Param,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,28, LD
+org.apache.tools.ant.types.Path,org.apache.tools.ant.types.Path$PathElement,31, LD
+org.apache.tools.ant.types.Commandline$Marker,org.apache.tools.ant.types.Commandline,19, LD
+org.apache.tools.ant.types.Commandline$Marker,org.apache.tools.ant.types.Commandline$Argument,19, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$ReplaceString,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.Target,org.apache.tools.ant.ProjectHelper,16, LD
+org.apache.tools.ant.AntClassLoader,org.apache.tools.ant.AntClassLoader$ResourceEnumeration,39, LD
+org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,org.apache.tools.ant.taskdefs.FixCRLF,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,org.apache.tools.ant.taskdefs.FixCRLF$CrLf,17, LD
+org.apache.tools.ant.UnknownElement,org.apache.tools.ant.RuntimeConfigurable,16, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$AntHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$ContainsRegex,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Jar,33, LD
+org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,33, LD
+org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Zip,56, LD
+org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Zip$Duplicate,56, LD
+org.apache.tools.ant.taskdefs.Zip$WhenEmpty,org.apache.tools.ant.taskdefs.Zip$ArchiveState,56, LD
+org.apache.tools.ant.taskdefs.FixCRLF$CrLf,org.apache.tools.ant.taskdefs.FixCRLF,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$CrLf,org.apache.tools.ant.taskdefs.FixCRLF$OneLiner,17, LD
+org.apache.tools.ant.taskdefs.FixCRLF$CrLf,org.apache.tools.ant.taskdefs.FixCRLF$AddAsisRemove,17, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef$Attribute,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef$Text,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance,org.apache.tools.ant.taskdefs.MacroInstance$Element,5, LD
+org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Jar,33, LD
+org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,33, LD
+org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Zip,56, LD
+org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,56, LD
+org.apache.tools.ant.taskdefs.Zip$Duplicate,org.apache.tools.ant.taskdefs.Zip$ArchiveState,56, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.taskdefs.Concat$TextElement,org.apache.tools.ant.taskdefs.Concat,12, LD
+org.apache.tools.ant.taskdefs.Concat$TextElement,org.apache.tools.ant.taskdefs.Concat$MultiReader,12, LD
+org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,org.apache.tools.ant.taskdefs.Jar,42, LD
+org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,org.apache.tools.ant.taskdefs.Zip,33, LD
+org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,33, LD
+org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,org.apache.tools.ant.taskdefs.Zip$Duplicate,33, LD
+org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,org.apache.tools.ant.taskdefs.Zip$ArchiveState,33, LD
+org.apache.tools.ant.taskdefs.Zip$ArchiveState,org.apache.tools.ant.taskdefs.Jar,33, LD
+org.apache.tools.ant.taskdefs.Zip$ArchiveState,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,33, LD
+org.apache.tools.ant.taskdefs.Zip$ArchiveState,org.apache.tools.ant.taskdefs.Zip,56, LD
+org.apache.tools.ant.taskdefs.Zip$ArchiveState,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,56, LD
+org.apache.tools.ant.taskdefs.Zip$ArchiveState,org.apache.tools.ant.taskdefs.Zip$Duplicate,56, LD
+org.apache.tools.ant.taskdefs.Available$FileDir,org.apache.tools.ant.taskdefs.Available,19, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$PackageName,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.taskdefs.Untar,org.apache.tools.ant.taskdefs.Untar$UntarCompressionMethod,17, LD
+org.apache.tools.ant.Task,org.apache.tools.ant.Project,13, LD
+org.apache.tools.ant.Task,org.apache.tools.ant.Project$AntRefTable,13, LD
+org.apache.tools.ant.taskdefs.Ant,org.apache.tools.ant.Project,20, LD
+org.apache.tools.ant.taskdefs.Ant,org.apache.tools.ant.Project$AntRefTable,20, LD
+org.apache.tools.ant.taskdefs.Ant,org.apache.tools.ant.taskdefs.Ant$Reference,50, LD
+org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,org.apache.tools.ant.taskdefs.Tar,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,org.apache.tools.ant.taskdefs.Tar$TarFileSet,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,17, LD
+org.apache.tools.ant.taskdefs.Manifest,org.apache.tools.ant.taskdefs.Manifest$Attribute,17, LD
+org.apache.tools.ant.taskdefs.Manifest,org.apache.tools.ant.taskdefs.Manifest$Section,17, LD
+org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$Param,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$OutputProperty,28, LD
+org.apache.tools.ant.taskdefs.XSLTProcess,org.apache.tools.ant.taskdefs.XSLTProcess$Factory,28, LD
+org.apache.tools.ant.taskdefs.CallTarget,org.apache.tools.ant.taskdefs.Ant,13, LD
+org.apache.tools.ant.taskdefs.CallTarget,org.apache.tools.ant.taskdefs.Ant$Reference,13, LD
+org.apache.tools.ant.types.CommandlineJava,org.apache.tools.ant.types.CommandlineJava$SysProperties,30, LD
+org.apache.tools.zip.ZipFile$BoundedInputStream,org.apache.tools.zip.ZipFile,6, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$SourceFile,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.taskdefs.Manifest$Section,org.apache.tools.ant.taskdefs.Manifest,17, LD
+org.apache.tools.ant.taskdefs.Manifest$Section,org.apache.tools.ant.taskdefs.Manifest$Attribute,17, LD
+org.apache.tools.ant.taskdefs.ExecuteOn,org.apache.tools.ant.taskdefs.ExecuteOn$FileDirBoth,17, LD
+org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,6, LD
+org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$Attribute,6, LD
+org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$Text,6, LD
+org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,6, LD
+org.apache.tools.ant.taskdefs.MacroDef,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$Attribute,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,6, LD
+org.apache.tools.ant.taskdefs.MacroDef$Text,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,6, LD
+org.apache.tools.ant.taskdefs.Rmic,org.apache.tools.ant.taskdefs.Rmic$ImplementationSpecificArgument,20, LD
+org.apache.tools.zip.ZipFile,org.apache.tools.zip.ZipFile$BoundedInputStream,6, LD
+org.apache.tools.ant.taskdefs.Javac,org.apache.tools.ant.taskdefs.Javac$ImplementationSpecificArgument,50, LD
+org.apache.tools.ant.IntrospectionHelper$Creator,org.apache.tools.ant.IntrospectionHelper,43, LD
+org.apache.tools.ant.IntrospectionHelper$Creator,org.apache.tools.ant.IntrospectionHelper$NestedCreator,43, LD
+org.apache.tools.ant.IntrospectionHelper$Creator,org.apache.tools.ant.IntrospectionHelper$AttributeSetter,43, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef$NestedSequential,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef$Attribute,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef$Text,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef$TemplateElement,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroDef$MyAntTypeDefinition,5, LD
+org.apache.tools.ant.taskdefs.MacroInstance$Element,org.apache.tools.ant.taskdefs.MacroInstance,5, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$Html,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2$RootHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.zip.ZipOutputStream,org.apache.tools.ant.taskdefs.Zip,8, LD
+org.apache.tools.zip.ZipOutputStream,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,8, LD
+org.apache.tools.zip.ZipOutputStream,org.apache.tools.ant.taskdefs.Zip$Duplicate,8, LD
+org.apache.tools.zip.ZipOutputStream,org.apache.tools.ant.taskdefs.Zip$ArchiveState,8, LD
+org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Jar,33, LD
+org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,33, LD
+org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,56, LD
+org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$Duplicate,56, LD
+org.apache.tools.ant.taskdefs.Zip,org.apache.tools.ant.taskdefs.Zip$ArchiveState,56, LD
+org.apache.tools.ant.taskdefs.Move,org.apache.tools.ant.taskdefs.Copy,16, LD
+org.apache.tools.ant.taskdefs.Ant$Reference,org.apache.tools.ant.Project,20, LD
+org.apache.tools.ant.taskdefs.Ant$Reference,org.apache.tools.ant.Project$AntRefTable,20, LD
+org.apache.tools.ant.taskdefs.Ant$Reference,org.apache.tools.ant.taskdefs.Ant,50, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$AccessType,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$AntHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$MainHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$ProjectHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$TargetHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelper2$RootHandler,org.apache.tools.ant.helper.ProjectHelper2$ElementHandler,14, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$AbstractHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$ProjectHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TargetHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DescriptionHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$TaskHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$NestedElementHandler,10, LD
+org.apache.tools.ant.helper.ProjectHelperImpl$RootHandler,org.apache.tools.ant.helper.ProjectHelperImpl$DataTypeHandler,10, LD
+org.apache.tools.ant.AntClassLoader$ResourceEnumeration,org.apache.tools.ant.AntClassLoader,39, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$DocletParam,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.taskdefs.Definer,org.apache.tools.ant.taskdefs.Definer$OnError,20, LD
+org.apache.tools.ant.taskdefs.Definer,org.apache.tools.ant.taskdefs.Definer$Format,20, LD
+org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter$RmicFileNameMapper,org.apache.tools.ant.taskdefs.rmic.DefaultRmicAdapter,15, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$Trim,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,org.apache.tools.ant.taskdefs.Tar,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,org.apache.tools.ant.taskdefs.Tar$TarFileSet,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,17, LD
+org.apache.tools.ant.taskdefs.Copy,org.apache.tools.ant.taskdefs.Move,16, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,6, LD
+org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.ProjectHelper,org.apache.tools.ant.Project,17, LD
+org.apache.tools.ant.ProjectHelper,org.apache.tools.ant.Project$AntRefTable,17, LD
+org.apache.tools.ant.types.XMLCatalog$CatalogResolver,org.apache.tools.ant.types.XMLCatalog,12, LD
+org.apache.tools.ant.types.XMLCatalog$CatalogResolver,org.apache.tools.ant.types.XMLCatalog$InternalResolver,12, LD
+org.apache.tools.ant.types.XMLCatalog$CatalogResolver,org.apache.tools.ant.types.XMLCatalog$ExternalResolver,12, LD
+org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Jar$FilesetManifestConfig,42, LD
+org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Zip,33, LD
+org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,33, LD
+org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Zip$Duplicate,33, LD
+org.apache.tools.ant.taskdefs.Jar,org.apache.tools.ant.taskdefs.Zip$ArchiveState,33, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$FileTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$StringTokenizer,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$ChainableReaderFilter,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$ReplaceString,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$ContainsString,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$ReplaceRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$ContainsRegex,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$Trim,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$IgnoreBlank,6, LD
+org.apache.tools.ant.filters.TokenFilter$DeleteCharacters,org.apache.tools.ant.filters.TokenFilter$Filter,6, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.XmlLogger$TimedElement,org.apache.tools.ant.XmlLogger,14, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletParam,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$ExtensionInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$DocletInfo,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$PackageName,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$SourceFile,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$Html,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$AccessType,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$TagArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$GroupArgument,40, LD
+org.apache.tools.ant.taskdefs.Javadoc$LinkArgument,org.apache.tools.ant.taskdefs.Javadoc$JavadocOutputStream,40, LD
+org.apache.tools.ant.taskdefs.War,org.apache.tools.ant.taskdefs.Zip,14, LD
+org.apache.tools.ant.taskdefs.War,org.apache.tools.ant.taskdefs.Zip$WhenEmpty,14, LD
+org.apache.tools.ant.taskdefs.War,org.apache.tools.ant.taskdefs.Zip$Duplicate,14, LD
+org.apache.tools.ant.taskdefs.War,org.apache.tools.ant.taskdefs.Zip$ArchiveState,14, LD
+org.apache.tools.ant.types.FilterSet$Filter,org.apache.tools.ant.types.FilterSet,10, LD
+org.apache.tools.ant.types.FilterSet$Filter,org.apache.tools.ant.types.FilterSet$FiltersFile,10, LD
+org.apache.tools.ant.taskdefs.Available,org.apache.tools.ant.taskdefs.Available$FileDir,19, LD
+org.apache.tools.ant.taskdefs.Tar,org.apache.tools.ant.taskdefs.Tar$TarFileSet,17, LD
+org.apache.tools.ant.taskdefs.Tar,org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,17, LD
+org.apache.tools.ant.taskdefs.Tar,org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,17, LD
+org.apache.tools.ant.types.Mapper$MapperType,org.apache.tools.ant.types.Mapper,11, LD
+org.apache.tools.ant.taskdefs.Rmic$ImplementationSpecificArgument,org.apache.tools.ant.taskdefs.Rmic,20, LD
+org.apache.tools.ant.AntTypeDefinition,org.apache.tools.ant.ComponentHelper,5, LD
+org.apache.tools.ant.DemuxOutputStream,org.apache.tools.ant.DemuxOutputStream$BufferInfo,12, LD
+org.apache.tools.ant.taskdefs.Tar$TarFileSet,org.apache.tools.ant.taskdefs.Tar,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarFileSet,org.apache.tools.ant.taskdefs.Tar$TarLongFileMode,17, LD
+org.apache.tools.ant.taskdefs.Tar$TarFileSet,org.apache.tools.ant.taskdefs.Tar$TarCompressionMethod,17, LD
+org.apache.tools.ant.Project,org.apache.tools.ant.Project$AntRefTable,92, LD
