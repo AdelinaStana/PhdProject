@@ -28,6 +28,7 @@ class RedirectPrintToFile:
         sys.stdout = self.original_stdout
         self.file.close()
 
+
 '''
 The MQ measurement is bounded between -1 (no cohesion
     within the subsystems) and 1 (no coupling between the
@@ -44,9 +45,9 @@ indicate overlapping clusters.
 '''
 
 
-def build_and_measure(file_path):
+def build_and_measure(file_path, median=0):
     print(os.path.basename(file_path), end=',')
-    dependencies = DependenciesBuilder(file_path)
+    dependencies = DependenciesBuilder(file_path, median)
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
@@ -65,94 +66,29 @@ def build_and_measure(file_path):
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
 
+"""
+Median Ant: 125
+Median Catalina: 255
+Median Hibernate: 106
+"""
+
+
+def run_project(name, median=0):
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\sd_{name}.csv")
+
+    for i in range(10, 101, 10):
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", median)
+
+    for i in range(10, 101, 10):
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv", median)
+
+
 def run_all():
-    '''
-    ANT
-    '''
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_30_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_40_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_50_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_60_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_ld.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_30_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_40_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_50_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_60_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
-
-    '''
-    CATALINA
-    # '''
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_20_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_30_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_40_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_60_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_70_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_80_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_90_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_100_ld.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_20_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_30_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_40_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_60_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_70_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_80_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_90_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_100_sd_ld.csv")
-
-    '''
-    HIBERNATE
-    '''
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\sd_hibernate.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_30_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_40_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_50_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_60_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_70_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_80_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_90_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_100_ld.csv")
-
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_30_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_40_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_50_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_60_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_70_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_80_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_90_sd_ld.csv")
-    build_and_measure("D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_100_sd_ld.csv")
+    # run_project("ant", 125)
+    # run_project("catalina", 210)
+    run_project("catalina", 306)
 
 
 # with RedirectPrintToFile('./../results/output.txt'):
-#     run_all()
 
 run_all()
-
-
