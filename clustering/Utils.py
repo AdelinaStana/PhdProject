@@ -1,7 +1,6 @@
 import csv
 
 import networkx as nx
-import os
 import numpy as np
 import subprocess
 
@@ -9,15 +8,17 @@ import subprocess
 Use it to concatenate two csv;
 First must be SD, second LD
 
-concat_files("D:\\Util\\doctorat\\PhdProject\\results\\sd_ant.csv", 
-"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_10.csv")
+for i in range(10, 101, 10):
+    input_file1 = f"D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv"
+    input_file2 = f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_{i}_ld.csv"
+
+    Utils.concat_csv_files(input_file1, input_file2)
 
 '''
 
 
-def concat_files(file1_path, file2_path):
-    output_file = file2_path.replace(".csv", "_sd_ld.csv")
-    reworked_ld = file2_path.replace(".csv", "_ld.csv")
+def concat_csv_files(file1_path, file2_path):
+    output_file = file2_path.replace("_ld.csv", "_sd_ld.csv")
 
     with open(output_file, 'w') as out_file:
         with open(file1_path, 'r') as file:
@@ -25,19 +26,12 @@ def concat_files(file1_path, file2_path):
                 out_file.write(line)
         file.close()
 
-        with open(reworked_ld, 'w') as new_ld:
-            with open(file2_path, 'r') as file:
-                for line in file:
-                    if 'a,b' in line:
-                        continue
-                    out_file.write(line.strip() + ",1\n")
-                    new_ld.write(line.strip() + ",1\n")
+        with open(file2_path, 'r') as file:
+            for line in file:
+                out_file.write(line)
         file.close()
 
     out_file.close()
-    new_ld.close()
-    os.remove(file2_path)
-
 
 '''
     plot_info(dependencies, louvian.labels)
@@ -138,6 +132,15 @@ def map_labels_to_cluster_array(labels, dependencies_mapper):
 
     return clusters
 
+
+def save_clusters(clusters, file_name):
+    index = 0
+    with open(file_name, 'w') as file:
+        for cluster in clusters:
+            for item in cluster:
+                file.write(f"contain {index} {item}\n")
+            index += 1
+
 '''
 Please use one of the following:
 
@@ -156,21 +159,12 @@ java mojo.MoJo a.rsf b.rsf -b+
 '''
 
 
-def save_clusters(clusters, file_name):
-    index = 0
-    with open(file_name, 'w') as file:
-        for cluster in clusters:
-            for item in cluster:
-                file.write(f"contain {index} {item}\n")
-            index += 1
-
-
 def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
     sol_clusters = map_labels_to_cluster_array(sol_labels, dependencies_mapper)
-    #reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
+    reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
 
     save_clusters(sol_clusters, "solution.rsf")
-    #save_clusters(reference_clusters, "reference.rsf")
+    save_clusters(reference_clusters, "reference.rsf")
 
     mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf"], capture_output=True, text=True)
     mojofm = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"], capture_output=True, text=True)

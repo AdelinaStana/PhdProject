@@ -2,7 +2,7 @@ from sknetwork.clustering import Louvain
 from collections import OrderedDict
 
 
-class LouvianClustering:
+class LouvainClustering:
     def __init__(self, dependencies):
         self.index_name_map = dependencies.index_name_map
         louvain = Louvain()
@@ -10,7 +10,7 @@ class LouvianClustering:
         self.clusters = set(self.labels)
 
     def print_clusters(self):
-        print(f"\nLouvianClustering - cluster count: {len(self.clusters)}")
+        print(f"\nLouvain Clustering - cluster count: {len(self.clusters)}")
 
         for cluster in self.clusters:
             packages_dict = {}
