@@ -26,7 +26,7 @@ class CounterStrengthConfidence(CounterStrength):
             threads.append(t_git)
 
             for i in range(0, number_of_steps + 1):
-                t_strength = Thread(target=self.count_overlapping_with_code, args=(i + 2, i*10))
+                t_strength = Thread(target=self.count_strength, args=(i + 2, i*10))
                 threads.append(t_strength)
 
             for thread in threads:
@@ -53,20 +53,16 @@ class CounterStrengthConfidence(CounterStrength):
 
         for classItem in self.structure_manager.get_class_list():
             entity_class_id_dict[classItem.unique_id] = classItem
-            values = classItem.get_all_occurrence_values(self.structure_manager.commit_threshold)
+            values = classItem.get_all_occurrence_values()
             max_occ = 0
             if values:
                 max_occ = max(values)
             max_occ_list.append(max_occ)
 
         mean = statistics.mean(max_occ_list)
-        print(mean)
 
-        count = [i for i in max_occ_list if i > mean]
-        print(len(count))
-        csv_name = self.working_dir + "\\" + self.project_name + "_git_strength_" + str(threshold) + ".csv"
+        csv_name = self.working_dir + "\\" + self.project_name + "_git_strength_" + str(threshold) + "_ld.csv"
         file_writer = open(csv_name, 'wt')
-        file_writer.write("a,b,c\n")
 
         entities_count = 0
         try:
@@ -86,7 +82,7 @@ class CounterStrengthConfidence(CounterStrength):
 
                     if confidence_percent >= threshold:
                         file_writer.write(entity1.full_name + "," + entity2.full_name + "," +
-                                          str(round(confidence_percent, 0)) + "\n")
+                                          str(freqAUB) + ", LD\n")
                         entities_count += 1
 
         except BaseException as e:

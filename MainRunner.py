@@ -56,9 +56,9 @@ if __name__ == '__main__':
     option = argparse.ArgumentParser()
     option.add_argument('--repoPath', dest='repoPath', default="", type=str,
                         help='path to git repository')
-    option.add_argument('--outputPath', dest='outputPath', default="", type=str,
+    option.add_argument('--outputPath', dest='outputPath', default="D:\\Util\\doctorat\\TestProjects\\results", type=str,
                         help='path of output folder')
-    option.add_argument('--threshold', dest='threshold', default=None, type=int,
+    option.add_argument('--threshold', dest='threshold', default=20, type=int,
                         help='threshold for accepted length of git files in a commit')
     option.add_argument('--getFiles', dest='getFiles', default=False, type=bool,
                         help='download git diffs and convert source code to xml')
@@ -70,8 +70,8 @@ if __name__ == '__main__':
 
     repo_dict = {
              "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
-             # "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-             # "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+             "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+             "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
     }
 
     for repo in repo_dict:
