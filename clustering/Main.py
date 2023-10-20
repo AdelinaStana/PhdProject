@@ -1,5 +1,6 @@
 import sys
 import os
+from enum import Enum
 
 from clustering import Utils
 from clustering.LouvainClustering import LouvainClustering
@@ -33,7 +34,7 @@ class RedirectPrintToFile:
 The MQ measurement is bounded between -1 (no cohesion
     within the subsystems) and 1 (no coupling between the
     subsystems).
-    
+
 
 The score is bounded between -1 for incorrect clustering and +1 for highly dense clustering. Scores around zero 
 indicate overlapping clusters.
@@ -50,6 +51,7 @@ def build_and_measure(file_path, median=0):
     dependencies = DependenciesBuilder(file_path, median)
 
     louvian = LouvainClustering(dependencies)
+    print(dependencies.n, end=",")
     print(len(louvian.clusters), end=",")
 
     reference_labels = create_clustering_based_on_packages(file_path, dependencies)
@@ -59,9 +61,6 @@ def build_and_measure(file_path, median=0):
 
     print(round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3), end=",")
     print(round(metrics.get_modularity(dependencies.matrix, reference_labels), 3), end=",")
-
-    print(round(silhouette_score(dependencies.matrix, louvian.labels, metric='euclidean'), 2), end=",")
-    print(round(silhouette_score(dependencies.matrix, reference_labels, metric='euclidean'), 2), end=",")
 
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
@@ -80,15 +79,21 @@ def run_project(name, median=0):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", median)
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv", median)
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
+                          median)
 
 
 def run_all():
-    # run_project("ant", 125)
-    # run_project("catalina", 210)
-    run_project("catalina", 306)
+    run_project("ant", 125)
+    run_project("catalina", 210)
+    run_project("hibernate", 306)
 
 
 # with RedirectPrintToFile('./../results/output.txt'):
 
 run_all()
+
+
+
+
+

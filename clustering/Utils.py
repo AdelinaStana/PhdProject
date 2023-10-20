@@ -61,8 +61,13 @@ def create_clustering_based_on_packages(file_path, dependencies_mapper):
     labels = np.array([0]*dependencies_mapper.n)
     for package in packages.keys():
         for item in packages[package]:
-            index = dependencies_mapper.name_index_map[item]
-            labels[index] = label_index
+            if '$' in item:
+                item = item.split('$')[0]
+            try:
+                index = dependencies_mapper.name_index_map[item]
+                labels[index] = label_index
+            except BaseException as e:
+                pass
         label_index += 1
 
     return labels
@@ -74,8 +79,10 @@ def convert_to_cluster_packages(file_path):
         csvreader = csv.reader(csvfile)
         for row in csvreader:
             if len(row) >= 2:
-                class_names.add(row[0])
-                class_names.add(row[1])
+                entity1 = row[0].strip().split('$')[0]
+                entity2 = row[1].strip().split('$')[0]
+                class_names.add(entity1)
+                class_names.add(entity2)
 
     packages = {}
 

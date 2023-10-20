@@ -18,7 +18,6 @@ class DependenciesBuilder:
         self.name_index_map = {}
         self.index_name_map = {}
         self.matrix = np.array([])
-        self.array = []
         self.name_graph = nx.Graph()
         self.n = 0
         self.median = median       # sd median
@@ -36,14 +35,18 @@ class DependenciesBuilder:
             with open(csv_file, newline='') as file1:
                 reader = csv.reader(file1)
                 for row in reader:
+                    entity1 = row[0].strip()
+                    entity2 = row[1].strip()
                     value = int(row[2].strip())
                     if len(row) > 3 and row[3]:
-                        data.append([row[0].strip(), row[1].strip(), value + (self.median * (percent/100))])
+                        entity1 = entity1.split('$')[0]     # remove internal classes
+                        entity2 = entity2.split('$')[0]
+                        data.append([entity1, entity2, value + (self.median * (percent / 100))])
                     else:
-                        data.append([row[0].strip(), row[1].strip(), value])
+                        data.append([entity1, entity2, value])
 
-                    entities.add(row[0].strip())
-                    entities.add(row[1].strip())
+                    entities.add(entity1)
+                    entities.add(entity2)
 
         except BaseException as e:
             print(f"Error at reading csv file: {csv_file}")
@@ -67,9 +70,8 @@ class DependenciesBuilder:
             index_a = self.name_index_map[dependency[0]]
             index_b = self.name_index_map[dependency[1]]
 
-            self.matrix[index_a][index_b] = dependency[2]
-            self.matrix[index_b][index_a] = dependency[2]
+            self.matrix[index_a][index_b] += dependency[2]
+            self.matrix[index_b][index_a] += dependency[2]
 
-            self.array.append([index_a, index_b, dependency[2]])
             self.name_graph.add_edge(index_a, index_b)
 
