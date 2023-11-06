@@ -39,8 +39,6 @@ class DependenciesBuilder:
                     entity2 = row[1].strip()
                     value = int(row[2].strip())
                     if len(row) > 3 and row[3]:
-                        entity1 = entity1.split('$')[0]     # remove internal classes
-                        entity2 = entity2.split('$')[0]
                         data.append([entity1, entity2, value + (self.median * (percent / 100))])
                     else:
                         data.append([entity1, entity2, value])

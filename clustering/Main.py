@@ -51,8 +51,8 @@ def build_and_measure(file_path, median=0):
     dependencies = DependenciesBuilder(file_path, median)
 
     louvian = LouvainClustering(dependencies)
-    print(dependencies.n, end=",")
     print(len(louvian.clusters), end=",")
+    print(dependencies.n, end=",")
 
     reference_labels = create_clustering_based_on_packages(file_path, dependencies)
 
@@ -73,7 +73,7 @@ Median Hibernate: 106
 
 
 def run_project(name, median=0):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\sd_{name}.csv")
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", median)
@@ -86,13 +86,12 @@ def run_project(name, median=0):
 def run_all():
     run_project("ant", 125)
     run_project("catalina", 210)
-    run_project("hibernate", 306)
+    #run_project("hibernate", 306)
 
 
 # with RedirectPrintToFile('./../results/output.txt'):
 
 run_all()
-
 
 
 
