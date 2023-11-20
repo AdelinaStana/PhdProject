@@ -10,7 +10,7 @@ def extract_number_from_path(file_path):
     if match:
         return int(match.group())
     else:
-        return 0
+        return 10
 
 
 class DependenciesBuilder:
@@ -29,7 +29,7 @@ class DependenciesBuilder:
         entities = set()
         data = []
 
-        percent = extract_number_from_path(csv_file)
+        percent = extract_number_from_path(csv_file)/10
 
         try:
             with open(csv_file, newline='') as file1:
@@ -39,7 +39,7 @@ class DependenciesBuilder:
                     entity2 = row[1].strip()
                     value = int(row[2].strip())
                     if len(row) > 3 and row[3]:
-                        data.append([entity1, entity2, value + (self.median * (percent / 100))])
+                        data.append([entity1, entity2, value])
                     else:
                         data.append([entity1, entity2, value])
 
