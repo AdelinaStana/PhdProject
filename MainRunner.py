@@ -69,9 +69,11 @@ if __name__ == '__main__':
     # run_regression_test()
 
     repo_dict = {
-             "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
-             "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
-             "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar"
+             # "D:\\Util\\doctorat\\TestProjects\\ant": "D:\\Util\\doctorat\\TestProjects\\jars\\ant.jar",
+             # "D:\\Util\\doctorat\\TestProjects\\catalina": "D:\\Util\\doctorat\\TestProjects\\jars\\tomcat-catalina-9.0.4.jar",
+             # "D:\\Util\\doctorat\\TestProjects\\hibernate": "D:\\Util\\doctorat\\TestProjects\\jars\\hibernate-core-5.2.12.Final.jar",
+             # "D:\\Util\\doctorat\\TestProjects\\gson": "D:\\Util\\doctorat\\TestProjects\\jars\\gson-2.10.1.jar",
+             "D:\\Util\\doctorat\\TestProjects\\RxJava": "D:\\Util\\doctorat\\TestProjects\\jars\\rxjava-3.1.8.jar",
     }
 
     for repo in repo_dict:

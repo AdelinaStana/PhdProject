@@ -1,8 +1,12 @@
 import csv
+import os
 
 import networkx as nx
 import numpy as np
 import subprocess
+
+from clustering.DependenciesBuilder import DependenciesBuilder
+from clustering.LouvainClustering import LouvainClustering
 
 '''
 Use it to concatenate two csv;
@@ -49,6 +53,57 @@ def plot_info(dependencies, labels):
 
     # Display the graph
     plt.show()
+
+
+"""
+#diff(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv",
+f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv", 125)
+
+
+"""
+
+
+def diff(file_path1, file_path2, median=0):
+    # calculate clustering for path1
+    print(os.path.basename(file_path1), end=',')
+    dependencies1 = DependenciesBuilder(file_path1, median)
+    louvian1 = LouvainClustering(dependencies1)
+    reference_labels1 = create_clustering_based_on_packages(file_path1, dependencies1)
+
+    print(len(louvian1.clusters), end=",")
+    print(dependencies1.n, end=",")
+
+    calculate_mojo(louvian1.labels, reference_labels1, dependencies1)
+
+    # calculate clustering for path2
+    print(os.path.basename(file_path2), end=',')
+    dependencies2 = DependenciesBuilder(file_path2, median)
+    louvian2 = LouvainClustering(dependencies2)
+    print(len(louvian2.clusters), end=",")
+    print(dependencies2.n, end=",")
+
+    reference_labels2 = create_clustering_based_on_packages(file_path2, dependencies2)
+
+    calculate_mojo(louvian2.labels, reference_labels2, dependencies2)
+
+    sol1 = map_labels_to_cluster_array(louvian1.labels, dependencies1)
+    sol2 = map_labels_to_cluster_array(louvian2.labels, dependencies2)
+
+    for cluster1 in sol1:
+        for cluster2 in sol2:
+            difference = set(cluster1) - set(cluster2)
+            common = set(cluster1) & set(cluster2)
+            if difference != set() and len(difference) != len(cluster1):
+                print(f"cluster 1: {cluster1}")
+                print(f"cluster 2: {cluster2}")
+                print(f"diff ({len(difference)}){difference}")
+                print(f"common ({len(common)}) {common}")
+
+    id1 = dependencies1.name_index_map["org.apache.tools.ant.util.regexp.RegexpMatcher"]
+    id2 = dependencies2.name_index_map["org.apache.tools.ant.util.regexp.RegexpMatcher"]
+
+    print(dependencies1.matrix[id1])
+    print(dependencies2.matrix[id2])
 
 '''
 given a csv, merge all existing entities and split them based on packages
@@ -120,6 +175,18 @@ def convert_to_cluster_packages(file_path):
     return packages
 
 
+def calculate_key_classes_percent(dependencies, key_class_file_path):
+    with open(key_class_file_path, 'r') as file:
+        key_classes = [line.strip() for line in file.readlines()]
+
+    classes = set(dependencies.name_index_map.keys())
+    nr_of_key_classes = len(classes)
+    key_classes = set(key_classes)
+
+    nr_of_found_key_classes = len(classes & key_classes)
+    return round((nr_of_found_key_classes * 100)/nr_of_key_classes, 2)
+
+
 def map_labels_to_cluster_array(labels, dependencies_mapper):
     clusters_dict = {}
     for i in range(0, len(labels)):
@@ -175,7 +242,7 @@ def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
     mojofm = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"], capture_output=True, text=True)
 
     print(mojo.stdout.strip(), end=",")
-    print(mojofm.stdout.strip())
+    print(mojofm.stdout.strip(), end=",")
 
 
 

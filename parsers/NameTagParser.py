@@ -8,7 +8,7 @@ from xml.etree.ElementTree import *
 class NameTagParser(Parser):
     def __init__(self, root_dir, unique_id, threshold=None):
         Parser.__init__(self, root_dir, unique_id)
-        self.replace = "org"
+        self.roots = ["io", "org", "com"]
         self.threshold = threshold
 
     def get_all_structures(self, root):
@@ -46,8 +46,12 @@ class NameTagParser(Parser):
         file_path = file_path.replace(".xml", "")
         file_path = file_path.replace("\\", "/")
 
-        rep = file_path.find(self.replace)
-        rep = file_path[0:rep]
+        for root in self.roots:
+            if root in file_path:
+                rep = file_path.find(root)
+                rep = file_path[0:rep]
+                break
+
         base_name = file_path.replace(rep, "")
         extension = os.path.splitext(base_name)[1]
         base_name = base_name.replace(extension, "")

@@ -64,29 +64,30 @@ class CounterStrengthConfidence(CounterStrength):
         csv_name = self.working_dir + "\\" + self.project_name + "_git_strength_" + str(threshold) + "_ld.csv"
         file_writer = open(csv_name, 'wt')
 
-        entities_count = 0
-        try:
-            for classItem in self.structure_manager.get_class_list():
-                entity1 = classItem
+        if mean:
+            entities_count = 0
+            try:
+                for classItem in self.structure_manager.get_class_list():
+                    entity1 = classItem
 
-                related_list = classItem.get_filtered_git_links(1)
-                for entity2_id in related_list:
-                    entity2 = entity_class_id_dict[entity2_id]
+                    related_list = classItem.get_filtered_git_links(1)
+                    for entity2_id in related_list:
+                        entity2 = entity_class_id_dict[entity2_id]
 
-                    freqAUB = entity1.get_nr_of_occ_with(entity2_id)  # commits involving A and B
-                    freqA = entity1.commits_count  # total nr of commits involving A
+                        freqAUB = entity1.get_nr_of_occ_with(entity2_id)  # commits involving A and B
+                        freqA = entity1.commits_count  # total nr of commits involving A
 
-                    strength = freqAUB/mean
+                        strength = freqAUB/mean
 
-                    confidence_percent = ((100 * freqAUB) / freqA) * strength
+                        confidence_percent = ((100 * freqAUB) / freqA) * strength
 
-                    if confidence_percent >= threshold:
-                        file_writer.write(entity1.full_name + "," + entity2.full_name + "," +
-                                          str(freqAUB) + ", LD\n")
-                        entities_count += 1
+                        if confidence_percent >= threshold:
+                            file_writer.write(entity1.full_name + "," + entity2.full_name + "," +
+                                              str(freqAUB) + ", LD\n")
+                            entities_count += 1
 
-        except BaseException as e:
-            print("Exception: "+str(e))
+            except BaseException as e:
+                print("Exception: "+str(e))
 
         file_writer.close()
 
