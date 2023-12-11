@@ -37,6 +37,7 @@ def concat_csv_files(file1_path, file2_path):
 
     out_file.close()
 
+
 '''
     plot_info(dependencies, louvian.labels)
 '''
@@ -105,6 +106,7 @@ def diff(file_path1, file_path2, median=0):
     print(dependencies1.matrix[id1])
     print(dependencies2.matrix[id2])
 
+
 '''
 given a csv, merge all existing entities and split them based on packages
 '''
@@ -113,7 +115,7 @@ given a csv, merge all existing entities and split them based on packages
 def create_clustering_based_on_packages(file_path, dependencies_mapper):
     packages = convert_to_cluster_packages(file_path)
     label_index = 0
-    labels = np.array([0]*dependencies_mapper.n)
+    labels = np.array([0] * dependencies_mapper.n)
     for package in packages.keys():
         for item in packages[package]:
             try:
@@ -184,7 +186,7 @@ def calculate_key_classes_percent(dependencies, key_class_file_path):
     key_classes = set(key_classes)
 
     nr_of_found_key_classes = len(classes & key_classes)
-    return round((nr_of_found_key_classes * 100)/nr_of_key_classes, 2)
+    return round((nr_of_found_key_classes * 100) / nr_of_key_classes, 2)
 
 
 def map_labels_to_cluster_array(labels, dependencies_mapper):
@@ -213,6 +215,31 @@ def save_clusters(clusters, file_name):
                 file.write(f"contain {index} {item}\n")
             index += 1
 
+
+def read_links_from_csv(file_path):
+    links = set()
+    with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            if len(row) >= 2:
+                link = tuple(sorted(row[:2]))
+                links.add(link)
+    return links
+
+
+def calculate_overlapp(file_ld, file_sd):
+    percentage = 0
+
+    if file_sd:
+        links_ld = read_links_from_csv(file_ld)
+        links_sd = read_links_from_csv(file_sd)
+
+        common_links = links_ld.intersection(links_sd)
+        percentage = round(((len(common_links) / len(links_ld)) * 100), 2)
+
+    print(percentage)
+
+
 '''
 Please use one of the following:
 
@@ -238,11 +265,11 @@ def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
     save_clusters(sol_clusters, "solution.rsf")
     save_clusters(reference_clusters, "reference.rsf")
 
-    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf"], capture_output=True, text=True)
-    mojofm = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"], capture_output=True, text=True)
+    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf"],
+                          capture_output=True, text=True)
+    mojofm = subprocess.run(
+        ["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"],
+        capture_output=True, text=True)
 
     print(mojo.stdout.strip(), end=",")
     print(mojofm.stdout.strip(), end=",")
-
-
-

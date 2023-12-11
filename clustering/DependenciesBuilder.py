@@ -14,13 +14,12 @@ def extract_number_from_path(file_path):
 
 
 class DependenciesBuilder:
-    def __init__(self, csv_file, median=0):
+    def __init__(self, csv_file):
         self.name_index_map = {}
         self.index_name_map = {}
         self.matrix = np.array([])
         self.name_graph = nx.Graph()
         self.n = 0
-        self.median = median       # sd median
 
         self.populate_matrix(csv_file)
 

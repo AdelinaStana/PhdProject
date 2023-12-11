@@ -45,9 +45,9 @@ indicate overlapping clusters.
 '''
 
 
-def build_and_measure(file_path, name, median):
+def build_and_measure(file_path, name, reference=None):
     print(os.path.basename(file_path), end=',')
-    dependencies = DependenciesBuilder(file_path, median)
+    dependencies = DependenciesBuilder(file_path)
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
@@ -63,6 +63,8 @@ def build_and_measure(file_path, name, median):
 
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
+    calculate_overlapp(file_path, reference)
+
     #print(calculate_key_classes_percent(dependencies, f"D:\\Util\\doctorat\\PhdProject\\results\\key classes\\{name}_top_half_key_classes.txt"))
 
 
@@ -73,26 +75,23 @@ Median Hibernate: 106
 """
 
 
-def run_project(name, median=0):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", name, median)
+def run_project(name):
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", name)
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", name, median)
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", name, f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          name, median)
+                          name, f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
 
 def run_all():
     run_project("ant")
-    # run_project("catalina")
-    # run_project("hibernate")
-    # run_project("gson")
-    # run_project("RxJava")
-
-
-
+    run_project("catalina")
+    run_project("hibernate")
+    run_project("gson")
+    run_project("RxJava")
 
 # with RedirectPrintToFile('./../results/output.txt'):
 
