@@ -241,6 +241,37 @@ def calculate_overlapp(file_ld, file_sd):
 
 
 '''
+To export reference solution
+'''
+
+
+def export_reference_solution(name, file_path, dependencies_mapper):
+    reference_labels = create_clustering_based_on_packages(file_path, dependencies_mapper)
+    reference_clusters = map_labels_to_cluster_array(reference_labels, dependencies_mapper)
+    save_clusters(reference_clusters, f"{name}_reference.rsf")
+
+
+def import_clustering_solution(file_path, dependencies_mapper):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    reference_sol_dict = {}
+
+    for line in lines:
+        name = line.split(" ")[2].strip()
+        cluster = line.split(" ")[1].strip()
+
+        reference_sol_dict[name] = cluster
+
+    reference_sol = np.array([0]*dependencies_mapper.n)
+    for name in dependencies_mapper.name_index_map.keys():
+        index = dependencies_mapper.name_index_map[name]
+        reference_sol[index] = reference_sol_dict[name]
+
+    return reference_sol
+
+
+'''
 Please use one of the following:
 
 java mojo.MoJo a.rsf b.rsf

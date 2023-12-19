@@ -45,7 +45,7 @@ indicate overlapping clusters.
 '''
 
 
-def build_and_measure(file_path, name, reference=None):
+def build_and_measure(file_path, reference_solution_path, structural_dependencies=None):
     print(os.path.basename(file_path), end=',')
     dependencies = DependenciesBuilder(file_path)
 
@@ -53,7 +53,7 @@ def build_and_measure(file_path, name, reference=None):
     print(len(louvian.clusters), end=",")
     print(dependencies.n, end=",")
 
-    reference_labels = create_clustering_based_on_packages(file_path, dependencies)
+    reference_labels = import_clustering_solution(reference_solution_path, dependencies)
 
     print(round(calculate_modularity(dependencies.matrix, louvian.labels), 3), end=",")
     print(round(calculate_modularity(dependencies.matrix, reference_labels), 3), end=",")
@@ -63,10 +63,7 @@ def build_and_measure(file_path, name, reference=None):
 
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
-    calculate_overlapp(file_path, reference)
-
-    #print(calculate_key_classes_percent(dependencies, f"D:\\Util\\doctorat\\PhdProject\\results\\key classes\\{name}_top_half_key_classes.txt"))
-
+    calculate_overlapp(file_path, structural_dependencies)
 
 """
 Median Ant: 125
@@ -76,14 +73,17 @@ Median Hibernate: 106
 
 
 def run_project(name):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", name)
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv", name, f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          name, f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",)
 
 
 def run_all():

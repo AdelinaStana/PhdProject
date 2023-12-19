@@ -78,18 +78,19 @@ def calculate_interconnectivity(adj_matrix, cluster_labels, cluster_id_i, cluste
 
 
 def calculate_modularity(adj_matrix, labels):
-    k = len(set(labels))
+    unique_labels = set(labels)
+    k = len(unique_labels)
 
     if k == 1:
         return calculate_intraconnectivity(adj_matrix, labels, 0)
 
     sum_intraconnectivity = 0
-    for i in range(0, k):
+    for i in unique_labels:
         sum_intraconnectivity += calculate_intraconnectivity(adj_matrix, labels, i)
 
     sum_interconnectivity = 0
-    for i in range(0, k):
-        for j in range(0, k):
+    for i in unique_labels:
+        for j in unique_labels:
             sum_interconnectivity += calculate_interconnectivity(adj_matrix, labels, i, j)
 
     modularity = (1 / k) * sum_intraconnectivity + ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
