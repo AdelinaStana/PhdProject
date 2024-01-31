@@ -64,10 +64,10 @@ f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.
 """
 
 
-def diff(file_path1, file_path2, median=0):
+def diff(file_path1, file_path2):
     # calculate clustering for path1
     print(os.path.basename(file_path1), end=',')
-    dependencies1 = DependenciesBuilder(file_path1, median)
+    dependencies1 = DependenciesBuilder(file_path1,)
     louvian1 = LouvainClustering(dependencies1)
     reference_labels1 = create_clustering_based_on_packages(file_path1, dependencies1)
 
@@ -78,7 +78,7 @@ def diff(file_path1, file_path2, median=0):
 
     # calculate clustering for path2
     print(os.path.basename(file_path2), end=',')
-    dependencies2 = DependenciesBuilder(file_path2, median)
+    dependencies2 = DependenciesBuilder(file_path2)
     louvian2 = LouvainClustering(dependencies2)
     print(len(louvian2.clusters), end=",")
     print(dependencies2.n, end=",")

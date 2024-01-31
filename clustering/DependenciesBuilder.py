@@ -37,8 +37,9 @@ class DependenciesBuilder:
                     entity1 = row[0].strip()
                     entity2 = row[1].strip()
                     value = int(row[2].strip())
-                    if len(row) > 3 and row[3]:
+                    if len(row) > 3 and row[3]: #LD is in that row
                         data.append([entity1, entity2, value])
+                        data.append([entity2, entity1, value])
                     else:
                         data.append([entity1, entity2, value])
 
@@ -68,7 +69,7 @@ class DependenciesBuilder:
             index_b = self.name_index_map[dependency[1]]
 
             self.matrix[index_a][index_b] += dependency[2]
-            self.matrix[index_b][index_a] += dependency[2]
+            # self.matrix[index_b][index_a] += dependency[2]
 
             self.name_graph.add_edge(index_a, index_b)
 

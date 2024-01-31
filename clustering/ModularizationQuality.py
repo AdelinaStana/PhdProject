@@ -67,7 +67,7 @@ def calculate_interconnectivity(adj_matrix, cluster_labels, cluster_id_i, cluste
     for i in range(num_nodes):
         if cluster_labels[i] == cluster_id_i:
             for j in range(num_nodes):
-                if cluster_labels[j] == cluster_id_j and adj_matrix[i, j] != 0:
+                if cluster_labels[j] == cluster_id_j and adj_matrix[i, j] != 0 and i != j:
                     eij += 1
     Ni = calculate_components_number(cluster_labels, cluster_id_i)
     Nj = calculate_components_number(cluster_labels, cluster_id_j)
@@ -78,7 +78,7 @@ def calculate_interconnectivity(adj_matrix, cluster_labels, cluster_id_i, cluste
 
 
 def calculate_modularity(adj_matrix, labels):
-    unique_labels = set(labels)
+    unique_labels = sorted(set(labels))
     k = len(unique_labels)
 
     if k == 1:
@@ -91,7 +91,8 @@ def calculate_modularity(adj_matrix, labels):
     sum_interconnectivity = 0
     for i in unique_labels:
         for j in unique_labels:
-            sum_interconnectivity += calculate_interconnectivity(adj_matrix, labels, i, j)
+            if i < j:
+                sum_interconnectivity += calculate_interconnectivity(adj_matrix, labels, i, j)
 
-    modularity = (1 / k) * sum_intraconnectivity + ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
+    modularity = ((1 / k) * sum_intraconnectivity) + ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
     return modularity

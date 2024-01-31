@@ -1,10 +1,4 @@
 import sys
-import os
-from enum import Enum
-
-from clustering import Utils
-from clustering.LouvainClustering import LouvainClustering
-from clustering.DependenciesBuilder import DependenciesBuilder
 from ModularizationQuality import *
 from clustering.Utils import *
 
@@ -45,9 +39,9 @@ indicate overlapping clusters.
 '''
 
 
-def build_and_measure(file_path, reference_solution_path, structural_dependencies=None):
-    print(os.path.basename(file_path), end=',')
-    dependencies = DependenciesBuilder(file_path)
+def build_and_measure(dependencies_path, reference_solution_path, original_matrix):
+    print(os.path.basename(dependencies_path), end=',')
+    dependencies = DependenciesBuilder(dependencies_path)
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
@@ -63,27 +57,27 @@ def build_and_measure(file_path, reference_solution_path, structural_dependencie
 
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
-    calculate_overlapp(file_path, structural_dependencies)
-
-"""
-Median Ant: 125
-Median Catalina: 255
-Median Hibernate: 106
-"""
-
 
 def run_project(name):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+    dependencies_orig = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_10_sd_ld.csv")
+
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
+                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+    print()
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+
+        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
+                           f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",)
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+
+        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
+                           f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
 
 def run_all():
