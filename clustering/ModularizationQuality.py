@@ -29,11 +29,7 @@ eij - inter-edge dependencies
 
 
 def calculate_components_number(cluster_labels, cluster_id):
-    Ni = 0  # components number
-    for label in cluster_labels:
-        if label == cluster_id:
-            Ni += 1
-    return Ni
+    return np.count_nonzero(cluster_labels == cluster_id)   # calculate components number
 
 
 def calculate_intraconnectivity(adj_matrix, cluster_labels, cluster_id):
@@ -50,27 +46,29 @@ def calculate_intraconnectivity(adj_matrix, cluster_labels, cluster_id):
     Ni = calculate_components_number(cluster_labels, cluster_id)
 
     # Ai = mi/Ni^2
-    intraconnectivity = mi / (pow(Ni, 2))
-    return intraconnectivity
+    interconnectivity = mi / (pow(Ni, 2))
+    return interconnectivity
 
 
 def calculate_interconnectivity(adj_matrix, cluster_labels, cluster_id_i, cluster_id_j):
     if cluster_id_i == cluster_id_j:
         return 0
 
-    if cluster_id_i not in cluster_labels or cluster_id_j not in cluster_labels:
-        return 0
-
-    num_nodes = adj_matrix.shape[0]
-    eij = 0.0  # inter-edge dependencies
-
-    for i in range(num_nodes):
-        if cluster_labels[i] == cluster_id_i:
-            for j in range(num_nodes):
-                if cluster_labels[j] == cluster_id_j and adj_matrix[i, j] != 0 and i != j:
-                    eij += 1
     Ni = calculate_components_number(cluster_labels, cluster_id_i)
     Nj = calculate_components_number(cluster_labels, cluster_id_j)
+
+    if Ni == 0 or Nj == 0:
+        return 0
+
+    indices_i = np.where(cluster_labels == cluster_id_i)[0]
+    indices_j = np.where(cluster_labels == cluster_id_j)[0]
+
+    eij = 0.0  # inter-edge dependencies
+
+    for i in indices_i:
+        for j in indices_j:
+            if adj_matrix[i, j] != 0 and i != j:
+                eij += 1
 
     # Eij = eij/2NiNj
     interconnectivity = eij / (2 * Ni * Nj)

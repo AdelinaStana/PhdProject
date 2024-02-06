@@ -39,9 +39,18 @@ indicate overlapping clusters.
 '''
 
 
-def build_and_measure(dependencies_path, reference_solution_path, original_matrix):
+def delete_row_column(matrix, n):
+    matrix_array = np.array(matrix)
+
+    result_matrix = np.delete(matrix_array, n, axis=0)
+    result_matrix = np.delete(result_matrix, n, axis=1)
+
+    return result_matrix
+
+
+def build_and_measure(dependencies_path, reference_solution_path, original_dependencies):
     print(os.path.basename(dependencies_path), end=',')
-    dependencies = DependenciesBuilder(dependencies_path)
+    dependencies = DependenciesBuilder(dependencies_path, original_dependencies)
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
@@ -49,32 +58,32 @@ def build_and_measure(dependencies_path, reference_solution_path, original_matri
 
     reference_labels = import_clustering_solution(reference_solution_path, dependencies)
 
-    print(round(calculate_modularity(dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(calculate_modularity(dependencies.matrix, reference_labels), 3), end=",")
+    print(round(calculate_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
+    print(round(calculate_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
 
-    print(round(metrics.get_modularity(dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(metrics.get_modularity(dependencies.matrix, reference_labels), 3), end=",")
+    print(round(metrics.get_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
+    print(round(metrics.get_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
 
     calculate_mojo(louvian.labels, reference_labels, dependencies)
 
 
 def run_project(name):
-    dependencies_orig = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_10_sd_ld.csv")
+    dependencies_orig = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
-                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
     print()
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
 
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig.matrix)
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
 
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
