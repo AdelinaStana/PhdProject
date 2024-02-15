@@ -31,9 +31,9 @@ class LouvainClustering:
                             packages_dict[package] = 1
 
             print(f"\nTotal: {count}")
-            print("Distribution: ", end="")
-            # print packages distribution
-            sorted_dict = OrderedDict(sorted(packages_dict.items(), key=lambda item: item[1], reverse=True))
-            for item in sorted_dict.items():
-                print(f"{item[0]} - {item[1]} [{round((item[1]*100)/count, 1)}%]", end=", ")
+            # print("Distribution: ", end="")
+            # # print packages distribution
+            # sorted_dict = OrderedDict(sorted(packages_dict.items(), key=lambda item: item[1], reverse=True))
+            # for item in sorted_dict.items():
+            #     print(f"{item[0]} - {item[1]} [{round((item[1]*100)/count, 1)}%]", end=", ")
 

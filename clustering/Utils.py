@@ -46,10 +46,10 @@ def concat_csv_files(file1_path, file2_path):
 def plot_info(dependencies, labels):
     import matplotlib.pyplot as plt
     node_colors = []
-    for node in dependencies.name_graph.nodes():
+    for node in dependencies.graph.nodes():
         node_colors.append(labels[node])
-    pos = nx.spring_layout(dependencies.name_graph)
-    nx.draw(dependencies.name_graph, pos, with_labels=True, node_size=500, font_size=5, font_color='black',
+    pos = nx.spring_layout(dependencies.graph)
+    nx.draw(dependencies.graph, pos, with_labels=True, node_size=500, font_size=5, font_color='black',
             font_weight='bold', node_color=node_colors, cmap=plt.cm.plasma)
 
     # Display the graph

@@ -18,7 +18,7 @@ class DependenciesBuilder:
         self.name_index_map = {}
         self.index_name_map = {}
         self.matrix = np.array([])
-        self.name_graph = nx.Graph()
+        self.graph = nx.Graph()
         self.n = 0
 
         entities_set, data = self.read_csv_dependencies(csv_file)
@@ -70,12 +70,13 @@ class DependenciesBuilder:
                 i += 1
 
         self.matrix = np.array([[0]*self.n]*self.n)
+        self.graph.clear()
         for dependency in data:
             index_a = self.name_index_map[dependency[0]]
             index_b = self.name_index_map[dependency[1]]
 
             self.matrix[index_a][index_b] += dependency[2]
-            #self.name_graph.add_edge(index_a, index_b)
+            self.graph.add_edge(index_a, index_b,  weight=dependency[2])
 
     def repopulate_matrix(self, data, original_dependencies):
         self.index_name_map = original_dependencies.index_name_map
@@ -83,6 +84,7 @@ class DependenciesBuilder:
         self.n = original_dependencies.n
 
         self.matrix = np.array([[0] * self.n] * self.n)
+        self.graph.clear()
 
         for dependency in data:
             if dependency[0] in self.name_index_map.keys() and dependency[1] in self.name_index_map.keys():
@@ -90,5 +92,6 @@ class DependenciesBuilder:
                 index_b = self.name_index_map[dependency[1]]
 
                 self.matrix[index_a][index_b] += dependency[2]
+                self.graph.add_edge(index_a, index_b, weight=dependency[2])
 
 
