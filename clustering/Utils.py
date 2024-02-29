@@ -304,3 +304,174 @@ def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
 
     print(mojo.stdout.strip(), end=",")
     print(mojofm.stdout.strip(), end=",")
+
+
+def draw_graph(G, cluster_nodes, cut_prefix):
+    import plotly.graph_objects as go
+    import networkx as nx
+
+    pos = nx.spring_layout(G, k=0.75, iterations=50)
+
+    # Create edge traces for the graph
+    edge_x = []
+    edge_y = []
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x.extend([x0, x1, None])
+        edge_y.extend([y0, y1, None])
+
+    edge_trace = go.Scatter(
+        x=edge_x, y=edge_y,
+        line=dict(width=1, color='Black'),
+        hoverinfo='none',
+        mode='lines')
+
+    # Create node trace with smaller, fixed-size nodes
+    node_x = []
+    node_y = []
+    node_text = []
+    node_color = []
+    for node in G.nodes():
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        if node in cluster_nodes:
+            node_color.append('green')
+        else:
+            node_color.append('LightSkyBlue')
+        node_text.append(node.replace(cut_prefix, ""))
+
+    node_trace = go.Scatter(
+        x=node_x, y=node_y,
+        mode='markers+text',
+        text=node_text,
+        textposition="bottom center",
+        hoverinfo='text',
+        marker=dict(
+            size=10,  # Smaller node size
+            color=node_color,
+            line=dict(color='Black', width=1)),
+        textfont=dict(
+            size=13,
+            color='Black'),
+    )
+
+    # Create a trace for edge weights
+    # edge_annotations = []
+    # for edge in G.edges(data=True):
+    #     x0, y0 = pos[edge[0]]
+    #     x1, y1 = pos[edge[1]]
+    #     edge_annotations.append(
+    #         dict(
+    #             x=(x0 + x1) / 2, y=(y0 + y1) / 2,
+    #             xref="x", yref="y",
+    #             text=str(edge[2]['weight']),  # assuming the attribute is 'weight'
+    #             showarrow=False,
+    #             font=dict(size=9)
+    #         )
+    #     )
+
+    # Create figure
+    fig = go.Figure(data=[edge_trace, node_trace],
+                    layout=go.Layout(
+                        paper_bgcolor='white',
+                        plot_bgcolor='white',
+                        showlegend=False,
+                        hovermode='closest',
+                        # annotations=edge_annotations,
+                        margin=dict(b=0, l=0, r=0, t=40),
+                        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)))
+
+    fig.update_layout(title_text="")
+
+    # Show plot
+    fig.show()
+
+    import plotly.io as pio
+    fig.update_layout(
+        autosize=False,
+        width=800,
+        height=600
+    )
+
+    # Save the figure to a file
+    pio.write_image(fig, 'D:\\network_graph.png')
+
+
+def check_mapping(labels1, labels2, index):
+    count = 0
+    match = {}
+
+    for i in range(len(labels1)):
+        if labels1[i] == index:
+            if labels2[i] not in match:
+                match[labels2[i]] = []
+            match[labels2[i]].append(i)
+            count += 1
+
+    best_match = max(match, key=lambda x: len(match[x])) if match else None
+
+    return best_match
+
+
+def ant_diff_results():
+    dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
+    louvian_sd = LouvainClustering(dependencies_sd)
+
+    dependencies_ld = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv",
+                                          dependencies_sd)
+
+    louvian_ld = LouvainClustering(dependencies_ld)
+
+    match_dict = {}
+    for i in set(louvian_sd.labels):
+        match_dict[i] = check_mapping(louvian_sd.labels, louvian_ld.labels, i)
+
+    print(match_dict)
+
+    for i in range(0, len(louvian_ld.labels)):
+        if louvian_sd.labels[i] != louvian_ld.labels[i]:
+            if match_dict[louvian_sd.labels[i]] and louvian_ld.labels[i] != match_dict[louvian_sd.labels[i]]:
+                print(louvian_ld.index_name_map[i])
+
+    louvian_sd.print_clusters()
+    louvian_ld.print_clusters()
+
+
+def create_graphs():
+    import networkx as nx
+
+    dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
+    louvian_sd = LouvainClustering(dependencies_sd)
+
+    dependencies_ld = DependenciesBuilder(
+        f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv")
+
+    louvian_ld = LouvainClustering(dependencies_ld)
+
+    G = nx.Graph()
+    dependencies = dependencies_sd
+    names = [
+        'org.apache.tools.ant.taskdefs.Concat',
+        'org.apache.tools.ant.taskdefs.Concat$1',
+        'org.apache.tools.ant.taskdefs.Concat$MultiReader',
+        'org.apache.tools.ant.taskdefs.Concat$TextElement'
+    ]
+
+    for name in names:
+        G.add_node(name)
+        index = dependencies.name_index_map[name]
+        for j in range(0, dependencies.n):
+            if dependencies.matrix[index][j] != 0:
+                other = dependencies.index_name_map[j]
+                G.add_node(other)
+                G.add_edge(name, other, weight=dependencies.matrix[index][j])
+
+            if dependencies.matrix[j][index] != 0:
+                other = dependencies.index_name_map[j]
+                G.add_node(other)
+                G.add_edge(name, other,weight=dependencies.matrix[j][index])
+
+    draw_graph(G, names, "org.apache.tools.ant.")
