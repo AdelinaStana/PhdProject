@@ -47,26 +47,22 @@ indicate overlapping clusters.
 def build_and_measure(dependencies_path, reference_solution_path, original_dependencies):
     print(os.path.basename(dependencies_path), end=',')
     dependencies = DependenciesBuilder(dependencies_path, original_dependencies)
-    print(dependencies.n, end=",")
-
     reference_labels = import_clustering_solution(reference_solution_path, dependencies)
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
+    print(dependencies.n, end=",")
 
-    mst = MSTClustering(dependencies)
-    print(len(mst.clusters), end=",")
+    if original_dependencies is None:
+        original_dependencies = dependencies
 
     print(round(calculate_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(calculate_modularity(original_dependencies.matrix, mst.labels), 3), end=",")
     print(round(calculate_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
 
     print(round(metrics.get_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(metrics.get_modularity(original_dependencies.matrix, mst.labels), 3), end=",")
     print(round(metrics.get_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
 
-    calculate_mojo(louvian.labels, reference_labels, dependencies)
-    calculate_mojo(mst.labels, reference_labels, dependencies)
+    calculate_mojo(louvian.labels, reference_labels, original_dependencies)
 
 
 def run_project(name):
@@ -74,11 +70,12 @@ def run_project(name):
 
     build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
                       f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
+
     print()
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", None)
 
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
@@ -92,9 +89,8 @@ def run_project(name):
 
 
 def run_all():
-    # ant_diff_results()
     # create_graphs()
-    create_graphs()
+    # ant_diff_results()
     run_project("ant")
     # run_project("catalina")
     # run_project("hibernate")

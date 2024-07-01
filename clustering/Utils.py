@@ -310,7 +310,7 @@ def draw_graph(G, cluster_nodes, cut_prefix):
     import plotly.graph_objects as go
     import networkx as nx
 
-    pos = nx.spring_layout(G, k=0.75, iterations=50)
+    pos = nx.spring_layout(G, k=0.75, iterations=10)
 
     # Create edge traces for the graph
     edge_x = []
@@ -340,6 +340,7 @@ def draw_graph(G, cluster_nodes, cut_prefix):
             node_color.append('green')
         else:
             node_color.append('LightSkyBlue')
+        node = node.split(".")[-1]
         node_text.append(node.replace(cut_prefix, ""))
 
     node_trace = go.Scatter(
@@ -349,28 +350,13 @@ def draw_graph(G, cluster_nodes, cut_prefix):
         textposition="bottom center",
         hoverinfo='text',
         marker=dict(
-            size=10,  # Smaller node size
+            size=30,  # Smaller node size
             color=node_color,
             line=dict(color='Black', width=1)),
         textfont=dict(
-            size=13,
+            size=20,
             color='Black'),
     )
-
-    # Create a trace for edge weights
-    # edge_annotations = []
-    # for edge in G.edges(data=True):
-    #     x0, y0 = pos[edge[0]]
-    #     x1, y1 = pos[edge[1]]
-    #     edge_annotations.append(
-    #         dict(
-    #             x=(x0 + x1) / 2, y=(y0 + y1) / 2,
-    #             xref="x", yref="y",
-    #             text=str(edge[2]['weight']),  # assuming the attribute is 'weight'
-    #             showarrow=False,
-    #             font=dict(size=9)
-    #         )
-    #     )
 
     # Create figure
     fig = go.Figure(data=[edge_trace, node_trace],
@@ -384,14 +370,17 @@ def draw_graph(G, cluster_nodes, cut_prefix):
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)))
 
-    fig.update_layout(title_text="")
+    fig.update_layout(
+        dragmode='lasso'  # 'lasso' allows dragging nodes
+    )
 
     # Show plot
     fig.show()
 
+
     import plotly.io as pio
     fig.update_layout(
-        autosize=False,
+        autosize=True,
         width=800,
         height=600
     )
@@ -444,34 +433,27 @@ def create_graphs():
     import networkx as nx
 
     dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
-    louvian_sd = LouvainClustering(dependencies_sd)
-
     dependencies_ld = DependenciesBuilder(
-        f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv")
+        f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv", dependencies_sd)
 
     louvian_ld = LouvainClustering(dependencies_ld)
 
     G = nx.Graph()
-    dependencies = dependencies_sd
-    names = [
-        'org.apache.tools.ant.taskdefs.Concat',
-        'org.apache.tools.ant.taskdefs.Concat$1',
-        'org.apache.tools.ant.taskdefs.Concat$MultiReader',
-        'org.apache.tools.ant.taskdefs.Concat$TextElement'
-    ]
+    dependencies = dependencies_ld
+    names = ['org.apache.tools.ant.taskdefs.Replace', 'org.apache.tools.ant.taskdefs.Replace$NestedString','org.apache.tools.ant.taskdefs.Replace$Replacefilter']
 
-    for name in names:
-        G.add_node(name)
-        index = dependencies.name_index_map[name]
-        for j in range(0, dependencies.n):
-            if dependencies.matrix[index][j] != 0:
-                other = dependencies.index_name_map[j]
-                G.add_node(other)
-                G.add_edge(name, other, weight=dependencies.matrix[index][j])
+    # for name in names:
+    #     G.add_node(name)
+    #     index = dependencies.name_index_map[name]
+    #     for j in range(0, dependencies.n):
+    #         if dependencies.matrix[index][j] != 0:
+    #             other = dependencies.index_name_map[j]
+    #             G.add_node(other)
+    #             G.add_edge(name, other, weight=dependencies.matrix[index][j])
+    #
+    #         if dependencies.matrix[j][index] != 0:
+    #             other = dependencies.index_name_map[j]
+    #             G.add_node(other)
+    #             G.add_edge(name, other,weight=dependencies.matrix[j][index])
 
-            if dependencies.matrix[j][index] != 0:
-                other = dependencies.index_name_map[j]
-                G.add_node(other)
-                G.add_edge(name, other,weight=dependencies.matrix[j][index])
-
-    draw_graph(G, names, "org.apache.tools.ant.")
+    draw_graph(dependencies.graph, names, "org.apache.tools.ant.")

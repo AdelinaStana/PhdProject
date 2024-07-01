@@ -92,5 +92,5 @@ def calculate_modularity(adj_matrix, labels):
             if i < j:
                 sum_interconnectivity += calculate_interconnectivity(adj_matrix, labels, i, j)
 
-    modularity = ((1 / k) * sum_intraconnectivity) + ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
+    modularity = ((1 / k) * sum_intraconnectivity) - ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
     return modularity

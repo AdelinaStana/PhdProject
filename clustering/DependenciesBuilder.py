@@ -41,7 +41,7 @@ class DependenciesBuilder:
                     entity2 = row[1].strip()
                     value = int(row[2].strip())
                     if len(row) > 3 and row[3]:  # LD is in that row
-                        data.append([entity1, entity2, value/2])
+                        data.append([entity1, entity2, value])
                         # data.append([entity2, entity1, value*2])
                     else:
                         data.append([entity1, entity2, value])
@@ -61,6 +61,8 @@ class DependenciesBuilder:
     def populate_matrix(self, entities_set, data):
         self.n = len(entities_set)
 
+        cluster = """"""
+        cluster = cluster.replace(" ","").replace("\n","").split(",")
         # create dict with mapping between entity and id (index)
         i = 0
         for name in entities_set:
@@ -76,7 +78,8 @@ class DependenciesBuilder:
             index_b = self.name_index_map[dependency[1]]
 
             self.matrix[index_a][index_b] += dependency[2]
-            self.graph.add_edge(index_a, index_b,  weight=dependency[2])
+            if dependency[0] in cluster and dependency[1] in cluster:
+                self.graph.add_edge(dependency[0], dependency[1],  weight=dependency[2])
 
     def repopulate_matrix(self, data, original_dependencies):
         self.index_name_map = original_dependencies.index_name_map
@@ -85,6 +88,8 @@ class DependenciesBuilder:
 
         self.matrix = np.array([[0] * self.n] * self.n)
         self.graph.clear()
+        cluster = """"""
+        cluster = cluster.replace(" ", "").replace("\n", "").replace("$", "").split(",")
 
         for dependency in data:
             if dependency[0] in self.name_index_map.keys() and dependency[1] in self.name_index_map.keys():
@@ -92,6 +97,8 @@ class DependenciesBuilder:
                 index_b = self.name_index_map[dependency[1]]
 
                 self.matrix[index_a][index_b] += dependency[2]
-                self.graph.add_edge(index_a, index_b, weight=dependency[2])
+                self.matrix[index_b][index_a] += dependency[2]
+                if dependency[0].replace("$", "") in cluster and dependency[1].replace("$", "") in cluster:
+                    self.graph.add_edge(dependency[0], dependency[1], weight=dependency[2] if dependency[2]>=300 else 100)
 
 
