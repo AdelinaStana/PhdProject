@@ -1,5 +1,6 @@
 import sys
-from ModularizationQuality import *
+import ModularizationQualityNew
+import ModularizationQuality
 from clustering import Utils
 from clustering.MSTClustering import MSTClustering
 from clustering.Utils import *
@@ -23,7 +24,6 @@ class RedirectPrintToFile:
     def __exit__(self, exc_type, exc_value, traceback):
         sys.stdout = self.original_stdout
         self.file.close()
-
 
 
 # with RedirectPrintToFile('./../results/output.txt'):
@@ -56,8 +56,10 @@ def build_and_measure(dependencies_path, reference_solution_path, original_depen
     if original_dependencies is None:
         original_dependencies = dependencies
 
-    print(round(calculate_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(calculate_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
+    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, louvian.labels), 3),
+          end=",")
+    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
+          end=",")
 
     print(round(metrics.get_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
     print(round(metrics.get_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
@@ -88,14 +90,26 @@ def run_project(name):
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
 
+def generate_ref_solutions():
+    export_reference_solution2("ant",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
+    export_reference_solution2("catalina",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_sd_ld.csv")
+    export_reference_solution2("hibernate",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_sd_ld.csv")
+    export_reference_solution2("gson",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
+
+
 def run_all():
     # create_graphs()
     # ant_diff_results()
+
     run_project("ant")
     # run_project("catalina")
     # run_project("hibernate")
     # run_project("gson")
-    # run_project("RxJava")
+
 
 
 run_all()

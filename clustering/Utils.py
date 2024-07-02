@@ -149,24 +149,24 @@ def convert_to_cluster_packages(file_path):
         else:
             packages[package] = [name]
 
-    threshold = 15
-    if 'hibernate' in file_path:
-        threshold = 30
-
-    to_delete = set()
-    keys = list(packages.keys())
-    keys = sorted(keys)
-    for package in keys:
-        if len(packages[package]) <= threshold:
-            for item in packages[package]:
-                parts = item.split(".")
-                new_package = parts[-3]
-                if new_package in packages.keys() and new_package != package:
-                    packages[new_package].append(item)
-                    to_delete.add(package)
-
-    for deleted in to_delete:
-        del packages[deleted]
+    # threshold = 15
+    # if 'hibernate' in file_path:
+    #     threshold = 30
+    #
+    # to_delete = set()
+    # keys = list(packages.keys())
+    # keys = sorted(keys)
+    # for package in keys:
+    #     if len(packages[package]) <= threshold:
+    #         for item in packages[package]:
+    #             parts = item.split(".")
+    #             new_package = parts[-3]
+    #             if new_package in packages.keys() and new_package != package:
+    #                 packages[new_package].append(item)
+    #                 to_delete.add(package)
+    #
+    # for deleted in to_delete:
+    #     del packages[deleted]
 
     # print(f"packages: {len(packages.keys())}")
     # for package in packages.keys():
@@ -245,10 +245,29 @@ To export reference solution
 '''
 
 
-def export_reference_solution(name, file_path, dependencies_mapper):
+def export_reference_solution(name, file_path):
+    dependencies_mapper = DependenciesBuilder(file_path)
     reference_labels = create_clustering_based_on_packages(file_path, dependencies_mapper)
     reference_clusters = map_labels_to_cluster_array(reference_labels, dependencies_mapper)
     save_clusters(reference_clusters, f"{name}_reference.rsf")
+
+
+def export_reference_solution2(name, file_path):
+    dependencies_mapper = DependenciesBuilder(file_path)
+    entities_set, data = dependencies_mapper.read_csv_dependencies(file_path)
+    packages = convert_to_cluster_packages(file_path)
+
+    for entity in entities_set:
+        for package in packages.keys():
+            if entity in packages[package]:
+                for connection in packages[package]:
+                    data.append([entity, connection, 1])
+                    data.append([connection, entity, 1])
+
+    dependencies_mapper.populate_matrix(entities_set, data)
+    louvian = LouvainClustering(dependencies_mapper)
+    reference_clusters = map_labels_to_cluster_array(louvian.labels, dependencies_mapper)
+    save_clusters(reference_clusters, f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
 
 def import_clustering_solution(file_path, dependencies_mapper):
@@ -409,7 +428,7 @@ def ant_diff_results():
     dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
     louvian_sd = LouvainClustering(dependencies_sd)
 
-    dependencies_ld = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv",
+    dependencies_ld = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv",
                                           dependencies_sd)
 
     louvian_ld = LouvainClustering(dependencies_ld)

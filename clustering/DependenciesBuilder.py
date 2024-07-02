@@ -62,7 +62,7 @@ class DependenciesBuilder:
         self.n = len(entities_set)
 
         cluster = """"""
-        cluster = cluster.replace(" ","").replace("\n","").split(",")
+        cluster = cluster.replace(" ", "").replace("\n","").split(",")
         # create dict with mapping between entity and id (index)
         i = 0
         for name in entities_set:
@@ -97,7 +97,7 @@ class DependenciesBuilder:
                 index_b = self.name_index_map[dependency[1]]
 
                 self.matrix[index_a][index_b] += dependency[2]
-                self.matrix[index_b][index_a] += dependency[2]
+
                 if dependency[0].replace("$", "") in cluster and dependency[1].replace("$", "") in cluster:
                     self.graph.add_edge(dependency[0], dependency[1], weight=dependency[2] if dependency[2]>=300 else 100)
 
