@@ -115,8 +115,6 @@ org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.MemoryRealm,13, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.RealmBase,10, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.RealmBase$AllRolesMode,10, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.UserDatabaseRealm,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.Constants,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.HTMLManagerServlet,11, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.AccessLogValve,14, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
@@ -261,7 +259,6 @@ org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filte
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
-org.apache.catalina.manager.Constants,org.apache.catalina.manager.host.Constants,12, LD
 org.apache.catalina.manager.Constants,org.apache.catalina.manager.HTMLManagerServlet,13, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat,39, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
@@ -359,7 +356,6 @@ org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.auth
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,8, LD
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.FormAuthenticator,7, LD
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.SSLAuthenticator,7, LD
-org.apache.catalina.loader.JdbcLeakPrevention,org.apache.catalina.loader.WebappClassLoader,6, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.AuthenticatorBase,11, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,11, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials,18, LD
@@ -1275,8 +1271,6 @@ org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,o
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve,6, LD
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,6, LD
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState,6, LD
-org.apache.catalina.filters.WebdavFixFilter,org.apache.catalina.filters.RequestDumperFilter,5, LD
-org.apache.catalina.filters.WebdavFixFilter,org.apache.catalina.filters.RequestDumperFilter$Timestamp,5, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,17, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,17, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,17, LD
@@ -1353,7 +1347,6 @@ org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.a
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContext,14, LD
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContext$DispatchData,14, LD
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContextFacade,18, LD
-org.apache.catalina.valves.Constants,org.apache.catalina.valves.Constants$AccessLog,4, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.DataSourceRealm,15, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.JAASRealm,13, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.JDBCRealm,19, LD
@@ -1362,7 +1355,6 @@ org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.JNDIRealm$User,1
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.RealmBase,14, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.RealmBase$AllRolesMode,14, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.UserDatabaseRealm,13, LD
-org.apache.catalina.valves.Constants$AccessLog,org.apache.catalina.valves.Constants,4, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper,22, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MapElement,22, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MappedHost,22, LD

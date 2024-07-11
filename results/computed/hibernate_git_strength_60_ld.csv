@@ -36,7 +36,6 @@ org.hibernate.engine.spi.ManagedComposite,org.hibernate.event.internal.AbstractF
 org.hibernate.engine.spi.ManagedComposite,org.hibernate.bytecode.enhance.spi.Enhancer,1, LD
 org.hibernate.engine.spi.ManagedComposite,org.hibernate.engine.internal.EntityEntryContext,1, LD
 org.hibernate.engine.spi.ManagedComposite,org.hibernate.engine.internal.EntityEntryContext$ManagedEntityImpl,1, LD
-org.hibernate.internal.SessionImpl$BaseNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$BaseNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$BaseNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$BaseNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -54,7 +53,6 @@ org.hibernate.engine.spi.ManagedEntity,org.hibernate.engine.internal.EntityEntry
 org.hibernate.engine.spi.ManagedEntity,org.hibernate.engine.internal.EntityEntryContext$ImmutableManagedEntityHolder,2, LD
 org.hibernate.engine.spi.ManagedEntity,org.hibernate.engine.internal.EntityEntryContext$ManagedEntityImpl,2, LD
 org.hibernate.engine.spi.ManagedEntity,org.hibernate.tool.enhance.EnhancementTask,2, LD
-org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
 org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,45, LD
@@ -105,7 +103,6 @@ org.hibernate.event.spi.EventSource,org.hibernate.engine.spi.ActionQueue$Transac
 org.hibernate.event.spi.EventSource,org.hibernate.engine.spi.ActionQueue$InsertActionSorter,2, LD
 org.hibernate.event.spi.EventSource,org.hibernate.engine.spi.ActionQueue$ListProvider,2, LD
 org.hibernate.event.spi.EventSource,org.hibernate.engine.internal.Cascade,2, LD
-org.hibernate.event.spi.EventSource,org.hibernate.internal.SessionImpl,2, LD
 org.hibernate.event.spi.EventSource,org.hibernate.internal.SessionImpl$LobHelperImpl,2, LD
 org.hibernate.event.spi.EventSource,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,2, LD
 org.hibernate.event.spi.EventSource,org.hibernate.internal.SessionImpl$LockRequestImpl,2, LD
@@ -138,7 +135,6 @@ org.hibernate.type.StringNVarcharType,org.hibernate.engine.jdbc.LobCreator,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.cfg.Configuration,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.StringNVarcharType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.StringNVarcharType,org.hibernate.type.NClobType,1, LD
@@ -164,7 +160,6 @@ org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.cfg.Configurat
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.type.StringNVarcharType,1, LD
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.PrimitiveCharacterArrayNClobType,org.hibernate.type.NClobType,1, LD
@@ -213,7 +208,6 @@ org.hibernate.collection.internal.PersistentMap$MapEntryProxy,org.hibernate.coll
 org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl,org.hibernate.tool.schema.extract.spi.DatabaseInformation,3, LD
 org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl,org.hibernate.tool.schema.extract.spi.ExtractionContext,3, LD
 org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl,org.hibernate.tool.schema.extract.spi.ExtractionContext$DatabaseObjectAccess,3, LD
-org.hibernate.internal.SessionFactoryRegistry$ObjectFactoryImpl,org.hibernate.internal.SessionFactoryImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry$ObjectFactoryImpl,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry$ObjectFactoryImpl,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry$ObjectFactoryImpl,org.hibernate.internal.SessionFactoryRegistry,5, LD
@@ -233,7 +227,6 @@ org.hibernate.boot.model.source.internal.hbm.ModelBinder$DelayedPropertyReferenc
 org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.spi.SessionFactoryBuilderFactory,1, LD
 org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.internal.MetadataImpl,1, LD
 org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.internal.SessionFactoryBuilderImpl,1, LD
-org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,1, LD
 org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.internal.SessionFactoryOptionsImpl,1, LD
 org.hibernate.boot.spi.SessionFactoryBuilderImplementor,org.hibernate.boot.internal.SessionFactoryOptionsState,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.MapEntryNode,1, LD
@@ -242,7 +235,6 @@ org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.in
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.MapEntryNode$MapEntryBuilder,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.MapEntryNode$EntryAdapter,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.MapKeyNode,1, LD
-org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.FromElement,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.AbstractMapComponentNode,1, LD
 org.hibernate.hql.internal.ast.tree.MapKeyEntityFromElement,org.hibernate.hql.internal.ast.tree.FromElementType,1, LD
@@ -260,7 +252,6 @@ org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.action.internal.
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.event.spi.DeleteEvent,1, LD
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.engine.internal.Cascade,1, LD
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.event.spi.EventSource,1, LD
-org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.action.internal.OrphanRemovalAction,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -287,7 +278,6 @@ org.hibernate.id.enhanced.PooledLoThreadLocalOptimizer,org.hibernate.id.enhanced
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.ConstructorResultColumnProcessor,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.JdbcResultMetadata,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.ResultColumnProcessor,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.loader.custom.ResultRowProcessor,1, LD
@@ -303,7 +293,6 @@ org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.interna
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$FloatDescriptor,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$DoubleDescriptor,1, LD
 org.hibernate.loader.custom.NonScalarResultColumnProcessor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$PrimitiveWrapperDescriptor,1, LD
-org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -317,7 +306,6 @@ org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,org.hibernate.Session
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.event.internal.AbstractSaveEventListener,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.event.internal.AbstractSaveEventListener$EntityState,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.action.internal.EntityInsertAction,4, LD
-org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl$LobHelperImpl,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl$LockRequestImpl,3, LD
@@ -328,7 +316,6 @@ org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,3, LD
 org.hibernate.action.internal.AbstractEntityInsertAction,org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,3, LD
 org.hibernate.hql.internal.ast.tree.IdentNode$DereferenceType,org.hibernate.hql.internal.ast.tree.IdentNode,5, LD
-org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -371,17 +358,6 @@ org.hibernate.event.internal.EntityCopyAllowedObserver,org.hibernate.event.inter
 org.hibernate.event.internal.DefaultSaveOrUpdateEventListener,org.hibernate.event.internal.AbstractSaveEventListener,4, LD
 org.hibernate.event.internal.DefaultSaveOrUpdateEventListener,org.hibernate.event.internal.AbstractSaveEventListener$EntityState,4, LD
 org.hibernate.event.internal.DefaultSaveOrUpdateEventListener,org.hibernate.event.internal.DefaultMergeEventListener,4, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$MultiIdentifierLoadAccessImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$BaseNaturalIdLoadAccessImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,45, LD
-org.hibernate.internal.SessionImpl,org.hibernate.Session,9, LD
-org.hibernate.internal.SessionImpl,org.hibernate.Session$LockRequest,9, LD
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList,5, LD
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList$Clear,5, LD
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,5, LD
@@ -389,7 +365,6 @@ org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collect
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList$Set,5, LD
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList$Remove,5, LD
 org.hibernate.collection.internal.PersistentList$SimpleAdd,org.hibernate.collection.internal.PersistentList$SimpleRemove,5, LD
-org.hibernate.boot.internal.SessionFactoryBuilderImpl,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,7, LD
 org.hibernate.criterion.Property,org.hibernate.criterion.Restrictions,4, LD
 org.hibernate.cfg.InheritanceState,org.hibernate.cfg.InheritanceState$ElementsToProcess,2, LD
 org.hibernate.hql.internal.ast.tree.DotNode,org.hibernate.hql.internal.ast.tree.DotNode$IllegalCollectionDereferenceExceptionBuilder,9, LD
@@ -411,7 +386,6 @@ org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,org.hibernate.hql.internal.ast.tree.FromClause,1, LD
-org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,org.hibernate.hql.internal.ast.tree.FromElement,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,1, LD
 org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,org.hibernate.collection.internal.PersistentList,5, LD
 org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,org.hibernate.collection.internal.PersistentList$Clear,5, LD
@@ -420,7 +394,6 @@ org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperati
 org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,org.hibernate.collection.internal.PersistentList$Set,5, LD
 org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,org.hibernate.collection.internal.PersistentList$Remove,5, LD
 org.hibernate.collection.internal.PersistentList$AbstractListValueDelayedOperation,org.hibernate.collection.internal.PersistentList$SimpleRemove,5, LD
-org.hibernate.internal.StatelessSessionImpl,org.hibernate.internal.SessionImpl,5, LD
 org.hibernate.internal.StatelessSessionImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,5, LD
 org.hibernate.internal.StatelessSessionImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,5, LD
 org.hibernate.internal.StatelessSessionImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,5, LD
@@ -479,7 +452,6 @@ org.hibernate.cfg.annotations.BagBinder,org.hibernate.cfg.AnnotationBinder$Local
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.ConstructorResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.JdbcResultMetadata,1, LD
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.NonScalarResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ResultColumnProcessor,org.hibernate.loader.custom.ResultRowProcessor,1, LD
@@ -507,7 +479,6 @@ org.hibernate.hql.internal.ast.SqlGenerator,org.hibernate.hql.internal.ast.SqlGe
 org.hibernate.hql.internal.ast.SqlGenerator,org.hibernate.hql.internal.ast.SqlGenerator$DefaultWriter,7, LD
 org.hibernate.hql.internal.ast.SqlGenerator,org.hibernate.hql.internal.ast.SqlGenerator$SqlWriter,7, LD
 org.hibernate.hql.internal.ast.SqlGenerator,org.hibernate.hql.internal.ast.SqlGenerator$FunctionArgumentsCollectingWriter,7, LD
-org.hibernate.loader.custom.NonUniqueDiscoveredSqlAliasException,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder,org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl,1, LD
 org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder,org.hibernate.engine.jdbc.connections.internal.PooledConnections,1, LD
 org.hibernate.annotations.SortComparator,org.hibernate.annotations.SortNatural,2, LD
@@ -582,7 +553,6 @@ org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeMapSecon
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeMapSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$ManyToOneColumnBinder,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeMapSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$ManyToOneFkSecondPass,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeMapSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$NaturalIdUniqueKeyBinderImpl,9, LD
-org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,org.hibernate.internal.SessionFactoryImpl,47, LD
 org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,47, LD
 org.hibernate.dialect.Dialect,org.hibernate.dialect.Oracle8iDialect,11, LD
 org.hibernate.persister.collection.CollectionPersister,org.hibernate.persister.collection.AbstractCollectionPersister,4, LD
@@ -636,7 +606,6 @@ org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.loader.entity.Dynamic
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder$DynamicEntityLoader,1, LD
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.engine.spi.SessionDelegatorBaseImpl,1, LD
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.IdentifierLoadAccess,1, LD
-org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.loader.BatchLoadSizingStrategy,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -676,7 +645,6 @@ org.hibernate.engine.jdbc.batch.internal.BatchBuilderMXBean,org.hibernate.engine
 org.hibernate.engine.jdbc.batch.internal.BatchBuilderMXBean,org.hibernate.engine.jdbc.batch.spi.Batch,1, LD
 org.hibernate.engine.jdbc.batch.internal.BatchBuilderMXBean,org.hibernate.engine.jdbc.batch.spi.BatchBuilder,1, LD
 org.hibernate.engine.jdbc.batch.internal.BatchBuilderMXBean,org.hibernate.engine.jdbc.batch.spi.BatchKey,1, LD
-org.hibernate.internal.SessionImpl$LobHelperImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$LobHelperImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$LobHelperImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
 org.hibernate.internal.SessionImpl$LobHelperImpl,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,45, LD
@@ -711,7 +679,6 @@ org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.persister.entity.A
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.persister.entity.AbstractEntityPersister$InclusionChecker,1, LD
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.persister.entity.AbstractEntityPersister$CacheEntryHelper,1, LD
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.persister.entity.EntityPersister,1, LD
-org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.persister.entity.MultiLoadOptions,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -907,7 +874,6 @@ org.hibernate.EntityNameResolver,org.hibernate.persister.entity.AbstractEntityPe
 org.hibernate.EntityNameResolver,org.hibernate.persister.entity.AbstractEntityPersister$InclusionChecker,1, LD
 org.hibernate.EntityNameResolver,org.hibernate.persister.entity.AbstractEntityPersister$CacheEntryHelper,1, LD
 org.hibernate.EntityNameResolver,org.hibernate.IdentifierLoadAccess,1, LD
-org.hibernate.EntityNameResolver,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.EntityNameResolver,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.EntityNameResolver,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.EntityNameResolver,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -926,7 +892,6 @@ org.hibernate.EntityNameResolver,org.hibernate.Session$LockRequest,1, LD
 org.hibernate.engine.internal.ForeignKeys,org.hibernate.engine.internal.ForeignKeys$Nullifier,3, LD
 org.hibernate.engine.spi.SessionFactoryDelegatingImpl,org.hibernate.engine.spi.SessionFactoryImplementor,2, LD
 org.hibernate.engine.spi.SessionFactoryDelegatingImpl,org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,2, LD
-org.hibernate.engine.spi.SessionFactoryDelegatingImpl,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.engine.spi.SessionFactoryDelegatingImpl,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.engine.spi.SessionFactoryDelegatingImpl,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.action.internal.BulkOperationCleanupAction,org.hibernate.action.internal.BulkOperationCleanupAction$EntityCleanup,5, LD
@@ -1063,7 +1028,6 @@ org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$
 org.hibernate.engine.spi.AbstractDelegatingSessionBuilderImplementor,org.hibernate.engine.spi.AbstractDelegatingSharedSessionBuilder,1, LD
 org.hibernate.engine.spi.AbstractDelegatingSessionBuilderImplementor,org.hibernate.engine.spi.AbstractDelegatingSessionBuilder,1, LD
 org.hibernate.event.service.internal.PostCommitEventListenerGroupImpl,org.hibernate.event.service.internal.EventListenerRegistryImpl,1, LD
-org.hibernate.cache.internal.CollectionCacheInvalidator,org.hibernate.cache.internal.CollectionCacheInvalidator$CollectionEvictCacheAction,6, LD
 org.hibernate.cfg.annotations.HCANNHelper,org.hibernate.internal.CoreMessageLogger,1, LD
 org.hibernate.cfg.annotations.HCANNHelper,org.hibernate.cfg.PropertyContainer,1, LD
 org.hibernate.engine.jdbc.spi.SqlExceptionHelper,org.hibernate.engine.jdbc.spi.SqlExceptionHelper$WarningHandlerLoggingSupport,4, LD
@@ -1111,7 +1075,6 @@ org.hibernate.cfg.IndexColumn,org.hibernate.cfg.AnnotationBinder,2, LD
 org.hibernate.cfg.IndexColumn,org.hibernate.cfg.AnnotationBinder$LocalCacheAnnotationImpl,2, LD
 org.hibernate.hql.internal.ast.tree.ComponentJoin,org.hibernate.hql.internal.ast.tree.ComponentJoin$ComponentFromElementType,5, LD
 org.hibernate.hql.internal.ast.tree.ComponentJoin,org.hibernate.hql.internal.ast.tree.ComponentJoin$ComponentPropertyMapping,5, LD
-org.hibernate.internal.SessionImpl$MultiIdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$MultiIdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$MultiIdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$MultiIdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -1130,19 +1093,15 @@ org.hibernate.context.internal.ManagedSessionContext,org.hibernate.context.inter
 org.hibernate.context.internal.ManagedSessionContext,org.hibernate.context.internal.ThreadLocalSessionContext,2, LD
 org.hibernate.context.internal.ManagedSessionContext,org.hibernate.context.internal.ThreadLocalSessionContext$CleanupSync,2, LD
 org.hibernate.context.internal.ManagedSessionContext,org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper,2, LD
-org.hibernate.context.internal.ManagedSessionContext,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.context.internal.ManagedSessionContext,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.context.internal.ManagedSessionContext,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,org.hibernate.engine.spi.SelfDirtinessTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,2, LD
-org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,org.hibernate.bytecode.enhance.spi.EnhancerConstants,2, LD
-org.hibernate.engine.spi.CacheImplementor,org.hibernate.internal.CacheImpl,2, LD
 org.hibernate.engine.spi.CacheImplementor,org.hibernate.engine.spi.CacheInitiator,2, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.ConstructorResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.JdbcResultMetadata,1, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.NonScalarResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ResultRowProcessor,org.hibernate.loader.custom.ResultColumnProcessor,1, LD
@@ -1186,7 +1145,6 @@ org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.cfg.Configuratio
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.procedure.internal.ProcedureCallMementoImpl$ParameterMemento,1, LD
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.cfg.annotations.reflection.JPAMetadataProvider,1, LD
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.cfg.annotations.QueryBinder,1, LD
-org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.internal.SessionFactoryImpl,1, LD
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,1, LD
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,1, LD
 org.hibernate.cfg.annotations.QueryHintDefinition,org.hibernate.cfg.annotations.reflection.JPAOverriddenAnnotationReader,1, LD
@@ -1271,7 +1229,6 @@ org.hibernate.id.IdentityGenerator$InsertSelectDelegate,org.hibernate.id.Sequenc
 org.hibernate.id.IdentityGenerator$InsertSelectDelegate,org.hibernate.id.SequenceIdentityGenerator$NoCommentsInsert,4, LD
 org.hibernate.id.IdentityGenerator$InsertSelectDelegate,org.hibernate.id.IdentityGenerator,5, LD
 org.hibernate.id.IdentityGenerator$InsertSelectDelegate,org.hibernate.id.IdentityGenerator$BasicDelegate,5, LD
-org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -1347,7 +1304,6 @@ org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.inte
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.internal.ast.tree.FromClause,1, LD
-org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.internal.ast.tree.FromElement,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,1, LD
 org.hibernate.procedure.spi.ParameterRegistrationImplementor,org.hibernate.procedure.internal.AbstractParameterRegistrationImpl,2, LD
 org.hibernate.procedure.spi.ParameterRegistrationImplementor,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
@@ -1373,7 +1329,6 @@ org.hibernate.tool.schema.internal.HibernateSchemaManagementTool,org.hibernate.t
 org.hibernate.tool.schema.internal.HibernateSchemaManagementTool,org.hibernate.tool.schema.spi.SchemaFilterProvider,2, LD
 org.hibernate.boot.internal.SessionFactoryOptionsImpl,org.hibernate.cfg.AvailableSettings,3, LD
 org.hibernate.boot.internal.SessionFactoryOptionsImpl,org.hibernate.boot.internal.SessionFactoryBuilderImpl,3, LD
-org.hibernate.boot.internal.SessionFactoryOptionsImpl,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,3, LD
 org.hibernate.boot.internal.SessionFactoryOptionsImpl,org.hibernate.boot.internal.SessionFactoryOptionsState,3, LD
 org.hibernate.bytecode.enhance.spi.EnhancementContext,org.hibernate.bytecode.enhance.spi.DefaultEnhancementContext,3, LD
 org.hibernate.bytecode.enhance.spi.EnhancementContext,org.hibernate.tool.enhance.EnhancementTask,6, LD
@@ -1385,7 +1340,6 @@ org.hibernate.type.EnumType$OrdinalEnumValueMapper,org.hibernate.type.EnumType$E
 org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,org.hibernate.engine.spi.SelfDirtinessTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,2, LD
-org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,org.hibernate.bytecode.enhance.spi.EnhancerConstants,2, LD
 org.hibernate.jdbc.WorkExecutor,org.hibernate.id.MultipleHiLoPerTableGenerator,1, LD
 org.hibernate.jdbc.WorkExecutor,org.hibernate.jdbc.WorkExecutorVisitable,1, LD
 org.hibernate.jdbc.WorkExecutor,org.hibernate.id.enhanced.TableGenerator,1, LD
@@ -1405,7 +1359,6 @@ org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boo
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl,1, LD
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boot.spi.SessionFactoryOptions,1, LD
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boot.internal.SessionFactoryBuilderImpl,1, LD
-org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,1, LD
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boot.internal.SessionFactoryOptionsImpl,1, LD
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.boot.internal.SessionFactoryOptionsState,1, LD
 org.hibernate.resource.jdbc.spi.PhysicalConnectionHandlingMode,org.hibernate.internal.AbstractSessionImpl,1, LD
@@ -1440,7 +1393,6 @@ org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.cfg.annotations.Name
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.internal.PostgresCallableStatementSupport,1, LD
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.internal.StandardCallableStatementSupport,1, LD
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.internal.ProcedureCallMementoImpl,1, LD
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.dialect.PostgreSQL81Dialect,1, LD
 org.hibernate.procedure.spi.ParameterStrategy,org.hibernate.procedure.spi.CallableStatementSupport,1, LD
@@ -1455,7 +1407,6 @@ org.hibernate.NaturalIdLoadAccess,org.hibernate.persister.entity.AbstractEntityP
 org.hibernate.NaturalIdLoadAccess,org.hibernate.persister.entity.AbstractEntityPersister$InclusionChecker,3, LD
 org.hibernate.NaturalIdLoadAccess,org.hibernate.persister.entity.AbstractEntityPersister$CacheEntryHelper,3, LD
 org.hibernate.NaturalIdLoadAccess,org.hibernate.IdentifierLoadAccess,3, LD
-org.hibernate.NaturalIdLoadAccess,org.hibernate.internal.SessionImpl,5, LD
 org.hibernate.NaturalIdLoadAccess,org.hibernate.internal.SessionImpl$LobHelperImpl,5, LD
 org.hibernate.NaturalIdLoadAccess,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,5, LD
 org.hibernate.NaturalIdLoadAccess,org.hibernate.internal.SessionImpl$LockRequestImpl,5, LD
@@ -1550,15 +1501,12 @@ org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.Procedu
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.Outputs,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.internal.OutputsImpl,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,1, LD
-org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.internal.ResultSetOutputImpl,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.result.internal.UpdateCountOutputImpl,1, LD
 org.hibernate.procedure.NoSuchParameterException,org.hibernate.procedure.ParameterStrategyException,1, LD
-org.hibernate.internal.SessionImpl$LockRequestImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$LockRequestImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$LockRequestImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$LockRequestImpl,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,45, LD
@@ -1584,7 +1532,6 @@ org.hibernate.engine.internal.CascadePoint,org.hibernate.event.internal.Abstract
 org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.cfg.AvailableSettings,2, LD
 org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.boot.spi.SessionFactoryOptions,2, LD
 org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.boot.internal.SessionFactoryBuilderImpl,2, LD
-org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,2, LD
 org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.boot.internal.SessionFactoryOptionsImpl,2, LD
 org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions,org.hibernate.boot.internal.SessionFactoryOptionsState,2, LD
 org.hibernate.collection.internal.PersistentList,org.hibernate.collection.internal.PersistentList$Clear,5, LD
@@ -1641,12 +1588,10 @@ org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequence
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinFragment,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,org.hibernate.hql.internal.ast.tree.FromClause,1, LD
-org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,org.hibernate.hql.internal.ast.tree.FromElement,1, LD
 org.hibernate.hql.internal.ast.tree.EntityJoinFromElement$EntityJoinJoinSequenceImpl,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.ConstructorResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.JdbcResultMetadata,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.NonScalarResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ScalarResultColumnProcessor,org.hibernate.loader.custom.ResultColumnProcessor,1, LD
@@ -1680,7 +1625,6 @@ org.hibernate.type.CharacterArrayNClobType,org.hibernate.cfg.Configuration,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.type.StringNVarcharType,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.CharacterArrayNClobType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.CharacterArrayNClobType,org.hibernate.type.NClobType,1, LD
@@ -1729,7 +1673,6 @@ org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeArraySec
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeArraySecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$ManyToOneColumnBinder,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeArraySecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$ManyToOneFkSecondPass,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeArraySecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$NaturalIdUniqueKeyBinderImpl,9, LD
-org.hibernate.IdentifierLoadAccess,org.hibernate.internal.SessionImpl,5, LD
 org.hibernate.IdentifierLoadAccess,org.hibernate.internal.SessionImpl$LobHelperImpl,5, LD
 org.hibernate.IdentifierLoadAccess,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,5, LD
 org.hibernate.IdentifierLoadAccess,org.hibernate.internal.SessionImpl$LockRequestImpl,5, LD
@@ -1762,15 +1705,10 @@ org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$BaseNatural
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$NaturalIdLoadAccessImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$ManagedFlushCheckerStandardImpl,2, LD
-org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$LobHelperImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$LockRequestImpl,2, LD
 org.hibernate.event.spi.LoadEvent,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,2, LD
-org.hibernate.cfg.IndexOrUniqueKeySecondPass,org.hibernate.cfg.AnnotationBinder,2, LD
-org.hibernate.cfg.IndexOrUniqueKeySecondPass,org.hibernate.cfg.AnnotationBinder$LocalCacheAnnotationImpl,2, LD
-org.hibernate.cfg.IndexOrUniqueKeySecondPass,org.hibernate.cfg.annotations.TableBinder,2, LD
-org.hibernate.cfg.IndexOrUniqueKeySecondPass,org.hibernate.cfg.annotations.TableBinder$AssociationTableNameSource,2, LD
 org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADialect$CloseSuppressingReader,3, LD
 org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADialect$CloseSuppressingInputStream,3, LD
 org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADialect$MaterializedBlob,3, LD
@@ -1780,7 +1718,6 @@ org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADial
 org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADialect$HANANClobTypeDescriptor,3, LD
 org.hibernate.dialect.AbstractHANADialect,org.hibernate.dialect.AbstractHANADialect$HANABlobTypeDescriptor,3, LD
 org.hibernate.engine.spi.SessionFactoryImplementor,org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,10, LD
-org.hibernate.engine.spi.SessionFactoryImplementor,org.hibernate.internal.SessionFactoryImpl,8, LD
 org.hibernate.engine.spi.SessionFactoryImplementor,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,8, LD
 org.hibernate.engine.spi.SessionFactoryImplementor,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,8, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeIdBagSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder,9, LD
@@ -1801,12 +1738,10 @@ org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.Proce
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.Outputs,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.internal.OutputsImpl,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,1, LD
-org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.internal.ResultSetOutputImpl,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.result.internal.UpdateCountOutputImpl,1, LD
 org.hibernate.procedure.ParameterStrategyException,org.hibernate.procedure.NoSuchParameterException,1, LD
 org.hibernate.dialect.Oracle10gDialect,org.hibernate.dialect.Dialect,3, LD
@@ -1848,7 +1783,6 @@ org.hibernate.type.CharacterNCharType,org.hibernate.cfg.Configuration,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.type.StringNVarcharType,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.CharacterNCharType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.CharacterNCharType,org.hibernate.type.NClobType,1, LD
@@ -1925,7 +1859,6 @@ org.hibernate.dialect.unique.UniqueDelegate,org.hibernate.cfg.Configuration,3, L
 org.hibernate.dialect.unique.UniqueDelegate,org.hibernate.mapping.Table,5, LD
 org.hibernate.dialect.unique.UniqueDelegate,org.hibernate.mapping.Table$ForeignKeyKey,5, LD
 org.hibernate.dialect.unique.UniqueDelegate,org.hibernate.mapping.UniqueKey,3, LD
-org.hibernate.Session$LockRequest,org.hibernate.internal.SessionImpl,9, LD
 org.hibernate.Session$LockRequest,org.hibernate.internal.SessionImpl$LobHelperImpl,9, LD
 org.hibernate.Session$LockRequest,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,9, LD
 org.hibernate.Session$LockRequest,org.hibernate.internal.SessionImpl$LockRequestImpl,9, LD
@@ -2026,7 +1959,6 @@ org.hibernate.engine.spi.CascadingActions$BaseCascadingAction,org.hibernate.engi
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.procedure.ProcedureCall,2, LD
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.procedure.internal.ProcedureOutputsImpl,2, LD
-org.hibernate.procedure.ProcedureOutputs,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,2, LD
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.result.Outputs,2, LD
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.result.internal.OutputsImpl,2, LD
 org.hibernate.procedure.ProcedureOutputs,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
@@ -2121,7 +2053,6 @@ org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.engine.spi.EntityEntry
 org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,2, LD
 org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,2, LD
 org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,2, LD
-org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.engine.spi.ActionQueue$AbstractTransactionCompletionProcessQueue,org.hibernate.engine.spi.ActionQueue,14, LD
@@ -2215,7 +2146,6 @@ org.hibernate.tool.schema.spi.SchemaFilter,org.hibernate.tool.schema.internal.De
 org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,org.hibernate.engine.spi.SelfDirtinessTracker,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,2, LD
-org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker,org.hibernate.bytecode.enhance.spi.EnhancerConstants,2, LD
 org.hibernate.internal.util.xml.BaseXMLEventReader,org.hibernate.internal.util.xml.BufferedXMLEventReader,1, LD
 org.hibernate.internal.util.xml.BaseXMLEventReader,org.hibernate.internal.util.xml.FilteringXMLEventReader,1, LD
 org.hibernate.internal.util.xml.BaseXMLEventReader,org.hibernate.internal.util.xml.UnsupportedOrmXsdVersionException,1, LD
@@ -2269,7 +2199,6 @@ org.hibernate.internal.FilterAliasGenerator,org.hibernate.cfg.annotations.Collec
 org.hibernate.internal.FilterAliasGenerator,org.hibernate.mapping.PersistentClass,1, LD
 org.hibernate.internal.FilterAliasGenerator,org.hibernate.internal.StaticFilterAliasGenerator,1, LD
 org.hibernate.internal.FilterAliasGenerator,org.hibernate.mapping.Subclass,1, LD
-org.hibernate.Session,org.hibernate.internal.SessionImpl,9, LD
 org.hibernate.Session,org.hibernate.internal.SessionImpl$LobHelperImpl,9, LD
 org.hibernate.Session,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,9, LD
 org.hibernate.Session,org.hibernate.internal.SessionImpl$LockRequestImpl,9, LD
@@ -2307,7 +2236,6 @@ org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.Cust
 org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.engine.spi.EntityEntry,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,2, LD
-org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.dialect.identity.Oracle12cGetGeneratedKeysDelegate,org.hibernate.dialect.identity.Oracle12cIdentityColumnSupport,1, LD
@@ -2321,7 +2249,6 @@ org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.Custo
 org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.engine.spi.EntityEntry,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,2, LD
-org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.engine.spi.ActionQueue$AfterTransactionCompletionProcessQueue,org.hibernate.engine.spi.ActionQueue,14, LD
@@ -2343,7 +2270,6 @@ org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.C
 org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.engine.spi.EntityEntry,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.CustomEntityDirtinessStrategy$DirtyCheckContext,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.CustomEntityDirtinessStrategy$AttributeChecker,2, LD
-org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.internal.SessionFactoryImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,2, LD
 org.hibernate.CustomEntityDirtinessStrategy$AttributeInformation,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,2, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibernate.engine.spi.SelfDirtinessTracker,1, LD
@@ -2351,7 +2277,6 @@ org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibe
 org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker,1, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibernate.bytecode.enhance.internal.tracker.SortedFieldTracker,1, LD
 org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibernate.bytecode.enhance.spi.CollectionTracker,1, LD
-org.hibernate.bytecode.enhance.internal.tracker.SimpleCollectionTracker,org.hibernate.bytecode.enhance.spi.EnhancerConstants,1, LD
 org.hibernate.hql.internal.ast.QueryTranslatorImpl$JavaConstantConverter,org.hibernate.hql.internal.ast.QueryTranslatorImpl,6, LD
 org.hibernate.boot.model.naming.DatabaseIdentifier,org.hibernate.engine.jdbc.env.internal.NormalizingIdentifierHelperImpl,1, LD
 org.hibernate.boot.model.naming.DatabaseIdentifier,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl,1, LD
@@ -2387,7 +2312,6 @@ org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.persister.entity.Abs
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.persister.entity.AbstractEntityPersister$ReferenceCacheEntryHelper,4, LD
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.persister.entity.EntityPersister,3, LD
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.IdentifierLoadAccess,2, LD
-org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.internal.SessionImpl,4, LD
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.internal.SessionImpl$LobHelperImpl,4, LD
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,4, LD
 org.hibernate.event.spi.ResolveNaturalIdEvent,org.hibernate.internal.SessionImpl$LockRequestImpl,4, LD
@@ -2408,7 +2332,6 @@ org.hibernate.engine.internal.AbstractEntityEntry$EnumState,org.hibernate.engine
 org.hibernate.engine.internal.AbstractEntityEntry$EnumState,org.hibernate.engine.internal.ImmutableEntityEntry,3, LD
 org.hibernate.boot.model.source.internal.hbm.NamedQueryBinder,org.hibernate.engine.spi.NamedSQLQueryDefinition,2, LD
 org.hibernate.internal.util.collections.JoinedIterator,org.hibernate.mapping.Collection,2, LD
-org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer,org.hibernate.proxy.pojo.javassist.JavassistProxyFactory,4, LD
 org.hibernate.loader.criteria.EntityCriteriaInfoProvider,org.hibernate.loader.criteria.CriteriaQueryTranslator,2, LD
 org.hibernate.loader.criteria.EntityCriteriaInfoProvider,org.hibernate.loader.criteria.ScalarCollectionCriteriaInfoProvider,2, LD
 org.hibernate.loader.criteria.EntityCriteriaInfoProvider,org.hibernate.loader.criteria.ComponentCollectionCriteriaInfoProvider,2, LD
@@ -2427,7 +2350,6 @@ org.hibernate.tool.schema.extract.internal.ExtractionContextImpl,org.hibernate.t
 org.hibernate.tool.schema.extract.internal.ExtractionContextImpl,org.hibernate.tool.schema.extract.spi.ExtractionContext$DatabaseObjectAccess,2, LD
 org.hibernate.tool.schema.extract.internal.ExtractionContextImpl,org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl,2, LD
 org.hibernate.event.service.internal.EventListenerRegistryImpl,org.hibernate.event.spi.EventType,4, LD
-org.hibernate.event.service.internal.EventListenerRegistryImpl,org.hibernate.internal.SessionImpl,3, LD
 org.hibernate.event.service.internal.EventListenerRegistryImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,3, LD
 org.hibernate.event.service.internal.EventListenerRegistryImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,3, LD
 org.hibernate.event.service.internal.EventListenerRegistryImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,3, LD
@@ -2513,7 +2435,6 @@ org.hibernate.QueryParameterException,org.hibernate.hql.internal.ast.QuerySyntax
 org.hibernate.QueryParameterException,org.hibernate.QueryException,2, LD
 org.hibernate.QueryParameterException,org.hibernate.hql.internal.ast.HqlSqlWalker,2, LD
 org.hibernate.QueryParameterException,org.hibernate.hql.internal.ast.HqlSqlWalker$WithClauseVisitor,2, LD
-org.hibernate.engine.spi.SessionOwner,org.hibernate.internal.SessionImpl,2, LD
 org.hibernate.engine.spi.SessionOwner,org.hibernate.internal.SessionImpl$LobHelperImpl,2, LD
 org.hibernate.engine.spi.SessionOwner,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,2, LD
 org.hibernate.engine.spi.SessionOwner,org.hibernate.internal.SessionImpl$LockRequestImpl,2, LD
@@ -2539,8 +2460,6 @@ org.hibernate.procedure.internal.ProcedureCallMementoImpl$ParameterMemento,org.h
 org.hibernate.procedure.internal.ProcedureCallMementoImpl$ParameterMemento,org.hibernate.cfg.annotations.NamedProcedureCallDefinition,3, LD
 org.hibernate.procedure.internal.ProcedureCallMementoImpl$ParameterMemento,org.hibernate.cfg.annotations.NamedProcedureCallDefinition$ParameterDefinitions,3, LD
 org.hibernate.procedure.internal.ProcedureCallMementoImpl$ParameterMemento,org.hibernate.cfg.annotations.NamedProcedureCallDefinition$ParameterDefinition,3, LD
-org.hibernate.boot.registry.selector.internal.StrategySelectorImpl,org.hibernate.boot.registry.selector.internal.StrategySelectorBuilder,2, LD
-org.hibernate.boot.registry.selector.internal.StrategySelectorImpl,org.hibernate.boot.registry.selector.spi.StrategySelector,2, LD
 org.hibernate.tool.hbm2ddl.SchemaExport$Type,org.hibernate.tool.hbm2ddl.SchemaExport,12, LD
 org.hibernate.tool.hbm2ddl.SchemaExport$Type,org.hibernate.tool.hbm2ddl.SchemaExport$CommandLineArgs,12, LD
 org.hibernate.tool.hbm2ddl.SchemaExport$Type,org.hibernate.tool.hbm2ddl.SchemaExport$TargetDescriptorImpl,12, LD
@@ -2755,7 +2674,6 @@ org.hibernate.internal.util.type.PrimitiveWrapperHelper$ShortDescriptor,org.hibe
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ShortDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$FloatDescriptor,2, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ShortDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$DoubleDescriptor,2, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ShortDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$PrimitiveWrapperDescriptor,2, LD
-org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,org.hibernate.boot.internal.SessionFactoryBuilderImpl,7, LD
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.annotations.MapBinder,1, LD
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.ClassPropertyHolder,1, LD
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.CollectionPropertyHolder,1, LD
@@ -2770,14 +2688,10 @@ org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.annotations.Collecti
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.AbstractPropertyHolder,1, LD
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.AnnotationBinder,1, LD
 org.hibernate.cfg.AttributeConversionInfo,org.hibernate.cfg.AnnotationBinder$LocalCacheAnnotationImpl,1, LD
-org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,org.hibernate.internal.SessionFactoryImpl,47, LD
 org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,47, LD
 org.hibernate.tuple.entity.AbstractEntityTuplizer$MappedIdentifierValueMarshaller,org.hibernate.tuple.entity.AbstractEntityTuplizer,7, LD
 org.hibernate.tuple.entity.AbstractEntityTuplizer$MappedIdentifierValueMarshaller,org.hibernate.tuple.entity.AbstractEntityTuplizer$NormalMappedIdentifierValueMarshaller,7, LD
 org.hibernate.tuple.entity.AbstractEntityTuplizer$MappedIdentifierValueMarshaller,org.hibernate.tuple.entity.AbstractEntityTuplizer$IncrediblySillyJpaMapsIdMappedIdentifierValueMarshaller,7, LD
-org.hibernate.tuple.TimestampGenerators,org.hibernate.tuple.CreationTimestampGeneration,1, LD
-org.hibernate.tuple.TimestampGenerators,org.hibernate.tuple.UpdateTimestampGeneration,1, LD
-org.hibernate.tuple.TimestampGenerators,org.hibernate.annotations.UpdateTimestamp,1, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ByteDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper,2, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ByteDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$BooleanDescriptor,2, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$ByteDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$CharacterDescriptor,2, LD
@@ -2790,7 +2704,6 @@ org.hibernate.internal.util.type.PrimitiveWrapperHelper$ByteDescriptor,org.hiber
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.procedure.ProcedureCall,2, LD
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.procedure.ProcedureOutputs,2, LD
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.procedure.internal.ProcedureCallImpl,3, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,3, LD
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.result.Outputs,2, LD
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.result.internal.OutputsImpl,2, LD
 org.hibernate.procedure.internal.ProcedureOutputsImpl,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
@@ -2840,7 +2753,6 @@ org.hibernate.internal.util.type.PrimitiveWrapperHelper$CharacterDescriptor,org.
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$CharacterDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$DoubleDescriptor,2, LD
 org.hibernate.internal.util.type.PrimitiveWrapperHelper$CharacterDescriptor,org.hibernate.internal.util.type.PrimitiveWrapperHelper$PrimitiveWrapperDescriptor,2, LD
 org.hibernate.boot.registry.selector.spi.StrategySelector,org.hibernate.boot.registry.selector.internal.StrategySelectorBuilder,2, LD
-org.hibernate.boot.registry.selector.spi.StrategySelector,org.hibernate.boot.registry.selector.internal.StrategySelectorImpl,2, LD
 org.hibernate.collection.internal.AbstractPersistentCollection$ValueDelayedOperation,org.hibernate.collection.internal.AbstractPersistentCollection,22, LD
 org.hibernate.collection.internal.AbstractPersistentCollection$ValueDelayedOperation,org.hibernate.collection.internal.AbstractPersistentCollection$IteratorProxy,22, LD
 org.hibernate.collection.internal.AbstractPersistentCollection$ValueDelayedOperation,org.hibernate.collection.internal.AbstractPersistentCollection$ListIteratorProxy,22, LD
@@ -2859,7 +2771,6 @@ org.hibernate.boot.registry.classloading.spi.ClassLoaderService,org.hibernate.bo
 org.hibernate.boot.registry.classloading.spi.ClassLoaderService,org.hibernate.boot.registry.classloading.spi.ClassLoaderService$Work,4, LD
 org.hibernate.annotations.UpdateTimestamp,org.hibernate.tuple.CreationTimestampGeneration,1, LD
 org.hibernate.annotations.UpdateTimestamp,org.hibernate.tuple.UpdateTimestampGeneration,1, LD
-org.hibernate.annotations.UpdateTimestamp,org.hibernate.tuple.TimestampGenerators,1, LD
 org.hibernate.internal.util.collections.JoinedIterable,org.hibernate.internal.util.collections.JoinedIterable$TypeSafeJoinedIterator,2, LD
 org.hibernate.persister.collection.BasicCollectionPersister,org.hibernate.persister.collection.AbstractCollectionPersister,5, LD
 org.hibernate.persister.collection.BasicCollectionPersister,org.hibernate.persister.collection.AbstractCollectionPersister$ColumnMapperImpl,5, LD
@@ -2884,7 +2795,6 @@ org.hibernate.id.insert.InsertGeneratedIdentifierDelegate,org.hibernate.id.Ident
 org.hibernate.id.insert.InsertGeneratedIdentifierDelegate,org.hibernate.id.IdentityGenerator,2, LD
 org.hibernate.id.insert.InsertGeneratedIdentifierDelegate,org.hibernate.id.IdentityGenerator$InsertSelectDelegate,2, LD
 org.hibernate.id.insert.InsertGeneratedIdentifierDelegate,org.hibernate.id.IdentityGenerator$BasicDelegate,2, LD
-org.hibernate.proxy.pojo.javassist.JavassistProxyFactory,org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer,4, LD
 org.hibernate.mapping.OneToOne,org.hibernate.mapping.ManyToOne,2, LD
 org.hibernate.mapping.OneToOne,org.hibernate.mapping.OneToMany,2, LD
 org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl,org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl$Builder,2, LD
@@ -2932,7 +2842,6 @@ org.hibernate.event.spi.ClearEvent,org.hibernate.internal.SessionImpl$ManagedFlu
 org.hibernate.event.spi.ClearEvent,org.hibernate.event.service.internal.EventListenerRegistryImpl,1, LD
 org.hibernate.event.spi.ClearEvent,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.event.spi.ClearEvent,org.hibernate.event.spi.ClearEventListener,1, LD
-org.hibernate.event.spi.ClearEvent,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.event.spi.ClearEvent,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.event.spi.ClearEvent,org.hibernate.event.spi.EventType,1, LD
 org.hibernate.event.spi.ClearEvent,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -2945,7 +2854,6 @@ org.hibernate.result.Output,org.hibernate.procedure.ProcedureCall,1, LD
 org.hibernate.result.Output,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.result.Output,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.result.Output,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.result.Output,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.result.Output,org.hibernate.result.Outputs,1, LD
 org.hibernate.result.Output,org.hibernate.result.ResultSetOutput,1, LD
 org.hibernate.result.Output,org.hibernate.result.UpdateCountOutput,1, LD
@@ -2958,7 +2866,6 @@ org.hibernate.result.Outputs,org.hibernate.procedure.ProcedureCall,2, LD
 org.hibernate.result.Outputs,org.hibernate.procedure.ProcedureOutputs,2, LD
 org.hibernate.result.Outputs,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
 org.hibernate.result.Outputs,org.hibernate.procedure.internal.ProcedureOutputsImpl,2, LD
-org.hibernate.result.Outputs,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,2, LD
 org.hibernate.result.Outputs,org.hibernate.result.internal.OutputsImpl,2, LD
 org.hibernate.result.Outputs,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
 org.hibernate.result.Outputs,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,2, LD
@@ -2970,12 +2877,10 @@ org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl$Ma
 org.hibernate.event.spi.ClearEventListener,org.hibernate.event.service.internal.EventListenerRegistryImpl,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.event.spi.ClearEvent,1, LD
-org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.event.spi.EventType,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
 org.hibernate.event.spi.ClearEventListener,org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl,1, LD
-org.hibernate.cache.internal.CollectionCacheInvalidator$CollectionEvictCacheAction,org.hibernate.cache.internal.CollectionCacheInvalidator,6, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$AbstractPluralAttributeSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$AbstractPluralAttributeSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$TypeResolution,9, LD
 org.hibernate.boot.model.source.internal.hbm.ModelBinder$AbstractPluralAttributeSecondPass,org.hibernate.boot.model.source.internal.hbm.ModelBinder$DelayedPropertyReferenceHandlerImpl,9, LD
@@ -2993,7 +2898,6 @@ org.hibernate.result.ResultSetOutput,org.hibernate.procedure.ProcedureCall,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.result.ResultSetOutput,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.result.Output,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.result.Outputs,1, LD
 org.hibernate.result.ResultSetOutput,org.hibernate.result.UpdateCountOutput,1, LD
@@ -3054,7 +2958,6 @@ org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.proce
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.procedure.ProcedureOutputs,2, LD
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.procedure.internal.ProcedureOutputsImpl,2, LD
-org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,2, LD
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.result.Outputs,2, LD
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.result.internal.OutputsImpl,2, LD
 org.hibernate.result.internal.OutputsImpl$CurrentReturnState,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,2, LD
@@ -3095,7 +2998,6 @@ org.hibernate.internal.CoreLogging,org.hibernate.engine.loading.internal.Collect
 org.hibernate.cfg.beanvalidation.BeanValidationIntegrator,org.hibernate.cfg.beanvalidation.TypeSafeActivator,4, LD
 org.hibernate.loader.plan.spi.AttributeFetch,org.hibernate.loader.plan.spi.BidirectionalEntityReference,2, LD
 org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,org.hibernate.engine.spi.SessionFactoryImplementor,10, LD
-org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,org.hibernate.internal.SessionFactoryImpl,8, LD
 org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,8, LD
 org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,8, LD
 org.hibernate.boot.model.source.spi.TableSpecificationSource,org.hibernate.boot.model.source.internal.hbm.InLineViewSourceImpl,1, LD
@@ -3187,7 +3089,6 @@ org.hibernate.internal.CriteriaImpl$CriterionEntry,org.hibernate.internal.Criter
 org.hibernate.internal.CriteriaImpl$CriterionEntry,org.hibernate.internal.CriteriaImpl$OrderEntry,4, LD
 org.hibernate.UnknownEntityTypeException,org.hibernate.engine.spi.SessionFactoryImplementor,1, LD
 org.hibernate.UnknownEntityTypeException,org.hibernate.engine.spi.SessionFactoryImplementor$DeserializationResolver,1, LD
-org.hibernate.UnknownEntityTypeException,org.hibernate.internal.SessionFactoryImpl,1, LD
 org.hibernate.UnknownEntityTypeException,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,1, LD
 org.hibernate.UnknownEntityTypeException,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,1, LD
 org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl,1, LD
@@ -3219,11 +3120,9 @@ org.hibernate.context.spi.CurrentTenantIdentifierResolver,org.hibernate.context.
 org.hibernate.context.spi.CurrentTenantIdentifierResolver,org.hibernate.context.internal.ThreadLocalSessionContext$TransactionProtectionWrapper,1, LD
 org.hibernate.context.spi.CurrentTenantIdentifierResolver,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,1, LD
 org.hibernate.context.spi.CurrentTenantIdentifierResolver,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,1, LD
-org.hibernate.context.spi.CurrentTenantIdentifierResolver,org.hibernate.internal.SessionFactoryImpl,1, LD
 org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl$Builder,org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl,2, LD
 org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl$Builder,org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl,2, LD
 org.hibernate.boot.internal.SessionFactoryOptionsState,org.hibernate.boot.internal.SessionFactoryBuilderImpl,3, LD
-org.hibernate.boot.internal.SessionFactoryOptionsState,org.hibernate.boot.internal.SessionFactoryBuilderImpl$SessionFactoryOptionsStateStandardImpl,3, LD
 org.hibernate.boot.internal.SessionFactoryOptionsState,org.hibernate.boot.internal.SessionFactoryOptionsImpl,3, LD
 org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder$DynamicBatchingEntityLoader,4, LD
 org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder$DynamicEntityLoader,4, LD
@@ -3265,7 +3164,6 @@ org.hibernate.engine.internal.NaturalIdXrefDelegate$CachedNaturalId,org.hibernat
 org.hibernate.engine.internal.NaturalIdXrefDelegate$CachedNaturalId,org.hibernate.engine.internal.StatefulPersistenceContext,5, LD
 org.hibernate.internal.util.StringHelper$Renderer,org.hibernate.internal.util.StringHelper,16, LD
 org.hibernate.tool.schema.internal.SchemaCreatorImpl$JournalingGenerationTarget,org.hibernate.tool.schema.internal.SchemaCreatorImpl,3, LD
-org.hibernate.hql.internal.ast.tree.FromElement,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,5, LD
 org.hibernate.internal.CriteriaImpl$OrderEntry,org.hibernate.loader.criteria.CriteriaQueryTranslator,3, LD
 org.hibernate.internal.CriteriaImpl$OrderEntry,org.hibernate.internal.CriteriaImpl,4, LD
 org.hibernate.internal.CriteriaImpl$OrderEntry,org.hibernate.internal.CriteriaImpl$Subcriteria,4, LD
@@ -3317,7 +3215,6 @@ org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.pr
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.procedure.ProcedureOutputs,2, LD
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.procedure.internal.ProcedureOutputsImpl,2, LD
-org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,2, LD
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.result.Outputs,2, LD
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.result.internal.OutputsImpl,2, LD
 org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
@@ -3335,7 +3232,6 @@ org.hibernate.hql.internal.ast.SqlGenerator$CastFunctionArguments,org.hibernate.
 org.hibernate.hql.internal.ast.SqlGenerator$CastFunctionArguments,org.hibernate.hql.internal.ast.SqlGenerator$FunctionArgumentsCollectingWriter,7, LD
 org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.JdbcResultMetadata,1, LD
 org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.NonScalarResultColumnProcessor,1, LD
 org.hibernate.loader.custom.ConstructorResultColumnProcessor,org.hibernate.loader.custom.ResultColumnProcessor,1, LD
@@ -3373,7 +3269,6 @@ org.hibernate.type.descriptor.sql.NationalizedTypeMappings,org.hibernate.boot.mo
 org.hibernate.type.descriptor.sql.NationalizedTypeMappings,org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeIdBagSecondPass,1, LD
 org.hibernate.type.descriptor.sql.NationalizedTypeMappings,org.hibernate.boot.model.source.internal.hbm.ModelBinder$PluralAttributeBagSecondPass,1, LD
 org.hibernate.type.descriptor.sql.NationalizedTypeMappings,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
-org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl,45, LD
 org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LobHelperImpl,45, LD
 org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,45, LD
 org.hibernate.internal.SessionImpl$SimpleNaturalIdLoadAccessImpl,org.hibernate.internal.SessionImpl$LockRequestImpl,45, LD
@@ -3408,7 +3303,6 @@ org.hibernate.type.NClobType,org.hibernate.cfg.Configuration,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.StringNVarcharType,1, LD
 org.hibernate.type.NClobType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.NClobType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.NClobType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.NTextType,1, LD
@@ -3417,8 +3311,6 @@ org.hibernate.type.NClobType,org.hibernate.type.BasicTypeRegistry,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.descriptor.java.NClobTypeDescriptor,1, LD
 org.hibernate.type.NClobType,org.hibernate.type.descriptor.java.NClobTypeDescriptor$NClobMutabilityPlan,1, LD
 org.hibernate.engine.jdbc.BlobProxy$StreamBackedBinaryStream,org.hibernate.engine.jdbc.BlobProxy,4, LD
-org.hibernate.internal.SessionFactoryImpl,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,47, LD
-org.hibernate.internal.SessionFactoryImpl,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,47, LD
 org.hibernate.dialect.AbstractHANADialect$CloseSuppressingReader,org.hibernate.dialect.AbstractHANADialect,3, LD
 org.hibernate.dialect.AbstractHANADialect$CloseSuppressingReader,org.hibernate.dialect.AbstractHANADialect$CloseSuppressingInputStream,3, LD
 org.hibernate.dialect.AbstractHANADialect$CloseSuppressingReader,org.hibernate.dialect.AbstractHANADialect$MaterializedBlob,3, LD
@@ -3502,18 +3394,6 @@ org.hibernate.mapping.List,org.hibernate.mapping.IdentifierBag,1, LD
 org.hibernate.mapping.List,org.hibernate.mapping.ManyToOne,1, LD
 org.hibernate.mapping.List,org.hibernate.mapping.Map,1, LD
 org.hibernate.mapping.List,org.hibernate.mapping.Array,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.ProcedureCall,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.ProcedureOutputs,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.result.Outputs,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.result.internal.OutputsImpl,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.result.internal.UpdateCountOutputImpl,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.NoSuchParameterException,1, LD
-org.hibernate.result.internal.ResultSetOutputImpl,org.hibernate.procedure.ParameterStrategyException,1, LD
 org.hibernate.UnsupportedLockAttemptException,org.hibernate.persister.entity.AbstractEntityPersister$StandardCacheEntryHelper,1, LD
 org.hibernate.UnsupportedLockAttemptException,org.hibernate.persister.entity.AbstractEntityPersister$ReferenceCacheEntryHelper,1, LD
 org.hibernate.UnsupportedLockAttemptException,org.hibernate.engine.internal.AbstractEntityEntry,1, LD
@@ -3554,7 +3434,6 @@ org.hibernate.hql.internal.classic.QueryTranslatorImpl,org.hibernate.loader.hql.
 org.hibernate.hql.internal.classic.QueryTranslatorImpl,org.hibernate.loader.Loader,5, LD
 org.hibernate.hql.internal.classic.QueryTranslatorImpl,org.hibernate.loader.Loader$SqlStatementWrapper,5, LD
 org.hibernate.hql.internal.ast.tree.CollectionPropertyReference,org.hibernate.hql.internal.ast.tree.MethodNode,1, LD
-org.hibernate.hql.internal.ast.tree.CollectionPropertyReference,org.hibernate.hql.internal.ast.tree.FromElement,1, LD
 org.hibernate.hql.internal.ast.tree.CollectionPropertyReference,org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,1, LD
 org.hibernate.hql.internal.ast.tree.CollectionPropertyReference,org.hibernate.hql.internal.ast.tree.FromElementType,1, LD
 org.hibernate.hql.internal.ast.tree.CollectionPropertyReference,org.hibernate.hql.internal.ast.tree.FromElementType$SpecialManyToManyCollectionPropertyMapping,1, LD
@@ -3568,7 +3447,6 @@ org.hibernate.type.NTextType,org.hibernate.cfg.Configuration,1, LD
 org.hibernate.type.NTextType,org.hibernate.type.StandardBasicTypes,1, LD
 org.hibernate.type.NTextType,org.hibernate.type.StringNVarcharType,1, LD
 org.hibernate.type.NTextType,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.type.NTextType,org.hibernate.annotations.Nationalized,1, LD
 org.hibernate.type.NTextType,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
 org.hibernate.type.NTextType,org.hibernate.type.MaterializedNClobType,1, LD
 org.hibernate.type.NTextType,org.hibernate.type.NClobType,1, LD
@@ -3609,7 +3487,6 @@ org.hibernate.result.UpdateCountOutput,org.hibernate.procedure.ProcedureCall,1, 
 org.hibernate.result.UpdateCountOutput,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.result.UpdateCountOutput,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.result.UpdateCountOutput,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.result.UpdateCountOutput,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.result.UpdateCountOutput,org.hibernate.result.Output,1, LD
 org.hibernate.result.UpdateCountOutput,org.hibernate.result.Outputs,1, LD
 org.hibernate.result.UpdateCountOutput,org.hibernate.result.ResultSetOutput,1, LD
@@ -3618,7 +3495,6 @@ org.hibernate.result.UpdateCountOutput,org.hibernate.result.internal.OutputsImpl
 org.hibernate.result.UpdateCountOutput,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,1, LD
 org.hibernate.tuple.UpdateTimestampGeneration,org.hibernate.tuple.CreationTimestampGeneration,1, LD
 org.hibernate.tuple.UpdateTimestampGeneration,org.hibernate.annotations.UpdateTimestamp,1, LD
-org.hibernate.tuple.UpdateTimestampGeneration,org.hibernate.tuple.TimestampGenerators,1, LD
 org.hibernate.tool.schema.extract.internal.TableInformationImpl,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl,1, LD
 org.hibernate.tool.schema.extract.internal.TableInformationImpl,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl$ForeignKeyBuilderImpl,1, LD
 org.hibernate.tool.schema.extract.internal.TableInformationImpl,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl$ForeignKeyBuilder,1, LD
@@ -3638,7 +3514,6 @@ org.hibernate.result.internal.OutputsImpl,org.hibernate.procedure.ProcedureCall,
 org.hibernate.result.internal.OutputsImpl,org.hibernate.procedure.ProcedureOutputs,2, LD
 org.hibernate.result.internal.OutputsImpl,org.hibernate.procedure.internal.ProcedureCallImpl,2, LD
 org.hibernate.result.internal.OutputsImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl,2, LD
-org.hibernate.result.internal.OutputsImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,2, LD
 org.hibernate.result.internal.OutputsImpl,org.hibernate.result.Outputs,2, LD
 org.hibernate.result.internal.OutputsImpl,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
 org.hibernate.result.internal.OutputsImpl,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,2, LD
@@ -3692,7 +3567,6 @@ org.hibernate.resource.transaction.backend.jta.internal.synchronization.Exceptio
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.resource.transaction.backend.jta.internal.synchronization.SynchronizationCallbackCoordinatorNonTrackingImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.engine.spi.SessionOwner,1, LD
-org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -3706,7 +3580,6 @@ org.hibernate.resource.transaction.backend.jta.internal.synchronization.Exceptio
 org.hibernate.mapping.ManyToOne,org.hibernate.mapping.OneToMany,2, LD
 org.hibernate.mapping.ManyToOne,org.hibernate.mapping.OneToOne,2, LD
 org.hibernate.cfg.AvailableSettings,org.hibernate.cfg.Configuration,7, LD
-org.hibernate.cfg.AvailableSettings,org.hibernate.internal.SessionFactoryImpl,7, LD
 org.hibernate.cfg.AvailableSettings,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,7, LD
 org.hibernate.cfg.AvailableSettings,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,7, LD
 org.hibernate.id.IdentifierGeneratorHelper$BigIntegerHolder,org.hibernate.id.IdentifierGeneratorHelper,6, LD
@@ -3717,12 +3590,10 @@ org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.Proc
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.ProcedureOutputs,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.internal.ProcedureCallImpl,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl,1, LD
-org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.result.Outputs,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.result.internal.OutputsImpl,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,1, LD
-org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.result.internal.ResultSetOutputImpl,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.NoSuchParameterException,1, LD
 org.hibernate.result.internal.UpdateCountOutputImpl,org.hibernate.procedure.ParameterStrategyException,1, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.persister.entity.AbstractEntityPersister,6, LD
@@ -3736,7 +3607,6 @@ org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.engine.spi.PersistenceContext,4, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.persister.entity.EntityPersister,5, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.engine.internal.StatefulPersistenceContext,4, LD
-org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl,6, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$LobHelperImpl,6, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,6, LD
 org.hibernate.event.internal.DefaultResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$LockRequestImpl,6, LD
@@ -3791,7 +3661,6 @@ org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedF
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.resource.transaction.backend.jta.internal.synchronization.SynchronizationCallbackCoordinatorNonTrackingImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.engine.spi.SessionOwner,1, LD
-org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.internal.SessionImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.internal.SessionImpl$LobHelperImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,1, LD
 org.hibernate.resource.transaction.backend.jta.internal.synchronization.ManagedFlushChecker,org.hibernate.internal.SessionImpl$LockRequestImpl,1, LD
@@ -3806,12 +3675,10 @@ org.hibernate.id.enhanced.Optimizer,org.hibernate.id.enhanced.TableGenerator,2, 
 org.hibernate.hql.internal.ast.tree.MapValueNode,org.hibernate.hql.internal.ast.tree.MapKeyNode,2, LD
 org.hibernate.hql.internal.ast.tree.MapValueNode,org.hibernate.hql.internal.ast.tree.AbstractMapComponentNode,2, LD
 org.hibernate.dialect.PostgreSQL94Dialect,org.hibernate.dialect.PostgreSQL92Dialect,1, LD
-org.hibernate.internal.SessionFactoryRegistry,org.hibernate.internal.SessionFactoryImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry,org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry,org.hibernate.internal.SessionFactoryImpl$StatelessSessionBuilderImpl,3, LD
 org.hibernate.internal.SessionFactoryRegistry,org.hibernate.internal.SessionFactoryRegistry$ObjectFactoryImpl,5, LD
 org.hibernate.event.spi.EventType,org.hibernate.event.service.internal.EventListenerRegistryImpl,4, LD
-org.hibernate.event.spi.EventType,org.hibernate.internal.SessionImpl,3, LD
 org.hibernate.event.spi.EventType,org.hibernate.internal.SessionImpl$LobHelperImpl,3, LD
 org.hibernate.event.spi.EventType,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,3, LD
 org.hibernate.event.spi.EventType,org.hibernate.internal.SessionImpl$LockRequestImpl,3, LD
@@ -3946,24 +3813,6 @@ org.hibernate.boot.internal.IdGeneratorInterpreterImpl,org.hibernate.cfg.Annotat
 org.hibernate.hql.internal.ast.tree.ComponentJoin$ComponentFromElementType,org.hibernate.hql.internal.ast.tree.ComponentJoin,5, LD
 org.hibernate.hql.internal.ast.tree.ComponentJoin$ComponentFromElementType,org.hibernate.hql.internal.ast.tree.ComponentJoin$ComponentPropertyMapping,5, LD
 org.hibernate.boot.registry.internal.StandardServiceRegistryImpl,org.hibernate.service.internal.AbstractServiceRegistryImpl,3, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.PrimitiveCharacterArrayNClobType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.cfg.AvailableSettings,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.CharacterArrayNClobType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.engine.jdbc.AbstractLobCreator,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.CharacterNCharType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.engine.jdbc.LobCreator,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.cfg.Configuration,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.StandardBasicTypes,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.StringNVarcharType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.engine.jdbc.SerializableNClobProxy,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.cfg.annotations.SimpleValueBinder,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.MaterializedNClobType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.NClobType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.NTextType,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.engine.jdbc.WrappedNClob,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.BasicTypeRegistry,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.descriptor.java.NClobTypeDescriptor,1, LD
-org.hibernate.annotations.Nationalized,org.hibernate.type.descriptor.java.NClobTypeDescriptor$NClobMutabilityPlan,1, LD
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$SchemaNameCatalogFormat,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl,1, LD
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$SchemaNameCatalogFormat,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl$ForeignKeyBuilderImpl,1, LD
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$SchemaNameCatalogFormat,org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl$ForeignKeyBuilder,1, LD
@@ -4047,14 +3896,6 @@ org.hibernate.internal.util.xml.XmlInfrastructureException,org.hibernate.interna
 org.hibernate.internal.util.xml.XmlInfrastructureException,org.hibernate.internal.util.xml.UnsupportedOrmXsdVersionException,1, LD
 org.hibernate.internal.util.xml.XmlInfrastructureException,org.hibernate.internal.util.xml.XMLStreamConstantsUtils,1, LD
 org.hibernate.internal.util.xml.XmlInfrastructureException,org.hibernate.InvalidMappingException,1, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.procedure.ProcedureCall,2, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.procedure.ProcedureOutputs,2, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.procedure.internal.ProcedureCallImpl,3, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.procedure.internal.ProcedureOutputsImpl,3, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.result.Outputs,2, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.result.internal.OutputsImpl,2, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.result.internal.OutputsImpl$CurrentReturnState,2, LD
-org.hibernate.procedure.internal.ProcedureOutputsImpl$ProcedureCurrentReturnState,org.hibernate.result.internal.OutputsImpl$CustomLoaderExtension,2, LD
 org.hibernate.dialect.TeradataDialect,org.hibernate.dialect.Dialect,3, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierCaseStrategy,org.hibernate.internal.util.collections.ArrayHelper,1, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierCaseStrategy,org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl,1, LD
@@ -4087,7 +3928,6 @@ org.hibernate.engine.jdbc.env.spi.IdentifierHelper,org.hibernate.engine.jdbc.env
 org.hibernate.engine.jdbc.env.spi.IdentifierHelper,org.hibernate.engine.jdbc.env.internal.NormalizingIdentifierHelperImpl,4, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierHelper,org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder,2, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierHelper,org.hibernate.boot.model.naming.ObjectNameNormalizer,2, LD
-org.hibernate.loader.custom.ConstructorReturn,org.hibernate.loader.custom.CustomLoader,2, LD
 org.hibernate.collection.internal.PersistentSet$SimpleAdd,org.hibernate.collection.internal.PersistentList,3, LD
 org.hibernate.collection.internal.PersistentSet$SimpleAdd,org.hibernate.collection.internal.PersistentList$Clear,3, LD
 org.hibernate.collection.internal.PersistentSet$SimpleAdd,org.hibernate.collection.internal.PersistentList$SimpleAdd,3, LD
@@ -4114,7 +3954,6 @@ org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.persister.en
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.persister.entity.AbstractEntityPersister$ReferenceCacheEntryHelper,3, LD
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.persister.entity.EntityPersister,2, LD
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.IdentifierLoadAccess,2, LD
-org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl,3, LD
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$LobHelperImpl,3, LD
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,3, LD
 org.hibernate.event.spi.ResolveNaturalIdEventListener,org.hibernate.internal.SessionImpl$LockRequestImpl,3, LD
@@ -4134,7 +3973,6 @@ org.hibernate.engine.spi.EntityEntryFactory,org.hibernate.service.internal.Stand
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.CollectionFetchReturn,1, LD
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.ConstructorResultColumnProcessor,1, LD
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.ConstructorReturn,1, LD
-org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.CustomLoader,1, LD
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.NonScalarResultColumnProcessor,1, LD
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.ResultColumnProcessor,1, LD
 org.hibernate.loader.custom.JdbcResultMetadata,org.hibernate.loader.custom.ResultRowProcessor,1, LD
@@ -4207,7 +4045,6 @@ org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$CatalogSchemaNameFormat,org.hibernate.tool.hbm2ddl.SchemaExport$Type,1, LD
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$CatalogSchemaNameFormat,org.hibernate.tool.hbm2ddl.SchemaExport$Action,1, LD
 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl$CatalogSchemaNameFormat,org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl,1, LD
-org.hibernate.hql.internal.ast.tree.FromElement$TypeDiscriminatorMetadataImpl,org.hibernate.hql.internal.ast.tree.FromElement,5, LD
 org.hibernate.engine.query.spi.ParameterParser$Recognizer,org.hibernate.engine.query.spi.ParameterParser,4, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder,org.hibernate.cfg.AvailableSettings,2, LD
 org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder,org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl,3, LD
@@ -4226,7 +4063,6 @@ org.hibernate.annotations.OptimisticLocking,org.hibernate.annotations.Entity,2, 
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder,2, LD
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder$DynamicBatchingEntityLoader,2, LD
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.loader.entity.DynamicBatchingEntityLoaderBuilder$DynamicEntityLoader,2, LD
-org.hibernate.MultiIdentifierLoadAccess,org.hibernate.internal.SessionImpl,2, LD
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.internal.SessionImpl$LobHelperImpl,2, LD
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.internal.SessionImpl$SharedSessionBuilderImpl,2, LD
 org.hibernate.MultiIdentifierLoadAccess,org.hibernate.internal.SessionImpl$LockRequestImpl,2, LD

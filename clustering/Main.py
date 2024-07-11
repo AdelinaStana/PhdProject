@@ -84,32 +84,39 @@ def run_project(name):
 
     for i in range(10, 101, 10):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", None)
 
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
 
 def generate_ref_solutions():
-    export_reference_solution2("ant",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
-    export_reference_solution2("catalina",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_10_sd_ld.csv")
-    export_reference_solution2("hibernate",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_10_sd_ld.csv")
+    # export_reference_solution2("ant",
+    #                           f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
+    # export_reference_solution2("catalina",
+    #                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
+    # export_reference_solution2("hibernate",
+    #                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
     export_reference_solution2("gson",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
+                                f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
+
+
+def remove_unknown():
+    for i in range(10, 101, 10):
+        filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_gson.csv",
+                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_{i}_sd_ld.csv")
+        filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_gson.csv",
+                                    f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_{i}_ld.csv")
 
 
 def run_all():
     # create_graphs()
     # ant_diff_results()
-
+    # generate_ref_solutions()
     run_project("ant")
-    # run_project("catalina")
-    # run_project("hibernate")
-    # run_project("gson")
-
+    run_project("catalina")
+    run_project("hibernate")
+    run_project("gson")
 
 
 run_all()

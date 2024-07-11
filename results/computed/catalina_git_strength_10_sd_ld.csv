@@ -2440,8 +2440,6 @@ org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.Default
 org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.WebdavServlet,12, LD
 org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.WebdavServlet$LockInfo,12, LD
 org.apache.catalina.servlets.DefaultServlet,org.apache.catalina.servlets.WebdavServlet$WebdavResolver,12, LD
-org.apache.catalina.users.MemoryUser,org.apache.catalina.users.MemoryGroup,5, LD
-org.apache.catalina.users.MemoryUser,org.apache.catalina.users.MemoryUserDatabase,6, LD
 org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,org.apache.catalina.realm.DataSourceRealm,7, LD
 org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,org.apache.catalina.realm.GenericPrincipal,17, LD
 org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,org.apache.catalina.realm.JAASRealm,9, LD
@@ -2489,9 +2487,6 @@ org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.MemoryRealm,13, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.RealmBase,10, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.RealmBase$AllRolesMode,10, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.UserDatabaseRealm,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.host.HTMLHostManagerServlet,5, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.Constants,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.HTMLManagerServlet,11, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.AccessLogValve,14, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
@@ -2801,7 +2796,6 @@ org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filte
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
 org.apache.catalina.manager.Constants,org.apache.catalina.manager.StatusManagerServlet,5, LD
-org.apache.catalina.manager.Constants,org.apache.catalina.manager.host.Constants,12, LD
 org.apache.catalina.manager.Constants,org.apache.catalina.manager.HTMLManagerServlet,13, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat,39, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
@@ -2988,7 +2982,6 @@ org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.auth
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$AuthenticateAction,5, LD
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.SpnegoAuthenticator$SpnegoTokenFixer,5, LD
 org.apache.catalina.authenticator.NonLoginAuthenticator,org.apache.catalina.authenticator.SSLAuthenticator,7, LD
-org.apache.catalina.loader.JdbcLeakPrevention,org.apache.catalina.loader.WebappClassLoader,6, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.AuthenticatorBase,11, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,11, LD
 org.apache.catalina.authenticator.BasicAuthenticator,org.apache.catalina.authenticator.BasicAuthenticator$BasicCredentials,18, LD
@@ -3808,7 +3801,6 @@ org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,org.apache.catal
 org.apache.catalina.authenticator.DigestAuthenticator$NonceInfo,org.apache.catalina.realm.RealmBase$AllRolesMode,8, LD
 org.apache.catalina.connector.Connector,org.apache.catalina.connector.Request,18, LD
 org.apache.catalina.connector.Connector,org.apache.catalina.connector.Request$SpecialAttributeAdapter,18, LD
-org.apache.catalina.filters.FilterBase,org.apache.catalina.filters.Constants,4, LD
 org.apache.catalina.filters.FilterBase,org.apache.catalina.filters.RequestFilter,6, LD
 org.apache.catalina.util.SessionIdGeneratorBase,org.apache.catalina.session.ManagerBase,4, LD
 org.apache.catalina.util.SessionIdGeneratorBase,org.apache.catalina.session.ManagerBase$SessionTiming,4, LD
@@ -3827,7 +3819,6 @@ org.apache.catalina.valves.rewrite.Substitution$ServerVariableHttpElement,org.ap
 org.apache.catalina.realm.DigestCredentialHandlerBase,org.apache.catalina.realm.RealmBase,3, LD
 org.apache.catalina.realm.DigestCredentialHandlerBase,org.apache.catalina.realm.RealmBase$AllRolesMode,3, LD
 org.apache.catalina.filters.RequestDumperFilter$Timestamp,org.apache.catalina.filters.RequestDumperFilter,8, LD
-org.apache.catalina.filters.RequestDumperFilter$Timestamp,org.apache.catalina.filters.WebdavFixFilter,5, LD
 org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations,5, LD
 org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Providers,5, LD
 org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Property,org.apache.catalina.authenticator.jaspic.PersistentProviderRegistrations$Provider,5, LD
@@ -3959,7 +3950,6 @@ org.apache.catalina.authenticator.AuthenticatorBase,org.apache.catalina.authenti
 org.apache.catalina.authenticator.AuthenticatorBase,org.apache.catalina.connector.Request,9, LD
 org.apache.catalina.authenticator.AuthenticatorBase,org.apache.catalina.connector.Request$SpecialAttributeAdapter,9, LD
 org.apache.catalina.users.AbstractGroup,org.apache.catalina.users.AbstractUser,3, LD
-org.apache.catalina.users.AbstractGroup,org.apache.catalina.users.MemoryUser,3, LD
 org.apache.catalina.users.AbstractGroup,org.apache.catalina.users.MemoryUserDatabase,3, LD
 org.apache.catalina.users.AbstractGroup,org.apache.catalina.users.MemoryUserDatabaseFactory,3, LD
 org.apache.catalina.realm.JAASCallbackHandler,org.apache.catalina.realm.UserDatabaseRealm,5, LD
@@ -4108,10 +4098,6 @@ org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authen
 org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.authenticator.SSLAuthenticator,11, LD
 org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.realm.RealmBase,8, LD
 org.apache.catalina.authenticator.DigestAuthenticator,org.apache.catalina.realm.RealmBase$AllRolesMode,8, LD
-org.apache.catalina.filters.Constants,org.apache.catalina.filters.CsrfPreventionFilter,4, LD
-org.apache.catalina.filters.Constants,org.apache.catalina.filters.CsrfPreventionFilter$CsrfResponseWrapper,4, LD
-org.apache.catalina.filters.Constants,org.apache.catalina.filters.CsrfPreventionFilter$LruCache,4, LD
-org.apache.catalina.filters.Constants,org.apache.catalina.filters.FilterBase,4, LD
 org.apache.catalina.Container,org.apache.catalina.startup.FailedContext,6, LD
 org.apache.catalina.Container,org.apache.catalina.core.ContainerBase,16, LD
 org.apache.catalina.Container,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,16, LD
@@ -4599,7 +4585,6 @@ org.apache.catalina.valves.AbstractAccessLogValve$HostElement,org.apache.catalin
 org.apache.catalina.valves.AbstractAccessLogValve$HostElement,org.apache.catalina.valves.AbstractAccessLogValve$DateAndTimeElement,5, LD
 org.apache.catalina.valves.AbstractAccessLogValve$HostElement,org.apache.catalina.valves.AbstractAccessLogValve$RequestElement,5, LD
 org.apache.catalina.filters.RequestDumperFilter,org.apache.catalina.filters.RequestDumperFilter$Timestamp,8, LD
-org.apache.catalina.filters.RequestDumperFilter,org.apache.catalina.filters.WebdavFixFilter,5, LD
 org.apache.catalina.valves.AbstractAccessLogValve$PortType,org.apache.catalina.valves.AbstractAccessLogValve$HttpStatusCodeElement,5, LD
 org.apache.catalina.valves.AbstractAccessLogValve$PortType,org.apache.catalina.valves.AbstractAccessLogValve$PortElement,5, LD
 org.apache.catalina.valves.AbstractAccessLogValve$PortType,org.apache.catalina.valves.AbstractAccessLogValve$ByteSentElement,5, LD
@@ -4787,8 +4772,6 @@ org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catali
 org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
 org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
 org.apache.catalina.filters.ExpiresFilter$XHttpServletResponse,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
-org.apache.catalina.users.MemoryGroup,org.apache.catalina.users.MemoryUser,5, LD
-org.apache.catalina.users.MemoryGroup,org.apache.catalina.users.MemoryUserDatabase,4, LD
 org.apache.catalina.core.ContainerBase,org.apache.catalina.Container,16, LD
 org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$PrivilegedAddChild,55, LD
 org.apache.catalina.core.ContainerBase,org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor,55, LD
@@ -4833,8 +4816,6 @@ org.apache.catalina.webresources.AbstractArchiveResource$JarInputStreamWrapper,o
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve,6, LD
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$CompletedStuckThread,6, LD
 org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThread,org.apache.catalina.valves.StuckThreadDetectionValve$MonitoredThreadState,6, LD
-org.apache.catalina.filters.WebdavFixFilter,org.apache.catalina.filters.RequestDumperFilter,5, LD
-org.apache.catalina.filters.WebdavFixFilter,org.apache.catalina.filters.RequestDumperFilter$Timestamp,5, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedFindClassByName,17, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedGetClassLoader,17, LD
 org.apache.catalina.loader.WebappClassLoaderBase,org.apache.catalina.loader.WebappClassLoaderBase$PrivilegedHasLoggingConfig,17, LD
@@ -5037,8 +5018,6 @@ org.apache.catalina.valves.ExtendedAccessLogValve$ResponseAllHeaderElement,org.a
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContext,14, LD
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContext$DispatchData,14, LD
 org.apache.catalina.core.ApplicationContextFacade$PrivilegedExecuteMethod,org.apache.catalina.core.ApplicationContextFacade,18, LD
-org.apache.catalina.valves.Constants,org.apache.catalina.valves.AccessLogValve,3, LD
-org.apache.catalina.valves.Constants,org.apache.catalina.valves.Constants$AccessLog,4, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.CombinedRealm,8, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.DataSourceRealm,15, LD
 org.apache.catalina.realm.MemoryRealm,org.apache.catalina.realm.GenericPrincipal,9, LD
@@ -5083,8 +5062,6 @@ org.apache.catalina.valves.AbstractAccessLogValve$ProtocolElement,org.apache.cat
 org.apache.naming.factory.DataSourceLinkFactory$DataSourceHandler,org.apache.naming.factory.DataSourceLinkFactory,3, LD
 org.apache.catalina.session.TooManyActiveSessionsException,org.apache.catalina.session.ManagerBase,2, LD
 org.apache.catalina.session.TooManyActiveSessionsException,org.apache.catalina.session.ManagerBase$SessionTiming,2, LD
-org.apache.catalina.valves.Constants$AccessLog,org.apache.catalina.valves.AccessLogValve,3, LD
-org.apache.catalina.valves.Constants$AccessLog,org.apache.catalina.valves.Constants,4, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper,22, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MapElement,22, LD
 org.apache.catalina.mapper.Mapper$MappedWrapper,org.apache.catalina.mapper.Mapper$MappedHost,22, LD
@@ -5105,7 +5082,6 @@ org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.SSIMedi
 org.apache.catalina.ssi.ExpressionParseTree$Node,org.apache.catalina.ssi.SSIProcessor,4, LD
 org.apache.catalina.manager.HTMLManagerServlet,org.apache.catalina.manager.Constants,13, LD
 org.apache.catalina.manager.HTMLManagerServlet,org.apache.catalina.manager.ManagerServlet,25, LD
-org.apache.catalina.manager.HTMLManagerServlet,org.apache.catalina.manager.host.Constants,11, LD
 org.apache.catalina.realm.GenericPrincipal,org.apache.catalina.realm.DataSourceRealm,7, LD
 org.apache.catalina.realm.GenericPrincipal,org.apache.catalina.realm.GenericPrincipal$SerializablePrincipal,17, LD
 org.apache.catalina.realm.GenericPrincipal,org.apache.catalina.realm.JAASRealm,9, LD
@@ -5599,9 +5575,6 @@ org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catal
 org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestParameterElement,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$PatternTokenizer,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$CookieElement,org.apache.catalina.valves.ExtendedAccessLogValve$ElementTimestampStruct,17, LD
-org.apache.catalina.startup.Constants,org.apache.catalina.startup.ContextConfig,6, LD
-org.apache.catalina.startup.Constants,org.apache.catalina.startup.ContextConfig$DefaultWebXmlCacheEntry,6, LD
-org.apache.catalina.startup.Constants,org.apache.catalina.startup.ContextConfig$JavaClassCacheEntry,6, LD
 org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.AuthenticatorBase,8, LD
 org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.AuthenticatorBase$JaspicState,8, LD
 org.apache.catalina.authenticator.SpnegoAuthenticator$AcceptAction,org.apache.catalina.authenticator.BasicAuthenticator,11, LD

@@ -52,7 +52,6 @@ org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.cata
 org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$Range,44, LD
 org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$CompressionFormat,44, LD
 org.apache.catalina.servlets.DefaultServlet$SecureEntityResolver,org.apache.catalina.servlets.DefaultServlet$PrecompressedResource,44, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.Constants,12, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$RequestHeaderElement,17, LD

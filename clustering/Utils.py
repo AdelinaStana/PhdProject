@@ -4,6 +4,7 @@ import os
 import networkx as nx
 import numpy as np
 import subprocess
+import pandas as pd
 
 from clustering.DependenciesBuilder import DependenciesBuilder
 from clustering.LouvainClustering import LouvainClustering
@@ -446,6 +447,31 @@ def ant_diff_results():
 
     louvian_sd.print_clusters()
     louvian_ld.print_clusters()
+
+
+def filter_csv_by_names(csv1_path, csv2_path):
+    df1 = pd.read_csv(csv1_path, header=None, usecols=[0, 1])
+    df2 = pd.read_csv(csv2_path, header=None, usecols=[0, 1])
+
+    names_set1 = set(df1[0]).union(set(df1[1]))
+    names_set2 = set(df2[0]).union(set(df2[1]))
+    missing = names_set2 - names_set1
+    print("Missing entities:", end="")
+    print(missing)
+
+    with open(csv2_path, 'r') as file:
+        all_lines = [line.strip() for line in file.readlines()]
+
+    filtered_lines = []
+    for line in all_lines:
+        entities = line.split(",")
+        if entities[0] in missing or entities[1] in missing:
+            filtered_lines.append(line)
+
+    with open(csv2_path, 'w') as file:
+        for line in all_lines:
+            if line not in filtered_lines:
+                file.write(line + '\n')
 
 
 def create_graphs():

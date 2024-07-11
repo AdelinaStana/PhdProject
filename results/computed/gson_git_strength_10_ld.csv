@@ -60,8 +60,6 @@ com.google.gson.TypeAdapter,com.google.gson.Gson,8, LD
 com.google.gson.TypeAdapter,com.google.gson.Gson$FutureTypeAdapter,8, LD
 com.google.gson.TypeAdapter,com.google.gson.internal.bind.MapTypeAdapterFactory,6, LD
 com.google.gson.TypeAdapter,com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter,6, LD
-com.google.gson.stream.JsonScope,com.google.gson.stream.JsonWriter,3, LD
-com.google.gson.stream.JsonScope,com.google.gson.stream.JsonReader,3, LD
 com.google.gson.internal.bind.ArrayTypeAdapter,com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField,7, LD
 com.google.gson.internal.bind.ArrayTypeAdapter,com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter,7, LD
 com.google.gson.internal.bind.ArrayTypeAdapter,com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$FieldReflectionAdapter,7, LD

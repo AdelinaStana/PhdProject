@@ -2381,8 +2381,6 @@ org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.DataSourceRealm,12
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.JDBCRealm,14, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.MemoryRealm,13, LD
 org.apache.catalina.realm.JAASRealm,org.apache.catalina.realm.UserDatabaseRealm,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.Constants,12, LD
-org.apache.catalina.manager.host.Constants,org.apache.catalina.manager.HTMLManagerServlet,11, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.AccessLogValve,14, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve,17, LD
 org.apache.catalina.valves.ExtendedAccessLogValve$TimeElement,org.apache.catalina.valves.ExtendedAccessLogValve$DateElement,17, LD
@@ -2489,7 +2487,6 @@ org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filte
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$XServletOutputStream,13, LD
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$DurationUnit,13, LD
 org.apache.catalina.filters.ExpiresFilter$XPrintWriter,org.apache.catalina.filters.ExpiresFilter$StartingPoint,13, LD
-org.apache.catalina.manager.Constants,org.apache.catalina.manager.host.Constants,12, LD
 org.apache.catalina.manager.Constants,org.apache.catalina.manager.HTMLManagerServlet,13, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat,39, LD
 org.apache.catalina.startup.Tomcat$ExistingStandardWrapper,org.apache.catalina.startup.Tomcat$FixContextListener,39, LD
