@@ -148,11 +148,19 @@ class Statistics:
                 commits_above_20 += 1
             sum_commits += commit_size
 
-        print("Nr of commits with less than 5 files: " + str(commits_under_5))
-        print("Nr of commits with more than 5 and less then 10 files: " + str(commits_under_10))
-        print("Nr of commits with more than 10 and less then 20 files: " + str(commits_under_20))
-        print("Nr of commits with more than 20 files: " + str(commits_above_20))
-        print("Average nr of files/commit: " + str(round(sum_commits / nr_commits, 2)))
+        # print("Nr of commits with less than 5 files: " + str(commits_under_5))
+        # print("Nr of commits with more than 5 and less then 10 files: " + str(commits_under_10))
+        # print("Nr of commits with more than 10 and less then 20 files: " + str(commits_under_20))
+        # print("Nr of commits with more than 20 files: " + str(commits_above_20))
+        # print("Average nr of files/commit: " + str(round(sum_commits / nr_commits, 2)))
+        #
+        # print(
+        #     f"{nr_commits},{commits_under_5},{commits_under_10},{commits_under_20},{commits_above_20},{round(sum_commits / nr_commits, 2)}")
 
-        print(str(commits_under_5) + "," + str(commits_under_10) + "," + str(commits_under_20) + "," + str(
-            commits_above_20) + "," + str(round(sum_commits / nr_commits, 2)))
+        percent_under_5 = (commits_under_5 / nr_commits) * 100
+        percent_under_10 = (commits_under_10 / nr_commits) * 100
+        percent_under_20 = (commits_under_20 / nr_commits) * 100
+        percent_above_20 = (commits_above_20 / nr_commits) * 100
+
+        # Printing the result
+        print(f"{percent_under_5:.2f}%,{percent_under_10:.2f}%,{percent_under_20:.2f}%,{percent_above_20:.2f}%,{round(sum_commits / nr_commits, 2)}")

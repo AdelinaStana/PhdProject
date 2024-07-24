@@ -323,7 +323,6 @@ def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
         capture_output=True, text=True)
 
     print(mojo.stdout.strip(), end=",")
-    print(mojofm.stdout.strip(), end=",")
 
 
 def draw_graph(G, cluster_nodes, cut_prefix):

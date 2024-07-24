@@ -17,7 +17,7 @@ class DependenciesBuilder:
     def __init__(self, csv_file, original_dependencies=None):
         self.name_index_map = {}
         self.index_name_map = {}
-        self.matrix = np.array([])
+        self.matrix = np.array([], dtype=float)
         self.graph = nx.Graph()
         self.n = 0
 
@@ -41,8 +41,8 @@ class DependenciesBuilder:
                     entity2 = row[1].strip()
                     value = int(row[2].strip())
                     if len(row) > 3 and row[3]:  # LD is in that row
-                        data.append([entity1, entity2, value])
-                        # data.append([entity2, entity1, value*2])
+                        # data.append([entity1, entity2, value])
+                        data.append([entity2, entity1, value])
                     else:
                         data.append([entity1, entity2, value])
 

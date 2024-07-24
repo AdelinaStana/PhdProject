@@ -2,7 +2,7 @@ import sys
 import ModularizationQualityNew
 import ModularizationQuality
 from clustering import Utils
-from clustering.MSTClustering import MSTClustering
+from clustering.MSTClustering import MSTClusteringWrapper
 from clustering.Utils import *
 
 '''
@@ -49,22 +49,29 @@ def build_and_measure(dependencies_path, reference_solution_path, original_depen
     dependencies = DependenciesBuilder(dependencies_path, original_dependencies)
     reference_labels = import_clustering_solution(reference_solution_path, dependencies)
 
+    print(dependencies.n, end=",")
+
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
-    print(dependencies.n, end=",")
 
     if original_dependencies is None:
         original_dependencies = dependencies
 
     print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, louvian.labels), 3),
           end=",")
-    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
-          end=",")
-
-    print(round(metrics.get_modularity(original_dependencies.matrix, louvian.labels), 3), end=",")
-    print(round(metrics.get_modularity(original_dependencies.matrix, reference_labels), 3), end=",")
-
+    # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
+    #       end=",")
     calculate_mojo(louvian.labels, reference_labels, original_dependencies)
+
+    mst = MSTClusteringWrapper(dependencies)
+    print(len(mst.clusters), end=",")
+
+    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, mst.labels), 3),
+          end=",")
+    # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
+    #       end=",")
+
+    calculate_mojo(mst.labels, reference_labels, original_dependencies)
 
 
 def run_project(name):
@@ -91,12 +98,12 @@ def run_project(name):
 
 
 def generate_ref_solutions():
-    # export_reference_solution2("ant",
-    #                           f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
-    # export_reference_solution2("catalina",
-    #                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
-    # export_reference_solution2("hibernate",
-    #                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
+    export_reference_solution2("ant",
+                              f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
+    export_reference_solution2("catalina",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
+    export_reference_solution2("hibernate",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
     export_reference_solution2("gson",
                                 f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
 
@@ -114,9 +121,9 @@ def run_all():
     # ant_diff_results()
     # generate_ref_solutions()
     run_project("ant")
-    run_project("catalina")
-    run_project("hibernate")
-    run_project("gson")
+    # run_project("catalina")
+    # run_project("hibernate")
+    # run_project("gson")
 
 
 run_all()
