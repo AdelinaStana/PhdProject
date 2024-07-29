@@ -8,6 +8,8 @@ import pandas as pd
 
 from clustering.DependenciesBuilder import DependenciesBuilder
 from clustering.LouvainClustering import LouvainClustering
+from clustering.MSTClustering import MSTClusteringWrapper
+from clustering.ModularizationQuality import *
 
 '''
 Use it to concatenate two csv;
@@ -69,27 +71,19 @@ def diff(file_path1, file_path2):
     # calculate clustering for path1
     print(os.path.basename(file_path1), end=',')
     dependencies1 = DependenciesBuilder(file_path1,)
-    louvian1 = LouvainClustering(dependencies1)
-    reference_labels1 = create_clustering_based_on_packages(file_path1, dependencies1)
+    result1 = MSTClusteringWrapper(dependencies1)
 
-    print(len(louvian1.clusters), end=",")
+    print(len(result1.clusters), end=",")
     print(dependencies1.n, end=",")
 
-    calculate_mojo(louvian1.labels, reference_labels1, dependencies1)
-
-    # calculate clustering for path2
     print(os.path.basename(file_path2), end=',')
     dependencies2 = DependenciesBuilder(file_path2)
-    louvian2 = LouvainClustering(dependencies2)
-    print(len(louvian2.clusters), end=",")
+    results2 = MSTClusteringWrapper(dependencies2)
+    print(len(results2.clusters), end=",")
     print(dependencies2.n, end=",")
 
-    reference_labels2 = create_clustering_based_on_packages(file_path2, dependencies2)
-
-    calculate_mojo(louvian2.labels, reference_labels2, dependencies2)
-
-    sol1 = map_labels_to_cluster_array(louvian1.labels, dependencies1)
-    sol2 = map_labels_to_cluster_array(louvian2.labels, dependencies2)
+    sol1 = map_labels_to_cluster_array(result1.labels, dependencies1)
+    sol2 = map_labels_to_cluster_array(results2.labels, dependencies2)
 
     for cluster1 in sol1:
         for cluster2 in sol2:
@@ -101,11 +95,6 @@ def diff(file_path1, file_path2):
                 print(f"diff ({len(difference)}){difference}")
                 print(f"common ({len(common)}) {common}")
 
-    id1 = dependencies1.name_index_map["org.apache.tools.ant.util.regexp.RegexpMatcher"]
-    id2 = dependencies2.name_index_map["org.apache.tools.ant.util.regexp.RegexpMatcher"]
-
-    print(dependencies1.matrix[id1])
-    print(dependencies2.matrix[id2])
 
 
 '''
@@ -192,7 +181,8 @@ def calculate_key_classes_percent(dependencies, key_class_file_path):
 
 def map_labels_to_cluster_array(labels, dependencies_mapper):
     clusters_dict = {}
-    for i in range(0, len(labels)):
+    unique_labels = set(labels)
+    for i in unique_labels:
         if labels[i] in clusters_dict.keys():
             clusters_dict[labels[i]].append(i)
         else:
@@ -208,13 +198,10 @@ def map_labels_to_cluster_array(labels, dependencies_mapper):
     return clusters
 
 
-def save_clusters(clusters, file_name):
-    index = 0
+def save_clusters(labels, dep_mapper, file_name):
     with open(file_name, 'w') as file:
-        for cluster in clusters:
-            for item in cluster:
-                file.write(f"contain {index} {item}\n")
-            index += 1
+        for i in range(0, len(labels)):
+            file.write(f"contain {labels[i]} {dep_mapper.index_name_map[i]}\n")
 
 
 def read_links_from_csv(file_path):
@@ -248,13 +235,6 @@ To export reference solution
 
 def export_reference_solution(name, file_path):
     dependencies_mapper = DependenciesBuilder(file_path)
-    reference_labels = create_clustering_based_on_packages(file_path, dependencies_mapper)
-    reference_clusters = map_labels_to_cluster_array(reference_labels, dependencies_mapper)
-    save_clusters(reference_clusters, f"{name}_reference.rsf")
-
-
-def export_reference_solution2(name, file_path):
-    dependencies_mapper = DependenciesBuilder(file_path)
     entities_set, data = dependencies_mapper.read_csv_dependencies(file_path)
     packages = convert_to_cluster_packages(file_path)
 
@@ -267,11 +247,10 @@ def export_reference_solution2(name, file_path):
 
     dependencies_mapper.populate_matrix(entities_set, data)
     louvian = LouvainClustering(dependencies_mapper)
-    reference_clusters = map_labels_to_cluster_array(louvian.labels, dependencies_mapper)
-    save_clusters(reference_clusters, f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+    save_clusters(louvian.labels, dependencies_mapper, f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
 
-def import_clustering_solution(file_path, dependencies_mapper):
+def import_clustering_solution_labels(file_path, dependencies_mapper):
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
@@ -309,14 +288,10 @@ java mojo.MoJo a.rsf b.rsf -b+
 '''
 
 
-def calculate_mojo(sol_labels, reference_lables, dependencies_mapper):
-    sol_clusters = map_labels_to_cluster_array(sol_labels, dependencies_mapper)
-    reference_clusters = map_labels_to_cluster_array(reference_lables, dependencies_mapper)
+def calculate_mojo(sol_labels, reference_sol_path, dependencies_mapper):
+    save_clusters(sol_labels, dependencies_mapper, "D:\\Util\\doctorat\\PhdProject\\solution.rsf")
 
-    save_clusters(sol_clusters, "solution.rsf")
-    save_clusters(reference_clusters, "reference.rsf")
-
-    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf"],
+    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "D:\\Util\\doctorat\\PhdProject\\solution.rsf", reference_sol_path],
                           capture_output=True, text=True)
     mojofm = subprocess.run(
         ["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"],
@@ -424,28 +399,37 @@ def check_mapping(labels1, labels2, index):
     return best_match
 
 
-def ant_diff_results():
-    dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
-    louvian_sd = LouvainClustering(dependencies_sd)
+def diff_results(file_path1, file_path2):
+    # calculate clustering for path1
+    print(os.path.basename(file_path1), end=',')
+    dependencies1 = DependenciesBuilder(file_path1)
+    result1 = MSTClusteringWrapper(dependencies1)
+    print(len(result1.clusters), end=",")
+    print(dependencies1.n, end=",")
+    print(f"Clusters: {set(result1.labels)}")
+    print(f"MQ: {calculate_modularity(dependencies1.matrix, result1.labels)}")
 
-    dependencies_ld = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv",
-                                          dependencies_sd)
-
-    louvian_ld = LouvainClustering(dependencies_ld)
+    print(os.path.basename(file_path2), end=',')
+    dependencies2 = DependenciesBuilder(file_path2)
+    result2 = MSTClusteringWrapper(dependencies2)
+    print(len(result2.clusters), end=",")
+    print(dependencies2.n, end=",")
+    print(f"Clusters: {set(result2.labels)}")
+    print(f"MQ: {calculate_modularity(dependencies2.matrix, result2.labels)}")
 
     match_dict = {}
-    for i in set(louvian_sd.labels):
-        match_dict[i] = check_mapping(louvian_sd.labels, louvian_ld.labels, i)
+    for i in set(result1.labels):
+        match_dict[i] = check_mapping(result1.labels, result2.labels, i)
 
     print(match_dict)
 
-    for i in range(0, len(louvian_ld.labels)):
-        if louvian_sd.labels[i] != louvian_ld.labels[i]:
-            if match_dict[louvian_sd.labels[i]] and louvian_ld.labels[i] != match_dict[louvian_sd.labels[i]]:
-                print(louvian_ld.index_name_map[i])
+    for i in range(0, len(result1.labels)):
+        if result1.labels[i] != result2.labels[i]:
+            if match_dict[result1.labels[i]] and result2.labels[i] != match_dict[result1.labels[i]]:
+                print(result2.index_name_map[i])
 
-    louvian_sd.print_clusters()
-    louvian_ld.print_clusters()
+    result1.print_clusters()
+    result2.print_clusters()
 
 
 def filter_csv_by_names(csv1_path, csv2_path):

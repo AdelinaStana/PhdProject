@@ -84,7 +84,9 @@ def calculate_modularity(adj_matrix, labels):
 
     sum_intraconnectivity = 0
     for i in unique_labels:
+        intra = calculate_intraconnectivity(adj_matrix, labels, i)
         sum_intraconnectivity += calculate_intraconnectivity(adj_matrix, labels, i)
+        # print(f"{i} - {intra}")
 
     sum_interconnectivity = 0
     for i in unique_labels:
@@ -92,5 +94,8 @@ def calculate_modularity(adj_matrix, labels):
             if i < j:
                 sum_interconnectivity += calculate_interconnectivity(adj_matrix, labels, i, j)
 
+    # print(f"sum_intraconnectivity = {sum_intraconnectivity}, sum_interconnectivity = {sum_interconnectivity}, k = {k}")
+    # print(f"modularity = ((1 / k) * sum_intraconnectivity) - ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)")
     modularity = ((1 / k) * sum_intraconnectivity) - ((1 / ((k * (k - 1)) / 2)) * sum_interconnectivity)
+    # print(f"modularity {modularity}")
     return modularity

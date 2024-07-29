@@ -43,68 +43,75 @@ indicate overlapping clusters.
 
 '''
 
+def print_name(dependencies_path_sd, dependencies_path_ld):
+    if dependencies_path_sd and dependencies_path_ld:
+        strength = dependencies_path_ld.split("_")[-2]
+        print(f"SD+LD({strength})", end=',')
+        return
+    if dependencies_path_sd:
+        print(f"SD", end=',')
+        return
+    if dependencies_path_ld:
+        strength = dependencies_path_ld.split("_")[-2]
+        print(f"LD ({strength})", end=',')
+        return
 
-def build_and_measure(dependencies_path, reference_solution_path, original_dependencies):
-    print(os.path.basename(dependencies_path), end=',')
-    dependencies = DependenciesBuilder(dependencies_path, original_dependencies)
-    reference_labels = import_clustering_solution(reference_solution_path, dependencies)
 
+def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solution_path):
+    print_name(dependencies_path_sd, dependencies_path_ld)
+    dependencies = DependenciesBuilder(dependencies_path_sd, dependencies_path_ld)
+
+    # reference_labels = import_clustering_solution_labels(reference_solution_path, dependencies)
+    # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
+    #       end=",")
     print(dependencies.n, end=",")
 
     louvian = LouvainClustering(dependencies)
     print(len(louvian.clusters), end=",")
 
-    if original_dependencies is None:
-        original_dependencies = dependencies
-
-    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, louvian.labels), 3),
+    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, louvian.labels), 3),
           end=",")
-    # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
-    #       end=",")
-    calculate_mojo(louvian.labels, reference_labels, original_dependencies)
+    calculate_mojo(louvian.labels, reference_solution_path, dependencies)
 
     mst = MSTClusteringWrapper(dependencies)
     print(len(mst.clusters), end=",")
 
-    print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, mst.labels), 3),
+    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, mst.labels), 3),
           end=",")
-    # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
-    #       end=",")
 
-    calculate_mojo(mst.labels, reference_labels, original_dependencies)
+    calculate_mojo(mst.labels, reference_solution_path, dependencies)
 
 
 def run_project(name):
-    dependencies_orig = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
-
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
-                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", dependencies_orig)
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", None,
+                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
     print()
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", None)
+        build_and_measure(None, f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf", None)
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
 
-        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_sd_ld.csv",
+        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
 
 
 def generate_ref_solutions():
-    export_reference_solution2("ant",
+    export_reference_solution("ant",
                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
-    export_reference_solution2("catalina",
+    export_reference_solution("catalina",
                                f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
-    export_reference_solution2("hibernate",
+    export_reference_solution("hibernate",
                                f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
-    export_reference_solution2("gson",
+    export_reference_solution("gson",
                                 f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
 
 
@@ -118,7 +125,9 @@ def remove_unknown():
 
 def run_all():
     # create_graphs()
-    # ant_diff_results()
+    # diff_results("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_sd_ld.csv",
+    #              "D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_sd_ld.csv"
+    #              )
     # generate_ref_solutions()
     run_project("ant")
     # run_project("catalina")
