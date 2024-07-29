@@ -43,6 +43,7 @@ indicate overlapping clusters.
 
 '''
 
+
 def print_name(dependencies_path_sd, dependencies_path_ld):
     if dependencies_path_sd and dependencies_path_ld:
         strength = dependencies_path_ld.split("_")[-2]
@@ -83,50 +84,48 @@ def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solu
 
 
 def run_project(name):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv", None,
-                      f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv", None,
+                      f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
 
     print()
 
     for i in range(10, 101, 10):
-        build_and_measure(None, f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+        build_and_measure(None, f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
 
-        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                           f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
+        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+                           f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
 
     for i in range(10, 101, 10):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+                          f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
 
-        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\{name}_git_strength_{i}_ld.csv",
-                           f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_{name}.csv")
+        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+                           f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
 
 
 def generate_ref_solutions():
     export_reference_solution("ant",
-                              f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv")
+                              f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_sd_ld.csv")
     export_reference_solution("catalina",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_50_sd_ld.csv")
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_50_sd_ld.csv")
     export_reference_solution("hibernate",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\hibernate_git_strength_20_sd_ld.csv")
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_20_sd_ld.csv")
     export_reference_solution("gson",
-                                f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_10_sd_ld.csv")
+                                f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_10_sd_ld.csv")
 
 
 def remove_unknown():
     for i in range(10, 101, 10):
-        filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_gson.csv",
-                            f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_{i}_sd_ld.csv")
-        filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_gson.csv",
-                                    f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\gson_git_strength_{i}_ld.csv")
+        filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
+                            f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_{i}_ld.csv")
 
 
 def run_all():
     # create_graphs()
-    # diff_results("D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_70_sd_ld.csv",
-    #              "D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_80_sd_ld.csv"
+    # diff_results("D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_70_ld.csv",
+    #              "D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_80_ld.csv"
     #              )
     # generate_ref_solutions()
     run_project("ant")

@@ -17,7 +17,7 @@ First must be SD, second LD
 
 for i in range(10, 101, 10):
     input_file1 = f"D:\\Util\\doctorat\\PhdProject\\results\\sd_catalina.csv"
-    input_file2 = f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\catalina_git_strength_{i}_ld.csv"
+    input_file2 = f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_{i}_ld.csv"
 
     Utils.concat_csv_files(input_file1, input_file2)
 
@@ -60,8 +60,8 @@ def plot_info(dependencies, labels):
 
 
 """
-#diff(f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_90_sd_ld.csv",
-f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_100_sd_ld.csv", 125)
+#diff(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_90_sd_ld.csv",
+f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_sd_ld.csv", 125)
 
 
 """
@@ -247,7 +247,7 @@ def export_reference_solution(name, file_path):
 
     dependencies_mapper.populate_matrix(entities_set, data)
     louvian = LouvainClustering(dependencies_mapper)
-    save_clusters(louvian.labels, dependencies_mapper, f"D:\\Util\\doctorat\\PhdProject\\results\\{name}_reference.rsf")
+    save_clusters(louvian.labels, dependencies_mapper, f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
 
 
 def import_clustering_solution_labels(file_path, dependencies_mapper):
@@ -289,9 +289,9 @@ java mojo.MoJo a.rsf b.rsf -b+
 
 
 def calculate_mojo(sol_labels, reference_sol_path, dependencies_mapper):
-    save_clusters(sol_labels, dependencies_mapper, "D:\\Util\\doctorat\\PhdProject\\solution.rsf")
+    save_clusters(sol_labels, dependencies_mapper, "D:\\Util\\doctorat\\PhdProject\\results\\solution.rsf")
 
-    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "D:\\Util\\doctorat\\PhdProject\\solution.rsf", reference_sol_path],
+    mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "D:\\Util\\doctorat\\PhdProject\\results\\solution.rsf", reference_sol_path],
                           capture_output=True, text=True)
     mojofm = subprocess.run(
         ["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"],
@@ -460,9 +460,9 @@ def filter_csv_by_names(csv1_path, csv2_path):
 def create_graphs():
     import networkx as nx
 
-    dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\structural_dep_ant.csv")
+    dependencies_sd = DependenciesBuilder(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv")
     dependencies_ld = DependenciesBuilder(
-        f"D:\\Util\\doctorat\\PhdProject\\results\\computed\\ant_git_strength_20_sd_ld.csv", dependencies_sd)
+        f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_20_sd_ld.csv", dependencies_sd)
 
     louvian_ld = LouvainClustering(dependencies_ld)
 
