@@ -9,8 +9,6 @@ from clustering.Utils import *
 Measurements:
 '''
 
-from sknetwork.clustering import metrics
-
 
 class RedirectPrintToFile:
     def __init__(self, filename):
@@ -47,14 +45,17 @@ indicate overlapping clusters.
 def print_name(dependencies_path_sd, dependencies_path_ld):
     if dependencies_path_sd and dependencies_path_ld:
         strength = dependencies_path_ld.split("_")[-2]
-        print(f"SD+LD({strength})", end=',')
+        name = dependencies_path_sd.split("_")[-1].replace(".csv", "")
+        print(f"{name} SD+LD({strength})", end=',')
         return
     if dependencies_path_sd:
-        print(f"SD", end=',')
+        name = dependencies_path_sd.split("_")[-1].replace(".csv", "")
+        print(f"{name} SD", end=',')
         return
     if dependencies_path_ld:
+        name = dependencies_path_ld.split("\\")[-1].split("_")[0]
         strength = dependencies_path_ld.split("_")[-2]
-        print(f"LD ({strength})", end=',')
+        print(f"{name} LD ({strength})", end=',')
         return
 
 
@@ -67,12 +68,12 @@ def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solu
     #       end=",")
     print(dependencies.n, end=",")
 
-    louvian = LouvainClustering(dependencies)
-    print(len(louvian.clusters), end=",")
+    louvain = LouvainClustering(dependencies)
+    print(len(louvain.clusters), end=",")
 
-    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, louvian.labels), 3),
+    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, louvain.labels), 3),
           end=",")
-    calculate_mojo(louvian.labels, reference_solution_path, dependencies)
+    calculate_mojo(louvain.labels, reference_solution_path, dependencies)
 
     mst = MSTClusteringWrapper(dependencies)
     print(len(mst.clusters), end=",")
@@ -106,14 +107,14 @@ def run_project(name):
 
 
 def generate_ref_solutions():
-    export_reference_solution("ant",
-                              f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_sd_ld.csv")
-    export_reference_solution("catalina",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_50_sd_ld.csv")
-    export_reference_solution("hibernate",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_20_sd_ld.csv")
-    export_reference_solution("gson",
-                                f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_10_sd_ld.csv")
+    export_reference_solution("ant", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv",
+                              f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_ld.csv")
+    export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
+    export_reference_solution("hibernate", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_hibernate.csv",
+                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
+    export_reference_solution("gson", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
+                                f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_100_ld.csv")
 
 
 def remove_unknown():
@@ -129,9 +130,9 @@ def run_all():
     #              )
     # generate_ref_solutions()
     run_project("ant")
-    # run_project("catalina")
-    # run_project("hibernate")
-    # run_project("gson")
+    run_project("catalina")
+    run_project("hibernate")
+    run_project("gson")
 
 
 run_all()

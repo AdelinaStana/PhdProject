@@ -233,17 +233,18 @@ To export reference solution
 '''
 
 
-def export_reference_solution(name, file_path):
-    dependencies_mapper = DependenciesBuilder(file_path)
-    entities_set, data = dependencies_mapper.read_csv_dependencies(file_path)
-    packages = convert_to_cluster_packages(file_path)
+def export_reference_solution(name, sd_file_path, ld_file_path):
+    dependencies_mapper = DependenciesBuilder(sd_file_path, ld_file_path)
+    entities_set, data = dependencies_mapper.read_csv_dependencies(None, ld_file_path)
+    packages = convert_to_cluster_packages(sd_file_path)
 
-    for entity in entities_set:
-        for package in packages.keys():
-            if entity in packages[package]:
-                for connection in packages[package]:
-                    data.append([entity, connection, 1])
-                    data.append([connection, entity, 1])
+    for package in packages.keys():
+        for connection in packages[package]:
+            for other in packages[package]:
+                    data.append([connection, other, 100])
+                    data.append([other, connection, 100])
+                    entities_set.add(connection)
+                    entities_set.add(other)
 
     dependencies_mapper.populate_matrix(entities_set, data)
     louvian = LouvainClustering(dependencies_mapper)

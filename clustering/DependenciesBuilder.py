@@ -13,6 +13,19 @@ def extract_number_from_path(file_path):
         return 10
 
 
+def compute_overall_average(data):
+    total_sum = 0
+    total_count = 0
+
+    for _, _, value in data:
+        total_sum += value
+        total_count += 1
+
+    overall_average = total_sum / total_count if total_count > 0 else 0
+
+    return overall_average
+
+
 class DependenciesBuilder:
     def __init__(self, csv_file_sd, csv_file_ld, original_dependencies=None):
         self.name_index_map = {}
@@ -29,7 +42,6 @@ class DependenciesBuilder:
             self.populate_matrix(entities_set, data)
 
     def read_csv_dependencies(self, csv_file_sd, csv_file_ld):
-        # read file
         entities_set = set()
         data = []
 
@@ -45,7 +57,6 @@ class DependenciesBuilder:
 
                         entities_set.add(entity1)
                         entities_set.add(entity2)
-
             except BaseException as e:
                 print(f"Error at reading csv file: {csv_file_sd}")
                 print(e)
@@ -63,13 +74,12 @@ class DependenciesBuilder:
 
                         entities_set.add(entity1)
                         entities_set.add(entity2)
-
             except BaseException as e:
                 print(f"Error at reading csv file: {csv_file_ld}")
                 print(e)
                 return
 
-        entities_set = sorted(entities_set)
+        entities_set = set(sorted(entities_set))
 
         return entities_set, data
 
@@ -91,7 +101,11 @@ class DependenciesBuilder:
             index_b = self.name_index_map[dependency[1]]
 
             self.matrix[index_a][index_b] += dependency[2]
-            self.graph.add_edge(dependency[0], dependency[1],  weight=dependency[2])
+            if self.graph.has_edge(dependency[0], dependency[1]):
+                old_weight = self.graph.get_edge_data(dependency[0], dependency[1])['weight']
+                self.graph.add_edge(dependency[0], dependency[1], weight=(old_weight+dependency[2])/2)
+            else:
+                self.graph.add_edge(dependency[0], dependency[1],  weight=dependency[2])
 
     def repopulate_matrix(self, data, original_dependencies):
         self.index_name_map = original_dependencies.index_name_map
