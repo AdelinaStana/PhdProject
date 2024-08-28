@@ -133,37 +133,33 @@ def convert_to_cluster_packages(file_path):
 
     for name in class_names:
         parts = name.split(".")
-        package = parts[-2]
-        if package in packages.keys():
-            packages[package].append(name)
+        prefix = ".".join(parts[:-2])
+
+        if prefix in packages:
+            packages[prefix].append(name)
         else:
-            packages[package] = [name]
+            packages[prefix] = [name]
 
-    # threshold = 15
-    # if 'hibernate' in file_path:
-    #     threshold = 30
-    #
-    # to_delete = set()
-    # keys = list(packages.keys())
-    # keys = sorted(keys)
-    # for package in keys:
-    #     if len(packages[package]) <= threshold:
-    #         for item in packages[package]:
-    #             parts = item.split(".")
-    #             new_package = parts[-3]
-    #             if new_package in packages.keys() and new_package != package:
-    #                 packages[new_package].append(item)
-    #                 to_delete.add(package)
-    #
-    # for deleted in to_delete:
-    #     del packages[deleted]
+    to_delete = set()
+    keys = sorted(packages.keys())
 
-    # print(f"packages: {len(packages.keys())}")
-    # for package in packages.keys():
-    #     print(package)
-    #     for item in packages[package]:
-    #         print(f"\t{item}")
+    for package in keys:
+        if len(packages[package]) < 100:
+            for name in packages[package]:
+                parts = name.split(".")
+                prefix = ".".join(parts[:-3])
+                index = 4
+                while prefix not in keys and prefix != "":
+                    prefix = ".".join(parts[:-index])
+                    index -= 1
 
+                if prefix in keys and prefix not in to_delete:
+                    packages[prefix].extend(packages[package])
+                    to_delete.add(package)
+                    break
+
+    for package in to_delete:
+        del packages[package]
     return packages
 
 
@@ -241,8 +237,8 @@ def export_reference_solution(name, sd_file_path, ld_file_path):
     for package in packages.keys():
         for connection in packages[package]:
             for other in packages[package]:
-                    data.append([connection, other, 100])
-                    data.append([other, connection, 100])
+                    data.append([connection, other, 1])
+                    data.append([other, connection, 1])
                     entities_set.add(connection)
                     entities_set.add(other)
 
@@ -295,10 +291,10 @@ def calculate_mojo(sol_labels, reference_sol_path, dependencies_mapper):
     mojo = subprocess.run(["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "D:\\Util\\doctorat\\PhdProject\\results\\solution.rsf", reference_sol_path],
                           capture_output=True, text=True)
     mojofm = subprocess.run(
-        ["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "solution.rsf", "reference.rsf", "-fm"],
+        ["java", "-jar", "D:\\Util\\doctorat\\mojo\\mojorun.jar", "D:\\Util\\doctorat\\PhdProject\\results\\solution.rsf", reference_sol_path, "-fm"],
         capture_output=True, text=True)
 
-    print(mojo.stdout.strip(), end=",")
+    print(mojofm.stdout.strip(), end=",")
 
 
 def draw_graph(G, cluster_nodes, cut_prefix):

@@ -107,14 +107,14 @@ def run_project(name):
 
 
 def generate_ref_solutions():
-    export_reference_solution("ant", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv",
-                              f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_ld.csv")
-    export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
+    # export_reference_solution("ant", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv",
+    #                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_ld.csv")
+    # export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
+    #                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
     export_reference_solution("hibernate", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_hibernate.csv",
-                               f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
-    export_reference_solution("gson", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
-                                f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_100_ld.csv")
+                            f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
+    # export_reference_solution("gson", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
+    #                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_40_ld.csv")
 
 
 def remove_unknown():
@@ -122,16 +122,19 @@ def remove_unknown():
         filter_csv_by_names("D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_{i}_ld.csv")
 
+'''
+ant - just multiply in MST clustering with 2 the avg
+catalina - 3 * for MST; multiply by 2 LD value
+gson - 2 for MST
+'''
+
 
 def run_all():
     # create_graphs()
-    # diff_results("D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_70_ld.csv",
-    #              "D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_80_ld.csv"
-    #              )
     # generate_ref_solutions()
-    run_project("ant")
-    run_project("catalina")
-    run_project("hibernate")
+    # run_project("ant")
+    # run_project("catalina")
+    # run_project("hibernate")
     run_project("gson")
 
 

@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 from mst_clustering import MSTClustering
 import networkx as nx
@@ -51,10 +53,13 @@ class MSTClusteringWrapper:
 
         sorted_edges = sorted(mst.edges(data=True), key=lambda x: x[2]['weight'])
 
-        num_edges_to_remove = int(len(sorted_edges) * 0.1)
+        average_weight = sum(data['weight'] for _, _, data in mst.edges(data=True)) / mst.number_of_edges()
 
-        for u, v, data in sorted_edges[-num_edges_to_remove:]:
-            mst.remove_edge(u, v)
+        threshold = average_weight * 3.5
+
+        edges_to_remove = [(u, v) for u, v, data in sorted_edges if data['weight'] > threshold]
+
+        mst.remove_edges_from(edges_to_remove)
 
         self.labels = np.array([-1] * dependencies.n)
         cluster_id = 0
@@ -65,7 +70,18 @@ class MSTClusteringWrapper:
 
         if -1 in self.labels:
             print("ups")
+
         self.clusters = set(self.labels)
+
+    def calculate_nr_edges_to_remove(self, mst, n):
+        max_entities_per_cluster = 25
+
+        num_clusters_needed = math.ceil(n / max_entities_per_cluster)
+        existing_clusters = len(list(nx.connected_components(mst)))
+        num_edges_to_remove = max(0, num_clusters_needed - existing_clusters)
+
+        return num_edges_to_remove
+
 
     def print_clusters(self):
         print(f"\nMST Clustering - cluster count: {len(self.clusters)}")
