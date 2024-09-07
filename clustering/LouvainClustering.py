@@ -1,3 +1,4 @@
+from scipy import sparse
 from sknetwork.clustering import Louvain
 from collections import OrderedDict
 
@@ -6,7 +7,8 @@ class LouvainClustering:
     def __init__(self, dependencies):
         self.index_name_map = dependencies.index_name_map
         louvain = Louvain()
-        self.labels = louvain.fit_predict(dependencies.matrix)
+        matrix = sparse.csr_matrix(dependencies.matrix)
+        self.labels = louvain.fit_predict(matrix)
         self.clusters = set(self.labels)
 
     def print_clusters(self):

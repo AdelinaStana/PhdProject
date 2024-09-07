@@ -55,7 +55,7 @@ class MSTClusteringWrapper:
 
         average_weight = sum(data['weight'] for _, _, data in mst.edges(data=True)) / mst.number_of_edges()
 
-        threshold = average_weight * 3.5
+        threshold = average_weight * 3
 
         edges_to_remove = [(u, v) for u, v, data in sorted_edges if data['weight'] > threshold]
 

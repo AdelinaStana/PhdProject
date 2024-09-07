@@ -1,8 +1,7 @@
 import sys
-import ModularizationQualityNew
 import ModularizationQuality
-from clustering import Utils
-from clustering.MSTClustering import MSTClusteringWrapper
+from clustering.BDSCANClustering import DBSCANClustering
+from clustering.LeidenClustering import LeidenClustering
 from clustering.Utils import *
 
 '''
@@ -75,13 +74,21 @@ def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solu
           end=",")
     calculate_mojo(louvain.labels, reference_solution_path, dependencies)
 
-    mst = MSTClusteringWrapper(dependencies)
-    print(len(mst.clusters), end=",")
+    leiden = LeidenClustering(dependencies)
+    print(len(leiden.clusters), end=",")
 
-    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, mst.labels), 3),
+    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, leiden.labels), 3),
           end=",")
 
-    calculate_mojo(mst.labels, reference_solution_path, dependencies)
+    calculate_mojo(leiden.labels, reference_solution_path, dependencies)
+
+    dbscan = DBSCANClustering(dependencies)
+    print(len(dbscan.clusters), end=",")
+
+    print(round(ModularizationQuality.calculate_modularity(dependencies.matrix, dbscan.labels), 3),
+          end=",")
+
+    calculate_mojo(dbscan.labels, reference_solution_path, dependencies)
 
 
 def run_project(name):
@@ -110,9 +117,9 @@ def generate_ref_solutions():
     # export_reference_solution("ant", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv",
     #                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_ld.csv")
     # export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
-    #                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
+    #                          f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
     export_reference_solution("hibernate", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_hibernate.csv",
-                            f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
+                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
     # export_reference_solution("gson", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
     #                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_40_ld.csv")
 
@@ -125,7 +132,7 @@ def remove_unknown():
 '''
 ant - just multiply in MST clustering with 2 the avg
 catalina - 3 * for MST; multiply by 2 LD value
-gson - 2 for MST
+gson - 2 for MST; multiply by 3 LD value
 '''
 
 
@@ -134,8 +141,8 @@ def run_all():
     # generate_ref_solutions()
     # run_project("ant")
     # run_project("catalina")
-    # run_project("hibernate")
-    run_project("gson")
+    run_project("hibernate")
+    # run_project("gson")
 
 
 run_all()

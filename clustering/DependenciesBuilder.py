@@ -70,7 +70,7 @@ class DependenciesBuilder:
                         entity1 = row[0].strip()
                         entity2 = row[1].strip()
                         value = int(row[2].strip())
-                        data.append([entity1, entity2, value*3])
+                        data.append([entity1, entity2, value*2])
 
                         entities_set.add(entity1)
                         entities_set.add(entity2)
@@ -100,7 +100,7 @@ class DependenciesBuilder:
             index_a = self.name_index_map[dependency[0]]
             index_b = self.name_index_map[dependency[1]]
 
-            self.matrix[index_a][index_b] += dependency[2]
+            self.matrix[index_a][index_b] += int(dependency[2])
 
             if self.graph.has_edge(dependency[0], dependency[1]):
                 old_weight = self.graph.get_edge_data(dependency[0], dependency[1])['weight']
@@ -122,7 +122,7 @@ class DependenciesBuilder:
                 index_a = self.name_index_map[dependency[0]]
                 index_b = self.name_index_map[dependency[1]]
 
-                self.matrix[index_a][index_b] += dependency[2]
+                self.matrix[index_a][index_b] += int(dependency[2])
                 self.graph.add_edge(dependency[0], dependency[1], weight=dependency[2])
 
 
