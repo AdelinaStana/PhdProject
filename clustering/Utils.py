@@ -230,7 +230,7 @@ To export reference solution
 
 
 def export_reference_solution(name, sd_file_path, ld_file_path):
-    dependencies_mapper = DependenciesBuilder(sd_file_path, ld_file_path)
+    dependencies_mapper = DependenciesBuilder(name, sd_file_path, ld_file_path)
     entities_set, data = dependencies_mapper.read_csv_dependencies(None, ld_file_path)
     packages = convert_to_cluster_packages(sd_file_path)
 

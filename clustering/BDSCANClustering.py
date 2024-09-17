@@ -1,6 +1,5 @@
 from scipy import sparse
 from sklearn.cluster import DBSCAN
-from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
 
@@ -15,6 +14,6 @@ class DBSCANClustering:
 
         dense_matrix = matrix.toarray()
 
-        dbscan = DBSCAN(eps=0.5, min_samples=4, metric='precomputed')
+        dbscan = DBSCAN(eps=0.3, min_samples=4, metric='precomputed')
         self.labels = dbscan.fit_predict(dense_matrix)
         self.clusters = set(self.labels)

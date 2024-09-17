@@ -46,21 +46,21 @@ def print_name(dependencies_path_sd, dependencies_path_ld):
         strength = dependencies_path_ld.split("_")[-2]
         name = dependencies_path_sd.split("_")[-1].replace(".csv", "")
         print(f"{name} SD+LD({strength})", end=',')
-        return
+        return name
     if dependencies_path_sd:
         name = dependencies_path_sd.split("_")[-1].replace(".csv", "")
         print(f"{name} SD", end=',')
-        return
+        return name
     if dependencies_path_ld:
         name = dependencies_path_ld.split("\\")[-1].split("_")[0]
         strength = dependencies_path_ld.split("_")[-2]
         print(f"{name} LD ({strength})", end=',')
-        return
+        return name
 
 
 def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solution_path):
-    print_name(dependencies_path_sd, dependencies_path_ld)
-    dependencies = DependenciesBuilder(dependencies_path_sd, dependencies_path_ld)
+    name = print_name(dependencies_path_sd, dependencies_path_ld)
+    dependencies = DependenciesBuilder(name, dependencies_path_sd, dependencies_path_ld)
 
     # reference_labels = import_clustering_solution_labels(reference_solution_path, dependencies)
     # print(round(ModularizationQuality.calculate_modularity(original_dependencies.matrix, reference_labels), 3),
@@ -92,19 +92,19 @@ def build_and_measure(dependencies_path_sd, dependencies_path_ld, reference_solu
 
 
 def run_project(name):
-    build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv", None,
-                      f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
+    # build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv", None,
+    #                   f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
+    #
+    # print()
+    #
+    # for i in range(10, 101, 10):
+    #     build_and_measure(None, f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+    #                       f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
+    #
+    #     calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+    #                        f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
 
-    print()
-
-    for i in range(10, 101, 10):
-        build_and_measure(None, f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
-
-        calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
-                           f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
-
-    for i in range(10, 101, 10):
+    for i in range(100, 101, 90):
         build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv",
                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
                           f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
@@ -116,10 +116,10 @@ def run_project(name):
 def generate_ref_solutions():
     # export_reference_solution("ant", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_ant.csv",
     #                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\ant_git_strength_100_ld.csv")
-    # export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
-    #                          f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
-    export_reference_solution("hibernate", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_hibernate.csv",
-                           f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
+    export_reference_solution("catalina", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_catalina.csv",
+                              f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\catalina_git_strength_100_ld.csv")
+    # export_reference_solution("hibernate", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_hibernate.csv",
+    #                        f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\hibernate_git_strength_100_ld.csv")
     # export_reference_solution("gson", f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_gson.csv",
     #                             f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\gson_git_strength_40_ld.csv")
 
@@ -140,8 +140,8 @@ def run_all():
     # create_graphs()
     # generate_ref_solutions()
     # run_project("ant")
-    # run_project("catalina")
-    run_project("hibernate")
+    run_project("catalina")
+    # run_project("hibernate")
     # run_project("gson")
 
 
