@@ -211,6 +211,22 @@ def read_links_from_csv(file_path):
     return links
 
 
+def calculate_average_from_csv(file):
+    third_column_values = []
+
+    with open(file, 'r', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            if len(row) >= 2:
+                third_column_values.append(float(row[2]))
+
+    if third_column_values:
+        average = sum(third_column_values) / len(third_column_values)
+        return round(average, 2)
+    else:
+        return None
+
+
 def calculate_overlapp(file_ld, file_sd):
     percentage = 0
 
@@ -221,7 +237,9 @@ def calculate_overlapp(file_ld, file_sd):
         common_links = links_ld.intersection(links_sd)
         percentage = round(((len(common_links) / len(links_ld)) * 100), 2)
 
-    print(percentage)
+    print(percentage, end=",")
+    print(calculate_average_from_csv(file_sd), end=",")
+    print(calculate_average_from_csv(file_ld))
 
 
 '''

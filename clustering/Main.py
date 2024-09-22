@@ -104,11 +104,11 @@ def run_project(name):
     #     calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
     #                        f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
 
-    for i in range(100, 101, 90):
-        build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
-                          f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
-
+    for i in range(10, 101, 10):
+        # build_and_measure(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv",
+        #                   f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
+        #                   f"D:\\Util\\doctorat\\PhdProject\\results\\baseline\\{name}_reference.rsf")
+        name = print_name(f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv", f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv")
         calculate_overlapp(f"D:\\Util\\doctorat\\PhdProject\\results\\LD\\{name}_git_strength_{i}_ld.csv",
                            f"D:\\Util\\doctorat\\PhdProject\\results\\SD\\structural_dep_{name}.csv")
 
@@ -139,10 +139,10 @@ gson - 2 for MST; multiply by 3 LD value
 def run_all():
     # create_graphs()
     # generate_ref_solutions()
-    # run_project("ant")
+    run_project("ant")
     run_project("catalina")
-    # run_project("hibernate")
-    # run_project("gson")
+    run_project("hibernate")
+    run_project("gson")
 
 
 run_all()
