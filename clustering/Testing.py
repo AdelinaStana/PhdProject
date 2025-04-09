@@ -138,3 +138,69 @@ run_anova_and_print("Gson Leiden MQ", Gson_MQ_SD_Leiden, Gson_MQ_LD_Leiden, Gson
 run_anova_and_print("Gson Leiden MoJoFM", Gson_MoJoFM_SD_Leiden, Gson_MoJoFM_LD_Leiden, Gson_MoJoFM_SDLD_Leiden)
 run_anova_and_print("Gson DBSCAN MQ", Gson_MQ_SD_DBSCAN, Gson_MQ_LD_DBSCAN, Gson_MQ_SDLD_DBSCAN)
 run_anova_and_print("Gson DBSCAN MoJoFM", Gson_MoJoFM_SD_DBSCAN, Gson_MoJoFM_LD_DBSCAN, Gson_MoJoFM_SDLD_DBSCAN)
+
+
+MQ_SD_Louvain = Ant_MQ_SD_Louvain * 10 + tomcat_louvain_sd_mq * 10 + Hibernate_MQ_SD_Louvain * 10 + Gson_MQ_SD_Louvain * 10
+MQ_LD_Louvain = Ant_MQ_LD_Louvain + tomcat_louvain_ld_mq + Hibernate_MQ_LD_Louvain + Gson_MQ_LD_Louvain
+MQ_SDLD_Louvain = Ant_MQ_SDLD_Louvain + tomcat_louvain_sd_ld_mq + Hibernate_MQ_SDLD_Louvain + Gson_MQ_SDLD_Louvain
+
+MoJoFM_SD_Louvain = Ant_MoJoFM_SD_Louvain * 10 + tomcat_louvain_sd_mojo * 10 + Hibernate_MoJoFM_SD_Louvain * 10 + Gson_MoJoFM_SD_Louvain * 10
+MoJoFM_LD_Louvain = Ant_MoJoFM_LD_Louvain + tomcat_louvain_ld_mojo + Hibernate_MoJoFM_LD_Louvain + Gson_MoJoFM_LD_Louvain
+MoJoFM_SDLD_Louvain = Ant_MoJoFM_SDLD_Louvain + tomcat_louvain_sd_ld_mojo + Hibernate_MoJoFM_SDLD_Louvain + Gson_MoJoFM_SDLD_Louvain
+
+MQ_SD_Leiden = Ant_MQ_SD_Leiden * 10 + tomcat_leiden_sd_mq * 10 + Hibernate_MQ_SD_Leiden * 10 + Gson_MQ_SD_Leiden * 10
+MQ_LD_Leiden = Ant_MQ_LD_Leiden + tomcat_leiden_ld_mq + Hibernate_MQ_LD_Leiden + Gson_MQ_LD_Leiden
+MQ_SDLD_Leiden = Ant_MQ_SDLD_Leiden + tomcat_leiden_sd_ld_mq + Hibernate_MQ_SDLD_Leiden + Gson_MQ_SDLD_Leiden
+
+MoJoFM_SD_Leiden = Ant_MoJoFM_SD_Leiden * 10 + tomcat_leiden_sd_mojo * 10 + Hibernate_MoJoFM_SD_Leiden * 10 + Gson_MoJoFM_SD_Leiden * 10
+MoJoFM_LD_Leiden = Ant_MoJoFM_LD_Leiden + tomcat_leiden_ld_mojo + Hibernate_MoJoFM_LD_Leiden + Gson_MoJoFM_LD_Leiden
+MoJoFM_SDLD_Leiden = Ant_MoJoFM_SDLD_Leiden + tomcat_leiden_sd_ld_mojo + Hibernate_MoJoFM_SDLD_Leiden + Gson_MoJoFM_SDLD_Leiden
+
+MQ_SD_DBSCAN = Ant_MQ_SD_DBSCAN * 10 + tomcat_dbscan_sd_mq * 10 + Hibernate_MQ_SD_DBSCAN * 10 + Gson_MQ_SD_DBSCAN * 10
+MQ_LD_DBSCAN = Ant_MQ_LD_DBSCAN + tomcat_dbscan_ld_mq + Hibernate_MQ_LD_DBSCAN + Gson_MQ_LD_DBSCAN
+MQ_SDLD_DBSCAN = Ant_MQ_SDLD_DBSCAN + tomcat_dbscan_sd_ld_mq + Hibernate_MQ_SDLD_DBSCAN + Gson_MQ_SDLD_DBSCAN
+
+MoJoFM_SD_DBSCAN = Ant_MoJoFM_SD_DBSCAN * 10 + tomcat_dbscan_sd_mojo * 10 + Hibernate_MoJoFM_SD_DBSCAN * 10 + Gson_MoJoFM_SD_DBSCAN * 10
+MoJoFM_LD_DBSCAN = Ant_MoJoFM_LD_DBSCAN + tomcat_dbscan_ld_mojo + Hibernate_MoJoFM_LD_DBSCAN + Gson_MoJoFM_LD_DBSCAN
+MoJoFM_SDLD_DBSCAN = Ant_MoJoFM_SDLD_DBSCAN + tomcat_dbscan_sd_ld_mojo + Hibernate_MoJoFM_SDLD_DBSCAN + Gson_MoJoFM_SDLD_DBSCAN
+
+
+run_anova_and_print("Louvain MQ", MQ_SD_Louvain, MQ_LD_Louvain, MQ_SDLD_Louvain)
+run_anova_and_print("Louvain MoJoFM", MoJoFM_SD_Louvain, MoJoFM_LD_Louvain, MoJoFM_SDLD_Louvain)
+run_anova_and_print("Leiden MQ", MQ_SD_Leiden, MQ_LD_Leiden, MQ_SDLD_Leiden)
+run_anova_and_print("Leiden MoJoFM", MoJoFM_SD_Leiden, MoJoFM_LD_Leiden, MoJoFM_SDLD_Leiden)
+run_anova_and_print("DBSCAN MQ", MQ_SD_DBSCAN, MQ_LD_DBSCAN, MQ_SDLD_DBSCAN)
+run_anova_and_print("DBSCAN MoJoFM", MoJoFM_SD_DBSCAN, MoJoFM_LD_DBSCAN, MoJoFM_SDLD_DBSCAN)
+
+
+MQ_SD_Louvain = Ant_MQ_SD_Louvain * 4 + tomcat_louvain_sd_mq * 4 + Hibernate_MQ_SD_Louvain * 4 + Gson_MQ_SD_Louvain * 4
+MQ_LD_Louvain = Ant_MQ_LD_Louvain[:4] + tomcat_louvain_ld_mq[:4] + Hibernate_MQ_LD_Louvain[:4] + Gson_MQ_LD_Louvain[:4]
+MQ_SDLD_Louvain = Ant_MQ_SDLD_Louvain[:4] + tomcat_louvain_sd_ld_mq[:4] + Hibernate_MQ_SDLD_Louvain[:4] + Gson_MQ_SDLD_Louvain[:4]
+
+MQ_SD_Leiden = Ant_MQ_SD_Leiden * 4 + tomcat_leiden_sd_mq * 4 + Hibernate_MQ_SD_Leiden * 4 + Gson_MQ_SD_Leiden * 4
+MQ_LD_Leiden = Ant_MQ_LD_Leiden[:4] + tomcat_leiden_ld_mq[:4] + Hibernate_MQ_LD_Leiden[:4] + Gson_MQ_LD_Leiden[:4]
+MQ_SDLD_Leiden = Ant_MQ_SDLD_Leiden[:4] + tomcat_leiden_sd_ld_mq[:4] + Hibernate_MQ_SDLD_Leiden[:4] + Gson_MQ_SDLD_Leiden[:4]
+
+MQ_SD_DBSCAN = Ant_MQ_SD_DBSCAN * 4 + tomcat_dbscan_sd_mq * 4 + Hibernate_MQ_SD_DBSCAN * 4 + Gson_MQ_SD_DBSCAN * 4
+MQ_LD_DBSCAN = Ant_MQ_LD_DBSCAN[:4] + tomcat_dbscan_ld_mq[:4] + Hibernate_MQ_LD_DBSCAN[:4] + Gson_MQ_LD_DBSCAN[:4]
+MQ_SDLD_DBSCAN = Ant_MQ_SDLD_DBSCAN[:4] + tomcat_dbscan_sd_ld_mq[:4] + Hibernate_MQ_SDLD_DBSCAN[:4] + Gson_MQ_SDLD_DBSCAN[:4]
+
+MoJoFM_SD_Louvain = Ant_MoJoFM_SD_Louvain * 4 + tomcat_louvain_sd_mojo * 4 + Hibernate_MoJoFM_SD_Louvain * 4 + Gson_MoJoFM_SD_Louvain * 4
+MoJoFM_LD_Louvain = Ant_MoJoFM_LD_Louvain[:4] + tomcat_louvain_ld_mojo[:4] + Hibernate_MoJoFM_LD_Louvain[:4] + Gson_MoJoFM_LD_Louvain[:4]
+MoJoFM_SDLD_Louvain = Ant_MoJoFM_SDLD_Louvain[:4] + tomcat_louvain_sd_ld_mojo[:4] + Hibernate_MoJoFM_SDLD_Louvain[:4] + Gson_MoJoFM_SDLD_Louvain[:4]
+
+MoJoFM_SD_Leiden = Ant_MoJoFM_SD_Leiden * 4 + tomcat_leiden_sd_mojo * 4 + Hibernate_MoJoFM_SD_Leiden * 4 + Gson_MoJoFM_SD_Leiden * 4
+MoJoFM_LD_Leiden = Ant_MoJoFM_LD_Leiden[:4] + tomcat_leiden_ld_mojo[:4] + Hibernate_MoJoFM_LD_Leiden[:4] + Gson_MoJoFM_LD_Leiden[:4]
+MoJoFM_SDLD_Leiden = Ant_MoJoFM_SDLD_Leiden[:4] + tomcat_leiden_sd_ld_mojo[:4] + Hibernate_MoJoFM_SDLD_Leiden[:4] + Gson_MoJoFM_SDLD_Leiden[:4]
+
+MoJoFM_SD_DBSCAN = Ant_MoJoFM_SD_DBSCAN * 4 + tomcat_dbscan_sd_mojo * 4 + Hibernate_MoJoFM_SD_DBSCAN * 4 + Gson_MoJoFM_SD_DBSCAN * 4
+MoJoFM_LD_DBSCAN = Ant_MoJoFM_LD_DBSCAN[:4] + tomcat_dbscan_ld_mojo[:4] + Hibernate_MoJoFM_LD_DBSCAN[:4] + Gson_MoJoFM_LD_DBSCAN[:4]
+MoJoFM_SDLD_DBSCAN = Ant_MoJoFM_SDLD_DBSCAN[:4] + tomcat_dbscan_sd_ld_mojo[:4] + Hibernate_MoJoFM_SDLD_DBSCAN[:4] + Gson_MoJoFM_SDLD_DBSCAN[:4]
+
+
+run_anova_and_print("Louvain MQ [10–40]", MQ_SD_Louvain, MQ_LD_Louvain, MQ_SDLD_Louvain)
+run_anova_and_print("Louvain MoJoFM [10–40]", MoJoFM_SD_Louvain, MoJoFM_LD_Louvain, MoJoFM_SDLD_Louvain)
+run_anova_and_print("Leiden MQ [10–40]", MQ_SD_Leiden, MQ_LD_Leiden, MQ_SDLD_Leiden)
+run_anova_and_print("Leiden MoJoFM [10–40]", MoJoFM_SD_Leiden, MoJoFM_LD_Leiden, MoJoFM_SDLD_Leiden)
+run_anova_and_print("DBSCAN MQ [10–40]", MQ_SD_DBSCAN, MQ_LD_DBSCAN, MQ_SDLD_DBSCAN)
+run_anova_and_print("DBSCAN MoJoFM [10–40]", MoJoFM_SD_DBSCAN, MoJoFM_LD_DBSCAN, MoJoFM_SDLD_DBSCAN)
