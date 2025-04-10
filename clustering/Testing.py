@@ -204,3 +204,71 @@ run_anova_and_print("Leiden MQ [10–40]", MQ_SD_Leiden, MQ_LD_Leiden, MQ_SDLD_L
 run_anova_and_print("Leiden MoJoFM [10–40]", MoJoFM_SD_Leiden, MoJoFM_LD_Leiden, MoJoFM_SDLD_Leiden)
 run_anova_and_print("DBSCAN MQ [10–40]", MQ_SD_DBSCAN, MQ_LD_DBSCAN, MQ_SDLD_DBSCAN)
 run_anova_and_print("DBSCAN MoJoFM [10–40]", MoJoFM_SD_DBSCAN, MoJoFM_LD_DBSCAN, MoJoFM_SDLD_DBSCAN)
+
+
+
+MQ_SD_Louvain = Ant_MQ_SD_Louvain + tomcat_louvain_sd_mq  + Hibernate_MQ_SD_Louvain + Gson_MQ_SD_Louvain
+MQ_SDLD20_Louvain = [Ant_MQ_SDLD_Louvain[1]] + [tomcat_louvain_sd_ld_mq[1]] + [Hibernate_MQ_SDLD_Louvain[1]] + [Gson_MQ_SDLD_Louvain[1]]
+MQ_LD100_Louvain = [Ant_MQ_LD_Louvain[9]] + [tomcat_louvain_ld_mq[9]] + [Hibernate_MQ_LD_Louvain[9]] + [Gson_MQ_LD_Louvain[9]]
+
+MoJoFM_SD_Louvain = Ant_MoJoFM_SD_Louvain + tomcat_louvain_sd_mojo + Hibernate_MoJoFM_SD_Louvain + Gson_MoJoFM_SD_Louvain
+MoJoFM_SDLD20_Louvain = [Ant_MoJoFM_SDLD_Louvain[1]] + [tomcat_louvain_sd_ld_mojo[1]] + [Hibernate_MoJoFM_SDLD_Louvain[1]] + [Gson_MoJoFM_SDLD_Louvain[1]]
+MoJoFM_LD100_Louvain = [Ant_MoJoFM_LD_Louvain[9]] + [tomcat_louvain_ld_mojo[9]] + [Hibernate_MoJoFM_LD_Louvain[9]] + [Gson_MoJoFM_LD_Louvain[9]]
+
+# Averages
+print("=== AVERAGES (Louvain) ===")
+print(f"Avg MQ - SD: {sum(MQ_SD_Louvain)/len(MQ_SD_Louvain):.4f}")
+print(f"Avg MQ - SD+LD(20): {sum(MQ_SDLD20_Louvain)/4:.4f}")
+print(f"Avg MQ - LD(100): {sum(MQ_LD100_Louvain)/4:.4f}\n")
+
+print(f"Avg MoJoFM - SD: {sum(MoJoFM_SD_Louvain)/len(MoJoFM_SD_Louvain):.2f}")
+print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_Louvain)/4:.2f}")
+print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_Louvain)/4:.2f}\n")
+
+# ANOVA
+run_anova_and_print("Louvain MQ", MQ_SD_Louvain, MQ_SDLD20_Louvain, MQ_LD100_Louvain)
+run_anova_and_print("Louvain MoJoFM", MoJoFM_SD_Louvain, MoJoFM_SDLD20_Louvain, MoJoFM_LD100_Louvain)
+
+# --- LEIDEN ---
+MQ_SD_Leiden = Ant_MQ_SD_Leiden + tomcat_leiden_sd_mq + Hibernate_MQ_SD_Leiden + Gson_MQ_SD_Leiden
+MQ_SDLD20_Leiden = [Ant_MQ_SDLD_Leiden[1]] + [tomcat_leiden_sd_ld_mq[1]] + [Hibernate_MQ_SDLD_Leiden[1]] + [Gson_MQ_SDLD_Leiden[1]]
+MQ_LD100_Leiden = [Ant_MQ_LD_Leiden[9]] + [tomcat_leiden_ld_mq[9]] + [Hibernate_MQ_LD_Leiden[9]] + [Gson_MQ_LD_Leiden[9]]
+
+MoJoFM_SD_Leiden = Ant_MoJoFM_SD_Leiden + tomcat_leiden_sd_mojo + Hibernate_MoJoFM_SD_Leiden + Gson_MoJoFM_SD_Leiden
+MoJoFM_SDLD20_Leiden = [Ant_MoJoFM_SDLD_Leiden[1]] + [tomcat_leiden_sd_ld_mojo[1]] + [Hibernate_MoJoFM_SDLD_Leiden[1]] + [Gson_MoJoFM_SDLD_Leiden[1]]
+MoJoFM_LD100_Leiden = [Ant_MoJoFM_LD_Leiden[9]] + [tomcat_leiden_ld_mojo[9]] + [Hibernate_MoJoFM_LD_Leiden[9]] + [Gson_MoJoFM_LD_Leiden[9]]
+
+print("=== AVERAGES (Leiden) ===")
+print(f"Avg MQ - SD: {sum(MQ_SD_Leiden)/len(MQ_SD_Leiden):.4f}")
+print(f"Avg MQ - SD+LD(20): {sum(MQ_SDLD20_Leiden)/4:.4f}")
+print(f"Avg MQ - LD(100): {sum(MQ_LD100_Leiden)/4:.4f}\n")
+
+print(f"Avg MoJoFM - SD: {sum(MoJoFM_SD_Leiden)/len(MoJoFM_SD_Leiden):.2f}")
+print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_Leiden)/4:.2f}")
+print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_Leiden)/4:.2f}\n")
+
+run_anova_and_print("Leiden MQ", MQ_SD_Leiden, MQ_SDLD20_Leiden, MQ_LD100_Leiden)
+print(MoJoFM_SD_Leiden, MoJoFM_SDLD20_Leiden, MoJoFM_LD100_Leiden)
+run_anova_and_print("Leiden MoJoFM", MoJoFM_SD_Leiden, MoJoFM_SDLD20_Leiden, MoJoFM_LD100_Leiden)
+
+
+# --- DBSCAN ---
+MQ_SD_DBSCAN = Ant_MQ_SD_DBSCAN + tomcat_dbscan_sd_mq + Hibernate_MQ_SD_DBSCAN + Gson_MQ_SD_DBSCAN
+MQ_SDLD20_DBSCAN = [Ant_MQ_SDLD_DBSCAN[1]] + [tomcat_dbscan_sd_ld_mq[1]] + [Hibernate_MQ_SDLD_DBSCAN[1]] + [Gson_MQ_SDLD_DBSCAN[1]]
+MQ_LD100_DBSCAN = [Ant_MQ_LD_DBSCAN[9]] + [tomcat_dbscan_ld_mq[9]] + [Hibernate_MQ_LD_DBSCAN[9]] + [Gson_MQ_LD_DBSCAN[9]]
+
+MoJoFM_SD_DBSCAN = Ant_MoJoFM_SD_DBSCAN + tomcat_dbscan_sd_mojo + Hibernate_MoJoFM_SD_DBSCAN + Gson_MoJoFM_SD_DBSCAN
+MoJoFM_SDLD20_DBSCAN = [Ant_MoJoFM_SDLD_DBSCAN[1]] + [tomcat_dbscan_sd_ld_mojo[1]] + [Hibernate_MoJoFM_SDLD_DBSCAN[1]] + [Gson_MoJoFM_SDLD_DBSCAN[1]]
+MoJoFM_LD100_DBSCAN = [Ant_MoJoFM_LD_DBSCAN[9]] + [tomcat_dbscan_ld_mojo[9]] + [Hibernate_MoJoFM_LD_DBSCAN[9]] + [Gson_MoJoFM_LD_DBSCAN[9]]
+
+print("=== AVERAGES (DBSCAN) ===")
+print(f"Avg MQ - SD: {sum(MQ_SD_DBSCAN)/len(MQ_SD_DBSCAN):.4f}")
+print(f"Avg MQ - SD+LD(20): {sum(MQ_SDLD20_DBSCAN)/4:.4f}")
+print(f"Avg MQ - LD(100): {sum(MQ_LD100_DBSCAN)/4:.4f}\n")
+
+print(f"Avg MoJoFM - SD: {sum(MoJoFM_SD_DBSCAN)/len(MoJoFM_SD_DBSCAN):.2f}")
+print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_DBSCAN)/4:.2f}")
+print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_DBSCAN)/4:.2f}\n")
+
+run_anova_and_print("DBSCAN MQ", MQ_SD_DBSCAN, MQ_SDLD20_DBSCAN, MQ_LD100_DBSCAN)
+run_anova_and_print("DBSCAN MoJoFM", MoJoFM_SD_DBSCAN, MoJoFM_SDLD20_DBSCAN, MoJoFM_LD100_DBSCAN)
