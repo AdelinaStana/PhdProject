@@ -10,6 +10,17 @@ def run_anova_and_print(label, group1, group2, group3):
         print(f"{label} p_value: {p_value:.4f} (>= 0.05 -> No statistically significant difference.)")
 
 
+
+def run_friedman_and_print(label, group1, group2, group3):
+    stat, p_value = stats.friedmanchisquare(group1, group2, group3)
+    print(f"{label} Friedman chi-square: {stat:.4f}")
+    if p_value < 0.05:
+        print(f"{label} p_value: {p_value:.4f} (< 0.05 -> Statistically significant differences found.)")
+    else:
+        print(f"{label} p_value: {p_value:.4f} (>= 0.05 -> No statistically significant difference.)")
+
+
+
 Ant_MQ_SD_Louvain = [0.114]
 Ant_MQ_LD_Louvain = [0.506, 0.547, 0.558, 0.580, 0.604, 0.587, 0.577, 0.576, 0.606, 0.611]
 Ant_MQ_SDLD_Louvain = [0.355, 0.318, 0.282, 0.340, 0.248, 0.244, 0.238, 0.246, 0.258, 0.214]
@@ -206,7 +217,6 @@ run_anova_and_print("DBSCAN MQ [10–40]", MQ_SD_DBSCAN, MQ_LD_DBSCAN, MQ_SDLD_D
 run_anova_and_print("DBSCAN MoJoFM [10–40]", MoJoFM_SD_DBSCAN, MoJoFM_LD_DBSCAN, MoJoFM_SDLD_DBSCAN)
 
 
-
 MQ_SD_Louvain = Ant_MQ_SD_Louvain + tomcat_louvain_sd_mq  + Hibernate_MQ_SD_Louvain + Gson_MQ_SD_Louvain
 MQ_SDLD20_Louvain = [Ant_MQ_SDLD_Louvain[1]] + [tomcat_louvain_sd_ld_mq[1]] + [Hibernate_MQ_SDLD_Louvain[1]] + [Gson_MQ_SDLD_Louvain[1]]
 MQ_LD100_Louvain = [Ant_MQ_LD_Louvain[9]] + [tomcat_louvain_ld_mq[9]] + [Hibernate_MQ_LD_Louvain[9]] + [Gson_MQ_LD_Louvain[9]]
@@ -226,8 +236,8 @@ print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_Louvain)/4:.2f}")
 print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_Louvain)/4:.2f}\n")
 
 # ANOVA
-run_anova_and_print("Louvain MQ", MQ_SD_Louvain, MQ_SDLD20_Louvain, MQ_LD100_Louvain)
-run_anova_and_print("Louvain MoJoFM", MoJoFM_SD_Louvain, MoJoFM_SDLD20_Louvain, MoJoFM_LD100_Louvain)
+run_friedman_and_print("Louvain MQ", MQ_SD_Louvain, MQ_SDLD20_Louvain, MQ_LD100_Louvain)
+run_friedman_and_print("Louvain MoJoFM", MoJoFM_SD_Louvain, MoJoFM_SDLD20_Louvain, MoJoFM_LD100_Louvain)
 
 # --- LEIDEN ---
 MQ_SD_Leiden = Ant_MQ_SD_Leiden + tomcat_leiden_sd_mq + Hibernate_MQ_SD_Leiden + Gson_MQ_SD_Leiden
@@ -247,9 +257,8 @@ print(f"Avg MoJoFM - SD: {sum(MoJoFM_SD_Leiden)/len(MoJoFM_SD_Leiden):.2f}")
 print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_Leiden)/4:.2f}")
 print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_Leiden)/4:.2f}\n")
 
-run_anova_and_print("Leiden MQ", MQ_SD_Leiden, MQ_SDLD20_Leiden, MQ_LD100_Leiden)
-print(MoJoFM_SD_Leiden, MoJoFM_SDLD20_Leiden, MoJoFM_LD100_Leiden)
-run_anova_and_print("Leiden MoJoFM", MoJoFM_SD_Leiden, MoJoFM_SDLD20_Leiden, MoJoFM_LD100_Leiden)
+run_friedman_and_print("Leiden MQ", MQ_SD_Leiden, MQ_SDLD20_Leiden, MQ_LD100_Leiden)
+run_friedman_and_print("Leiden MoJoFM", MoJoFM_SD_Leiden, MoJoFM_SDLD20_Leiden, MoJoFM_LD100_Leiden)
 
 
 # --- DBSCAN ---
@@ -270,5 +279,5 @@ print(f"Avg MoJoFM - SD: {sum(MoJoFM_SD_DBSCAN)/len(MoJoFM_SD_DBSCAN):.2f}")
 print(f"Avg MoJoFM - SD+LD(20): {sum(MoJoFM_SDLD20_DBSCAN)/4:.2f}")
 print(f"Avg MoJoFM - LD(100): {sum(MoJoFM_LD100_DBSCAN)/4:.2f}\n")
 
-run_anova_and_print("DBSCAN MQ", MQ_SD_DBSCAN, MQ_SDLD20_DBSCAN, MQ_LD100_DBSCAN)
-run_anova_and_print("DBSCAN MoJoFM", MoJoFM_SD_DBSCAN, MoJoFM_SDLD20_DBSCAN, MoJoFM_LD100_DBSCAN)
+run_friedman_and_print("DBSCAN MQ", MQ_SD_DBSCAN, MQ_SDLD20_DBSCAN, MQ_LD100_DBSCAN)
+run_friedman_and_print("DBSCAN MoJoFM", MoJoFM_SD_DBSCAN, MoJoFM_SDLD20_DBSCAN, MoJoFM_LD100_DBSCAN)
